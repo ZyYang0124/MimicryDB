@@ -1,0 +1,4 @@
+---
+import Layout from '../../layouts/Layout.astro'; import {interactions} from '../../data/demo';
+---
+<Layout><div class="container py-12"><span class="pill">DEMO / PROTOTYPE DATA</span><h1 class="mt-4 text-4xl font-bold">Explore interactions</h1><p class="mt-3">Directional records: Mimic → Model | Receiver</p><div class="mt-8 grid gap-4">{interactions.map(i=><a class="card block text-ink hover:border-teal" href={`/MimicryDB/interactions/${i.id.replace(':','-')}/`}><div class="flex flex-wrap items-center justify-between gap-3"><div class="text-xl font-semibold">{i.mimic} <span class="text-coral">→</span> {i.model}</div><span class="pill">{i.evidence}</span></div><div class="mt-3 text-sm text-slate-600">{i.type} · receiver: {i.receiver} · {i.kingdoms}</div><p class="mt-3">{i.summary}</p></a>)}</div></div></Layout>

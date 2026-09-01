@@ -1,0 +1,4 @@
+---
+import Layout from '../layouts/Layout.astro'; import {interactions} from '../data/demo'; const csv=['public_id,mimic,model,receiver,type,evidence',...interactions.map(i=>`${i.id},${i.mimic},${i.model},${i.receiver},${i.type},${i.evidence}`)].join('\\n');
+---
+<Layout><div class="container py-12"><h1 class="text-4xl font-bold">Download data</h1><p class="mt-4">Prototype CSV export. Scientific data licensing and release versioning will be finalized before production release.</p><a class="mt-6 inline-block rounded-lg bg-teal px-5 py-3 font-semibold text-white" download="mimicrydb-demo.csv" href={`data:text/csv;charset=utf-8,${encodeURIComponent(csv)}`}>Download demo CSV</a></div></Layout>
