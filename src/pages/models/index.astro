@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro'; import {data,slugify} from '../../data/provider';
+import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider';
 const all=data.all(); const gradeRank=(g:string)=>+(g[1]??0);
 const models=data.taxa().filter(t=>t.asModel>0).sort((a,b)=>b.asModel-a.asModel)
   .map(t=>({...t,mimics:new Set(all.filter(i=>i.model===t.name).map(i=>i.mimic)).size,best:'E'+Math.max(...all.filter(i=>i.model===t.name).map(i=>gradeRank(i.evidence)))}));

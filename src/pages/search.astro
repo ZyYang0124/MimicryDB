@@ -2,9 +2,7 @@
 import Layout from '../layouts/Layout.astro'; import {data} from '../data/provider';
 const idx=[
  ...data.taxa().map(t=>({kind:'taxon',text:t.name,label:t.name,href:`/MimicryDB/taxa/${t.slug}/`,meta:`mimic in ${t.asMimic} · model in ${t.asModel}`})),
- {kind:'interaction',text:'Interactions'},
  ...data.all().map(i=>({kind:'interaction',text:`${i.mimic} ${i.model} ${i.id} ${i.type} ${i.receiver} ${i.summary}`,label:`${i.mimic} → ${i.model}`,href:`/MimicryDB/interactions/${i.id.replace(':','-')}/`,meta:`${i.id} · ${i.type} · ${i.evidence}`})),
- {kind:'reference',text:'References'},
  ...data.references().map(r=>({kind:'reference',text:`${r.ref.title} ${r.ref.id} ${r.ref.doi??''}`,label:r.ref.title,href:`/MimicryDB/references/${r.ref.id}/`,meta:`supports ${r.supports}`}))];
 const kinds=[['taxon','Taxa'],['interaction','Interactions'],['reference','References']] as const;
 ---
