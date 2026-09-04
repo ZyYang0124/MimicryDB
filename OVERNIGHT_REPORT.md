@@ -9,7 +9,7 @@ The MVP is **live**: https://zyyang0124.github.io/MimicryDB/ — deployed from `
 ## Repository
 
 - URL: https://github.com/ZyYang0124/MimicryDB
-- Branch: `main` · HEAD: `c28426e` (docs: OVERNIGHT_REPORT + log)
+- Branch: `main` · HEAD: `461fd30` (docs: OVERNIGHT_REPORT)
 - Commits this session: 22 (baseline + 20 iterations + report), all semantic (`feat:`/`fix:`/`ci:`/`docs:`/`test:`/`chore:`)
 
 ## GitHub Pages
