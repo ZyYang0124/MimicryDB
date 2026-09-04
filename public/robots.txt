@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /MimicryDB/curator/
+
+Sitemap: https://zyyang0124.github.io/MimicryDB/sitemap-index.xml
