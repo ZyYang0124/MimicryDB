@@ -8,3 +8,5 @@
 | 00:12 | iter3 | 42f7357 + 6b684f6 | portal: models/mimics/references/search/sortable table/homepage SVG network; fixed check failures |
 | 00:16 | iter4+5 | 4fdf996 + this commit | data pipeline + test hardening |
 | 00:17 | push attempt 1 | — | FAILED: cannot connect github.com:443; will retry (max 3) |
+| 00:21 | iter6 | curator prototype | see git log |
+| 00:22 | push attempt 2 starting |
