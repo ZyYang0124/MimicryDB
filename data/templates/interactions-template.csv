@@ -1,0 +1,2 @@
+public_id,mimic,model,receiver,mimicry_type,signal_modalities,knowledge_status,evidence_grade,mimicry_summary,kingdom_flow,data_status
+MIMICRY:000010,Example mimicus,Example modelus,predator,Batesian mimicry,visual,reported,E1,Replace with the summary claimed by the source publication,Animalia → Animalia,DEMO

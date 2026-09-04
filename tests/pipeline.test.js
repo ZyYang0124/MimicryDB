@@ -1,7 +1,8 @@
 import test from 'node:test'; import assert from 'node:assert/strict';
 import {interactions} from '../src/data/demo.ts';
 import {data,detectDuplicates} from '../src/data/provider.ts';
-import {csv} from '../src/lib/csv.ts';
+import {csv,parseCsv} from '../src/lib/csv.ts';
+import {validateRow,HEADER} from '../src/lib/validation.ts';
 import vocab from '../data/controlled-vocabularies.json' with {type:'json'};
 
 test('same mimic+model pair is allowed when contexts differ (no global uniqueness)',()=>{
@@ -50,6 +51,24 @@ test('seed.sql stays in sync with the dataset and never seeds published rows',as
   for(const i of interactions)assert.ok(seed.includes(i.id),`seed.sql missing ${i.id}`);
   assert.ok(!/\bpublished\b/.test(seed.replace(/never seeds published|RLS/g,'')),'seed.sql must not set published status');
   assert.match(seed,/interaction_status='candidate'/);
+});
+
+test('import validator accepts the template-shaped row and flags bad grades',()=>{
+  const row=Object.fromEntries(HEADER.map(h=>[h,'']));
+  Object.assign(row,{public_id:'MIMICRY:000099',mimic:'Example mimicus',model:'Example modelus',receiver:'predator',mimicry_summary:'Test summary',kingdom_flow:'Animalia → Animalia',evidence_grade:'E1',data_status:'DEMO'});
+  const ok=validateRow(row,new Set(),[],0);
+  assert.equal(ok.errors.length,0,ok.errors.join('; '));
+  const bad={...row,evidence_grade:'E9',kingdom_flow:'Cloud → Animalia'};
+  const badReport=validateRow(bad,new Set(),[],0);
+  assert.ok(badReport.errors.some(e=>e.includes('E0–E4')));
+  assert.ok(badReport.errors.some(e=>e.includes('kingdom_flow')));
+});
+
+test('CSV parser round-trips quoted fields with embedded commas and newlines',()=>{
+  const text=csv(['a','b'],[['line1, with comma','say "hi"'],['plain','multi\nline']]);
+  const parsed=parseCsv(text);
+  assert.deepEqual(parsed[1],['line1, with comma','say "hi"']);
+  assert.deepEqual(parsed[2],['plain','multi\nline']);
 });
 
 test('evidence export invariants: grades align between interaction and vocabularies',()=>{
