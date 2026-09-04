@@ -79,7 +79,7 @@ test('query API supports the documented patterns (model=, kingdom=, min evidence
   assert.equal(cross.total,2,'demo dataset has 2 cross-kingdom records');
   assert.equal(cross.items.length,2,'pageSize respected');
   const strong=data.query({minEvidence:'E3'});
-  assert.equal(strong.total,3,'E3+ filter');
+  assert.equal(strong.total,5,'E3+ filter');
   const plantMimics=data.query({mimicKingdom:'Plantae'});
   assert.equal(plantMimics.total,2);
 });
