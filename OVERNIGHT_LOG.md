@@ -6,3 +6,5 @@
 | 00:01 | baseline | a2bf461 | master development prompt committed |
 | 00:03 | roadmap | — | docs/ROADMAP.md + iteration plan written |
 | 00:12 | iter3 | 42f7357 + 6b684f6 | portal: models/mimics/references/search/sortable table/homepage SVG network; fixed check failures |
+| 00:16 | iter4+5 | 4fdf996 + this commit | data pipeline + test hardening |
+| 00:17 | push attempt 1 | — | FAILED: cannot connect github.com:443; will retry (max 3) |

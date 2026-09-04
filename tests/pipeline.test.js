@@ -34,6 +34,16 @@ test('vocabularies are non-empty and uniquely termed',()=>{
   }
 });
 
+test('candidates carry full extraction provenance and stay demo-labeled',()=>{
+  for(const c of data.candidates()){
+    for(const f of ['proposed_mimic','proposed_model','extraction_model','extraction_prompt_version','reference','evidence_text'])
+      assert.ok(c[f]?.trim(),`${c.id}: empty ${f}`);
+    assert.match(c.note,/not from any real publication/,`${c.id}: synthetic candidates must disclose their status`);
+    assert.match(c.evidence_text,/placeholder/);
+    assert.ok(c.extraction_confidence>=0&&c.extraction_confidence<=1);
+  }
+});
+
 test('evidence export invariants: grades align between interaction and vocabularies',()=>{
   const grades=new Set(vocab.evidence_grade);
   for(const i of interactions)assert.ok(grades.has(i.evidence),`${i.id}: grade not in vocabulary`);

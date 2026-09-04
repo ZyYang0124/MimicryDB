@@ -1,5 +1,5 @@
-import {interactions,type Interaction,type DemoReference} from './demo.ts';
-export type {Interaction,DemoReference};
+import {interactions,candidates,type Interaction,type DemoReference,type Candidate} from './demo.ts';
+export type {Interaction,DemoReference,Candidate};
 export type TaxonSummary={name:string;slug:string;asMimic:number;asModel:number;lineages:string};
 export type ReferenceSummary={ref:DemoReference;supports:number};
 export interface DataProvider{
@@ -9,6 +9,7 @@ export interface DataProvider{
   references():ReferenceSummary[];
   refsFor(publicId:string):DemoReference[];
   interactionsForRef(refId:string):Interaction[];
+  candidates():Candidate[];
 }
 export const slugify=(name:string)=>name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 /** Duplicate policy (prompt.md §46): mimic+model pairs are NOT unique — the same pair may
@@ -34,7 +35,8 @@ export const demoProvider:DataProvider={
       if(!acc.has(r.id))acc.set(r.id,{ref:r,supports:0}); acc.get(r.id)!.supports++;}
     return [...acc.values()];},
   refsFor:(publicId)=>{const i=interactions.find(x=>x.id===publicId||x.id.replace(':','-')===publicId);return i?.refs??[];},
-  interactionsForRef:(refId)=>interactions.filter(i=>(i.refs??[]).some(r=>r.id===refId))
+  interactionsForRef:(refId)=>interactions.filter(i=>(i.refs??[]).some(r=>r.id===refId)),
+  candidates:()=>candidates
 };
 /** Single swap point for a future live adapter (e.g. Supabase); pages import only `data`. */
 export const data:DataProvider=demoProvider;
