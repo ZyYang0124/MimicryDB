@@ -23,3 +23,6 @@
 | 00:33 | iter14 docs | 7872275 | evidence distribution chart, README query docs, changelog; release:v0.3.0 dry-run OK |
 | 00:34 | push attempts 2–3 | — | FAILED: connection reset / could not connect; background retry loop started (15 min interval, stops 07:30) |
 | — | QA | — | dist audit: 60 pages, 800 internal links 0 broken, a11y clean, 17/17 tests, check 0 errors, build green |
+| 01:13 | deploy debug | fa286c2 | zero-job failures diagnosed: GitHub rejected flow-style workflow; rewrote canonical |
+| 01:45 | push | fa286c2 | PUSH SUCCEEDED (loop) |
+| 01:50 | DEPLOY VERIFIED | — | Pages API status=built; Actions run success on fa286c2; live site verified via external reader |
