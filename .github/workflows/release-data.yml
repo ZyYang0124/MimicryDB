@@ -1,0 +1,26 @@
+name: Release data
+on:
+  workflow_dispatch:
+    inputs:
+      version: {description: 'Release version, e.g. v0.2.0 (must match package.json for now)', required: true}
+permissions: {contents: write}
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: 22, cache: npm}
+      - run: npm ci
+      - name: Validate dataset
+        run: npm run validate:data
+      - name: Export release set
+        run: npm run export:data -- ${{ github.event.inputs.version }}
+      - name: Create GitHub release and attach files
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: data-${{ github.event.inputs.version }}
+          name: MimicryDB ${{ github.event.inputs.version }} — data release
+          body: 'Exported from the labeled DEMO dataset — see metadata.json for data status, counts and citation. Data licensing is an open project decision (docs/RELEASE_POLICY.md).'
+          files: export/${{ github.event.inputs.version }}/*
+          fail_on_unmatched_files: true
