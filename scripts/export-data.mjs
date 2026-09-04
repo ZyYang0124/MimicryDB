@@ -4,6 +4,7 @@
 // always states the data status so a demo export can never pass as curated data.
 import {interactions} from '../src/data/demo.ts';
 import {data} from '../src/data/provider.ts';
+import {csv} from '../src/lib/csv.ts';
 import {readFileSync, writeFileSync, mkdirSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {join} from 'node:path';
@@ -14,7 +15,6 @@ const schemaVersion='002';
 const outDir=join(process.cwd(),'export',version);
 mkdirSync(outDir,{recursive:true});
 
-const csv=(headers,rows)=>[headers.join(','),...rows.map(r=>r.map(v=>`"${String(v??'').replaceAll('"','""')}"`).join(','))].join('\n');
 const write=(name,content)=>{writeFileSync(join(outDir,name),content+'\n');return name;};
 
 const files=[];

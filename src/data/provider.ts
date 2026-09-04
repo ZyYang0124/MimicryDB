@@ -11,6 +11,13 @@ export interface DataProvider{
   interactionsForRef(refId:string):Interaction[];
 }
 export const slugify=(name:string)=>name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+/** Duplicate policy (prompt.md §46): mimic+model pairs are NOT unique — the same pair may
+ *  recur with different receivers, stages, modalities or contexts. This only flags
+ *  candidate duplicates for curator review; it never blocks a record. */
+export const detectDuplicates=(list:Interaction[])=>{const acc=new Map<string,{pair:string;ids:string[]}>();
+  for(const i of list){const key=`${i.mimic} → ${i.model}`;
+    if(!acc.has(key))acc.set(key,{pair:key,ids:[]}); acc.get(key)!.ids.push(i.id);}
+  return [...acc.values()].filter(x=>x.ids.length>1);};
 const splitKingdoms=(i:Interaction)=>{const [a,b]=i.kingdoms.split(' → ');return [a?.trim()??'',b?.trim()??''];};
 export const demoProvider:DataProvider={
   all:()=>interactions,
