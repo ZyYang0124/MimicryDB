@@ -71,6 +71,19 @@ test('CSV parser round-trips quoted fields with embedded commas and newlines',()
   assert.deepEqual(parsed[2],['plain','multi\nline']);
 });
 
+test('query API supports the documented patterns (model=, kingdom=, min evidence, paging)',()=>{
+  const formicidae=data.query({model:'Formicidae'});
+  assert.equal(formicidae.total,1);
+  assert.equal(formicidae.items[0].id,'MIMICRY:000001');
+  const cross=data.query({crossKingdomOnly:true,pageSize:2});
+  assert.equal(cross.total,2,'demo dataset has 2 cross-kingdom records');
+  assert.equal(cross.items.length,2,'pageSize respected');
+  const strong=data.query({minEvidence:'E3'});
+  assert.equal(strong.total,3,'E3+ filter');
+  const plantMimics=data.query({mimicKingdom:'Plantae'});
+  assert.equal(plantMimics.total,2);
+});
+
 test('evidence export invariants: grades align between interaction and vocabularies',()=>{
   const grades=new Set(vocab.evidence_grade);
   for(const i of interactions)assert.ok(grades.has(i.evidence),`${i.id}: grade not in vocabulary`);

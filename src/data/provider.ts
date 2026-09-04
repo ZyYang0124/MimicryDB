@@ -2,6 +2,10 @@ import {interactions,candidates,type Interaction,type DemoReference,type Candida
 export type {Interaction,DemoReference,Candidate};
 export type TaxonSummary={name:string;slug:string;asMimic:number;asModel:number;lineages:string};
 export type ReferenceSummary={ref:DemoReference;supports:number};
+/** Documented query patterns (prompt.md §48): the live Supabase adapter must answer the
+ *  same shapes. Filtering happens in the adapter/server, never by shipping the whole DB. */
+export type InteractionQuery={mimic?:string;model?:string;mimicKingdom?:string;modelKingdom?:string;type?:string;minEvidence?:'E0'|'E1'|'E2'|'E3'|'E4';crossKingdomOnly?:boolean;page?:number;pageSize?:number};
+export type InteractionPage={total:number;page:number;pageSize:number;items:Interaction[]};
 export interface DataProvider{
   all():Interaction[];
   byId(publicId:string):Interaction|undefined;
@@ -10,6 +14,7 @@ export interface DataProvider{
   refsFor(publicId:string):DemoReference[];
   interactionsForRef(refId:string):Interaction[];
   candidates():Candidate[];
+  query(filters:InteractionQuery):InteractionPage;
 }
 export const slugify=(name:string)=>name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 /** Duplicate policy (prompt.md §46): mimic+model pairs are NOT unique — the same pair may
@@ -36,7 +41,16 @@ export const demoProvider:DataProvider={
     return [...acc.values()];},
   refsFor:(publicId)=>{const i=interactions.find(x=>x.id===publicId||x.id.replace(':','-')===publicId);return i?.refs??[];},
   interactionsForRef:(refId)=>interactions.filter(i=>(i.refs??[]).some(r=>r.id===refId)),
-  candidates:()=>candidates
+  candidates:()=>candidates,
+  query:(f)=>{const g=(i:Interaction)=>+(i.evidence[1]??0);
+    const min=f.minEvidence?+(f.minEvidence[1]):0;
+    const hit=interactions.filter(i=>(!f.mimic||i.mimic===f.mimic)&&(!f.model||i.model===f.model)
+      &&(!f.type||i.type===f.type)&&(g(i)>=min)
+      &&(!f.mimicKingdom||i.kingdoms.split(' → ')[0]?.trim()===f.mimicKingdom)
+      &&(!f.modelKingdom||i.kingdoms.split(' → ')[1]?.trim()===f.modelKingdom)
+      &&(!f.crossKingdomOnly||i.kingdoms.split(' → ')[0]?.trim()!==i.kingdoms.split(' → ')[1]?.trim()));
+    const pageSize=Math.max(1,f.pageSize??20); const page=Math.max(1,f.page??1);
+    return {total:hit.length,page,pageSize,items:hit.slice((page-1)*pageSize,page*pageSize)};}
 };
 /** Single swap point for a future live adapter (e.g. Supabase); pages import only `data`. */
 export const data:DataProvider=demoProvider;
