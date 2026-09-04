@@ -62,6 +62,19 @@ https://zyyang0124.github.io/MimicryDB/ (GitHub Pages; deployed from `main` via 
 
 Download page on the portal (`/download/`) exports the current demo dataset as CSV/JSON. No authentication is required to download published data.
 
+The data layer also documents its public query patterns (`src/data/provider.ts`, prompt §48) — the contract the live Supabase adapter will answer server-side:
+
+```ts
+data.query({
+  model: 'Formicidae',          // model = exact taxon name
+  mimicKingdom: 'Plantae',      // mimic kingdom flow filter
+  modelKingdom: 'Animalia',
+  minEvidence: 'E3',            // evidence >= E3
+  crossKingdomOnly: true,
+  page: 1, pageSize: 20         // server-side paging
+}) // -> { total, page, pageSize, items }
+```
+
 ## Data releases
 
 Versioned, frozen releases (CSV set + metadata + checksums) are distributed via GitHub Releases; Zenodo/DOI archival is planned — see `docs/RELEASE_POLICY.md`.

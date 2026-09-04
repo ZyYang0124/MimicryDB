@@ -6,12 +6,14 @@ All notable changes to MimicryDB. Versions follow semver; data releases are tagg
 
 ### Added
 - Scientific schema migration 002: taxon hierarchy + synonyms, biological entities, controlled vocabularies (mimicry type / signal modality / receiver role), interaction↔reference M2M, geography, candidate inbox with LLM extraction provenance, evolutionary origins, indexes, published-only RLS on related tables
-- Portal: `/models/`, `/mimics/` rankings with evidence-threshold filter, `/references/` index + detail, global `/search/`, sortable interaction table with URL-persisted filters and cross-kingdom filter, homepage directed mimic→model network (inline SVG)
+- Portal: `/models/`, `/mimics/` rankings with evidence-threshold filter, `/references/` index + detail, global `/search/`, sortable interaction table with URL-persisted filters and cross-kingdom filter, homepage directed mimic→model network (inline SVG), evidence-grade distribution chart, branded 404, robots.txt, full document metadata
 - Interaction detail: signal modalities, knowledge status, structured references, related records
-- Data pipeline: `npm run validate:data` (CI-gated), `npm run export:data`, `npm run release:data`, `release-data.yml` workflow
-- Curator dashboard static prototype with candidate inbox demo
-- Policy docs: DATA_DICTIONARY, CURATION_GUIDE, TAXONOMY_POLICY, LLM_EXTRACTION_POLICY, RELEASE_POLICY, ROADMAP; full README structure
-- Repo infrastructure: MIT LICENSE (software), issue templates, PR template, CHANGELOG
+- Data pipeline: `npm run validate:data` (CI-gated), `npm run export:data`, `npm run release:data`, `npm run generate:seed` → `supabase/seed.sql` (candidate-status demo rows), `release-data.yml` workflow
+- Curator tooling: dashboard static prototype with candidate inbox demo; CSV import pre-check (`scripts/import-validate.mjs` + template) with atomic reject policy
+- `data.query()` documented query patterns on the provider (paged, filterable) defining the Supabase adapter contract
+- Demo dataset grown to 12 records incl. ant-mimicking spider, drone fly, and the viceroy/monarch case recorded with its Batesian/Müllerian dispute visible
+- Policy docs: DATA_DICTIONARY, CURATION_GUIDE, TAXONOMY_POLICY, LLM_EXTRACTION_POLICY, RELEASE_POLICY, ROADMAP; full README structure; expanded ARCHITECTURE
+- Repo infrastructure: MIT LICENSE (software), issue templates, PR template, CHANGELOG, accessibility pass (html lang, nav labels, a11y audit over all built pages)
 
 ### Changed
 - CI upgraded to Node 22 (native TS type stripping for data tests), dataset validation step added
