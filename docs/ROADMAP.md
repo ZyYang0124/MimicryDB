@@ -18,14 +18,14 @@ MimicryDB borrows interaction-model and portal patterns from established biodive
 | NSII 国家标本平台 | Chinese specimen-portal presentation: faceted browsing over specimen/record tables |
 | eFlora / Flora of China | Multi-lineage portal layout: description + data + literature on one taxon page |
 
-## Iteration plan — overnight session 2026-09-05
+## Iteration plan — overnight session 2026-09-05 (completed)
 
-1. **docs/** — DATA_DICTIONARY, CURATION_GUIDE, TAXONOMY_POLICY, LLM_EXTRACTION_POLICY, RELEASE_POLICY; expand README to the full scientific structure.
-2. **Scientific schema (PHASE 3)** — migration 002: taxon hierarchy fields, `taxon_synonym`, `biological_entity`, controlled vocabularies (`mimicry_type`, `signal_modality`, `receiver_role`) with M2M joins, `interaction_reference` M2M, `interaction_geography`, `candidate` (LLM extraction metadata), `evolutionary_origin`, indexes, expanded RLS; TS types + provider alignment.
-3. **Portal completion (PHASE 4)** — `/models/`, `/mimics/`, `/references/` (+ detail), global search, sortable/persistently-filtered interaction table, homepage directed network visualization (inline SVG).
-4. **Data pipeline (PHASE 6, §53–54)** — `scripts/` export-data (CSV set + metadata + checksums), validate-data wired into CI, release-data scaffolding + workflow (real infrastructure only; no fabricated exports).
-5. **Test hardening (PHASE 8)** — validation, duplicate detection, filtering, CSV export tests; a11y pass.
-6. **Stretch** — curator dashboard static prototype (`/curator/`, demo only).
+1. ✅ **docs/** — DATA_DICTIONARY, CURATION_GUIDE, TAXONOMY_POLICY, LLM_EXTRACTION_POLICY, RELEASE_POLICY, ROADMAP; README full structure
+2. ✅ **Scientific schema (PHASE 3)** — migration 002 (see `docs/DATABASE_SCHEMA.md`)
+3. ✅ **Portal completion (PHASE 4)** — models/mimics/references/search, sortable persistent-filter explorer, homepage SVG network
+4. ✅ **Data pipeline (PHASE 6, §53–54)** — validate/export/release scripts + workflow, generated seed
+5. ✅ **Test hardening (PHASE 8)** — 17 tests incl. duplicate policy, CSV, vocab, seed sync, query API; a11y audit clean
+6. ✅ **Stretch** — curator dashboard static prototype, CSV import pre-check, documented query patterns
 
 ## Beyond MVP (not scheduled)
 
