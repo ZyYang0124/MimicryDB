@@ -44,6 +44,14 @@ test('candidates carry full extraction provenance and stay demo-labeled',()=>{
   }
 });
 
+test('seed.sql stays in sync with the dataset and never seeds published rows',async()=>{
+  const {readFileSync}=await import('node:fs');
+  const seed=readFileSync(new URL('../supabase/seed.sql',import.meta.url),'utf8');
+  for(const i of interactions)assert.ok(seed.includes(i.id),`seed.sql missing ${i.id}`);
+  assert.ok(!/\bpublished\b/.test(seed.replace(/never seeds published|RLS/g,'')),'seed.sql must not set published status');
+  assert.match(seed,/interaction_status='candidate'/);
+});
+
 test('evidence export invariants: grades align between interaction and vocabularies',()=>{
   const grades=new Set(vocab.evidence_grade);
   for(const i of interactions)assert.ok(grades.has(i.evidence),`${i.id}: grade not in vocabulary`);
