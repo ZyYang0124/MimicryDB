@@ -97,6 +97,21 @@ test('GBIF reconciliation report covers every taxon name and is reviewable',asyn
   }
 });
 
+test('image manifest entries carry attribution and their files exist',async()=>{
+  const {readFileSync,existsSync}=await import('node:fs');
+  const manifestPath=new URL('../data/images.json',import.meta.url);
+  if(!existsSync(manifestPath))return; // image pipeline not run yet
+  const manifest=JSON.parse(readFileSync(manifestPath,'utf8'));
+  assert.match(manifest.policy,/attribution/i,'manifest must require attribution');
+  for(const [slug,img] of Object.entries(manifest.images)){
+    assert.ok(img.license&&img.license!=='unknown',`${slug}: license missing`);
+    assert.ok(img.artist,`${slug}: artist attribution missing`);
+    assert.ok(img.page,`${slug}: source page missing`);
+    const local=new URL('../public'+img.file.replace('/MimicryDB',''),import.meta.url);
+    assert.ok(existsSync(local),`${slug}: image file ${img.file} not found in public/`);
+  }
+});
+
 test('evidence export invariants: grades align between interaction and vocabularies',()=>{
   const grades=new Set(vocab.evidence_grade);
   for(const i of interactions)assert.ok(grades.has(i.evidence),`${i.id}: grade not in vocabulary`);
