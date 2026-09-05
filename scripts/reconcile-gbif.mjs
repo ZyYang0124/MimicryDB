@@ -31,9 +31,12 @@ for(const name of names){
       const res=await fetch(`https://api.gbif.org/v1/species/match?name=${encodeURIComponent(base)}&strict=false`,{headers:{'User-Agent':'MimicryDB-prototype (research)'}});
       if(!res.ok)throw new Error(`HTTP ${res.status}`);
       const j=await res.json();
+      const classification=['kingdom','phylum','class','order','family','genus']
+        .filter(rank=>j[rank]).map(rank=>({rank,name:j[rank],key:j[rank+'Key']}));
       report.push({input:name,queriedAs:base,matchType:j.matchType,confidence:j.confidence??null,
         gbif_usageKey:j.usageKey??null,gbif_canonical:j.canonicalName??null,gbif_scientificName:j.scientificName??null,
         gbif_rank:j.rank??null,gbif_kingdom:j.kingdom??null,gbif_status:j.synonym? 'synonym':'accepted/taxon',
+        gbif_classification:classification,
         warning:(j.kingdom&&expectedKingdom.get(name)&&j.kingdom!==expectedKingdom.get(name))?`kingdom differs from dataset flow (${expectedKingdom.get(name)})`:null});
       ok=true;
     }catch(e){

@@ -1,6 +1,6 @@
 {
   "source": "GBIF species match API (https://api.gbif.org/v1/species/match)",
-  "generated": "2026-09-05T00:42:18.992Z",
+  "generated": "2026-09-05T15:16:50.882Z",
   "policy": "reviewable reconciliation only — dataset names are never rewritten",
   "results": [
     {
@@ -14,6 +14,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Malacostraca",
+          "key": 229
+        },
+        {
+          "rank": "order",
+          "name": "Decapoda",
+          "key": 637
+        },
+        {
+          "rank": "family",
+          "name": "Leucosiidae",
+          "key": 3928
+        },
+        {
+          "rank": "genus",
+          "name": "Myra",
+          "key": 2221770
+        }
+      ],
       "warning": null
     },
     {
@@ -27,6 +59,33 @@
       "gbif_rank": "FAMILY",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Insecta",
+          "key": 216
+        },
+        {
+          "rank": "order",
+          "name": "Hymenoptera",
+          "key": 1457
+        },
+        {
+          "rank": "family",
+          "name": "Formicidae",
+          "key": 4342
+        }
+      ],
       "warning": null
     },
     {
@@ -40,6 +99,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Plantae",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Plantae",
+          "key": 6
+        },
+        {
+          "rank": "phylum",
+          "name": "Tracheophyta",
+          "key": 7707728
+        },
+        {
+          "rank": "class",
+          "name": "Liliopsida",
+          "key": 196
+        },
+        {
+          "rank": "order",
+          "name": "Asparagales",
+          "key": 1169
+        },
+        {
+          "rank": "family",
+          "name": "Orchidaceae",
+          "key": 7689
+        },
+        {
+          "rank": "genus",
+          "name": "Ophrys",
+          "key": 2792579
+        }
+      ],
       "warning": null
     },
     {
@@ -59,6 +150,33 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Chordata",
+          "key": 44
+        },
+        {
+          "rank": "class",
+          "name": "Squamata",
+          "key": 11592253
+        },
+        {
+          "rank": "family",
+          "name": "Colubridae",
+          "key": 6172
+        },
+        {
+          "rank": "genus",
+          "name": "Erythrolamprus",
+          "key": 8213297
+        }
+      ],
       "warning": null
     },
     {
@@ -72,6 +190,13 @@
       "gbif_rank": "KINGDOM",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        }
+      ],
       "warning": null
     },
     {
@@ -85,6 +210,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Chordata",
+          "key": 44
+        },
+        {
+          "rank": "class",
+          "name": "Aves",
+          "key": 212
+        },
+        {
+          "rank": "order",
+          "name": "Cuculiformes",
+          "key": 1492
+        },
+        {
+          "rank": "family",
+          "name": "Cuculidae",
+          "key": 9309
+        },
+        {
+          "rank": "genus",
+          "name": "Cuculus",
+          "key": 2336662
+        }
+      ],
       "warning": null
     },
     {
@@ -98,6 +255,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Chordata",
+          "key": 44
+        },
+        {
+          "rank": "class",
+          "name": "Aves",
+          "key": 212
+        },
+        {
+          "rank": "order",
+          "name": "Passeriformes",
+          "key": 729
+        },
+        {
+          "rank": "family",
+          "name": "Acrocephalidae",
+          "key": 6101019
+        },
+        {
+          "rank": "genus",
+          "name": "Acrocephalus",
+          "key": 2493112
+        }
+      ],
       "warning": null
     },
     {
@@ -111,6 +300,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Insecta",
+          "key": 216
+        },
+        {
+          "rank": "order",
+          "name": "Coleoptera",
+          "key": 1470
+        },
+        {
+          "rank": "family",
+          "name": "Lampyridae",
+          "key": 4737
+        },
+        {
+          "rank": "genus",
+          "name": "Photuris",
+          "key": 1162810
+        }
+      ],
       "warning": null
     },
     {
@@ -124,6 +345,38 @@
       "gbif_rank": "GENUS",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Insecta",
+          "key": 216
+        },
+        {
+          "rank": "order",
+          "name": "Coleoptera",
+          "key": 1470
+        },
+        {
+          "rank": "family",
+          "name": "Lampyridae",
+          "key": 4737
+        },
+        {
+          "rank": "genus",
+          "name": "Photinus",
+          "key": 1162746
+        }
+      ],
       "warning": null
     },
     {
@@ -137,6 +390,33 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Chordata",
+          "key": 44
+        },
+        {
+          "rank": "order",
+          "name": "Perciformes",
+          "key": 587
+        },
+        {
+          "rank": "family",
+          "name": "Blenniidae",
+          "key": 4251
+        },
+        {
+          "rank": "genus",
+          "name": "Plagiotremus",
+          "key": 2395969
+        }
+      ],
       "warning": null
     },
     {
@@ -150,6 +430,33 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Chordata",
+          "key": 44
+        },
+        {
+          "rank": "order",
+          "name": "Perciformes",
+          "key": 587
+        },
+        {
+          "rank": "family",
+          "name": "Labridae",
+          "key": 8535
+        },
+        {
+          "rank": "genus",
+          "name": "Labroides",
+          "key": 2383728
+        }
+      ],
       "warning": null
     },
     {
@@ -163,6 +470,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Insecta",
+          "key": 216
+        },
+        {
+          "rank": "order",
+          "name": "Lepidoptera",
+          "key": 797
+        },
+        {
+          "rank": "family",
+          "name": "Nymphalidae",
+          "key": 7017
+        },
+        {
+          "rank": "genus",
+          "name": "Heliconius",
+          "key": 1900140
+        }
+      ],
       "warning": null
     },
     {
@@ -176,6 +515,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Insecta",
+          "key": 216
+        },
+        {
+          "rank": "order",
+          "name": "Lepidoptera",
+          "key": 797
+        },
+        {
+          "rank": "family",
+          "name": "Nymphalidae",
+          "key": 7017
+        },
+        {
+          "rank": "genus",
+          "name": "Heliconius",
+          "key": 1900140
+        }
+      ],
       "warning": null
     },
     {
@@ -189,6 +560,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Plantae",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Plantae",
+          "key": 6
+        },
+        {
+          "rank": "phylum",
+          "name": "Tracheophyta",
+          "key": 7707728
+        },
+        {
+          "rank": "class",
+          "name": "Magnoliopsida",
+          "key": 220
+        },
+        {
+          "rank": "order",
+          "name": "Ranunculales",
+          "key": 399
+        },
+        {
+          "rank": "family",
+          "name": "Lardizabalaceae",
+          "key": 2412
+        },
+        {
+          "rank": "genus",
+          "name": "Boquila",
+          "key": 7306114
+        }
+      ],
       "warning": null
     },
     {
@@ -208,6 +611,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Fungi",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Fungi",
+          "key": 5
+        },
+        {
+          "rank": "phylum",
+          "name": "Basidiomycota",
+          "key": 34
+        },
+        {
+          "rank": "class",
+          "name": "Pucciniomycetes",
+          "key": 270
+        },
+        {
+          "rank": "order",
+          "name": "Pucciniales",
+          "key": 1126
+        },
+        {
+          "rank": "family",
+          "name": "Pucciniaceae",
+          "key": 3251
+        },
+        {
+          "rank": "genus",
+          "name": "Puccinia",
+          "key": 9533895
+        }
+      ],
       "warning": null
     },
     {
@@ -227,6 +662,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Arachnida",
+          "key": 367
+        },
+        {
+          "rank": "order",
+          "name": "Araneae",
+          "key": 1496
+        },
+        {
+          "rank": "family",
+          "name": "Salticidae",
+          "key": 5644
+        },
+        {
+          "rank": "genus",
+          "name": "Myrmaplata",
+          "key": 9097926
+        }
+      ],
       "warning": null
     },
     {
@@ -240,6 +707,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Insecta",
+          "key": 216
+        },
+        {
+          "rank": "order",
+          "name": "Hymenoptera",
+          "key": 1457
+        },
+        {
+          "rank": "family",
+          "name": "Formicidae",
+          "key": 4342
+        },
+        {
+          "rank": "genus",
+          "name": "Oecophylla",
+          "key": 1317383
+        }
+      ],
       "warning": null
     },
     {
@@ -253,6 +752,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Insecta",
+          "key": 216
+        },
+        {
+          "rank": "order",
+          "name": "Diptera",
+          "key": 811
+        },
+        {
+          "rank": "family",
+          "name": "Syrphidae",
+          "key": 6920
+        },
+        {
+          "rank": "genus",
+          "name": "Eristalis",
+          "key": 1491190
+        }
+      ],
       "warning": null
     },
     {
@@ -266,6 +797,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Insecta",
+          "key": 216
+        },
+        {
+          "rank": "order",
+          "name": "Hymenoptera",
+          "key": 1457
+        },
+        {
+          "rank": "family",
+          "name": "Apidae",
+          "key": 4334
+        },
+        {
+          "rank": "genus",
+          "name": "Apis",
+          "key": 1334757
+        }
+      ],
       "warning": null
     },
     {
@@ -279,6 +842,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Insecta",
+          "key": 216
+        },
+        {
+          "rank": "order",
+          "name": "Lepidoptera",
+          "key": 797
+        },
+        {
+          "rank": "family",
+          "name": "Nymphalidae",
+          "key": 7017
+        },
+        {
+          "rank": "genus",
+          "name": "Limenitis",
+          "key": 5131972
+        }
+      ],
       "warning": null
     },
     {
@@ -292,6 +887,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Insecta",
+          "key": 216
+        },
+        {
+          "rank": "order",
+          "name": "Lepidoptera",
+          "key": 797
+        },
+        {
+          "rank": "family",
+          "name": "Nymphalidae",
+          "key": 7017
+        },
+        {
+          "rank": "genus",
+          "name": "Danaus",
+          "key": 5133087
+        }
+      ],
       "warning": null
     },
     {
@@ -305,6 +932,38 @@
       "gbif_rank": "SPECIES",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Insecta",
+          "key": 216
+        },
+        {
+          "rank": "order",
+          "name": "Phasmida",
+          "key": 1460
+        },
+        {
+          "rank": "family",
+          "name": "Phasmatidae",
+          "key": 5108
+        },
+        {
+          "rank": "genus",
+          "name": "Extatosoma",
+          "key": 1413558
+        }
+      ],
       "warning": null
     },
     {
@@ -324,6 +983,38 @@
       "gbif_rank": "GENUS",
       "gbif_kingdom": "Animalia",
       "gbif_status": "accepted/taxon",
+      "gbif_classification": [
+        {
+          "rank": "kingdom",
+          "name": "Animalia",
+          "key": 1
+        },
+        {
+          "rank": "phylum",
+          "name": "Arthropoda",
+          "key": 54
+        },
+        {
+          "rank": "class",
+          "name": "Arachnida",
+          "key": 367
+        },
+        {
+          "rank": "order",
+          "name": "Araneae",
+          "key": 1496
+        },
+        {
+          "rank": "family",
+          "name": "Thomisidae",
+          "key": 6163
+        },
+        {
+          "rank": "genus",
+          "name": "Phrynarachne",
+          "key": 2166456
+        }
+      ],
       "warning": null
     },
     {
