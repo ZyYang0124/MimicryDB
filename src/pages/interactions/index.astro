@@ -10,7 +10,7 @@ const cols=[['id','ID'],['mimic','Mimic'],['model','Model'],['type','Type'],['ev
 <td class="py-3 pr-4 font-semibold"><a class="hover:underline" href={`/MimicryDB/taxa/${slugify(i.mimic)}/`}>{i.mimic}</a></td>
 <td class="py-3 pr-4 font-semibold"><a class="hover:underline" href={`/MimicryDB/taxa/${slugify(i.model)}/`}>{i.model}</a>{i.modelKind&&i.modelKind!=='organism'?<span class="pill ml-2">{i.modelKind}</span>:null}</td>
 <td class="py-3 pr-4 text-sm">{i.type}</td>
-<td class="py-3 pr-4"><span class="pill">{i.evidence}</span></td>
+<td class="py-3 pr-4"><span class="pill grade-{i.evidence}"></span></td>
 <td class="py-3 pr-4 text-sm text-slate-600">{i.kingdoms}</td></tr>)}</tbody></table></div><p id="empty" class="mt-8 hidden text-slate-600">No interactions match the current filters.</p><p class="mt-4 text-sm text-slate-600">Showing <span id="count"></span> of {interactions.length} sample records. Pagination will be introduced with the live database backend.</p></div>
 <script>const $=(id:string)=>document.getElementById(id)!;const q=$('q') as HTMLInputElement;const ty=$('type') as HTMLSelectElement;const g=$('grade') as HTMLSelectElement;const mk=$('mkind') as HTMLSelectElement;const xk=$('xking') as HTMLSelectElement;
 const rows=[...document.querySelectorAll('.interaction-row')] as HTMLElement[];const btns=[...document.querySelectorAll('.sort-btn')] as HTMLButtonElement[];

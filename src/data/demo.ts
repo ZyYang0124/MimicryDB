@@ -23,3 +23,20 @@ export const interactions:Interaction[]=[
 {id:'MIMICRY:000012',mimic:'Limenitis archippus',model:'Danaus plexippus',receiver:'predator',type:'Batesian / Müllerian (debated)',evidence:'E3',kingdoms:'Animalia → Animalia',summary:'The viceroy resembles the monarch; long taught as Batesian, its interpretation is debated since both species show some unpalatability — recorded here with the dispute visible.',reference:'Demo record — sample data',modalities:['visual','colour','pattern'],knowledge:'reported',modelKind:'organism',refs:[demoRef(12)]},
 {id:'MIMICRY:000013',mimic:'Extatosoma tiaratum',model:'foliage and twigs',receiver:'visual predators',type:'masquerade (leaf/plant mimicry)',evidence:'E2',kingdoms:'Animalia → environment',summary:'The spiny leaf insect resembles foliage and dried leaves; nymphs additionally curl their abdomens to imitate ants before switching to leaf resemblance.',reference:'Demo record — sample data',modalities:['visual','morphological','locomotor'],knowledge:'reported',modelKind:'environment',refs:[demoRef(13)]},
 {id:'MIMICRY:000014',mimic:'Phrynarachne',model:'bird droppings',receiver:'visual predators and prey',type:'masquerade (object mimicry)',evidence:'E2',kingdoms:'Animalia → object',summary:'These crab spiders resemble bird droppings in coloration and silk-mark arrangement, hiding from predators and luring dung-seeking insects.',reference:'Demo record — sample data',modalities:['visual','colour'],knowledge:'reported',modelKind:'object',refs:[demoRef(14)]}];
+/** Chinese display summaries for the demo records (presentation only — the English
+ *  summary and the verbatim evidence remain the scientific source of truth). */
+export const summaryZh:Record<string,string>={
+ 'MIMICRY:000001':'食蚜蝇在形态与行为上酷似蚂蚁。',
+ 'MIMICRY:000002':'蜂兰花的花朵拟态雌蜂外形与气味，吸引雄蜂前来"交配"从而完成传粉。',
+ 'MIMICRY:000003':'无毒的拟珊瑚蛇酷似剧毒的珊瑚蛇。',
+ 'MIMICRY:000004':'大杜鹃产下的卵在大小与底色上常与宿主（如苇莺）卵相近，从而降低被宿主认出并弃巢的概率。',
+ 'MIMICRY:000005':'雌性 Photuris 萤火虫模仿 Photinus 属雌虫的求偶闪光信号，引诱应答前来的雄虫并将其捕食。',
+ 'MIMICRY:000006':'Plagiotremus rhinorhynchos 在体形、体色与游动姿态上模仿清洁鱼裂唇鱼，借此接近"客户鱼"并啄食其鳞片与组织。',
+ 'MIMICRY:000007':'同域分布的袖蝶属物种共享翅面斑纹，把捕食者的"学习成本"分摊到各物种身上。',
+ 'MIMICRY:000008':'这种攀援藤本的叶片形似其攀附对象（邻近植物）的叶片；其机制与接收者反应仍存争议。',
+ 'MIMICRY:000009':'该锈菌将寄主组织改造为散发甜香的"假花"，吸引昆虫来访并帮助传播孢子。',
+ 'MIMICRY:000010':'跳蛛 Myrmarachne plataleoides 以蚁形的体态与步态，生活在黄猄蚁群落中并酷似蚂蚁。',
+ 'MIMICRY:000011':'黑带食蚜蝇在体色与行为上酷似意大利蜜蜂；其接收者反应已有定量与实验研究。',
+ 'MIMICRY:000012':'副王蛱蝶形似帝王蝶；因两者皆具一定不可食性，其贝氏/穆氏拟态解释长期存在争议——本记录如实保留分歧。',
+ 'MIMICRY:000013':'叶䗛（竹节虫）形似树叶与枝条；低龄若虫还会蜷曲腹部拟态蚂蚁，随后转为拟叶。',
+ 'MIMICRY:000014':'鸟粪蜘蛛的体色与丝线布置酷似鸟粪，既借此躲开捕食者，也吸引觅粪的昆虫自投罗网。'};
