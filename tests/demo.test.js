@@ -27,11 +27,21 @@ test('records are directional: mimic differs from model',()=>{
 
 test('kingdom flow notation is well-formed',()=>{
   const kingdoms=new Set(['Animalia','Plantae','Fungi','Protista','Monera','Bacteria','Archaea']);
+  const modelSide=new Set([...kingdoms,'environment','object']); // non-taxonomic models are explicit
   for(const i of interactions){
     const parts=i.kingdoms.split(' → ').map(x=>x.trim());
     assert.equal(parts.length,2,`${i.id}: kingdoms must be "X → Y"`);
-    assert.ok(parts.every(p=>kingdoms.has(p)),`${i.id}: unknown kingdom in "${i.kingdoms}"`);
+    assert.ok(kingdoms.has(parts[0]),`${i.id}: unknown mimic kingdom in "${i.kingdoms}"`);
+    assert.ok(modelSide.has(parts[1]),`${i.id}: unknown model kingdom in "${i.kingdoms}"`);
+    if(parts[1]==='environment')assert.equal(i.modelKind,'environment',`${i.id}: environment model side needs model_kind`);
+    if(parts[1]==='object')assert.equal(i.modelKind,'object',`${i.id}: object model side needs model_kind`);
   }
+});
+
+test('model kinds stay inside the controlled vocabulary',async()=>{
+  const {default:vocab}=await import('../data/controlled-vocabularies.json',{with:{type:'json'}});
+  const kinds=new Set(vocab.model_kind.map(t=>t.term));
+  for(const i of interactions)assert.ok(kinds.has(i.modelKind??'organism'),`${i.id}: model_kind outside vocabulary`);
 });
 
 test('provider round-trips public IDs',()=>{

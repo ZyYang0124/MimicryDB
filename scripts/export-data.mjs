@@ -19,8 +19,8 @@ const write=(name,content)=>{writeFileSync(join(outDir,name),content+'\n');retur
 
 const files=[];
 files.push(write('interactions.csv',csv(
- ['public_id','mimic','model','receiver','mimicry_type','signal_modalities','knowledge_status','evidence_grade','kingdom_flow','mimicry_summary','data_status'],
- interactions.map(i=>[i.id,i.mimic,i.model,i.receiver,i.type,(i.modalities??[]).join(';'),i.knowledge??'reported',i.evidence,i.kingdoms,i.summary,'DEMO']))));
+ ['public_id','mimic','model','model_kind','receiver','mimicry_type','signal_modalities','knowledge_status','evidence_grade','kingdom_flow','mimicry_summary','data_status'],
+ interactions.map(i=>[i.id,i.mimic,i.model,i.modelKind??'organism',i.receiver,i.type,(i.modalities??[]).join(';'),i.knowledge??'reported',i.evidence,i.kingdoms,i.summary,'DEMO']))));
 files.push(write('taxa.csv',csv(
  ['name','slug','acts_as_mimic_in','acts_as_model_in','lineages','data_status'],
  data.taxa().map(t=>[t.name,t.slug,t.asMimic,t.asModel,t.lineages,'DEMO']))));

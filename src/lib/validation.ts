@@ -2,6 +2,8 @@ import vocab from '../../data/controlled-vocabularies.json' with {type:'json'};
 export type Row=Record<string,string>;
 export type Report={errors:string[];warnings:string[];duplicates:string[]};
 const KINGDOMS=new Set(['Animalia','Plantae','Fungi','Protista','Monera','Bacteria','Archaea']);
+const MODEL_SIDE=new Set([...KINGDOMS,'environment','object']); // models may be an environment or an inanimate object rather than a taxon
+const MODEL_KINDS=new Set(vocab.model_kind.map(t=>t.term));
 export const HEADER=['public_id','mimic','model','receiver','mimicry_type','signal_modalities','knowledge_status','evidence_grade','mimicry_summary','kingdom_flow','data_status'] as const;
 const GRADES=new Set(vocab.evidence_grade);
 const MODS=new Set(vocab.signal_modality.flatMap(t=>[t.term,t.label.toLowerCase()]));
@@ -17,7 +19,8 @@ export const validateRow=(row:Row,seenIds:Set<string>,existing:Row[]=[],index=0)
   if(row.knowledge_status&&row.knowledge_status!=='reported'&&row.knowledge_status!=='supported'&&row.knowledge_status!=='inferred')
     r.errors.push(`${at}: knowledge_status must be reported|supported|inferred`);
   const [mk,dk]=String(row.kingdom_flow??'').split(' → ').map(x=>x.trim());
-  if(!mk||!dk||!KINGDOMS.has(mk)||!KINGDOMS.has(dk))r.errors.push(`${at}: kingdom_flow must be "X → Y" with known kingdoms`);
+  if(!mk||!dk||!KINGDOMS.has(mk)||!MODEL_SIDE.has(dk))r.errors.push(`${at}: kingdom_flow must be "X → Y" with known kingdoms (model side may be environment/object)`);
+  if(row.model_kind&&!MODEL_KINDS.has(row.model_kind))r.errors.push(`${at}: model_kind outside controlled vocabulary`);
   for(const m of (row.signal_modalities??'').split(';').map(x=>x.trim()).filter(Boolean))
     if(!MODS.has(m))r.warnings.push(`${at}: modality "${m}" outside controlled vocabulary`);
   const pair=`${row.mimic} → ${row.model}`;
