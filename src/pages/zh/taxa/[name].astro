@@ -1,6 +1,5 @@
 ---
-import Layout from '../../../layouts/Layout.astro'; import {data,gbifFor} from '../../../data/provider'; import {strings} from '../../../i18n';
-const s=strings('zh');
+import Layout from '../../../layouts/Layout.astro'; import {data,gbifFor} from '../../../data/provider'; 
 export const prerender=true; export function getStaticPaths(){return data.taxa().map(t=>({params:{name:t.slug}}));}
 const t=data.taxa().find(x=>x.slug===Astro.params.name); const related=t?data.all().filter(i=>i.mimic===t.name||i.model===t.name):[];
 const g=t?gbifFor(t.name):undefined;

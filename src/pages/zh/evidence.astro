@@ -1,6 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider'; import {strings} from '../../i18n';
-const s=strings('zh');
+import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider'; 
 const grades=[['E0','仅相似性措辞','文献中仅记录了相似性描述，没有明确的拟态主张或支持数据。'],['E1','作者明确提出','被引作者明确提出这是拟态关系，但缺乏进一步支持。'],['E2','生态/地理/行为学支持','分布、季节性或行为与所提拟态关系一致。'],['E3','定量或实验证据（相似性或接收者反应）','测量或实验证明了相似性，或接收者对信号有反应。'],['E4','直接的实验生物学结果','实验证明了该交互对模仿者或接收者的生物学结果（存活、捕食、传粉、交配等）。']];
 const interactions=data.all(); const total=interactions.length;
 const counts=grades.map(([g])=>interactions.filter(i=>i.evidence===g).length);

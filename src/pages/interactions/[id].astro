@@ -1,7 +1,38 @@
 ---
-import Layout from '../../layouts/Layout.astro'; import {data,slugify} from '../../data/provider';
+import Layout from '../../layouts/Layout.astro'; import {data,imageFor,slugify} from '../../data/provider';
 export const prerender=true; export function getStaticPaths(){return data.all().map(i=>({params:{id:i.id.replace(':','-')}}));}
 const i=data.byId(Astro.params.id??''); const refs=i?data.refsFor(i.id):[];
+const img=i?(imageFor(i.mimic)??imageFor(i.model)):undefined;
+const litRows=(refs??[]).map(r=>({id:r.id,title:r.title,meta:r.id+(r.doi?' · DOI '+r.doi:'')+' · supports '+data.interactionsForRef(r.id).length+' record(s)'}));
+const related=i?data.all().filter(x=>x.id!==i.id&&(x.mimic===i.mimic||x.model===i.model||x.type===i.type)).slice(0,4):[];
 ---
-<Layout>{i?<div class="container py-12"><a href="/MimicryDB/interactions/">← All interactions</a><h1 class="mt-6 text-4xl font-bold"><a class="hover:underline" href={`/MimicryDB/taxa/${slugify(i.mimic)}/`}>{i.mimic}</a> <span class="text-coral">→</span> <a class="hover:underline" href={`/MimicryDB/taxa/${slugify(i.model)}/`}>{i.model}</a></h1><p class="mt-2 text-sm text-slate-600">{i.id} · {i.kingdoms} · model kind: {i.modelKind??'organism'} · knowledge status: {i.knowledge??'reported'} <span class="pill ml-2">DEMO</span></p><div class="mt-6 grid gap-5 md:grid-cols-2"><div class="card"><h2 class="font-bold">Scientific summary</h2><p class="mt-3">{i.summary}</p><p class="mt-4"><strong>Receiver:</strong> {i.receiver}<br/><strong>Type:</strong> {i.type}<br/><strong>Evidence:</strong> <a class="inline-block" href="/MimicryDB/evidence/"><span class={`pill grade-${i.evidence}`}></span></a></p>{i.modalities?.length?<p class="mt-4"><strong>Signal modalities:</strong>{i.modalities.map(m=><span class="pill mr-2 ml-1">{m}</span>)}</p>:null}</div><div class="card"><h2 class="font-bold">Provenance</h2><p class="mt-3">{i.reference}</p>{refs.length?<ul class="mt-3 list-disc pl-5 text-sm">{refs.map(r=><li><a class="hover:underline" href={`/MimicryDB/references/${r.id}/`}>{r.title}</a></li>)}</ul>:null}<p class="mt-4 text-sm text-slate-600">This sample record is explicitly labeled demo data and is not a published scientific claim.</p></div></div>
-<h2 class="mt-10 text-2xl font-bold">Related records</h2><div class="mt-4 grid gap-4 md:grid-cols-2">{data.all().filter(x=>x.id!==i.id&&(x.mimic===i.mimic||x.model===i.model||x.type===i.type)).slice(0,4).map(x=><a class="card block text-ink hover:border-teal" href={`/MimicryDB/interactions/${x.id.replace(':','-')}/`}><div class="text-lg font-semibold">{x.mimic} <span class="text-coral">→</span> {x.model}</div><div class="mt-2 text-sm text-slate-600">{x.type} · {x.evidence}</div></a>)}</div></div>:<div class="container py-16"><h1 class="text-3xl font-bold">Interaction not found</h1></div>}</Layout>
+<Layout title={i?`${i.mimic} → ${i.model} · MimicryDB`:'Not found · MimicryDB'}>{i?<article>
+<div class="grid lg:grid-cols-2">
+<figure class="relative bg-mist lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] min-h-[320px] overflow-hidden">
+{img?<img src={img.file} alt={`${i.mimic} — photograph`} class="absolute inset-0 h-full w-full object-cover"/>:
+<div class="absolute inset-0 flex items-center justify-center bg-ink"><span class="font-serif text-[10rem] text-white/10 italic">{i.mimic.slice(0,1)}</span></div>}
+{img?<figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-xs text-white/85">{i.mimic} · © {img.artist}, {img.license}, via <a class="underline" href={img.page}>Wikimedia Commons</a></figcaption>:
+<figcaption class="absolute bottom-4 left-0 right-0 text-center text-xs text-white/60">photograph pending — sourced from Wikimedia Commons with attribution once available</figcaption>}
+</figure>
+<div class="px-6 lg:px-16 py-14 max-w-2xl">
+<p class="text-xs uppercase tracking-[0.25em] text-slate-500">{i.id} · {i.type} <span class="pill ml-3">DEMO</span></p>
+<h1 class="mt-6 text-5xl font-bold font-serif leading-[1.08]"><em>{i.mimic}</em> <span class="text-coral">→</span> {i.model}</h1>
+<p class="mt-4 text-sm text-slate-600">{i.kingdoms} · model kind: {i.modelKind??'organism'} · knowledge status: {i.knowledge??'reported'} · evidence <span class={`pill grade-${i.evidence}`}>{i.evidence}</span></p>
+<h2 class="mt-12 text-xs uppercase tracking-[0.25em] text-slate-500">Scientific summary</h2>
+<p class="mt-4 text-xl leading-relaxed">{i.summary}</p>
+<dl class="mt-12 grid grid-cols-2 gap-x-8 gap-y-6 text-sm">
+<div><dt class="text-xs uppercase tracking-[0.2em] text-slate-500">Receiver</dt><dd class="mt-2">{i.receiver}</dd></div>
+<div><dt class="text-xs uppercase tracking-[0.2em] text-slate-500">Signal modalities</dt><dd class="mt-2">{i.modalities?.join(' · ')??'—'}</dd></div>
+<div><dt class="text-xs uppercase tracking-[0.2em] text-slate-500">Mimic taxon</dt><dd class="mt-2"><a class="underline" href={`/MimicryDB/taxa/${slugify(i.mimic)}/`}>{i.mimic}</a></dd></div>
+<div><dt class="text-xs uppercase tracking-[0.2em] text-slate-500">Model</dt><dd class="mt-2"><a class="underline" href={`/MimicryDB/taxa/${slugify(i.model)}/`}>{i.model}</a></dd></div>
+</dl>
+<h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">Literature support</h2>
+<div class="mt-6 space-y-4 border-l-2 border-ink/10 pl-6">
+{litRows.map(r=><div><p class="font-serif italic">{r.title}</p><p class="mt-1 text-xs text-slate-600 mono">{r.meta} · <a class="underline" href={"/MimicryDB/references/"+r.id+'/'}>view record</a></p></div>)}
+<p class="text-sm text-slate-600">In production, every published claim links to the exact passage — page, section, figure — of these sources, with the curator's grade reason attached. This demo record carries placeholder references and makes no scientific claim.</p>
+</div>
+<h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">Related records</h2>
+<div class="mt-6 grid gap-4 sm:grid-cols-2">{related.map(x=><a class="card" href={`/MimicryDB/interactions/${x.id.replace(':','-')}/`}><div class="font-semibold"><em>{x.mimic}</em> <span class="text-coral">→</span> {x.model}</div><div class="mt-2 text-xs text-slate-600">{x.type} · <span class={`pill grade-${x.evidence}`}>{x.evidence}</span></div></a>)}</div>
+</div>
+</div>
+</article>:<div class="container py-16"><h1 class="text-3xl font-bold">Interaction not found</h1></div>}</Layout>

@@ -4,7 +4,7 @@
 // pages must render the credit line. Public-domain / CC0 / CC-BY candidates are
 // preferred over CC BY-SA. No license field = image is not used.
 import {data} from '../src/data/provider.ts';
-import {writeFileSync, mkdirSync} from 'node:fs';
+import {writeFileSync, mkdirSync, readFileSync, existsSync} from 'node:fs';
 import {slugify} from '../src/data/provider.ts';
 
 const API='https://commons.wikimedia.org/w/api.php';
@@ -18,27 +18,36 @@ const get=async(url,tries=3)=>{
 const strip=(html)=>String(html??'').replace(/<[^>]*>/g,'').trim();
 const licenseRank=(l)=>/public domain/i.test(l)?0:/cc0/i.test(l)?1:/^cc by(-sa)? [1-3]/i.test(l)?2:/^cc by\(/i.test(l)?3:/^cc by-sa/i.test(l)?4:9;
 
-const out={generated:new Date().toISOString(),source:'Wikimedia Commons',policy:'Openly licensed photographs; attribution is rendered on every page alongside the image.',images:{}};
+const outPath=new URL('../data/images.json',import.meta.url);
+const out=existsSync(outPath)?JSON.parse(readFileSync(outPath,'utf8')):{generated:'',source:'Wikimedia Commons',policy:'Openly licensed photographs; attribution is rendered on every page alongside the image.',images:{}};
+out.generated=new Date().toISOString();
 const taxa=data.taxa(); let found=0,misses=[];
 mkdirSync(new URL('../public/images/',import.meta.url),{recursive:true});
+const query=async(name)=>get(`${API}?action=query&generator=search&gsrsearch=${encodeURIComponent(name+' filetype:bitmap')}&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url|extmetadata|mime|size&iiurlwidth=1400&format=json`);
 for(const t of taxa){
   const slug=slugify(t.name);
-  try{
-    const j=await get(`${API}?action=query&generator=search&gsrsearch=${encodeURIComponent(t.name)}&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url|extmetadata|mime|size&iiurlwidth=1400&format=json`);
-    const pages=Object.values(j.query?.pages??{});
-    const cands=[];
-    for(const p of pages){
-      const ii=p.imageinfo?.[0]; if(!ii)continue;
-      if(!/^image\/(jpeg|png)$/.test(ii.mime??''))continue;
-      if((ii.width??0)<500)continue;
-      if(/map|distribution|range|diagram|logo|icon|graph/i.test(p.title))continue;
-      const em=ii.extmetadata??{};
-      const license=strip(em.LicenseShortName?.value)||'unknown';
-      const artist=strip(em.Artist?.value)||'Wikimedia Commons contributor';
-      cands.push({title:p.title,thumb:ii.thumburl||ii.url,page:ii.descriptionurl,license,licenseUrl:em.LicenseUrl?.value??'',artist,rank:licenseRank(license)});
+  if(out.images[slug]){found++;continue;} // incremental: keep already-fetched images
+  const tryFetch=async()=>{
+    let cands=[];
+    for(const q of [t.name, /^[A-Z][a-z]+/.test(t.name)&&t.name.split(' ').length>1?t.name.split(' ')[0]:null]){
+      if(!q)continue;
+      const j=await query(q);
+      for(const p of Object.values(j.query?.pages??{})){
+        const ii=p.imageinfo?.[0]; if(!ii)continue;
+        if(!/^image\/(jpeg|png)$/.test(ii.mime??''))continue;
+        if((ii.width??0)<500)continue;
+        if(/map|distribution|range|diagram|logo|icon|graph|skull|skeleton/i.test(p.title))continue;
+        const em=ii.extmetadata??{};
+        const license=strip(em.LicenseShortName?.value)||'unknown';
+        const artist=strip(em.Artist?.value)||'Wikimedia Commons contributor';
+        cands.push({title:p.title,thumb:ii.thumburl||ii.url,page:ii.descriptionurl,license,licenseUrl:em.LicenseUrl?.value??'',artist,rank:licenseRank(license)});
+      }
+      if(cands.length)break;
     }
-    cands.sort((a,b)=>a.rank-b.rank);
-    const pick=cands.find(c=>c.rank<=4);
+    return cands.sort((a,b)=>a.rank-b.rank).find(c=>c.rank<=4);
+  };
+  try{
+    const pick=await tryFetch();
     if(pick){
       const ext=pick.thumb.toLowerCase().includes('.png')?'png':'jpg';
       const img=await fetch(pick.thumb,{headers:{'User-Agent':'MimicryDB-prototype/0.3'}});
@@ -51,5 +60,6 @@ for(const t of taxa){
   }catch(e){misses.push(`${t.name} (${e.message})`);}
   await new Promise(r=>setTimeout(r,120));
 }
-writeFileSync(new URL('../data/images.json',import.meta.url),JSON.stringify(out,null,2));
+writeFileSync(outPath,JSON.stringify(out,null,2));
 console.log(`images: ${found}/${taxa.length} taxa illustrated${misses.length?` — missing: ${misses.join('; ')}`:''}`);
+

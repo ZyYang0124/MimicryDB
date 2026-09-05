@@ -1,0 +1,16 @@
+{
+  "generated": "2026-09-05T15:17:56.754Z",
+  "source": "Wikimedia Commons",
+  "policy": "Openly licensed photographs; attribution is rendered on every page alongside the image.",
+  "images": {
+    "extatosoma-tiaratum": {
+      "taxon": "Extatosoma tiaratum",
+      "file": "/MimicryDB/images/extatosoma-tiaratum.jpg",
+      "title": "File:Extatosoma tiaratum 119.JPG",
+      "page": "https://commons.wikimedia.org/wiki/File:Extatosoma_tiaratum_119.JPG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "Stephan M. Höhne"
+    }
+  }
+}

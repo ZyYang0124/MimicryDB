@@ -1,6 +1,5 @@
 ---
-import Layout from '../../../layouts/Layout.astro'; import {data} from '../../../data/provider'; import {strings} from '../../../i18n';
-const s=strings('zh');
+import Layout from '../../../layouts/Layout.astro'; import {data} from '../../../data/provider'; 
 export const prerender=true; export function getStaticPaths(){return data.references().map(r=>({params:{id:r.ref.id}}));}
 const r=data.references().find(x=>x.ref.id===Astro.params.id); const supported=r?data.interactionsForRef(r.ref.id):[];
 ---

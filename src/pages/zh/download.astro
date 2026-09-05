@@ -1,6 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider'; import {csv} from '../../lib/csv.ts'; import {strings} from '../../i18n';
-const s=strings('zh');
+import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider'; import {csv} from '../../lib/csv.ts'; 
 const interactions=data.all();
 const rows=interactions.map(i=>[i.id,i.mimic,i.model,i.modelKind??'organism',i.receiver,i.type,(i.modalities??[]).join(';'),i.knowledge??'reported',i.evidence,i.kingdoms,'DEMO']);
 const file=csv(['public_id','mimic','model','model_kind','receiver','type','signal_modalities','knowledge_status','evidence_grade','kingdom_flow','data_status'],rows);

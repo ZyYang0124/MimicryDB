@@ -1,6 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider'; import {strings} from '../../i18n';
-const s=strings('zh');
+import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider'; 
 const idx=[
  ...data.taxa().map(t=>({kind:'taxon',text:t.name,label:t.name,href:`/MimicryDB/zh/taxa/${t.slug}/`,meta:`模仿者 ${t.asMimic} 次 · 模型 ${t.asModel} 次`})),
  ...data.all().map(i=>({kind:'interaction',text:`${i.mimic} ${i.model} ${i.id} ${i.type} ${i.receiver} ${i.summary}`,label:`${i.mimic} → ${i.model}`,href:`/MimicryDB/zh/interactions/${i.id.replace(':','-')}/`,meta:`${i.id} · ${i.type} · ${i.evidence}`})),
