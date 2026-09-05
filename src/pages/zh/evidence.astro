@@ -1,0 +1,9 @@
+---
+import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider'; import {strings} from '../../i18n';
+const s=strings('zh');
+const grades=[['E0','仅相似性措辞','文献中仅记录了相似性描述，没有明确的拟态主张或支持数据。'],['E1','作者明确提出','被引作者明确提出这是拟态关系，但缺乏进一步支持。'],['E2','生态/地理/行为学支持','分布、季节性或行为与所提拟态关系一致。'],['E3','定量或实验证据（相似性或接收者反应）','测量或实验证明了相似性，或接收者对信号有反应。'],['E4','直接的实验生物学结果','实验证明了该交互对模仿者或接收者的生物学结果（存活、捕食、传粉、交配等）。']];
+const interactions=data.all(); const total=interactions.length;
+const counts=grades.map(([g])=>interactions.filter(i=>i.evidence===g).length);
+const max=Math.max(...counts,1);
+---
+<Layout lang="zh" title="证据等级 · MimicryDB"><div class="container py-12"><h1 class="text-4xl font-bold">证据等级</h1><p class="mt-3 max-w-2xl">每条记录都带有 E0–E4 证据等级。"报道了相似性"不等于"证明了拟态"——等级让这一区别显式可见。策展人必须记录定级理由与证据原文；绝不允许仅凭关键词机械定级。</p><h2 class="mt-10 text-2xl font-bold">等级分布</h2><p class="mt-2 text-sm text-slate-600">基于 {total} 条标注的演示记录——展示的是框架本身，不是科学结论。</p><div class="card mt-4 p-5">{grades.map(([g],idx)=>{const c=counts[idx];return <div class="flex items-center gap-3 py-1"><span class={`pill w-10 text-center grade-${g}`}>{g}</span><div class="flex-1 h-4 rounded bg-slate-100 overflow-hidden"><div class="h-full bg-teal" style={`width:${Math.round(c/max*100)}%`}></div></div><span class="text-sm text-slate-600 w-24">{c} 条记录</span></div>;})}</div><h2 class="mt-10 text-2xl font-bold">定义</h2><div class="mt-4 grid gap-4">{grades.map(([g,label,desc])=><div class="card flex gap-4"><span class={`pill h-fit grade-${g}`}>{g}</span><div><div class="font-semibold">{label}</div><p class="mt-1 text-sm text-slate-600">{desc}</p></div></div>)}</div><p class="mt-8 text-sm text-slate-600">完整政策：<a href="https://github.com/ZyYang0124/MimicryDB/blob/main/docs/EVIDENCE_GUIDELINES.md">docs/EVIDENCE_GUIDELINES.md</a></p></div></Layout>

@@ -1,0 +1,9 @@
+---
+import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider'; import {csv} from '../../lib/csv.ts'; import {strings} from '../../i18n';
+const s=strings('zh');
+const interactions=data.all();
+const rows=interactions.map(i=>[i.id,i.mimic,i.model,i.modelKind??'organism',i.receiver,i.type,(i.modalities??[]).join(';'),i.knowledge??'reported',i.evidence,i.kingdoms,'DEMO']);
+const file=csv(['public_id','mimic','model','model_kind','receiver','type','signal_modalities','knowledge_status','evidence_grade','kingdom_flow','data_status'],rows);
+const json=JSON.stringify(interactions,null,2);
+---
+<Layout lang="zh" title="下载数据 · MimicryDB"><div class="container py-12"><h1 class="text-4xl font-bold">下载数据</h1><p class="mt-4">原型阶段的导出文件，内容为明确标注的演示数据集。科学数据许可与发布版本管理将在正式发布前确定（docs/RELEASE_POLICY.md）。</p><div class="mt-6 flex flex-wrap gap-4"><a class="btn btn-teal" download="mimicrydb-demo.csv" href={`data:text/csv;charset=utf-8,${encodeURIComponent(file)}`}>下载 CSV</a><a class="btn btn-ink" download="mimicrydb-demo.json" href={`data:application/json;charset=utf-8,${encodeURIComponent(json)}`}>下载 JSON</a></div><p class="mt-6 text-sm text-slate-600">共 {interactions.length} 条记录 · 仅为演示数据，不是科学发布版本。版本化数据发布由 <code>npm run release:data</code> 生成（见 docs/RELEASE_POLICY.md）。</p></div></Layout>

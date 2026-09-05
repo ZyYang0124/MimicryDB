@@ -1,0 +1,6 @@
+---
+import Layout from '../../../layouts/Layout.astro'; import {data} from '../../../data/provider'; import {strings} from '../../../i18n';
+const taxa=data.taxa();
+const kindZh=(l:string)=>({'Animalia':'动物界','Plantae':'植物界','Fungi':'真菌界','environment':'环境','object':'无生命对象'}[l]??l);
+---
+<Layout lang="zh" title="分类单元 · MimicryDB"><div class="container py-12"><h1 class="text-4xl font-bold">分类单元</h1><p class="mt-3">演示数据集中出现的模仿者与模型。名称与 GBIF 名录的对齐结果见各分类页。</p><div class="mt-8 grid gap-3 md:grid-cols-3">{taxa.map(t=><a class="card block text-ink hover:border-teal" href={`/MimicryDB/zh/taxa/${t.slug}/`}><div class="flex items-baseline justify-between gap-2"><span class="text-lg font-semibold italic">{t.name}</span><span class="pill">{t.lineages.split(' · ').map(kindZh).join(' · ')}</span></div><div class="mt-2 text-sm text-slate-600">作为模仿者 {t.asMimic} 次 · 作为模型 {t.asModel} 次</div></a>)}</div></div></Layout>
