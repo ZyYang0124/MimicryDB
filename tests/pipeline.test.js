@@ -84,6 +84,19 @@ test('query API supports the documented patterns (model=, kingdom=, min evidence
   assert.equal(plantMimics.total,2);
 });
 
+test('GBIF reconciliation report covers every taxon name and is reviewable',async()=>{
+  const {gbifFor}=await import('../src/data/provider.ts');
+  const {readFileSync}=await import('node:fs');
+  const report=JSON.parse(readFileSync(new URL('../data/reconciliation/gbif.json',import.meta.url),'utf8'));
+  assert.equal(report.policy.includes('never rewritten'),true,'report must state the no-rewrite policy');
+  for(const t of data.taxa()){
+    const m=gbifFor(t.name);
+    assert.ok(m,`no reconciliation entry for ${t.name}`);
+    if(['EXACT','FUZZY'].includes(m.matchType))assert.ok(m.gbif_usageKey,`${t.name}: ${m.matchType} match requires usageKey`);
+    if(m.matchType==='NOT_A_SCIENTIFIC_NAME')assert.ok(m.note.includes('curation'),`${t.name}: descriptive entries must request curation`);
+  }
+});
+
 test('evidence export invariants: grades align between interaction and vocabularies',()=>{
   const grades=new Set(vocab.evidence_grade);
   for(const i of interactions)assert.ok(grades.has(i.evidence),`${i.id}: grade not in vocabulary`);

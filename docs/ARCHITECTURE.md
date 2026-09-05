@@ -27,6 +27,7 @@ PostgreSQL migrations live in `supabase/migrations/`:
 ## Pipeline
 
 - `npm run validate:data` — dataset integrity + vocabulary conformance (runs in CI)
+- `npm run reconcile:gbif` — match dataset names against the GBIF backbone into `data/reconciliation/gbif.json`; reviewable only, names are never rewritten (`docs/TAXONOMY_POLICY.md`); surfaced on taxon pages
 - `npm run export:data` — versioned CSV release set + metadata + SHA256 checksums into `export/`
 - `npm run generate:seed` — regenerate `supabase/seed.sql`
 - `npm run release:data` — validate + export; `.github/workflows/release-data.yml` attaches the set to a GitHub Release
