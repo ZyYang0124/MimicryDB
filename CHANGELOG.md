@@ -2,6 +2,19 @@
 
 All notable changes to MimicryDB. Versions follow semver; data releases are tagged `data-vX.Y.Z` (see docs/RELEASE_POLICY.md).
 
+## [0.4.0] — 2026-09-05 evening iteration
+
+### Added
+- Model-kind axis: organism vs environment vs inanimate-object models (migration 003, vocabulary, filters, badges; new demo records Extatosoma tiaratum and Phrynarachne)
+- GBIF backbone reconciliation pipeline (npm run reconcile:gbif) with full rank classification; surfaced on taxon pages; reviewable, never rewrites names
+- Tree of Life homepage: GBIF-backed dendrogram with mimic/model distribution color-mapped (teal/coral/dark)
+- Hasselblad-inspired interaction pages: sticky species photograph (Wikimedia Commons, attributed), editorial right column, literature-support section; species thumbnails in explorers
+- Chinese version: mirrored /zh/ page tree (13 pages), language toggle, hreflang alternates, zh display summaries
+- npm run fetch:images pipeline storing license/artist manifests (data/images.json)
+
+### Changed
+- Design system refresh: serif display headings, refined palette, grade-colored evidence badges, sticky header, data tables
+
 ## [0.3.0] — 2026-09-05 (overnight iteration)
 
 ### Added

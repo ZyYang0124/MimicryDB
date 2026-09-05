@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05T15:17:56.754Z",
+  "generated": "2026-09-05T15:44:57.159Z",
   "source": "Wikimedia Commons",
   "policy": "Openly licensed photographs; attribution is rendered on every page alongside the image.",
   "images": {
@@ -11,6 +11,42 @@
       "license": "CC BY-SA 3.0",
       "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
       "artist": "Stephan M. Höhne"
+    },
+    "female-bee": {
+      "taxon": "female bee",
+      "file": "/MimicryDB/images/female-bee.jpg",
+      "title": "File:Inde bondo8658a.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Inde_bondo8658a.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Yves Picq\n\nhttp://veton.picq.fr/"
+    },
+    "plagiotremus-rhinorhynchos": {
+      "taxon": "Plagiotremus rhinorhynchos",
+      "file": "/MimicryDB/images/plagiotremus-rhinorhynchos.jpg",
+      "title": "File:Plagiotremus rhinorhynchos.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Plagiotremus_rhinorhynchos.jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Jenny (JennyHuang) from Taipei"
+    },
+    "boquila-trifoliolata": {
+      "taxon": "Boquila trifoliolata",
+      "file": "/MimicryDB/images/boquila-trifoliolata.jpg",
+      "title": "File:Boquila trifoliata.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Boquila_trifoliata.jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Inao"
+    },
+    "phrynarachne": {
+      "taxon": "Phrynarachne",
+      "file": "/MimicryDB/images/phrynarachne.jpg",
+      "title": "File:Phrynarachne katoi katoutukeogm03.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Phrynarachne_katoi_katoutukeogm03.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Keisotyo"
     }
   }
 }
