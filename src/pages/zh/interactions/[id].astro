@@ -13,7 +13,7 @@ const modZh=(m:string)=>({visual:'视觉',morphological:'形态',colour:'颜色'
 <figure class="relative bg-mist lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] min-h-[320px] overflow-hidden">
 {img?<img src={img.file} alt={`${i.mimic} 照片`} class="absolute inset-0 h-full w-full object-cover"/>:
 <div class="absolute inset-0 flex items-center justify-center bg-ink"><span class="font-serif text-[10rem] text-white/10 italic">{i.mimic.slice(0,1)}</span></div>}
-{img?<figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-xs text-white/85">{i.mimic} · © {img.artist}，{img.license}，来自 <a class="underline" href={img.page}>Wikimedia Commons</a></figcaption>:
+{img?<figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-xs text-white/85">{img.taxon} · © {img.artist}，{img.license}，来自 <a class="underline" href={img.page}>Wikimedia Commons</a></figcaption>:
 <figcaption class="absolute bottom-4 left-0 right-0 text-center text-xs text-white/60">照片待补充——获得可用授权图片后将附署名展示</figcaption>}
 </figure>
 <div class="px-6 lg:px-16 py-14 max-w-2xl">
