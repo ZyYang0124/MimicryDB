@@ -188,11 +188,15 @@ test('directed network covers every interaction once and lays out deterministica
     assert.ok(names.has(i.mimic),`network missing mimic node ${i.mimic}`);
     assert.ok(names.has(i.model),`network missing model node ${i.model}`);
   }
-  const cross=net.edges.filter(e=>e.crossKingdom);
-  assert.equal(cross.length,2,'demo dataset has 2 cross-kingdom edges');
+  // cross-kingdom edge count must track the data (provider query uses the same rule)
+  assert.equal(net.edges.filter(e=>e.crossKingdom).length,data.query({crossKingdomOnly:true,pageSize:1}).total,'cross-kingdom edges stay in sync with the dataset');
   const l1=layoutNetwork(net.nodes,net.edges);
   const l2=layoutNetwork(net.nodes,net.edges);
   assert.deepEqual(l1,l2,'force layout must be deterministic (no RNG)');
+  for(const n of net.nodes){
+    const m=data.all().filter(i=>i.mimic===n.name).length,mo=data.all().filter(i=>i.model===n.name).length;
+    assert.equal(n.mimic,m);assert.equal(n.model,mo);
+  }
   for(const p of l1.pos){
     assert.ok(p.x>=0&&p.x<=l1.width&&p.y>=0&&p.y<=l1.height,'node inside viewBox');
   }

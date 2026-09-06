@@ -47,3 +47,7 @@ table.data tbody tr:hover{background:#111}
 .pill.claim-model-identity{border-color:rgba(224,139,109,.55);color:#e08b6d;background:rgba(224,139,109,.07)}
 .pill.claim-receiver-response{border-color:rgba(216,198,144,.6);color:#d8c690;background:rgba(216,198,144,.07)}
 .pill.claim-mechanism,.pill.claim-distribution,.pill.claim-taxonomy{border-color:rgba(236,231,221,.25);color:#ece7dd;background:rgba(236,231,221,.05)}
+/* directed network: node names appear only on hover/focus (declutter) */
+svg .net-node text{opacity:0;transition:opacity .18s ease}
+svg .net-node:hover text,svg .net-node:focus text,svg .net-node:focus-within text{opacity:1}
+svg .net-node:hover circle,svg .net-node:focus circle{stroke:#ece7dd;stroke-width:1.6}
