@@ -177,3 +177,23 @@ test('twinPath mirrors every EN page to /zh/ and back (language toggle + hreflan
   }
   assert.equal(twinPath('/MimicryDB/zh/interactions/','zh'),'/MimicryDB/zh/interactions/','zh→zh stays put');
 });
+
+test('directed network covers every interaction once and lays out deterministically',async()=>{
+  const {buildNetwork,layoutNetwork}=await import('../src/lib/network.ts');
+  const net=buildNetwork();
+  assert.equal(net.edges.length,data.all().length,'one edge per interaction record');
+  assert.equal(new Set(net.edges.map(e=>e.interaction)).size,net.edges.length,'no duplicated edges');
+  const names=new Set(net.nodes.map(n=>n.name));
+  for(const i of data.all()){
+    assert.ok(names.has(i.mimic),`network missing mimic node ${i.mimic}`);
+    assert.ok(names.has(i.model),`network missing model node ${i.model}`);
+  }
+  const cross=net.edges.filter(e=>e.crossKingdom);
+  assert.equal(cross.length,2,'demo dataset has 2 cross-kingdom edges');
+  const l1=layoutNetwork(net.nodes,net.edges);
+  const l2=layoutNetwork(net.nodes,net.edges);
+  assert.deepEqual(l1,l2,'force layout must be deterministic (no RNG)');
+  for(const p of l1.pos){
+    assert.ok(p.x>=0&&p.x<=l1.width&&p.y>=0&&p.y<=l1.height,'node inside viewBox');
+  }
+});
