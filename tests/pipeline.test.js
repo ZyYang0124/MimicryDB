@@ -278,3 +278,17 @@ test('mimicry systems: grouping layer above atomic interactions',()=>{
   assert.ok(ringInteractions.length>=2,'ring has reciprocal edges');
   assert.equal(taxa.length,ringInteractions.length,'ring taxa are mutual co-mimics (each is both)');
 });
+
+test('crossref import report is reviewable and verbatim',async()=>{
+  const {readFileSync,existsSync}=await import('node:fs');
+  const p=new URL('../data/reconciliation/crossref.json',import.meta.url);
+  if(!existsSync(p))return;
+  const j=JSON.parse(readFileSync(p,'utf8'));
+  assert.match(j.policy,/never modifies the dataset directly/,'importer output must be curator-reviewable, never a direct write');
+  assert.ok(Object.keys(j.records).length>0,'report has records');
+  for(const [doi,r] of Object.entries(j.records)){
+    assert.ok(r.doi&&r.title&&r.url,`${doi}: doi/title/url required`);
+    assert.ok(!/<\/?(i|em|italic)>/i.test(r.title),`${doi}: JATS tags must be stripped from titles`);
+    assert.ok(r.crossref_metadata&&r.crossref_verified_at,`${doi}: raw Crossref provenance required`);
+  }
+});

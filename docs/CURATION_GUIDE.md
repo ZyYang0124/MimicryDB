@@ -47,3 +47,19 @@ The pair `mimic_taxon_id + model_taxon_id` is **not** unique. The same pair may 
 ## Revision discipline
 
 Every edit that changes scientific content writes an `audit_log` row: old value, new value, who, when, why, and a supporting reference if applicable. Taxonomic corrections are updates, not overwrites — `name_verbatim` from the source publication is preserved.
+
+## Reference import via Crossref (v0.5 groundwork)
+
+Paste a DOI — never hand-type bibliographic metadata:
+
+    npm run resolve:crossref -- 10.1126/science.176.4037.936
+    npm run resolve:crossref -- --find "Mullerian mimicry Heliconius"
+
+The importer queries the public Crossref REST API and writes verbatim metadata
+(title, authors, year, journal, volume/issue/pages, ISSN, publisher, license,
+abstract, plus the full raw record) to data/reconciliation/crossref.json.
+That report is a **reviewable inbox**: it never modifies the dataset directly.
+Reference rows enter the database only after a curator confirms them
+(candidate -> review -> published), and every record keeps a
+crossref_verified_at timestamp for provenance. JATS tags are stripped from
+titles/abstracts; the raw Crossref payload is preserved alongside.

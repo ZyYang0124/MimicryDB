@@ -31,7 +31,9 @@ This is an architectural constraint, not a slogan:
 
 Supabase production project; `DataProvider` swaps to a Supabase adapter (the documented query patterns already define the contract); data migration `biological_entity` → `entity` and `external_source` → `taxon_external_identifier`; RLS policies live; auth for curators; public read API. The static GitHub Pages frontend stays.
 
-### v0.5 — Curator platform
+### v0.5 — Curator platform *(groundwork started)*
+
+- [x] Crossref DOI importer (`npm run resolve:crossref`): DOI / bibliographic search → verbatim metadata into the reviewable inbox `data/reconciliation/crossref.json` (docs/CURATION_GUIDE.md)
 
 Login; candidate inbox UI; record editor; DOI-first reference importer (Crossref REST lookup → curator confirms); taxonomy reconciliation queue; evidence editor with per-dimension support; review & publish flow; audit history view.
 
