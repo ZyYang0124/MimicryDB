@@ -10,7 +10,7 @@ test('same mimic+model pair is allowed when contexts differ (no global uniquenes
   const flagged=detectDuplicates([...interactions,dup]);
   assert.equal(flagged.length,1);
   assert.deepEqual(flagged[0].ids,[interactions[0].id,'MIMICRY:000099']);
-  assert.equal(detectDuplicates(interactions).length,0);
+  assert.equal(detectDuplicates(interactions).length,0,'the mutual Müllerian pair is NOT a duplicate — detection is direction-aware');
 });
 
 test('CSV writer escapes quotes and keeps column counts',()=>{
