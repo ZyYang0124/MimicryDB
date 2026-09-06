@@ -37,7 +37,7 @@ const issueUrl=i?'https://github.com/ZyYang0124/MimicryDB/issues/new?title='+enc
 </div>
 <h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">Related records</h2>
 <div class="mt-6 grid gap-4 sm:grid-cols-2">{related.map(x=><a class="card" href={`/MimicryDB/interactions/${x.id.replace(':','-')}/`}><div class="font-semibold"><em>{x.mimic}</em> <span class="text-coral">→</span> {x.model}</div><div class="mt-2 text-xs text-slate-400">{x.type} · <span class={`pill grade-${x.evidence}`}>{x.evidence}</span></div></a>)}</div>
-<p class="mt-14 text-xs text-slate-500"><a class="underline decoration-gold/60 hover:text-gold" href={issueUrl} target="_blank" rel="noopener">{s.common.reportIssue}</a> — {s.common.reportIssueNote}.</p>
+<p class="mt-14 text-xs text-slate-500"><a class="underline decoration-gold/60 hover:text-gold" href={issueUrl} target="_blank" rel="noopener">{s.common.reportIssue}</a> — {s.common.reportIssueNote}</p>
 </div>
 </div>
 </article>:<div class="container py-16"><h1 class="text-3xl font-bold">Interaction not found</h1></div>}</Layout>
