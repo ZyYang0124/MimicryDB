@@ -221,3 +221,43 @@ test('layout clusters species that share a mimicry pattern',async()=>{
   assert.ok(wN>0&&xN>0,'both groups must exist');
   assert.ok(wS/wN<xS/xN,'species sharing a mimicry pattern must sit closer on average ('+(wS/wN).toFixed(0)+' vs '+(xS/xN).toFixed(0)+')');
 });
+test('v0.3 schema stabilization: migration 005 defines the full object layer',async()=>{
+  const {readFileSync}=await import('node:fs');
+  const sql=readFileSync(new URL('../supabase/migrations/005_schema_stabilization.sql',import.meta.url),'utf8');
+  for(const obj of ['create table if not exists entity','create table if not exists taxon_external_identifier',
+    'create table if not exists mimicry_system','create table if not exists system_interaction',
+    'create table if not exists evidence_support','create table if not exists contributor',
+    'create table if not exists contribution']){
+    assert.ok(sql.includes(obj),`migration 005 missing ${obj}`);
+  }
+  for(const col of ['public_id','parent_term','synonyms','inclusion_criteria','exclusion_criteria','status','version']){
+    assert.ok(sql.includes(col),`vocabulary_term versioning missing ${col}`);
+  }
+  for(const dim of ['resemblance','model_identity','receiver_perception','receiver_response','fitness_consequence','geographic_overlap','temporal_overlap','mechanism','signal_characterization']){
+    assert.ok(sql.includes(`'${dim}'`),`evidence dimension ${dim} missing from check constraint`);
+  }
+  assert.ok(sql.includes("'contradicts'"),'support_direction must allow contradictions');
+});
+
+test('v0.3 vocabularies: five new sets, evidence dimensions complete',()=>{
+  for(const v of ['entity_type','evidence_dimension','support_direction','system_type','model_resolution']){
+    assert.ok(Array.isArray(vocab[v])&&vocab[v].length>=4,`${v} missing or empty`);
+    const terms=vocab[v].map(t=>t.term);
+    assert.equal(new Set(terms).size,terms.length,`${v} has duplicate terms`);
+  }
+  const dims=vocab.evidence_dimension.map(t=>t.term);
+  for(const required of ['resemblance','model_identity','receiver_perception','receiver_response','fitness_consequence','mechanism'])
+    assert.ok(dims.includes(required),`evidence_dimension lacks ${required}`);
+  assert.ok(vocab.support_direction.map(t=>t.term).includes('contradicts'),'contradictory evidence must be representable');
+});
+
+test('seed carries stable term IDs, GBIF external identifiers and the demo system',async()=>{
+  const {readFileSync}=await import('node:fs');
+  const seed=readFileSync(new URL('../supabase/seed.sql',import.meta.url),'utf8');
+  assert.ok(seed.includes("TERM:MIMICRY_TYPE:BATESIAN"),'vocabulary terms must get stable public IDs');
+  assert.ok(seed.includes("insert into taxon_external_identifier"),'seed must backfill external identifiers');
+  assert.ok(seed.includes("authority, external_id"),'identifier rows use authority+external_id');
+  assert.ok(!seed.includes("'Myia fugax'")||!seed.includes("insert into taxon_external_identifier (taxon_id, authority, external_id, external_url, matched_name, match_type, verified_at) select id, 'GBIF', '2221771'"),'fuzzy-matched names must not receive identifiers');
+  assert.ok(seed.includes('SYSTEM:000001'),'demo mimicry_system must be seeded');
+  assert.ok(seed.includes('MIMICRY:000007'),'ring membership links the Müllerian pair');
+});

@@ -1,6 +1,6 @@
 # MimicryDB data dictionary
 
-This document describes the fields of the current schema (`supabase/migrations/001_initial.sql`). Future migrations (002+) extend it per `docs/ROADMAP.md`; this dictionary is updated with each schema change.
+This document describes the current schema — migrations 001 through 005 (`supabase/migrations/`). It is updated with every schema change; see `docs/DATABASE_SCHEMA.md` for the migration narrative and `docs/ONTOLOGY.md` for the vocabularies.
 
 ## Conventions
 
@@ -22,7 +22,7 @@ This document describes the fields of the current schema (`supabase/migrations/0
 | `taxonomic_status` | text | `accepted` (default) or other controlled status (synonym, doubtful, …) |
 | `created_at` / `updated_at` | timestamptz | Record timestamps |
 
-Planned in migration 002: `accepted_name`, `authorship`, phylum→genus hierarchy columns, `external_source` + `external_taxon_id`, `taxonomic_resolution`, `notes`, and a `taxon_synonym` table.
+Live since migration 002: `accepted_name`, `authorship`, the phylum→species hierarchy columns, `taxonomic_resolution`, `notes`, and the `taxon_synonym` table. Migration 002 also added `external_source` + `external_taxon_id`; these are **superseded by migration 005** — a taxon now carries any number of identifiers in `taxon_external_identifier` (GBIF, CoL, NCBI, OpenTree, WoRMS, POWO, Wikidata…), because a name usage can live in several authorities. The old columns are kept until the v0.4 data migration.
 
 ## reference
 
@@ -36,7 +36,7 @@ Planned in migration 002: `accepted_name`, `authorship`, phylum→genus hierarch
 | `citation_text` | text | Full citation string |
 | `created_at` | timestamptz | Record timestamp |
 
-Planned in migration 002: `pmid`, `volume`, `issue`, `pages`, `abstract`, `reference_type`, `notes`.
+Live since migration 005 (Crossref-shaped, for DOI-first curation): `volume`, `issue`, `pages`, `issn`, `publisher`, `license`, `reference_type`, `crossref_metadata` (jsonb snapshot of the Crossref record), `crossref_verified_at`. (`pmid` is still future work.)
 
 ## mimicry_interaction
 
@@ -56,7 +56,7 @@ Planned in migration 002: `pmid`, `volume`, `issue`, `pages`, `abstract`, `refer
 | `confidence` | numeric | Curator confidence |
 | `created_at` / `updated_at` | timestamptz | Record timestamps |
 
-Planned in migration 002: `mimic_entity_id`, `model_entity_id`, `receiver_taxon_id`, `receiver_resolution`, `specific_model_identified`, `geographic_overlap_status`, `curator_notes`, `created_by`, `reviewed_by`, `reviewed_at`, `published_at`.
+Live since migration 002: `mimic_entity_id`, `model_entity_id` (→ `biological_entity`), `receiver_taxon_id`, `receiver_resolution`, `specific_model_identified`, `geographic_overlap_status`, `curator_notes`, `created_by`, `reviewed_by`, `reviewed_at`, `published_at`. Migration 003 added `model_kind` (`organism | environment | object | self | unknown | other`); migration 004 added `observed_on date` and `recorded_by text` (NULL in demo — observation dates and recorders are never invented).
 
 ## evidence
 
@@ -82,3 +82,27 @@ Planned in migration 002: `mimic_entity_id`, `model_entity_id`, `receiver_taxon_
 | `changed_by` | uuid | Acting account |
 | `reason` | text | Why the change was made |
 | `timestamp` | timestamptz | When it happened |
+
+## Objects added by migrations 002–005
+
+| Table / column group | Migration | Purpose |
+| --- | --- | --- |
+| `taxon_synonym` | 002 | Historical combinations preserved with type and source — never rewritten |
+| `biological_entity` | 002 | Life stage / sex / anatomical structure / signal specificity (superseded by `entity`, migration 005, retained until the v0.4 data migration) |
+| `vocabulary_term` (+ `public_id`, `parent_term`, `synonyms`, inclusion/exclusion criteria, `status`, `version`) | 002 / 005 | Versioned, citable controlled vocabularies — stable IDs `TERM:<VOCABULARY>:<TERM>` (docs/ONTOLOGY.md) |
+| `interaction_mimicry_type`, `interaction_signal_modality` | 002 | M2M joins between interactions and vocabulary terms |
+| `interaction_reference` (+ `claim_roles`, `locator`) | 002 / 004 | Claim-level citation: which assertions a source supports, with optional page/figure locator |
+| `interaction_geography` | 002 | Country/region/locality, coordinates, sympatry status |
+| `candidate` | 002 | LLM extraction inbox; candidates can never auto-publish |
+| `evolutionary_origin`, `interaction_origin` | 002 | Inference layer (`ORIGIN:NNNNNN`), strictly separate from observational records |
+| `taxon_image`, `taxon_vernacular` | 004 | Media assets with mandatory attribution (`IMG-nnnn`); display-only common names |
+| `entity` | 005 | General participant: taxon, organism, life stage, signal, environmental object, biological material, functional class, unresolved; `parent_entity_id` composition |
+| `taxon_external_identifier` | 005 | Many authorities per taxon; `verified_at` records when the match was checked |
+| `mimicry_system`, `system_interaction` | 005 | Optional grouping layer (`SYSTEM:NNNNNN`): rings, complexes, polymorphic systems — never a replacement for the atomic edge |
+| `evidence_support` | 005 | Per-dimension support for an evidence passage: `evidence_dimension` × `support_direction` (supports / contradicts / mixed / uncertain) + strength + curator note |
+| `reference` Crossref columns | 005 | volume, issue, pages, issn, publisher, license, reference_type, `crossref_metadata`, `crossref_verified_at` |
+| `contributor`, `contribution` | 005 | Citable community-curator identity and per-record contribution credit |
+
+## New controlled vocabularies (v0.3)
+
+`entity_type`, `evidence_dimension` (10 dimensions), `support_direction`, `system_type`, `model_resolution` — see docs/ONTOLOGY.md for definitions, stable IDs and versioning policy. Existing vocabularies (`mimicry_type`, `signal_modality`, `receiver_role`, `model_kind`, `evidence_grade`, `claim_role`, `interaction_status`, `knowledge_status`) are unchanged.

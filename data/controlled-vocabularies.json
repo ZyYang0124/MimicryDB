@@ -248,5 +248,163 @@
       "term": "taxonomy",
       "label": "Taxonomy"
     }
+  ],
+  "entity_type": [
+    {
+      "term": "taxon",
+      "label": "Taxon (standardized name usage)"
+    },
+    {
+      "term": "organism",
+      "label": "Organism (individual or life-form)"
+    },
+    {
+      "term": "sex",
+      "label": "Sex-specific form"
+    },
+    {
+      "term": "life_stage",
+      "label": "Life stage (egg, larva, nymph, adult…)"
+    },
+    {
+      "term": "anatomical_structure",
+      "label": "Anatomical structure"
+    },
+    {
+      "term": "signal",
+      "label": "Signal (colour patch, pheromone, flash pattern…)"
+    },
+    {
+      "term": "environmental_object",
+      "label": "Environmental object (bird dropping, twig, leaf…)"
+    },
+    {
+      "term": "biological_material",
+      "label": "Biological material (faeces, silk, wax…)"
+    },
+    {
+      "term": "functional_class",
+      "label": "Functional class (descriptive model class)"
+    },
+    {
+      "term": "unresolved",
+      "label": "Unresolved"
+    }
+  ],
+  "evidence_dimension": [
+    {
+      "term": "resemblance",
+      "label": "Phenotypic resemblance"
+    },
+    {
+      "term": "model_identity",
+      "label": "Model identity"
+    },
+    {
+      "term": "receiver_identity",
+      "label": "Receiver identity"
+    },
+    {
+      "term": "receiver_perception",
+      "label": "Receiver perception"
+    },
+    {
+      "term": "receiver_response",
+      "label": "Receiver response"
+    },
+    {
+      "term": "fitness_consequence",
+      "label": "Fitness consequence"
+    },
+    {
+      "term": "geographic_overlap",
+      "label": "Geographic overlap / sympatry"
+    },
+    {
+      "term": "temporal_overlap",
+      "label": "Temporal overlap"
+    },
+    {
+      "term": "mechanism",
+      "label": "Mechanism"
+    },
+    {
+      "term": "signal_characterization",
+      "label": "Signal characterization"
+    }
+  ],
+  "support_direction": [
+    {
+      "term": "supports",
+      "label": "Supports the claim"
+    },
+    {
+      "term": "contradicts",
+      "label": "Contradicts the claim"
+    },
+    {
+      "term": "mixed",
+      "label": "Mixed evidence"
+    },
+    {
+      "term": "uncertain",
+      "label": "Uncertain / inconclusive"
+    }
+  ],
+  "system_type": [
+    {
+      "term": "ring",
+      "label": "Müllerian ring / multi-species ring"
+    },
+    {
+      "term": "complex",
+      "label": "Species complex centred on one lineage"
+    },
+    {
+      "term": "polymorphic",
+      "label": "Polymorphic mimicry system"
+    },
+    {
+      "term": "series",
+      "label": "Hierarchical series of models"
+    },
+    {
+      "term": "other",
+      "label": "Other grouping"
+    }
+  ],
+  "model_resolution": [
+    {
+      "term": "species",
+      "label": "Resolved to species"
+    },
+    {
+      "term": "genus",
+      "label": "Resolved to genus"
+    },
+    {
+      "term": "family",
+      "label": "Resolved to family"
+    },
+    {
+      "term": "higher_taxon",
+      "label": "Higher taxon only"
+    },
+    {
+      "term": "functional_group",
+      "label": "Functional group"
+    },
+    {
+      "term": "object",
+      "label": "Inanimate object"
+    },
+    {
+      "term": "signal",
+      "label": "Signal only (not the signal-bearer)"
+    },
+    {
+      "term": "unknown",
+      "label": "Unknown"
+    }
   ]
 }
