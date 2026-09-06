@@ -51,3 +51,9 @@ table.data tbody tr:hover{background:#111}
 svg .net-node text{opacity:0;transition:opacity .18s ease}
 svg .net-node:hover text,svg .net-node:focus text,svg .net-node:focus-within text{opacity:1}
 svg .net-node:hover circle,svg .net-node:focus circle{stroke:#ece7dd;stroke-width:1.6}
+/* directed network: click-to-highlight selection state */
+svg .net-node{cursor:pointer}
+svg .net-node.selected circle{stroke:#d8c690;stroke-width:2}
+svg .net-node.neighbor circle{stroke:#ece7dd;stroke-width:1.2}
+svg .net-node.selected text,svg .net-node.neighbor text{opacity:1}
+svg path.net-edge{transition:opacity .18s ease}
