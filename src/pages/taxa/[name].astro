@@ -2,7 +2,8 @@
 import Layout from '../../layouts/Layout.astro'; import {data,gbifFor,imageFor} from '../../data/provider'; import {strings} from '../../i18n';
 export const prerender=true; export function getStaticPaths(){return data.taxa().map(t=>({params:{name:t.slug}}));}
 const s=strings('en');
-const t=data.taxa().find(x=>x.slug===Astro.params.name); const related=t?data.all().filter(i=>i.mimic===t.name||i.model===t.name):[];
+const t=data.taxa().find(x=>x.slug===Astro.params.name); const tname=t?.name??'';
+const related=t?data.all().filter(i=>i.mimic===tname||i.model===tname):[];
 const g=t?gbifFor(t.name):undefined;
 const binomial=t&&/^[A-Z][a-zà-ÿ-]+ [a-zà-ÿ-]+(\s[^()]+)?$/.test(t.name)&&!t.name.includes('(')?t.name:null;
 const rank=(r:string)=>g?.gbif_classification?.find(c=>c.rank===r)?.name;
@@ -14,19 +15,19 @@ const ext=t?[
  ...(rank('class')==='Aves'&&binomial?[{label:'xeno-canto',href:`https://xeno-canto.org/species/${encodeURIComponent(binomial.replace(/\s+/g,'-'))}`}]:[]),
 ]:[];
 const issueUrl=t?'https://github.com/ZyYang0124/MimicryDB/issues/new?title='+encodeURIComponent(`[Taxon ${t.name}] Correction`)+'&body='+encodeURIComponent(`Taxon: ${t.name}\nPage: https://zyyang0124.github.io/MimicryDB/taxa/${t.slug}/\n\nProblem:\n`):'#';
-const asMimic=related.filter(i=>i.mimic===t.name);
-const asModel=related.filter(i=>i.model===t.name);
+const asMimic=related.filter(i=>i.mimic===tname);
+const asModel=related.filter(i=>i.model===tname);
 const models=[...new Set(asMimic.map(i=>i.model))];
 const mimics=[...new Set(asModel.map(i=>i.mimic))];
 const modalities=[...new Set(related.flatMap(i=>i.modalities??[]))];
 const types=[...new Set(related.map(i=>i.type))];
-const eProfile={};
+const eProfile:Record<string,number>={};
 for(const i of related)eProfile[i.evidence]=(eProfile[i.evidence]??0)+1;
 const eBars=['E4','E3','E2','E1','E0'].filter(e=>eProfile[e]).map(e=>({e,n:eProfile[e]}));
 const refs=[...new Map(related.flatMap(i=>i.refs??[]).map(r=>[r.id,r])).values()];
 const systems=data.systems().filter(sys=>sys.members.some(m=>related.some(i=>i.id===m)));
-const img=imageFor(t.name);
-const slugify=(n)=>n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+const img=t?imageFor(t.name):undefined;
+const slugify=(n:string)=>n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 const head='mt-10 text-xs uppercase tracking-[0.25em] text-slate-500';
 ---
 <Layout title={`${t?.name??'Not found'} · MimicryDB`}>{t?<article class="container py-12"><a href="/MimicryDB/taxa/">← All taxa</a>
