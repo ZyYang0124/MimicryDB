@@ -40,12 +40,18 @@ for(const i of interactions){
   lines.push(`insert into mimicry_interaction (public_id, mimic_taxon_id, model_taxon_id, receiver_description, interaction_status, knowledge_status, evidence_grade, evidence_grade_reason, mimicry_summary, model_resolution, model_kind) select ${q(i.id)}, m.id, o.id, ${q(i.receiver)}, 'candidate', ${q(i.knowledge??'reported')}, ${q(i.evidence)}, ${q(gradeReason)}, ${q(i.summary)}, 'demo — unresolved', ${q(i.modelKind??'organism')} from taxon m, taxon o where m.scientific_name=${q(i.mimic)} and o.scientific_name=${q(i.model)} on conflict (public_id) do nothing;`);
   for(const r of i.refs??[]){
     lines.push(`insert into reference (title, citation_text) select ${q(r.title)}, ${q(r.title+' [DEMO placeholder]')} where not exists (select 1 from reference where title=${q(r.title)});`);
-    lines.push(`insert into interaction_reference (interaction_id, reference_id, claim_roles) select mi.id, rf.id, ${q('{'+(r.claims??[]).join(',')+'}')}::text[] from mimicry_interaction mi, reference rf where mi.public_id=${q(i.id)} and rf.title=${q(r.title)};`);
+    lines.push(`insert into interaction_reference (interaction_id, reference_id, claim_roles) select mi.id, rf.id, ${q('{'+(r.claims??[]).join(',')+'}')}::text[] from mimicry_interaction mi, reference rf where mi.public_id=${q(i.id)} and rf.title=${q(r.title)} on conflict do nothing;`);
   }
 }
 // demo mimicry_system: the Heliconius Müllerian ring groups the two reciprocal edges —
 // the grouping layer above atomic interactions, never a replacement for them.
 lines.push(`insert into mimicry_system (public_id, name, description, system_type, notes) values ('SYSTEM:000001', 'Heliconius melpomene/erato Müllerian ring', 'Demo grouping: the two reciprocal co-mimicry edges between H. melpomene and H. erato form one ring. Not a scientific claim — placeholder grouping for the demo dataset.', 'ring', 'synthetic demo grouping — labeled DEMO') on conflict (public_id) do nothing;`);
 lines.push(`insert into system_interaction (system_id, interaction_id) select ms.id, mi.id from mimicry_system ms, mimicry_interaction mi where ms.public_id='SYSTEM:000001' and mi.public_id in ('MIMICRY:000007','MIMICRY:000015') on conflict do nothing;`);
+// Guard: the Supabase SQL Editor splits statements on ';', so a semicolon inside a
+// string literal would break execution mid-statement. Keep content semicolon-free.
+const strays=lines.map((l,ix)=>{let inQ=false;for(let i=0;i<l.length;i++){const c=l[i];
+ if(c==="'"){inQ=!inQ;continue;}
+ if(c===';'&&inQ)return ix+1;}return 0;}).filter(Boolean);
+if(strays.length)throw new Error('semicolon inside a SQL string literal at seed line(s): '+strays.join(', ')+' - replace it in the source content');
 writeFileSync(new URL('../supabase/seed.sql',import.meta.url),lines.join('\n')+'\n');
 console.log(`generated supabase/seed.sql — ${taxa.length} taxa, ${interactions.length} candidate interactions`);

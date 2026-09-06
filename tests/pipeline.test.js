@@ -345,3 +345,15 @@ test('SOP Phase 2/4: migration 006 completes stable IDs and evidence v1',async()
   assert.ok(seed.includes('TAXON:000001'),'taxa get stable public IDs');
   assert.ok(seed.includes("'mimicry_type', 'batesian"), "ontology parents/definitions seeded");
 });
+
+test('seed and setup SQL never contain semicolons inside string literals',async()=>{
+  const {readFileSync}=await import('node:fs');
+  for(const f of ['../supabase/seed.sql','../docs/supabase-setup.sql']){
+    const lines=readFileSync(new URL(f,import.meta.url),'utf8').split('\n');
+    const bad=lines.map((l,ix)=>{
+      let inQ=false;
+      for(let i=0;i<l.length;i++){const c=l[i];if(c==="'"){inQ=!inQ;continue;}if(c===';'&&inQ)return ix+1;}
+      return 0;}).filter(Boolean);
+    assert.equal(bad.length,0,`${f}: semicolon inside string literal at line(s) ${bad.join(',')} — the Supabase SQL Editor splits on it`);
+  }
+});
