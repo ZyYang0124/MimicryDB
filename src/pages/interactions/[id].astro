@@ -17,7 +17,7 @@ const related=i?data.all().filter(x=>x.id!==i.id&&(x.mimic===i.mimic||x.model===
 <div class="px-6 lg:px-16 py-14 max-w-2xl">
 <p class="text-xs uppercase tracking-[0.25em] text-slate-500">{i.id} · {i.type} <span class="pill ml-3">DEMO</span></p>
 <h1 class="mt-6 text-5xl font-bold font-serif leading-[1.08]"><em>{i.mimic}</em> <span class="text-coral">→</span> {i.model}</h1>
-<p class="mt-4 text-sm text-slate-600">{i.kingdoms} · model kind: {i.modelKind??'organism'} · knowledge status: {i.knowledge??'reported'} · evidence <span class={`pill grade-${i.evidence}`}>{i.evidence}</span></p>
+<p class="mt-4 text-sm text-slate-400">{i.kingdoms} · model kind: {i.modelKind??'organism'} · knowledge status: {i.knowledge??'reported'} · evidence <span class={`pill grade-${i.evidence}`}>{i.evidence}</span></p>
 <h2 class="mt-12 text-xs uppercase tracking-[0.25em] text-slate-500">Scientific summary</h2>
 <p class="mt-4 text-xl leading-relaxed">{i.summary}</p>
 <dl class="mt-12 grid grid-cols-2 gap-x-8 gap-y-6 text-sm">
@@ -27,12 +27,12 @@ const related=i?data.all().filter(x=>x.id!==i.id&&(x.mimic===i.mimic||x.model===
 <div><dt class="text-xs uppercase tracking-[0.2em] text-slate-500">Model</dt><dd class="mt-2"><a class="underline" href={`/MimicryDB/taxa/${slugify(i.model)}/`}>{i.model}</a></dd></div>
 </dl>
 <h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">Literature support</h2>
-<div class="mt-6 space-y-4 border-l-2 border-ink/10 pl-6">
-{litRows.map(r=><div><p class="font-serif italic">{r.title}</p><p class="mt-1 text-xs text-slate-600 mono">{r.meta} · <a class="underline" href={"/MimicryDB/references/"+r.id+'/'}>view record</a></p></div>)}
-<p class="text-sm text-slate-600">In production, every published claim links to the exact passage — page, section, figure — of these sources, with the curator's grade reason attached. This demo record carries placeholder references and makes no scientific claim.</p>
+<div class="mt-6 space-y-4 border-l-2 border-white/10 pl-6">
+{litRows.map(r=><div><p class="font-serif italic">{r.title}</p><p class="mt-1 text-xs text-slate-400 mono">{r.meta} · <a class="underline" href={"/MimicryDB/references/"+r.id+'/'}>view record</a></p></div>)}
+<p class="text-sm text-slate-400">In production, every published claim links to the exact passage — page, section, figure — of these sources, with the curator's grade reason attached. This demo record carries placeholder references and makes no scientific claim.</p>
 </div>
 <h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">Related records</h2>
-<div class="mt-6 grid gap-4 sm:grid-cols-2">{related.map(x=><a class="card" href={`/MimicryDB/interactions/${x.id.replace(':','-')}/`}><div class="font-semibold"><em>{x.mimic}</em> <span class="text-coral">→</span> {x.model}</div><div class="mt-2 text-xs text-slate-600">{x.type} · <span class={`pill grade-${x.evidence}`}>{x.evidence}</span></div></a>)}</div>
+<div class="mt-6 grid gap-4 sm:grid-cols-2">{related.map(x=><a class="card" href={`/MimicryDB/interactions/${x.id.replace(':','-')}/`}><div class="font-semibold"><em>{x.mimic}</em> <span class="text-coral">→</span> {x.model}</div><div class="mt-2 text-xs text-slate-400">{x.type} · <span class={`pill grade-${x.evidence}`}>{x.evidence}</span></div></a>)}</div>
 </div>
 </div>
 </article>:<div class="container py-16"><h1 class="text-3xl font-bold">Interaction not found</h1></div>}</Layout>

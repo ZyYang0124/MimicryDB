@@ -19,7 +19,7 @@ const modZh=(m:string)=>({visual:'视觉',morphological:'形态',colour:'颜色'
 <div class="px-6 lg:px-16 py-14 max-w-2xl">
 <p class="text-xs uppercase tracking-[0.25em] text-slate-500">{i.id} · {i.type} <span class="pill ml-3">DEMO</span></p>
 <h1 class="mt-6 text-5xl font-bold font-serif leading-[1.08]"><em>{i.mimic}</em> <span class="text-coral">→</span> {i.model}</h1>
-<p class="mt-4 text-sm text-slate-600">{i.kingdoms} · 模型类别：{kindZh(i.modelKind)} · 知识状态：{i.knowledge??'reported'} · 证据 <span class={`pill grade-${i.evidence}`}>{i.evidence}</span></p>
+<p class="mt-4 text-sm text-slate-400">{i.kingdoms} · 模型类别：{kindZh(i.modelKind)} · 知识状态：{i.knowledge??'reported'} · 证据 <span class={`pill grade-${i.evidence}`}>{i.evidence}</span></p>
 <h2 class="mt-12 text-xs uppercase tracking-[0.25em] text-slate-500">科学摘要</h2>
 <p class="mt-4 text-xl leading-relaxed">{summaryZh[i.id]??i.summary}</p>
 <p class="mt-3 text-sm text-slate-500">English: {i.summary}</p>
@@ -30,12 +30,12 @@ const modZh=(m:string)=>({visual:'视觉',morphological:'形态',colour:'颜色'
 <div><dt class="text-xs uppercase tracking-[0.2em] text-slate-500">模型</dt><dd class="mt-2"><a class="underline" href={`/MimicryDB/zh/taxa/${slugify(i.model)}/`}>{i.model}</a></dd></div>
 </dl>
 <h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">文献支持</h2>
-<div class="mt-6 space-y-4 border-l-2 border-ink/10 pl-6">
-{litRows.map(r=><div><p class="font-serif italic">{r.title}</p><p class="mt-1 text-xs text-slate-600 mono">{r.meta} · <a class="underline" href={"/MimicryDB/zh/references/"+r.id+'/'}>查看记录</a></p></div>)}
-<p class="text-sm text-slate-600">正式上线后，每条公开发表的主张都将链接到上述来源的精确原文（页码/章节/图表），并附策展人的定级理由。本演示记录仅使用占位文献，不构成科学结论。</p>
+<div class="mt-6 space-y-4 border-l-2 border-white/10 pl-6">
+{litRows.map(r=><div><p class="font-serif italic">{r.title}</p><p class="mt-1 text-xs text-slate-400 mono">{r.meta} · <a class="underline" href={"/MimicryDB/zh/references/"+r.id+'/'}>查看记录</a></p></div>)}
+<p class="text-sm text-slate-400">正式上线后，每条公开发表的主张都将链接到上述来源的精确原文（页码/章节/图表），并附策展人的定级理由。本演示记录仅使用占位文献，不构成科学结论。</p>
 </div>
 <h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">相关记录</h2>
-<div class="mt-6 grid gap-4 sm:grid-cols-2">{related.map(x=><a class="card" href={`/MimicryDB/zh/interactions/${x.id.replace(':','-')}/`}><div class="font-semibold"><em>{x.mimic}</em> <span class="text-coral">→</span> {x.model}</div><div class="mt-2 text-xs text-slate-600">{x.type} · <span class={`pill grade-${x.evidence}`}>{x.evidence}</span></div></a>)}</div>
+<div class="mt-6 grid gap-4 sm:grid-cols-2">{related.map(x=><a class="card" href={`/MimicryDB/zh/interactions/${x.id.replace(':','-')}/`}><div class="font-semibold"><em>{x.mimic}</em> <span class="text-coral">→</span> {x.model}</div><div class="mt-2 text-xs text-slate-400">{x.type} · <span class={`pill grade-${x.evidence}`}>{x.evidence}</span></div></a>)}</div>
 </div>
 </div>
 </article>:<div class="container py-16"><h1 class="text-3xl font-bold">未找到该交互记录</h1></div>}</Layout>

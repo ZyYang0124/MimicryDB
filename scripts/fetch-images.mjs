@@ -17,6 +17,13 @@ const get=async(url,tries=3)=>{
 };
 const strip=(html)=>String(html??'').replace(/<[^>]*>/g,'').trim();
 const licenseRank=(l)=>/public domain/i.test(l)?0:/cc0/i.test(l)?1:/^cc by(-sa)? [1-3]/i.test(l)?2:/^cc by\(/i.test(l)?3:/^cc by-sa/i.test(l)?4:9;
+// Title must contain every significant query word (genus + species, or the full
+// descriptive phrase). Guards against Commons full-text false matches.
+const titleValid=(title,query)=>{
+  const t=title.toLowerCase();
+  const words=query.toLowerCase().replace(/\([^)]*\)/g,' ').split(/\s+/).filter(w=>w.length>2&&!['and','the'].includes(w));
+  return words.length>0&&words.every(w=>t.includes(w));
+};
 
 const outPath=new URL('../data/images.json',import.meta.url);
 const out=existsSync(outPath)?JSON.parse(readFileSync(outPath,'utf8')):{generated:'',source:'Wikimedia Commons',policy:'Openly licensed photographs; attribution is rendered on every page alongside the image.',images:{}};
@@ -26,7 +33,16 @@ mkdirSync(new URL('../public/images/',import.meta.url),{recursive:true});
 const query=async(name)=>get(`${API}?action=query&generator=search&gsrsearch=${encodeURIComponent(name+' filetype:bitmap')}&gsrnamespace=6&gsrlimit=8&prop=imageinfo&iiprop=url|extmetadata|mime|size&iiurlwidth=1400&format=json`);
 for(const t of taxa){
   const slug=slugify(t.name);
+  // Curator blocklist: Myia is a nomen dubium with no verifiable imagery (Commons
+  // word-matches an unrelated epitaph). Typeographic fallback is the honest choice.
+  if(slug==='myia-fugax'){misses.push(`${t.name} (curator blocklist — no verifiable image)`);continue;}
   if(out.images[slug]){found++;continue;} // incremental: keep already-fetched images
+  // Fetch photographs only for scientific-name taxa. Descriptive/functional model
+  // classes ("female bee", "bird droppings", annotated signal models) get the
+  // typographic fallback instead of risking false matches.
+  const clean=t.name.replace(/\([^)]*\)/g,' ').trim();
+  const scientific=/^[A-Z][a-z]+/.test(clean)&&clean.split(/\s+/).length<=3&&!t.name.includes('(');
+  if(!scientific){misses.push(`${t.name} (descriptive model class — no photo attempt)`);continue;}
   const tryFetch=async()=>{
     let cands=[];
     for(const q of [t.name, /^[A-Z][a-z]+/.test(t.name)&&t.name.split(' ').length>1?t.name.split(' ')[0]:null]){
@@ -37,6 +53,7 @@ for(const t of taxa){
         if(!/^image\/(jpeg|png)$/.test(ii.mime??''))continue;
         if((ii.width??0)<500)continue;
         if(/map|distribution|range|diagram|logo|icon|graph|skull|skeleton/i.test(p.title))continue;
+        if(!titleValid(p.title,q))continue;
         const em=ii.extmetadata??{};
         const license=strip(em.LicenseShortName?.value)||'unknown';
         const artist=strip(em.Artist?.value)||'Wikimedia Commons contributor';

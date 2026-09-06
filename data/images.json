@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05T15:44:57.159Z",
+  "generated": "2026-09-06T00:14:34.355Z",
   "source": "Wikimedia Commons",
   "policy": "Openly licensed photographs; attribution is rendered on every page alongside the image.",
   "images": {
@@ -11,15 +11,6 @@
       "license": "CC BY-SA 3.0",
       "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
       "artist": "Stephan M. Höhne"
-    },
-    "female-bee": {
-      "taxon": "female bee",
-      "file": "/MimicryDB/images/female-bee.jpg",
-      "title": "File:Inde bondo8658a.jpg",
-      "page": "https://commons.wikimedia.org/wiki/File:Inde_bondo8658a.jpg",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-      "artist": "Yves Picq\n\nhttp://veton.picq.fr/"
     },
     "plagiotremus-rhinorhynchos": {
       "taxon": "Plagiotremus rhinorhynchos",
@@ -47,6 +38,141 @@
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "artist": "Keisotyo"
+    },
+    "myrmarachne-plataleoides": {
+      "taxon": "Myrmarachne plataleoides",
+      "file": "/MimicryDB/images/myrmarachne-plataleoides.jpg",
+      "title": "File:Myrmarachne plataleoides male at Kadavoor.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Myrmarachne_plataleoides_male_at_Kadavoor.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Jeevan Jose, Kerala, India"
+    },
+    "oecophylla-smaragdina": {
+      "taxon": "Oecophylla smaragdina",
+      "file": "/MimicryDB/images/oecophylla-smaragdina.jpg",
+      "title": "File:Green Tree Ant (Oecophylla smaragdina).jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Green_Tree_Ant_(Oecophylla_smaragdina).jpg",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "artist": "Didier B (Sam67fr)"
+    },
+    "eristalis-tenax": {
+      "taxon": "Eristalis tenax",
+      "file": "/MimicryDB/images/eristalis-tenax.jpg",
+      "title": "File:Eristalis November 2007-2.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Eristalis_November_2007-2.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Alvesgaspar"
+    },
+    "apis-mellifera": {
+      "taxon": "Apis mellifera",
+      "file": "/MimicryDB/images/apis-mellifera.jpg",
+      "title": "File:European honey bee extracts nectar.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:European_honey_bee_extracts_nectar.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "John Severns (Severnjc)"
+    },
+    "limenitis-archippus": {
+      "taxon": "Limenitis archippus",
+      "file": "/MimicryDB/images/limenitis-archippus.jpg",
+      "title": "File:Viceroy Butterfly.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Viceroy_Butterfly.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "artist": "PiccoloNamek"
+    },
+    "danaus-plexippus": {
+      "taxon": "Danaus plexippus",
+      "file": "/MimicryDB/images/danaus-plexippus.jpg",
+      "title": "File:ComputerHotline - Danaus plexippus (by) (3).jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:ComputerHotline_-_Danaus_plexippus_(by)_(3).jpg",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "artist": "Thomas Bresson"
+    },
+    "cuculus-canorus": {
+      "taxon": "Cuculus canorus",
+      "file": "/MimicryDB/images/cuculus-canorus.jpg",
+      "title": "File:Cuculus canorus canorus MHNT.ZOO.2010.11.149.48.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Cuculus_canorus_canorus_MHNT.ZOO.2010.11.149.48.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "artist": "Roger Culos"
+    },
+    "acrocephalus-scirpaceus-eggs": {
+      "taxon": "Acrocephalus scirpaceus (eggs)",
+      "file": "/MimicryDB/images/acrocephalus-scirpaceus-eggs.jpg",
+      "title": "File:Acrocephalus scirpaceus 01 by-dpc.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Acrocephalus_scirpaceus_01_by-dpc.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "David Perez"
+    },
+    "photuris-versicolor": {
+      "taxon": "Photuris versicolor",
+      "file": "/MimicryDB/images/photuris-versicolor.jpg",
+      "title": "File:Photuris lucicrescens.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Photuris_lucicrescens.jpg",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "artist": "Bruce Marlin"
+    },
+    "labroides-dimidiatus": {
+      "taxon": "Labroides dimidiatus",
+      "file": "/MimicryDB/images/labroides-dimidiatus.jpg",
+      "title": "File:Bluestreak Cleaner Wrasses (Labroides dimidiatus) (8473254957).jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Bluestreak_Cleaner_Wrasses_(Labroides_dimidiatus)_(8473254957).jpg",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "artist": "Bernard DUPONT from FRANCE"
+    },
+    "erythrolamprus-aesculapii": {
+      "taxon": "Erythrolamprus aesculapii",
+      "file": "/MimicryDB/images/erythrolamprus-aesculapii.jpg",
+      "title": "File:Erythrolamprus aesculapii.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Erythrolamprus_aesculapii.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "Wallembergsousa"
+    },
+    "micrurus": {
+      "taxon": "Micrurus",
+      "file": "/MimicryDB/images/micrurus.jpg",
+      "title": "File:Micrurus fulviusHolbrookV3P10AA.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Micrurus_fulviusHolbrookV3P10AA.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "artist": "Holbrook, John Edwards, 1794-1871 (English Wikipedia)"
+    },
+    "puccinia-monoica": {
+      "taxon": "Puccinia monoica",
+      "file": "/MimicryDB/images/puccinia-monoica.jpg",
+      "title": "File:Puccinia on Arabis.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Puccinia_on_Arabis.jpg",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+      "artist": "Lesfreck at English Wikipedia"
+    },
+    "formicidae": {
+      "taxon": "Formicidae",
+      "file": "/MimicryDB/images/formicidae.jpg",
+      "title": "File:Camponotus herculeanus queen high res.jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Camponotus_herculeanus_queen_high_res.jpg",
+      "license": "CC BY-SA 2.5",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+      "artist": "Richard Bartz, Munich Makro Freak"
+    },
+    "ophrys-apifera": {
+      "taxon": "Ophrys apifera",
+      "file": "/MimicryDB/images/ophrys-apifera.jpg",
+      "title": "File:Ophrys apifera (pale form).jpg",
+      "page": "https://commons.wikimedia.org/wiki/File:Ophrys_apifera_(pale_form).jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "artist": "(Hans Hillewaert)"
     }
   }
 }
