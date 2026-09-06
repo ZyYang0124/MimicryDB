@@ -63,3 +63,20 @@ Reference rows enter the database only after a curator confirms them
 (candidate -> review -> published), and every record keeps a
 crossref_verified_at timestamp for provenance. JATS tags are stripped from
 titles/abstracts; the raw Crossref payload is preserved alongside.
+
+## The /curator/ workbench (v0.6.0)
+
+Three queues, one export:
+
+1. **Interaction candidates** (data/curation/interaction-candidates.json) — Accept (publish-ready, review_status=reviewed) / Reject (reason required, stays internal) / Needs expert (second reviewer, SOP Phase 16). Field edits overwrite the proposal; originals survive in the audit log.
+2. **Literature screening queue** (data/harvest/candidates.json) — likely_relevant / maybe_relevant / irrelevant. Irrelevant requires an exclusion reason and is never deleted (SOP Phase 10).
+3. **Reference confirmations** (data/reconciliation/crossref.json) — confirm the Crossref metadata is the right paper.
+
+Workflow: record decisions in the browser (persisted locally), Export decisions,
+then apply:
+
+    npm run curation:apply -- curation-decisions-2026-09-06.json
+
+The apply script validates the file (curator name required; irrelevant needs a
+reason), writes the layer updates, and appends every action to
+data/curation/audit-log.jsonl — the audit trail is the product.

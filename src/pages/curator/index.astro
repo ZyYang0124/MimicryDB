@@ -1,13 +1,154 @@
 ---
-import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider';
-const cands=data.candidates(); const interactions=data.all();
-const stages=[['candidate','Candidate',interactions.length],['draft','Draft',0],['needs_review','Needs review',0],['reviewed','Reviewed',0],['published','Published',0]] as const;
-const pending=cands.filter(c=>c.review_status==='pending').length; const flagged=cands.filter(c=>c.review_status!=='pending').length;
-const exampleRaw=JSON.stringify({model:'demo-model (placeholder)',prompt_version:'v0',confidence:0.41,fields:{mimic:'demo mimic taxon C',model:'demo model class D',grade:'E0'},note:'synthetic — not from any real publication'},null,1);
+import Layout from '../../layouts/Layout.astro';
+import {readFileSync} from 'node:fs';
+const interactionCands=JSON.parse(readFileSync(new URL('../../data/curation/interaction-candidates.json',import.meta.url),'utf8')).candidates;
+const litDoc=JSON.parse(readFileSync(new URL('../../data/harvest/candidates.json',import.meta.url),'utf8'));
+const litCandidates=Object.entries(litDoc.candidates??{}).map(([key,c]:[string,any])=>({key,doi:c.doi,title:c.title,abstract:c.abstract,authors:c.authors,journal:c.journal,year:c.year,source:c.source,screening_status:c.screening_status,exclusion_reason:c.exclusion_reason??null}));
+const refDoc=JSON.parse(readFileSync(new URL('../../data/reconciliation/crossref.json',import.meta.url),'utf8'));
+const refRecords=Object.entries(refDoc.records??{}).map(([doi,r]:[string,any])=>({doi,title:r.title,authors:r.authors,year:r.year,journal:r.journal,curator_status:r.curator_status??null}));
+const EXCLUSION_REASONS=['molecular mimicry','not biological mimicry','colloquial use of "mimic"','computer vision / ML paper','taxonomic paper only','review without interaction information','duplicate','other'];
+const island=JSON.stringify({interactionCands,litCandidates,refRecords,exclusionReasons:EXCLUSION_REASONS}).replace(/<\/script/gi,'<\\/script');
+const sel='bg-transparent border border-white/25 rounded-sm px-2 py-1 text-xs text-white focus:border-gold outline-none';
 ---
-<Layout><div class="container py-12"><span class="pill">PROTOTYPE — NO AUTH YET</span><h1 class="mt-4 text-4xl font-bold">Curator dashboard</h1><p class="mt-3 max-w-2xl">Static demonstration of the curation workflow (docs/CURATION_GUIDE.md). In production this route sits behind Supabase Auth with curator roles; the numbers below come from the labeled demo dataset only.</p>
-<div class="mt-8 grid gap-4 md:grid-cols-5">{stages.map(([,label,n])=><div class="card"><div class="text-2xl font-bold">{n}</div><div class="text-sm text-slate-400">{label}</div></div>)}</div>
-<div class="mt-10 grid gap-5 md:grid-cols-2"><div class="card"><h2 class="font-bold">Workflow</h2><p class="mt-3 text-sm">candidate → draft → needs_review → reviewed → published<br/><span class="text-slate-400">rejected · disputed · withdrawn stay internal (never public)</span></p></div><div class="card"><h2 class="font-bold">Candidate inbox</h2><p class="mt-3 text-sm">{cands.length} candidates · <strong>{pending}</strong> pending · <strong>{flagged}</strong> flagged for review. A candidate never becomes published without human curation (docs/LLM_EXTRACTION_POLICY.md).</p></div></div>
-<h2 class="mt-10 text-2xl font-bold">Candidates</h2><div class="mt-4 overflow-x-auto"><table class="w-full text-left border-collapse text-sm"><thead><tr class="text-slate-400 border-b border-white/20"><th class="py-2 pr-3">ID</th><th class="py-2 pr-3">Proposed mimic → model</th><th class="py-2 pr-3">Type</th><th class="py-2 pr-3">Grade</th><th class="py-2 pr-3">Confidence</th><th class="py-2 pr-3">Model / prompt</th><th class="py-2 pr-3">Status</th><th class="py-2">Actions</th></tr></thead><tbody>{cands.map(c=><tr class="border-b border-white/10 align-top"><td class="py-3 pr-3 text-slate-400">{c.id}</td><td class="py-3 pr-3 font-semibold">{c.proposed_mimic} <span class="text-coral">→</span> {c.proposed_model}</td><td class="py-3 pr-3">{c.proposed_mimicry_type}</td><td class="py-3 pr-3"><span class="pill">{c.proposed_evidence_grade}</span></td><td class="py-3 pr-3">{c.extraction_confidence.toFixed(2)}</td><td class="py-3 pr-3 text-slate-400">{c.extraction_model} · {c.extraction_prompt_version}</td><td class="py-3 pr-3">{c.review_status}</td><td class="py-3"><span class="pill mr-1 opacity-50">Accept</span><span class="pill mr-1 opacity-50">Edit</span><span class="pill opacity-50">Reject</span></td></tr>)}</tbody></table></div>
-<div class="card mt-8"><h2 class="font-bold">Extraction provenance (candidate CAND-DEMO-002)</h2><p class="mt-2 text-sm text-slate-400">Every candidate stores its extraction model, prompt version, timestamp, confidence and raw JSON so an extraction stays auditable and rerunnable. The raw extraction for this prototype record is a synthetic placeholder — no real publication was mined.</p><pre class="mt-3 overflow-x-auto rounded p-3 text-xs text-white" style="background:#102a43d9">{exampleRaw}</pre></div>
-</div></Layout>
+<Layout title="Curator workbench · MimicryDB"><div class="container py-12"><span class="pill">LOCAL WORKBENCH — AUTH ARRIVES WITH THE PUBLISH PIPELINE (v0.6.1)</span><h1 class="mt-4 text-4xl font-bold">Curator workbench</h1>
+<p class="mt-3 max-w-2xl text-slate-400">Review the three candidate layers, record decisions, then <strong class="text-gold">Export decisions</strong> and run <code>npm run curation:apply -- &lt;file&gt;</code> to apply them with a full audit trail (docs/CURATION_GUIDE.md). Published scientific records are never touched here.</p>
+<div class="mt-6 flex flex-wrap items-end gap-4"><div><label class="block text-[0.65rem] uppercase tracking-[0.2em] text-slate-500 mb-1" for="curator-name">Curator</label><input id="curator-name" class={sel+' w-56'} placeholder="your name / ORCID"/></div><button id="export-btn" class="btn">Export decisions ↓</button><label class="btn btn-ink cursor-pointer">Import decisions ↑<input id="import-input" type="file" accept=".json" class="hidden"/></label><span id="wb-msg" class="text-sm text-gold"></span></div>
+
+<h2 class="mt-14 text-2xl font-bold">1 · Interaction candidates <span id="int-count" class="text-sm text-slate-500"></span></h2>
+<p class="mt-2 text-sm text-slate-400">LLM/community proposals. Accept → publish-ready (reviewed); Reject keeps the record internal with your reason; Needs expert flags a second reviewer (SOP Phase 16).</p>
+<div id="int-queue" class="mt-6 space-y-4"></div>
+
+<h2 class="mt-14 text-2xl font-bold">2 · Literature screening queue <span id="lit-count" class="text-sm text-slate-500"></span></h2>
+<p class="mt-2 text-sm text-slate-400">Harvested literature (SOP Phase 9). Irrelevant papers are excluded <em>with a reason</em> and stay recorded — never deleted (SOP Phase 10).</p>
+<div class="mt-4 flex flex-wrap gap-2 text-xs" id="lit-filters"></div>
+<div id="lit-queue" class="mt-6 space-y-3"></div>
+
+<h2 class="mt-14 text-2xl font-bold">3 · Reference confirmations <span id="ref-count" class="text-sm text-slate-500"></span></h2>
+<p class="mt-2 text-sm text-slate-400">Crossref-imported metadata — confirm it is the right paper before it becomes a reference row.</p>
+<div id="ref-queue" class="mt-6 space-y-3"></div>
+</div>
+<script type="application/json" id="wbdata" set:html={island}/><script>
+const DATA=JSON.parse(document.getElementById('wbdata')!.textContent??'{}');
+type IntCand={id:string;proposed_mimic:string;proposed_model:string;proposed_receiver:string;proposed_mimicry_type:string;proposed_evidence_grade:string;extraction_confidence:number;extraction_model:string;review_status:string};
+type LitCand={key:string;doi:string|null;title:string|null;abstract:string|null;authors:string|null;journal:string|null;year:number|null;source:string;screening_status:string;exclusion_reason?:string|null};
+type RefRec={doi:string;title:string|null;authors:string|null;year:number|null;journal:string|null;curator_status:string|null};
+const intCands=(DATA.interactionCands??[]) as IntCand[];
+const litCands=(DATA.litCandidates??[]) as LitCand[];
+const refRecs=(DATA.refRecords??[]) as RefRec[];
+const EXCL:string[]=(DATA.exclusionReasons??[]) as string[];
+const STORE='mimicrydb-curator-v1';
+type Decisions={curator:string;interactions:Record<string,{decision:'accept'|'reject'|'needs_expert';edits?:Record<string,string>;reason?:string;decided_at?:string}>;
+  literature:Record<string,{screening:'likely_relevant'|'maybe_relevant'|'irrelevant';exclusion_reason?:string;decided_at?:string}>;
+  references:Record<string,{decision:'confirmed'|'rejected';decided_at?:string}>};
+const empty:Decisions={curator:'',interactions:{},literature:{},references:{}};
+const load=():Decisions=>{try{const raw=JSON.parse(localStorage.getItem(STORE)??'{}');return {...empty,...raw,interactions:{...raw.interactions},literature:{...raw.literature},references:{...raw.references}};}catch{return empty;}};
+let D:Decisions=load();
+const save=()=>localStorage.setItem(STORE,JSON.stringify(D));
+const $=(id:string)=>document.getElementById(id)!;
+const msg=(t:string)=>{$('wb-msg').textContent=t;setTimeout(()=>{$('wb-msg').textContent='';},2500);};
+const esc=(v:string|null|undefined)=>(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+($('curator-name') as HTMLInputElement).value=D.curator??'';
+$('curator-name').addEventListener('input',()=>{D.curator=($('curator-name') as HTMLInputElement).value;save();});
+
+function renderInt(){
+  const q=$('int-queue');q.innerHTML='';
+  $('int-count').textContent=`(${intCands.length})`;
+  for(const c of intCands){
+    const d=D.interactions[c.id];
+    const card=document.createElement('div');card.className='card';
+    card.innerHTML=`<div class="flex flex-wrap items-baseline justify-between gap-2"><div class="font-semibold">${esc(c.id)} · <em>${esc(c.proposed_mimic)}</em> <span class="text-coral">→</span> ${esc(c.proposed_model)}</div><span class="pill">${esc(c.proposed_evidence_grade)}</span></div>
+    <div class="mt-2 text-xs text-slate-400">receiver: ${esc(c.proposed_receiver)} · type: ${esc(c.proposed_mimicry_type)} · confidence ${c.extraction_confidence.toFixed(2)} · ${esc(c.extraction_model)} · status: <span class="text-gold">${esc(c.review_status)}${d?' → '+d.decision:''}</span></div>
+    <div class="mt-3 flex flex-wrap items-center gap-2 text-xs">
+      <button class="btn" data-int="${esc(c.id)}" data-act="accept">Accept</button>
+      <button class="btn btn-ink" data-int="${esc(c.id)}" data-act="reject">Reject</button>
+      <button class="btn btn-ink" data-int="${esc(c.id)}" data-act="needs_expert">Needs expert</button>
+      <input class="bg-transparent border border-white/25 rounded-sm px-2 py-1 text-xs text-white w-44" placeholder="reason (reject/expert)" data-reason="${esc(c.id)}" value="${esc(d?.reason??'')}"/>
+    </div>`;
+    q.appendChild(card);
+  }
+  q.querySelectorAll('button[data-int]').forEach(b=>b.addEventListener('click',()=>{
+    const btn=b as HTMLElement;
+    const id=btn.dataset.int!;const act=btn.dataset.act as 'accept'|'reject'|'needs_expert';
+    const reasonInput=q.querySelector(`[data-reason="${CSS.escape(id)}"]`) as HTMLInputElement|null;
+    const reason=reasonInput?.value||undefined;
+    D.interactions[id]={decision:act,reason,decided_at:new Date().toISOString()};
+    save();msg(`${id} → ${act}`);renderInt();
+  }));
+}
+let litFilter='all';
+function renderLitFilters(){
+  const counts=[{k:'all',n:litCands.length},{k:'new',n:litCands.filter(c=>c.screening_status==='new').length},
+    ...['likely_relevant','maybe_relevant','irrelevant'].map(k=>({k,n:litCands.filter(c=>c.screening_status===k).length}))];
+  const f=$('lit-filters');f.innerHTML=counts.map(c=>`<button class="pill ${litFilter===c.k?'!border-gold !text-gold':''}" data-lf="${c.k}">${c.k} (${c.n})</button>`).join('');
+  f.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{litFilter=(b as HTMLElement).dataset.lf!;renderLitFilters();renderLit();}));
+}
+function renderLit(){
+  const q=$('lit-queue');q.innerHTML='';
+  const shown=litCands.filter(c=>litFilter==='all'||c.screening_status===litFilter);
+  $('lit-count').textContent=`(${litCands.length})`;
+  for(const c of shown){
+    const d=D.literature[c.key];
+    const card=document.createElement('div');card.className='card';
+    card.innerHTML=`<div class="flex flex-wrap items-baseline justify-between gap-2"><div class="font-semibold text-sm">${esc(c.title)}</div><span class="pill">${esc(c.screening_status)}${d?' → '+d.screening:''}</span></div>
+    <div class="mt-1 text-xs text-slate-400">${esc(c.authors)}${c.year?' · '+c.year:''}${c.journal?' · '+esc(c.journal):''} · ${c.doi?esc(c.doi):'no DOI'} · source: ${esc(c.source)}</div>
+    ${c.abstract?`<p class="mt-2 text-xs leading-relaxed text-slate-300">${esc(c.abstract.slice(0,320))}${c.abstract.length>320?'…':''}</p>`:''}
+    ${c.exclusion_reason?`<p class="mt-1 text-xs text-coral">excluded: ${esc(c.exclusion_reason)}</p>`:''}
+    <div class="mt-2 flex flex-wrap items-center gap-2 text-xs">
+      <button class="btn" data-lit="${esc(c.key)}" data-s="likely_relevant">Likely relevant</button>
+      <button class="btn btn-ink" data-lit="${esc(c.key)}" data-s="maybe_relevant">Maybe</button>
+      <button class="btn btn-ink" data-lit="${esc(c.key)}" data-s="irrelevant">Irrelevant</button>
+      <select class="bg-transparent border border-white/25 rounded-sm px-2 py-1 text-xs text-white" data-excl="${esc(c.key)}">
+        <option value="">exclusion reason…</option>
+        ${EXCL.map(r=>`<option value="${esc(r)}" ${d?.exclusion_reason===r?'selected':''}>${esc(r)}</option>`).join('')}
+      </select>
+    </div>`;
+    q.appendChild(card);
+  }
+  q.querySelectorAll('button[data-lit]').forEach(b=>b.addEventListener('click',()=>{
+    const btn=b as HTMLElement;
+    const key=btn.dataset.lit!;const s=btn.dataset.s as 'likely_relevant'|'maybe_relevant'|'irrelevant';
+    const excl=q.querySelector(`[data-excl="${CSS.escape(key)}"]`) as HTMLSelectElement|null;
+    if(s==='irrelevant'&&!excl?.value){msg('pick an exclusion reason first');return;}
+    D.literature[key]={screening:s,exclusion_reason:excl?.value||undefined,decided_at:new Date().toISOString()};
+    save();msg(`${key.slice(0,40)}… → ${s}`);renderLit();renderLitFilters();
+  }));
+}
+function renderRef(){
+  const q=$('ref-queue');q.innerHTML='';
+  $('ref-count').textContent=`(${refRecs.length})`;
+  for(const r of refRecs){
+    const d=D.references[r.doi];
+    const card=document.createElement('div');card.className='card';
+    card.innerHTML=`<div class="flex flex-wrap items-baseline justify-between gap-2"><div class="font-semibold text-sm">${esc(r.title)}</div><span class="pill">${r.curator_status??d?.decision??'unconfirmed'}</span></div>
+    <div class="mt-1 text-xs text-slate-400">${esc(r.authors)}${r.year?' · '+r.year:''}${r.journal?' · '+esc(r.journal):''} · ${esc(r.doi)}</div>
+    <div class="mt-2 flex gap-2 text-xs"><button class="btn" data-ref="${esc(r.doi)}" data-rd="confirmed">Confirm</button><button class="btn btn-ink" data-ref="${esc(r.doi)}" data-rd="rejected">Reject</button></div>`;
+    q.appendChild(card);
+  }
+  q.querySelectorAll('button[data-ref]').forEach(b=>b.addEventListener('click',()=>{
+    const btn=b as HTMLElement;
+    const doi=btn.dataset.ref!;const rd=btn.dataset.rd as 'confirmed'|'rejected';
+    D.references[doi]={decision:rd,decided_at:new Date().toISOString()};
+    save();msg(`${doi} → ${rd}`);renderRef();
+  }));
+}
+$('export-btn').addEventListener('click',()=>{
+  if(!D.curator.trim()){msg('enter the curator name first');return;}
+  const blob=new Blob([JSON.stringify({format:1,exported_at:new Date().toISOString(),curator:D.curator,interactions:D.interactions,literature:D.literature,references:D.references},null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+  a.download=`curation-decisions-${new Date().toISOString().slice(0,10)}.json`;a.click();
+  URL.revokeObjectURL(a.href);msg('exported — now run: npm run curation:apply -- <file>');
+});
+$('import-input').addEventListener('change',ev=>{
+  const f=(ev.target as HTMLInputElement).files?.[0];if(!f)return;
+  const rd=new FileReader();
+  rd.onload=()=>{try{const j=JSON.parse(String(rd.result));
+    D.curator=j.curator??D.curator??'';
+    D.interactions={...D.interactions,...(j.interactions??{})};
+    D.literature={...D.literature,...(j.literature??{})};
+    D.references={...D.references,...(j.references??{})};
+    save();($('curator-name') as HTMLInputElement).value=D.curator;renderInt();renderLitFilters();renderLit();msg('decisions imported');
+  }catch{msg('invalid decisions file');}};
+  rd.readAsText(f);
+});
+renderInt();renderLitFilters();renderLit();renderRef();
+</script></Layout>

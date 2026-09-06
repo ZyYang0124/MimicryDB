@@ -391,3 +391,29 @@ test('harvest 0.4.2: OpenAlex mapping, abstract reconstruction, fuzzy tier',asyn
   assert.ok(second,'fuzzy near-duplicate still creates its own candidate (review, not merge)');
   assert.ok(first.dedupe.concat(second.dedupe).some(d=>d.method==='fuzzy_title'),'fuzzy collision flagged for review on at least one side');
 });
+
+test('curation 0.6.0: decisions validate, apply, and leave an audit trail',async()=>{
+  const {validateDecisions,applyInteractionDecisions,applyLiteratureDecisions,applyReferenceDecisions}=await import('../src/lib/curation.ts');
+  // validation guards
+  assert.ok(!validateDecisions({format:2}).ok,'unknown format rejected');
+  assert.ok(!validateDecisions({format:1,curator:'',interactions:{},literature:{},references:{}}).ok,'curator name required');
+  assert.ok(!validateDecisions({format:1,curator:'C',interactions:{x:{decision:'publish'}},literature:{},references:{}}).ok,'unknown interaction decision rejected');
+  assert.ok(!validateDecisions({format:1,curator:'C',interactions:{},literature:{x:{screening:'irrelevant'}},references:{}}).ok,'irrelevant without exclusion_reason rejected');
+  // interaction application: accept/reject/needs_expert + field edits
+  const intCands=[{id:'CAND-1',review_status:'pending',proposed_mimic:'wrong name'}];
+  const audit1=applyInteractionDecisions(intCands,{ 'CAND-1':{decision:'accept',edits:{proposed_mimic:'Myrmarachne formicaria'},decided_at:'t'}},'curator A','t');
+  assert.equal(intCands[0].review_status,'reviewed');
+  assert.equal(intCands[0].proposed_mimic,'Myrmarachne formicaria','field edits applied');
+  assert.equal(intCands[0].reviewed_by,'curator A');
+  assert.equal(audit1[0].action,'accept');
+  // literature: irrelevant keeps its exclusion reason (SOP Phase 10)
+  const lit={ '10.1/x':{screening_status:'new'} };
+  applyLiteratureDecisions(lit,{'10.1/x':{screening:'irrelevant',exclusion_reason:'molecular mimicry',decided_at:'t'}},'C','t');
+  assert.equal(lit['10.1/x'].screening_status,'irrelevant');
+  assert.equal(lit['10.1/x'].exclusion_reason,'molecular mimicry','excluded records keep their reason, never deleted');
+  // references
+  const refs={ '10.2/y':{} };
+  applyReferenceDecisions(refs,{'10.2/y':{decision:'confirmed',decided_at:'t'}},'C','t');
+  assert.equal(refs['10.2/y'].curator_status,'confirmed');
+  assert.equal(refs['10.2/y'].curator,'C');
+});

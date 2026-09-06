@@ -73,7 +73,7 @@ Priority order is fixed: Schema > Ontology > Provenance > Curation > Harvester >
 | 0.5.0 | LLM screening | ◻ |
 | 0.5.1 | OA/fulltext resolver | ◻ |
 | 0.5.2 | LLM extraction | ◻ |
-| 0.6.0 | Curator UI | ◻ |
+| 0.6.0 | Curator UI | ✅ first pass (/curator/ workbench: interaction candidates, literature screening, reference confirmations, export → curation:apply with audit trail) |
 | 0.6.1 | Publish pipeline | ◻ |
 | 0.7.0 | Advanced search | ◻ (basic filter+export live on the download page) |
 | 0.7.1 | Taxon/reference/system portal | ✅ first pass (research-portal taxon pages, reference hubs, /systems pages) |

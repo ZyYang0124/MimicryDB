@@ -1,0 +1,54 @@
+{
+  "policy": "Curator workbench layer: LLM/community proposals under review. Accept promotes to publish-ready; nothing here is public until the publish pipeline (v0.6.1) runs with curator auth.",
+  "exported_from": "src/data/demo.ts (synthetic demo candidates)",
+  "candidates": [
+    {
+      "id": "CAND-DEMO-001",
+      "proposed_mimic": "demo mimic taxon A",
+      "proposed_model": "demo model taxon B",
+      "proposed_receiver": "predator",
+      "proposed_mimicry_type": "batesian",
+      "proposed_modality": "visual",
+      "proposed_evidence_grade": "E1",
+      "reference": "Demo reference — sample data (placeholder)",
+      "evidence_text": "[placeholder passage] The author describes the taxon as resembling the model.",
+      "extraction_confidence": 0.72,
+      "extraction_model": "demo-model (placeholder)",
+      "extraction_prompt_version": "v0",
+      "review_status": "pending",
+      "note": "synthetic example — not from any real publication"
+    },
+    {
+      "id": "CAND-DEMO-002",
+      "proposed_mimic": "demo mimic taxon C",
+      "proposed_model": "demo model class D",
+      "proposed_receiver": "not reported",
+      "proposed_mimicry_type": "uncertain",
+      "proposed_modality": "chemical",
+      "proposed_evidence_grade": "E0",
+      "reference": "Demo reference — sample data (placeholder)",
+      "evidence_text": "[placeholder passage] Resemblance terminology only.",
+      "extraction_confidence": 0.41,
+      "extraction_model": "demo-model (placeholder)",
+      "extraction_prompt_version": "v0",
+      "review_status": "needs_review",
+      "note": "low extraction confidence — flagged for curator · synthetic example, not from any real publication"
+    },
+    {
+      "id": "CAND-DEMO-003",
+      "proposed_mimic": "demo mimic taxon E",
+      "proposed_model": "demo model taxon F",
+      "proposed_receiver": "pollinator",
+      "proposed_mimicry_type": "floral",
+      "proposed_modality": "visual",
+      "proposed_evidence_grade": "E2",
+      "reference": "Demo reference — sample data (placeholder)",
+      "evidence_text": "[placeholder passage] Sympatric distribution consistent with the proposed interaction.",
+      "extraction_confidence": 0.88,
+      "extraction_model": "demo-model (placeholder)",
+      "extraction_prompt_version": "v0",
+      "review_status": "pending",
+      "note": "synthetic example — not from any real publication"
+    }
+  ]
+}
