@@ -27,7 +27,21 @@
       "records_error": 0,
       "status": "success",
       "error_log": []
+    },
+    {
+      "run_id": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "started_at": "2026-09-06T07:45:49.366Z",
+      "finished_at": "2026-09-06T07:45:52.447Z",
+      "records_seen": 20,
+      "records_new": 19,
+      "records_duplicate": 1,
+      "records_error": 0,
+      "status": "success",
+      "error_log": []
     }
   ],
-  "last_successful_sync": "2026-09-06T05:48:15.782Z"
+  "last_successful_sync": "2026-09-06T07:45:52.447Z"
 }

@@ -357,3 +357,37 @@ test('seed and setup SQL never contain semicolons inside string literals',async(
     assert.equal(bad.length,0,`${f}: semicolon inside string literal at line(s) ${bad.join(',')} — the Supabase SQL Editor splits on it`);
   }
 });
+
+test('harvest 0.4.2: OpenAlex mapping, abstract reconstruction, fuzzy tier',async()=>{
+  const {reconstructAbstract,mapOpenAlexWork,fuzzyTitleSimilarity,applyItems}=await import('../src/lib/harvest.ts');
+  // inverted-index abstract reconstruction (OpenAlex format)
+  const text=reconstructAbstract({'Butterflies':[0],'in':[1],'the':[2],'genus':[3],'Heliconius':[4],'exhibit':[5],'mimicry':[6]});
+  assert.equal(text,'Butterflies in the genus Heliconius exhibit mimicry');
+  assert.equal(reconstructAbstract(null),null);
+  // OpenAlex work mapping: doi prefix normalized downstream, ids preserved
+  const item=mapOpenAlexWork({id:'https://openalex.org/W123',doi:'https://doi.org/10.1/xx',
+    display_name:'A study of mimicry',publication_year:2024,
+    authorships:[{author:{display_name:'A. Curator'}},{author:{display_name:'B. Reviewer'}}],
+    primary_location:{source:{display_name:'Journal of Mimicry'}},
+    abstract_inverted_index:{'A':[0],'study':[1]}});
+  assert.equal(item.title,'A study of mimicry');
+  assert.equal(item.ids.openalex,'https://openalex.org/W123');
+  assert.equal(item.abstract,'A study');
+  assert.equal(item.authors,'A. Curator; B. Reviewer');
+  assert.equal(item.journal,'Journal of Mimicry');
+  // fuzzy tier flags near-duplicates (>=0.85) without blocking creation
+  const sim=fuzzyTitleSimilarity('Ant Mimicry in Spiders!','ant  mimicry  in spiders');
+  assert.ok(sim>=0.85,'near-identical titles score high');
+  assert.ok(fuzzyTitleSimilarity('Ant mimicry','Mullerian mimicry in butterflies')<0.5,'distinct titles score low');
+  const candidates={};
+  const run={run_id:'R',source:'openalex',search_profile:'P',profile_version:'1',started_at:'',finished_at:'',records_seen:0,records_new:0,records_duplicate:0,records_error:0,status:'failed',error_log:[]};
+  const {buildIndexes}=await import('../src/lib/harvest.ts');
+  const {byNormDoi,byNormTitle}=buildIndexes(candidates);
+  applyItems([
+    {doi:'10.5/a',title:'Ant mimicry in jumping spiders',ids:{openalex:'W1'}},
+    {doi:'10.5/b',title:'Ant Mimicry in the Jumping Spiders',ids:{openalex:'W2'}},
+  ],candidates,run,byNormDoi,byNormTitle);
+  const first=candidates['10.5/a'],second=candidates['10.5/b'];
+  assert.ok(second,'fuzzy near-duplicate still creates its own candidate (review, not merge)');
+  assert.ok(first.dedupe.concat(second.dedupe).some(d=>d.method==='fuzzy_title'),'fuzzy collision flagged for review on at least one side');
+});

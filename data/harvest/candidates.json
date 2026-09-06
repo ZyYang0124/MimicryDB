@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T05:48:13.704Z",
+  "generated": "2026-09-06T07:45:49.363Z",
   "policy": "literature_candidate corpus — discovery layer only; screening_status new → screened; irrelevant records are EXCLUDED with a reason, never deleted (SOP Phase 10).",
   "candidates": {
     "10.1016/j.foodhyd.2026.113278": {
@@ -699,6 +699,579 @@
           "method": "doi_exact",
           "confidence": 1,
           "matched_doi": "10.1016/j.tifs.2026.106021"
+        }
+      ]
+    },
+    "10.5281/zenodo.17776605": {
+      "doi": "10.5281/zenodo.17776605",
+      "normalized_doi": "10.5281/zenodo.17776605",
+      "normalized_title": "on zaya 2025 marcel van luit",
+      "title": "On Zaya (2025) – Marcel van Luit",
+      "abstract": "Abstract The Medium Betrayed the Miracle is a Post-Interpretive Criticism essay examining the encounter between image, memory, and medium through a detailed reading of Zaya’s digitally rendered allegorical tableau. What first appears to be a painting—replete with chiaroscuro, symbolic fauna, and mythic staging—gradually reveals itself as a digital work. This revelation becomes the fulcrum of the essay: a meditation on authenticity, labor, memory, and the ethics of medium. Through the tiger’s posture of grief, the zebra’s ecstatic witness, the birds’ opposing grammars of love, and the subtle fractures embedded in the architecture, the piece traces the tension between lived reality and stylized recollection. The discovery of its digital origin becomes not a dismissal but an invocation—forcing a confrontation with our inherited biases about materiality, struggle, and truth. Description This essay explores the betrayal and illumination inherent in contemporary digital aesthetics by following a deliberate, slow reading of an image that initially masquerades as traditional painting. The tiger at the center of the scene becomes both mourner and mathematician, contemplating the collapse of a paradise once shared. The broken arrows, the golden heart, the butterflies rising like memory, and the architecture leaning off-center all form a grammar of loss. The zebra, almost pleased, stands as a counter-mask; the birds echo two conjugations of desire—flamboyance and surrender. Throughout, the essay ties the symbolic tension of the composition to a deeper philosophical inquiry: the cost of creation. It asks what it means for beauty to exist without labor, or memory to exist without sediment. Drawing from anthropological insight, aesthetic theory, and the ethics of material presence, the work argues that medium is never neutral. Canvas carries struggle; digital carries concealment. The moment of revelation—that the work is digital—forces the critic to confront their own assumptions about authenticity, craft, and the lineage of human mark-making. Yet this collapse becomes generative. The artwork, in its digital deception, enacts a quiet triumph: it moved the viewer before it revealed itself. It performed presence before category. And this, as the essay argues, is its miracle. Keywords Art criticism; digital aesthetics; authenticity; medium theory; Post-Interpretive Criticism; memory; allegory; symbolism; visual analysis; contemporary digital art; representation; materiality; ontology of images; anthropological aesthetics; sensory ethics; Dorian Vale. Methodological Context The essay is written within the framework of the Post-Interpretive Movement, prioritizing presence over analysis and ethical proximity over interpretive extraction. The reading is grounded not in decoding symbolism but in honoring the atmosphere, tension, and moral residue of the visual experience. It situates digital creation within a lineage of material struggle, questioning how memory behaves when the medium contains no trace of the hand. Disciplinary Relevance – Art Criticism: Examines medium, authenticity, and symbolic structure. – Digital Humanities: Investigates digital aesthetics as inheritors of painterly illusion. – Anthropology & Semiotics: Interprets gestures, posture, and metaphor through the lens of cultural memory. – Aesthetics & Philosophy: Engages ancient biases about labor, truth, and the ontology of the image. – Visual Culture Studies: Explores the psychological aftermath of discovering digital origin. Movement Attribution This text is part of the Post-Interpretive Criticism corpus founded by Dorian Vale, emphasizing ethical witnessing, restraint, and custodial engagement with art. Funding & Institutional Context Published by Museum of One — Independent Research Institute for Contemporary Aesthetics.",
+      "authors": "Vale, Dorian",
+      "journal": null,
+      "year": 2028,
+      "ids": {
+        "crossref": "10.5281/zenodo.17776605",
+        "openalex": "https://openalex.org/W7108215888",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.440Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9,
+          "matched_doi": "10.5281/zenodo.19862260"
+        }
+      ]
+    },
+    "10.17613/xd840-6v157": {
+      "doi": "10.17613/xd840-6v157",
+      "normalized_doi": "10.17613/xd840-6v157",
+      "normalized_title": "moral consistency variance a pilot benchmark for decision stability under moral prompt perturbations in large language models",
+      "title": "Moral Consistency Variance: A Pilot Benchmark for Decision Stability under Moral Prompt Perturbations in Large Language Models",
+      "abstract": "Static moral question-answering benchmarks do not test whether a model's decision distribution remains stable when the same dilemma is rephrased without changing the underlying facts. This paper introduces Moral Consistency Variance (MCV), a pilot benchmark metric that measures the average Kullback-Leibler divergence between a baseline binary decision distribution and the distributions induced by prompt perturbations that keep the scenario text and action options fixed. To contextualize the directional KL-based score, we also report Jensen-Shannon divergence (JSD) as a symmetric baseline and decision flip rate as a categorical companion metric. The benchmark contains 50 synthetic dilemmas across ten moral themes, with five perturbation wrappers per scenario. We evaluate two xAI non-reasoning models, one Google Gemini model on Vertex AI, and one open-weight instruct model. A manual audit of 20 randomly sampled prompt pairs found that the perturbation wrappers preserved the scenario facts and action options in all sampled cases, while potentially still changing discourse emphasis. Across the shared 50 -scenario set, grok-4-fast-non-reasoning and grok-4-1-fast-non-reasoning showed low mean MCV ( $2.22 \\times 10^{-3}$ and $1.38 \\times 10^{-3}$ ) with zero observed decision flips; gemini-2.5-flash showed a higher mean MCV ( $2.27 \\times 10^{-2}$ ) with a lower mean flip rate ( 0.012 ) than the open-weight control SmolLM2-360M-Instruct, which reached $5.89 \\times 10^{-3} \\mathrm{MCV}$ with a mean flip rate of 0.292 . Bootstrap confidence intervals and paired Wilcoxon tests indicate that the model-level differences are statistically detectable on this pilot set. We interpret these results as evidence that MCV can reveal promptconditioned distributional instability that categorical agreement alone would miss. The current evidence supports \"moral mimicry\" only as an interpretive hypothesis, not as an established mechanism.",
+      "authors": "Qiao Liang",
+      "journal": null,
+      "year": 2026,
+      "ids": {
+        "crossref": "10.17613/xd840-6v157",
+        "openalex": "https://openalex.org/W7154276517",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.441Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "no-doi:the human adenosine a2a receptor co isolates with anionic phospholipids in smalps from pichia pastoris membranes": {
+      "doi": null,
+      "normalized_doi": null,
+      "normalized_title": "the human adenosine a2a receptor co isolates with anionic phospholipids in smalps from pichia pastoris membranes",
+      "title": "The human adenosine A2A receptor co-isolates with anionic phospholipids in SMALPs from Pichia pastoris membranes",
+      "abstract": "The adenosine A2A receptor (A2AR) is a GPCR that binds adenosine, leading to modulation of inflammation, platelet aggregation and vasodilation of coronary arteries. It is known that phospholipids surrounding GPCRs affect their activity but these effects have largely been determined by studies in reconstituted liposomes or by molecular dynamics simulations. Therefore, the aim was to investigate the phospholipid composition of the A2AR in a native-like environment to determine its preference for specific phospholipids. Recombinant human truncated A2AR (A316) was overexpressed in Pichia pastoris and solubilized by SMA2000 into SMA lipid particles (SMALPs). Phospholipids in the A2AR-SMALP were characterised and compared to those in bulk membranes and SMA-solubilized lipids by LC-MS/MS. In all samples, species of phosphatidylcholine (PC), phosphatidylethanolamine (PE), phosphatidylserine (PS), phosphatidylglycerol (PG), phosphatidylinositol (PI), lysophosphatidylcholine (LPC), and lysophosphatidylethanolamine (LPE) were detected. Principal component analysis showed clear differences in the lipid profiles of P. pastoris bulk membranes, SMA-solubilized fraction, and purified A2AR-SMALP. Bulk membranes were enriched in PC and LPE, whereas the SMA-solubilized fraction was enriched in PE, PS, and PG. In contrast, the A2AR-SMALP was enriched in the anionic lipids, especially PG and PA but contained lower intensities of PE. The data provides the first practical evidence suggesting that the A2AR co-isolates with anionic lipids that are positive regulators for GPCRs and has lower levels of the negative regulator PE than non-specific SMA-solubilized membrane. The study also provides evidence that SMA2000 does preferentially solubilize membrane regions containing certain phospholipids.",
+      "authors": "Idoia Company-Marín; Andrew R. Pitt; Corinne M. Spickett",
+      "journal": "Aston Publications Explorer (Aston University)",
+      "year": 2026,
+      "ids": {
+        "openalex": "https://openalex.org/W7167447758",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.442Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "no-doi:ethical investment dynamics in emerging economies an assessment of key determinants across the top financial firms in brics markets": {
+      "doi": null,
+      "normalized_doi": null,
+      "normalized_title": "ethical investment dynamics in emerging economies an assessment of key determinants across the top financial firms in brics markets",
+      "title": "Ethical investment dynamics in emerging economies: an assessment of key determinants across the top financial firms in BRICS markets",
+      "abstract": "Abstract: Ethical investment has gained increasing importance in emerging economies; however, how financial institutions strategically communicate ethical investment priorities remains underexplored. This study investigates ethical investment dynamics in BRICS countries by conducting a website-based thematic content analysis of the vision and mission statements of 25 leading financial institutions (five from each BRICS economy). Drawing on institutional, stakeholder, and legitimacy perspectives, the study identifies and compares core ethical themes articulated through corporate digital communication. The findings reveal substantial cross-country variation in ethics-focused emphasis. India exhibits the strongest explicit focus on ethics, primarily framed through governance, integrity, and accountability narratives, followed closely by China, where ethics is embedded within compliance-oriented and institutionally disciplined discourse. South Africa demonstrates a sustainability-led ethical narrative, integrating ethics with environmental and social responsibility, while Brazil adopts a purpose- and stakeholder-driven approach in which ethics supports broader value-based identity construction. In contrast, Russia places comparatively less explicit emphasis on ethics, framing ethical responsibility more implicitly through service orientation and stakeholder support. Overall, the results highlight that ethical investment in emerging markets is context-dependent and strategically communicated, rather than uniformly defined. By shifting attention from quantitative ESG indicators to qualitative corporate narratives, this study contributes to the ethical investment literature by offering a comparative, firm-level understanding of how ethics is constructed, prioritized, and legitimized across major emerging economies.",
+      "authors": "Salamat Hussain; Zhengmeng CHAI; Zaheer Abbas; Chuen Wah Seow; Talib Hussain",
+      "journal": "Scientific Electronic Library Online (Scientific Electronic Library Online)",
+      "year": 2026,
+      "ids": {
+        "openalex": "https://openalex.org/W7203801069",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.442Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1021/acs.jcim.6c01530": {
+      "doi": "10.1021/acs.jcim.6c01530",
+      "normalized_doi": "10.1021/acs.jcim.6c01530",
+      "normalized_title": "thermodynamics and unbinding kinetics of a22 at multiple actin binding sites revealed by enhanced sampling simulations",
+      "title": "Thermodynamics and Unbinding Kinetics of A22 at Multiple Actin-Binding Sites Revealed by Enhanced Sampling Simulations",
+      "abstract": "Abstract The cytoskeletal protein plays a major role in various cellular processes. Understanding the interactions of small molecules with cytoskeletal protein therefore might help in the development of therapeutics. Employing combined molecular docking, all-atom molecular dynamics (MD), and enhanced sampling technique, we studied bacterial inhibitor A22 and actin protein interaction. Five probable A22 binding sites (S1–S5) were observed in actin and unbiased MD simulations of 100 ns to 1000 ns showed structural stability at these sites. Interaction analyses showed A22 to form transient interactions except at sites S1, S3, and S5 where long-lived interactions were present. Enhanced sampling simulations quantitatively estimated ligand dissociation free energy (ΔGb) ∼ −1.3 ± 0.6 kcal/mol to −4.9 ± 1.5 kcal/mol for sites S1–S4 with residence times ∼μs to ms. For site S5, we observed the highest binding affinity with dissociation free energy (ΔGb) ∼ −8.8 ± 3.8 kcal/mol with residence time ∼sec. Analyses of the dissociation trajectories predict multiple dissociation pathways for A22 and found key gatekeeper residues at specific-sites facilitating ligand dissociation. Comparison of A22 with other known inhibitors suggests that A22 binds actin with relatively lower affinity, however, exhibits site-specific unbinding kinetics. Thus, our study provides a detailed mechanistic overview of actin + A22 interaction, its various binding modes, binding affinities, and unbinding kinetics. It also shows the importance and usage of metadynamics and its variants in exploring rare events like ligand–protein interaction. Deeper insights gained from this study expands our understanding of cytoskeletal ligand dynamics. These knowledges will be paramount in designing drug targeting cytoskeletal protein actin.",
+      "authors": "Anuj Kumar; Debabrata Pramanik",
+      "journal": "Journal of Chemical Information and Modeling",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1021/acs.jcim.6c01530",
+        "openalex": "https://openalex.org/W4412370668",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.442Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s41422-026-01287-9": {
+      "doi": "10.1038/s41422-026-01287-9",
+      "normalized_doi": "10.1038/s41422-026-01287-9",
+      "normalized_title": "innate immune sensors of inflammasomes and panoptosomes structural mechanistic insights and therapeutic implications",
+      "title": "Innate immune sensors of inflammasomes and PANoptosomes: structural–mechanistic insights and therapeutic implications",
+      "abstract": "Innate immunity provides a critical first line of defense against pathogens and homeostatic perturbations. Pattern recognition receptors detect these disruptions and initiate immune responses through multi-protein complex formation to drive inflammatory signaling and cell death pathways. Key cytosolic complexes formed by these sensors include inflammasomes and PANoptosomes. Inflammasomes induce caspase-1 activation and the subsequent maturation of interleukin (IL)-1β and IL-18, and they can act as integral components of larger PANoptosomes, whose formation and functions have been defined by genetic, biochemical, and single-cell imaging evidence. PANoptosomes induce lytic, inflammatory cell death (PANoptosis) and promote the release of damage-associated molecular patterns (DAMPs) and cytokines beyond IL-1β and IL-18, including TNF, IFNs, IL-6, and others. Given their critical functions in driving cell death and the release of cytokines and DAMPs, dysregulation of innate immune sensors is associated with a wide range of diseases, including infections, autoinflammatory syndromes, cardiovascular disorders, neurodegeneration, metabolic conditions, and cancer. Therefore, understanding innate immune sensors and how they assemble inflammasomes and PANoptosomes to drive cell death is critical for identifying therapeutic strategies. In this review, we discuss innate immune sensors that form inflammasomes and PANoptosomes, such as NLRP1, NLRP3, NLRC4, AIM2, Pyrin, and others. We highlight recent structural and mechanistic insights into these sensors, along with emerging structural studies of inflammasome assemblies and the biochemical and functional evidence supporting the formation of PANoptosomes. Given the physiological relevance of innate immune sensors and the complexes they form across the disease spectrum, an improved understanding of their structure-function relationships will be critical for informing therapeutic strategies that target these molecules, their associated complexes, and their physiological functions.",
+      "authors": "Saurabh Upadhyay; Raghavendra Nagampalli; Sara Resende; Thirumala‐Devi Kanneganti",
+      "journal": "Cell Research",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s41422-026-01287-9",
+        "openalex": "https://openalex.org/W7207562470",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.443Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s40267-026-01274-5": {
+      "doi": "10.1007/s40267-026-01274-5",
+      "normalized_doi": "10.1007/s40267-026-01274-5",
+      "normalized_title": "navigating nsaid hypersensitivity a phenotype based algorithm for diagnosis and safe therapy",
+      "title": "Navigating NSAID hypersensitivity: a phenotype-based algorithm for diagnosis and safe therapy",
+      "abstract": "Non‑steroidal anti‑inflammatory drugs (NSAIDs) are a common cause of drug‑induced hypersensitivity manifesting as urticaria and/or angioedema. These reactions arise via two principal mechanisms with distinct clinical implications: selective IgE‑mediated allergy to a single NSAID, and cross‑reactive intolerance driven by cyclooxygenase‑1 (COX‑1) inhibition. This review synthesizes current evidence on mechanisms, phenotypes, diagnosis, and management, emphasizing phenotype‑based clinical reasoning. We outline the European Network for Drug Allergy /European Academy of Allergy and Clinical Immunology classification system, highlight atypical and blended presentations, and stress the central role of carefully taken history combined with graded oral challenge testing where safe, given the poor performance of most skin and in-vitro assays outside pyrazolone allergy. For management, we summarize avoidance strategies, choice of safe alternatives (particularly COX‑2, selective agents), indications and protocols for aspirin desensitization, and the role of comorbidity control and adjuncts such as leukotriene receptor antagonists and biologics in selected cases. A pragmatic algorithm is provided to guide classification, testing, and therapy. Consistent application of these principles minimizes unnecessary blanket NSAID avoidance while preserving analgesic and anti‑inflammatory options for patients.",
+      "authors": "Ram Abou Mjahed; Ekatherine Prokopiou",
+      "journal": "Drugs & Therapy Perspectives",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s40267-026-01274-5",
+        "openalex": "https://openalex.org/W7207726731",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.443Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.14740/jmc5364": {
+      "doi": "10.14740/jmc5364",
+      "normalized_doi": "10.14740/jmc5364",
+      "normalized_title": "a silent mimic biopsy proven focal nodular hyperplasia masquerading as chronic intrahepatic biliary obstruction",
+      "title": "A Silent Mimic: Biopsy-Proven Focal Nodular Hyperplasia Masquerading as Chronic Intrahepatic Biliary Obstruction",
+      "abstract": "Focal nodular hyperplasia (FNH) is a benign hepatic lesion that is typically asymptomatic and most often found incidentally. Biliary obstruction caused by FNH is rare and can create diagnostic uncertainty, particularly when imaging can mimic vascular lesions, hepatocellular adenoma, bile duct adenoma, or congenital hepatobiliary abnormalities. We present the case of a 38-year-old woman with hypertension who was noted to have persistently abnormal liver enzymes on routine outpatient blood tests. She denied symptoms such as jaundice, pruritus, pale stools, dark urine, weight loss, nausea, vomiting, or abdominal pain. Laboratory tests showed a chronic cholestatic-predominant pattern with elevated alkaline phosphatase, mildly elevated aspartate aminotransferase (AST) and alanine aminotransferase (ALT), fluctuating hyperbilirubinemia, and markedly elevated gamma-glutamyl transferase (GGT). Ultrasound revealed intrahepatic biliary ductal dilatation and indeterminate cystic areas within the liver. Computed tomography revealed chronic biliary ductal dilatation, hepatic parenchymal deformity, a mass-like hypertrophied hepatic segment, and a central arterial-enhancing structure initially concerning for aneurysm or pseudoaneurysm. Magnetic resonance imaging (MRI) and magnetic resonance cholangiopancreatography (MRCP) demonstrated marked intrahepatic biliary dilatation, an arterially enhancing lesion suspicious for atypical FNH, and a second exophytic lesion causing mass effect on the biliary tree. Differentials included atypical adenoma, intrahepatic bile duct adenoma, vascular lesion, or congenital anomaly. Because serial imaging remained indeterminate, percutaneous liver biopsy was performed. Histopathology showed preserved lobular architecture, intermittent thin fibrous septa, focal sinusoidal dilatation, ductular reaction, and map-like glutamine synthetase staining with membranous beta-catenin staining, supporting the diagnosis of FNH. This case highlights an atypical presentation of FNH causing chronic intrahepatic biliary obstruction and emphasizes the importance of integrating imaging, multidisciplinary review, and histopathology when benign hepatic lesions present atypically and influence management decisions.",
+      "authors": "IMROZ APON; Ahmed Shehadah; Behrawar Ahmed; Usama Sakhawat; Ali Marhaba; Chibuike Enwereuzo",
+      "journal": "Journal of Medical Cases",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.14740/jmc5364",
+        "openalex": "https://openalex.org/W7208704488",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.443Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.3389/fsoc.2026.1907593": {
+      "doi": "10.3389/fsoc.2026.1907593",
+      "normalized_doi": "10.3389/fsoc.2026.1907593",
+      "normalized_title": "epistemicide and colonial knowledge a contrapuntal reading of nair historiography in south india",
+      "title": "Epistemicide and colonial knowledge: a contrapuntal reading of Nair historiography in South India",
+      "abstract": "Colonial power in South Asia operated not only through territorial administration but also through the systematic codification of indigenous societies into Western epistemic categories. This article investigates the historiographical construction of the Nair community in Kerala, South India, specifically focusing on the matrilineal institutions of marumakkathayam and sambandham . Situating the study within debates on colonial epistemology and postcolonial theory, the article analyses how ethnographic and historical narratives emplot Nair social institutions within Eurocentric interpretive frameworks. Drawing on Boaventura de Sousa Santos’s concept of epistemicide, Bernard Cohn’s theorisation of colonial forms of knowledge and Edward Said’s method of contrapuntal reading, the article traces how imperial discourse framed indigenous social practices into reductive binaries of “oppressor” and “oppressed”. The study advances debates in decolonial historiography by exposing the narrative structures through which colonial knowledge systems produced and perpetuated epistemicide. This contributes to the ongoing efforts to decolonize the study of South Asian communities.",
+      "authors": "S. Anandhu; C. V. Anupama Nayar; A.S.Aneesh",
+      "journal": "Frontiers in Sociology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.3389/fsoc.2026.1907593",
+        "openalex": "https://openalex.org/W7208711967",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.444Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1002/csr.70965": {
+      "doi": "10.1002/csr.70965",
+      "normalized_doi": "10.1002/csr.70965",
+      "normalized_title": "of mimicry and use in sustainability reporting a multi method analysis of issb adoption intention in morocco",
+      "title": "Of Mimicry and Use in Sustainability Reporting: A Multi‐Method Analysis of ISSB Adoption Intention in Morocco",
+      "abstract": "ABSTRACT This study examines ISSB sustainability reporting standards adoption intention in Morocco by addressing a central theoretical problem: why similar institutional pressures lead to heterogeneous adoption outcomes. We argue that external pressures translate into adoption intention primarily when they are cognitively internalised by organisational actors through perceived usefulness and feasibility. Using data from 335 Moroccan accounting professionals, the study tests a multi‐level behavioural model linking mimetic and normative pressures to individual adoption intention through perceived usefulness (PU) and perceived ease of use (PEOU). A multi‐method design combining Covariance‐Based Structural Equation Modelling (CB‐SEM), Generalized Structured Component Analysis (GSCA), Multi‐Group Analysis (MGA), Necessary Condition Analysis (NCA) and machine learning models (Random Forest and XGBoost supported by SHAP values) is employed. Results show that institutional pressures significantly influence individual adoption intention, but primarily through PU and PEOU. Importantly, PEOU emerges as a necessary condition, indicating that a minimum threshold of perceived feasibility is required before individual accounting professionals express an intention to adopt ISSB standards. PU is the strongest predictor but not indispensable. The study contributes by demonstrating that heterogeneous adoption intentions are not driven by institutional pressures alone, but by the way these pressures are cognitively interpreted and evaluated by individual accounting professionals, offering a more precise explanation of variability in ISSB adoption intention in emerging economies.",
+      "authors": "Issam Benhayoun",
+      "journal": "Corporate Social Responsibility and Environmental Management",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1002/csr.70965",
+        "openalex": "https://openalex.org/W7208715041",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.444Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s13367-026-00177-1": {
+      "doi": "10.1007/s13367-026-00177-1",
+      "normalized_doi": "10.1007/s13367-026-00177-1",
+      "normalized_title": "dynamic homogenization of inorganic uv filter particles in sunscreen coatings via skin wrinkle induced marangoni flow",
+      "title": "Dynamic homogenization of inorganic UV-filter particles in sunscreen coatings via skin-wrinkle-induced Marangoni flow",
+      "abstract": null,
+      "authors": "C. Yoo; Seoyoon Lee; Heemuk Oh; Jun Bae Lee; Chun Ho Park; Jun Dong Park",
+      "journal": "Korea-Australia Rheology Journal",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s13367-026-00177-1",
+        "openalex": "https://openalex.org/W7208726432",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.444Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.3389/fmicb.2026.1898345": {
+      "doi": "10.3389/fmicb.2026.1898345",
+      "normalized_doi": "10.3389/fmicb.2026.1898345",
+      "normalized_title": "phenotypic high content screening identifies plant derived extracts targeting microbial growth biofilms and swarming activity",
+      "title": "Phenotypic high-content screening identifies plant-derived extracts targeting microbial growth, biofilms and swarming activity",
+      "abstract": "The rise of antimicrobial resistance highlights the urgent need for new antibacterial agents, particularly from natural sources. In this study, 200 aqueous plant extracts were screened for antimicrobial activity against six clinically relevant pathogens. The test organisms included: Escherichia coli ATCC35401, Pseudomonas aeruginosa DSM19882, Salmonella enterica subsp. enterica ser. Typhimurium ATCC14028, Staphylococcus aureus NCCB32030, Streptococcus mutans DSM20523 and Enterococcus faecalis DSM2570. Three probiotic lactobacilli ( Lacticaseibacillus paracasei , Lactiplantibacillus plantarum and Lacticaseibacillus rhamnosus ) were used to differentiate pathogen-specific activity from broad-spectrum inhibition. Antimicrobial activities were initially assessed using the agar disk diffusion method, followed by broth microdilution to determine minimum inhibitory concentrations (MICs) and minimum bactericidal concentrations (MBCs) for active plant extracts. Additionally, the effects on biofilm formation by E. coli , S. Typhimurium, S. aureus and S. mutans , and on swarming motility of P. aeruginosa and S. Typhimurium, were evaluated. 21 extracts inhibited at least one pathogen in the disk diffusion assay. Defined MIC values were detected for 19 extracts, while only 5 demonstrated bactericidal activity. In addition to the known antibacterial plants Allium sativum and Allium ursinum , previously unreported leaf extracts from Castanea sativa , Ribes × nidigrolaria and Rubus laciniatus showed promising activity against the tested pathogens. These extracts not only inhibited bacterial growth but also reduced biofilm formation and swarming motility of some pathogenic species at subinhibitory concentrations. Notably, no inhibition of Lactobacillus growth was detected in the disk diffusion assay. Overall, our findings highlight the potential of aqueous plant extracts as sources of antimicrobial and anti-virulence activities and demonstrate the importance of pathogen-specific effects in the discovery of plant-derived antimicrobials.",
+      "authors": "Julia Kirchsteiger; Verena Preinfalk; Gerald Klanert; Elisabeth Kohberger; Clemens Schwarzinger; Julian Weghuber; Bettina Schwarzinger; Alice König",
+      "journal": "Frontiers in Microbiology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.3389/fmicb.2026.1898345",
+        "openalex": "https://openalex.org/W7208728359",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.444Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1017/eis.2026.10077": {
+      "doi": "10.1017/eis.2026.10077",
+      "normalized_doi": "10.1017/eis.2026.10077",
+      "normalized_title": "express your self expressivism and ontological security",
+      "title": "Express your Self. Expressivism and ontological security",
+      "abstract": "Abstract Recent research has demonstrated the entanglements between the security of Self and IR, yet it remains unclear how ontological security of the IR Self can be created. I argue that ontological security can be attempted through expressivist practices. Informed by perspectives from arts, law, and philosophy, I develop an analytical framework to explain how expressivism relates to ontological security. The implications of this framework for ontological security theory are that it proposes to re-define ontological security as a process of becoming secure, helping to understand how ontological security is expressively asserted. The empirical attainment of the nexus between expressivist practices and ontological security is illustrated by a case study of EU counter-measures adopted after Russia’s full-scale invasion of Ukraine. This article makes a twofold contribution. First, it provides a new theoretical distinction, applying expressivism to illuminate how ontological security can be creatively begot, moving beyond the long-standing dichotomy in the ontological security literature of being secure or insecure, and focusing instead on the actuation of becoming secure. Second, it illustrates various expressivist practices, showing how the EU transcended from a civilian power to becoming a global security and emerging criminal justice actor.",
+      "authors": "Cornelia Baciu",
+      "journal": "European Journal of International Security",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1017/eis.2026.10077",
+        "openalex": "https://openalex.org/W7208733709",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.444Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.59059/jupiekes.v4i3.3299": {
+      "doi": "10.59059/jupiekes.v4i3.3299",
+      "normalized_doi": "10.59059/jupiekes.v4i3.3299",
+      "normalized_title": "dilema independensi auditor internal kementerian lingkungan hidup antara kepatuhan regulasi dan tekanan institusional",
+      "title": "Dilema Independensi Auditor Internal Kementerian Lingkungan Hidup: Antara Kepatuhan Regulasi dan Tekanan Institusional",
+      "abstract": "Internal auditor independence is a fundamental aspect of maintaining the objectivity and credibility of the internal oversight function, particularly when auditors operate within organizational environments characterized by various institutional pressures. This study aims to understand the dilemmas surrounding internal auditor independence and identify adaptive strategies employed to maintain independence within the Main Inspectorate of the Ministry of Environment. A qualitative approach with a case study design was employed. Data were collected through in-depth interviews with five internal auditors and document analysis and were analyzed using the interactive model of Miles, Huberman, and Saldaña. The findings indicate that independence dilemmas primarily arise during the discussion, communication, and finalization of audit results, when auditors encounter responses, clarifications, and additional evidence from auditees. Institutional pressures include coercive pressures arising from regulations and organizational dynamics, normative pressures stemming from auditing standards, professional codes of ethics, and professional values, and mimetic pressures associated with learning from audit practices adopted by other institutions. Auditors maintain their independence through professional communication, the use of audit evidence, professional judgment, hierarchical supervision, and compliance with the Indonesian Government Internal Audit Standards (SAIPI) and professional codes of ethics. This study concludes that internal auditor independence does not imply complete freedom from pressure but rather the ability to maintain objectivity and integrity through professional mechanisms when confronting institutional dynamics.",
+      "authors": "Dewi Puspito Sari; I Putu Sudana; Ni Ketut Rasmini; Naniek Noviari",
+      "journal": "Jurnal Penelitian Ilmu Ekonomi dan Keuangan Syariah",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.59059/jupiekes.v4i3.3299",
+        "openalex": "https://openalex.org/W7208741014",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.445Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.jddst.2026.108910": {
+      "doi": "10.1016/j.jddst.2026.108910",
+      "normalized_doi": "10.1016/j.jddst.2026.108910",
+      "normalized_title": "natural bioenhancers for dermal delivery mechanisms formulation design and cosmeceutical applications",
+      "title": "Natural bioenhancers for dermal delivery: Mechanisms, formulation design and cosmeceutical applications",
+      "abstract": "ABSTRACT Natural bioenhancers have emerged as promising strategies for improving dermal and transdermal delivery of cosmetic and therapeutic products. Natural bioenhancers comprise diverse chemical classes, including alkaloids, fatty acids, polyphenols, polysaccharides, saponins, triterpenoids, and others, each contributing distinct structural features that influence interactions with the stratum corneum. These interactions include modulation of lipid packing, increased membrane fluidity, enhanced hydration, keratin-associated effects and changes in the microenvironment at the formulation-skin interface. Advances in molecular and biophysical studies have clarified how polarity, chain length, unsaturation, volatility and stereochemistry shape enhancer performance across hydrophilic and lipophilic actives. Alongside mechanistic insights, contemporary formulation science has adopted natural bioenhancers within nanoemulsions, lipid carriers, ethosomes, nanoemulgels, hydrogels and natural deep eutectic solvent systems. These platforms support improved solubility, stability and controlled release, while enabling targeted delivery to the stratum corneum, viable epidermis or hair follicles. Applications include anti-ageing, skin-brightening, anti-inflammatory and barrier-repairing products, and scalp-delivery formulations, with growing emphasis on biocompatibility and long-term tolerability. This review integrates current evidence on the chemistry, mechanisms and formulation strategies of natural bioenhancers and outlines their expanding role in cosmeceutical innovation.",
+      "authors": "Emran Habibi; Leila Panahi; Gamal Moustafa Mahmoud Abdelfattah; Mohammad Hossein Hosseinzadeh; Madiha Kousar; Satyajit D. Sarker; Lutfun Nahar",
+      "journal": "Journal of Drug Delivery Science and Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.jddst.2026.108910",
+        "openalex": "https://openalex.org/W7208748023",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.445Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s10211-026-00508-z": {
+      "doi": "10.1007/s10211-026-00508-z",
+      "normalized_doi": "10.1007/s10211-026-00508-z",
+      "normalized_title": "prey size influences the feeding behaviour of predatory female photuris lugubris fireflies coleoptera lampyridae",
+      "title": "Prey size influences the feeding behaviour of predatory female Photuris lugubris fireflies (Coleoptera: Lampyridae)",
+      "abstract": "Abstract Hunting female fireflies of the Photurinae subfamily specialize in feeding on heterospecific male fireflies, generally smaller than themselves, responding to their courtship signals. Photuris spp. females hunt males of Photinus spp. species, from which they obtain nutrients and defensive toxins. In some localities, Photuris lugubris is sympatric with Photinus extensus , whose males are larger than the hunting females. Here, we report a field study of the frequency of interactions between signalling P. extensus males and hunting P. lugubris females. We also report an experiment to determine whether P. lugubris females attack and feed on P. extensus males in captivity. In more than 18 h of focal observations, we only observed one case in which a P. extensus male was attracted by a P. lugubris female, but no attack occurred. In our experiment, females attacked in 17% of the opportunities they had. However, instead of the typical feeding on soft tissues and killing of the prey (as observed, for example, when P. lugubris females feed on males of the smaller Photinus palaciosi ), the females restrained the males with their legs and mandibles and fed on the liquid substance (presumably, haemolymph) exuded from pores located along the margin of the elytra and pronotum (reflex bleeding). All attacked males freed themselves and recovered from the attack. To the best of our knowledge, we are the first to report this peculiar non-lethal predatory behaviour in fireflies.",
+      "authors": "Aldair Vergara; Carlos Cordero",
+      "journal": "acta ethologica",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s10211-026-00508-z",
+        "openalex": "https://openalex.org/W7208751370",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.445Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s42399-026-02660-w": {
+      "doi": "10.1007/s42399-026-02660-w",
+      "normalized_doi": "10.1007/s42399-026-02660-w",
+      "normalized_title": "tuberculosis coexisting with invasive fungal infections risk factors diagnostic challenges and treatment outcomes",
+      "title": "Tuberculosis Coexisting with Invasive Fungal Infections: Risk Factors, Diagnostic Challenges and Treatment Outcomes",
+      "abstract": null,
+      "authors": "Bassey E. Ekeng; Walter Egbara; Oluwaseun Adereti; Thelma Bassey; Ikechukwu Agwu; Araga Aburu; Asukwo Onukak; Hilary Odo; Agbo James; Ido Ukpeh; Love Okafor; Emmanuel Jimmy; Rosa Nwagboso; Inemesit Nwa; Stella Chukwuma; Adeyinka Davies",
+      "journal": "SN Comprehensive Clinical Medicine",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s42399-026-02660-w",
+        "openalex": "https://openalex.org/W7208751706",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.445Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1021/acs.jpcb.6c02718": {
+      "doi": "10.1021/acs.jpcb.6c02718",
+      "normalized_doi": "10.1021/acs.jpcb.6c02718",
+      "normalized_title": "using amoeba to uncover deformation and hydration anisotropy in collagen mimetic peptides",
+      "title": "Using AMOEBA to Uncover Deformation and Hydration Anisotropy in Collagen-Mimetic Peptides",
+      "abstract": "Abstract Collagen is the primary constituent of the supramolecular fibers found in connective tissues. To be able to predict collagen’s properties, we need rigorous characterization at the molecular scale. In this work, we focus on collagen-mimetic peptides (CMPs) that are composed of short sequences of (PPG) tripeptides folded into a triple helix. We use molecular dynamics simulations with the AMOEBA polarizable force field to model these CMPs at physiological temperature. We show that AMOEBA captures length-dependent fraying of the triple helix, consistent with experimental observations. We also introduce new metrics to quantify the deformation of the triple helix and hydration dynamics. This enables a systematic quantification of CMPs under a variety of conditions, which was missing in the field. We apply our approach to mutated CMPs and CMPs in the presence of d-glucose. We find that translational diffusion anisotropy is a molecular signature of CMP structural integrity.",
+      "authors": "Ronnie Mondal; Valerie Vaissier Welborn",
+      "journal": "The Journal of Physical Chemistry B",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1021/acs.jpcb.6c02718",
+        "openalex": "https://openalex.org/W7208753258",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.446Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s41419-026-09233-8": {
+      "doi": "10.1038/s41419-026-09233-8",
+      "normalized_doi": "10.1038/s41419-026-09233-8",
+      "normalized_title": "sirt1 mediated deacetylation of lysyl trna synthetase reprograms lipid metabolism to promote colorectal tumorigenesis",
+      "title": "SIRT1-mediated deacetylation of Lysyl-tRNA synthetase reprograms lipid metabolism to promote colorectal tumorigenesis",
+      "abstract": "Abstract Aminoacyl-tRNA synthetases (AARSs) have long been recognized for their canonical role in protein synthesis, catalyzing the attachment of amino acids to their cognate tRNAs. However, accumulating evidence has revealed that many AARSs also exert non-canonical functions under various physiological and pathological conditions. Despite this, the specific contributions of AARSs to tumorigenesis remain poorly understood. In this study, we demonstrated that lysyl-tRNA synthetase (LysRS), a key member of the AARS family, is significantly overexpressed in colorectal cancer (CRC) and associated with poor prognosis. Mechanistically, LysRS undergoes reversible acetylation at K175 and K249, which regulates its ubiquitination and stability. Specifically, PCAF-mediated acetylation promotes LysRS ubiquitination and degradation, whereas SIRT1-mediated deacetylation, particularly under glucose starvation, enhances LysRS stability and increases its nuclear accumulation. Within the nucleus, LysRS physically interacts with the transcriptional coactivator PGC-1β and drives the expression of fatty acid oxidation (FAO)-related genes, including MCAD , LCAD , and CPT1A , thereby enabling metabolic adaptation to nutrient stress. Functionally, a deacetylation-mimetic LysRS mutant (2KR) enhances FAO activity, suppresses lipid droplet accumulation, and accelerates tumor growth in vivo. Importantly, pharmacological blockade of FAO largely abolished the tumor-promoting effect of the 2KR mutant in a xenograft model. Collectively, our findings uncover a previously unrecognized SIRT1–LysRS–PGC-1β axis that drives CRC progression through metabolic reprogramming, and highlight LysRS acetylation as a potential prognostic biomarker and therapeutic target in CRC.",
+      "authors": "Chaoqun Li; Qingwen Wang; Kailun Liu; Surui Yao; Bojian Fei; Zhaohui Huang",
+      "journal": "Cell Death and Disease",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s41419-026-09233-8",
+        "openalex": "https://openalex.org/W7208753680",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T07:45:52.446Z",
+      "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
         }
       ]
     }

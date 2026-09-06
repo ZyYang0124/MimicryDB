@@ -37,6 +37,24 @@
         "pages": 1
       },
       "notes": "v1.0.0 initial profile."
+    },
+    {
+      "id": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "version": "1.0.0",
+      "active": true,
+      "source": "openalex",
+      "description": "Same discovery intent as PROFILE:MIMICRY_GENERAL, through the OpenAlex API. Cross-source coverage matters: OpenAlex indexes preprints and venues Crossref misses, and its abstracts are openly available.",
+      "query": {
+        "endpoint": "https://api.openalex.org/works",
+        "params": {
+          "search": "mimicry OR mimetic OR masquerade",
+          "filter": "type:article",
+          "sort": "publication_date:desc"
+        },
+        "rows": 20,
+        "pages": 1
+      },
+      "notes": "v1.0.0 initial profile."
     }
   ]
 }

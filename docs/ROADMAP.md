@@ -68,8 +68,8 @@ Priority order is fixed: Schema > Ontology > Provenance > Curation > Harvester >
 | 0.3.2 | Reference + Taxonomy normalization | ✅ (Crossref-shaped reference columns + importer groundwork; GBIF external identifiers + reconciliation guards) |
 | 0.4.0 | Live Supabase DB | ◻ needs Supabase project credentials |
 | 0.4.1 | Harvester: Crossref | ✅ MVP (docs/HARVESTER.md; profile-driven, dedupe ladder, run provenance, fixture-tested) |
-| 0.4.2 | Harvester: OpenAlex | ◻ |
-| 0.4.3 | Candidate corpus + dedupe | ✅ corpus + DOI/title ladder (fuzzy tier ◻) |
+| 0.4.2 | Harvester: OpenAlex | ✅ (profile + inverted-index abstract reconstruction + cross-source dedupe) |
+| 0.4.3 | Candidate corpus + dedupe | ✅ corpus + full ladder (DOI exact / normalized title / fuzzy-title flag for review) |
 | 0.5.0 | LLM screening | ◻ |
 | 0.5.1 | OA/fulltext resolver | ◻ |
 | 0.5.2 | LLM extraction | ◻ |

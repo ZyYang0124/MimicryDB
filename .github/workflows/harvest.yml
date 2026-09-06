@@ -1,0 +1,32 @@
+name: Harvest literature
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * 1'  # Mondays 03:00 UTC — Crossref + OpenAlex sweep
+
+permissions:
+  contents: write
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm run harvest -- PROFILE:MIMICRY_GENERAL
+      - run: npm run harvest -- PROFILE:MIMICRY_GENERAL_OPENALEX
+      - run: npm run harvest -- PROFILE:ANT_MIMICRY
+      - name: Commit corpus changes
+        run: |
+          git config user.name 'mimicrydb-harvest'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/harvest/
+          if git diff --cached --quiet; then
+            echo 'no new literature'
+          else
+            git commit -m 'harvest: weekly literature sweep'
+            git push
+          fi

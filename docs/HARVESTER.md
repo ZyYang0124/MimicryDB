@@ -54,6 +54,6 @@ Incremental by construction: existing DOIs/titles are skipped; re-running the sa
 - ✓ `last_successful_sync`
 - ◻ Scheduled execution (GitHub Actions cron — wire when harvest cadence is decided; avoid surprise commits)
 
-## Next (0.4.2+)
+## Next (0.5.0+)
 
-OpenAlex source adapter; candidate_duplicate table with fuzzy-title tier; LLM screening queue (0.5.0) gated by a relevance threshold benchmarked against the gold-standard set (0.9.0).
+OpenAlex source adapter — DONE (0.4.2): PROFILE:MIMICRY_GENERAL_OPENALEX, abstract reconstruction from inverted index, cross-source dedupe verified live. Remaining: LLM screening queue (0.5.0) gated by a relevance threshold benchmarked against the gold-standard set (0.9.0).
