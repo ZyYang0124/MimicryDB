@@ -1,8 +1,82 @@
 ---
 import Layout from '../layouts/Layout.astro'; import {data} from '../data/provider'; import {csv} from '../lib/csv.ts';
 const interactions=data.all();
-const rows=interactions.map(i=>[i.id,i.mimic,i.model,i.receiver,i.type,(i.modalities??[]).join(';'),i.knowledge??'reported',i.evidence,i.kingdoms,'DEMO']);
-const file=csv(['public_id','mimic','model','receiver','type','signal_modalities','knowledge_status','evidence_grade','kingdom_flow','data_status'],rows);
+const rows=interactions.map(i=>[i.id,i.mimic,i.model,i.receiver,i.type,(i.modalities??[]).join(';'),i.knowledge??'reported',i.evidence,i.kingdoms,i.modelKind??'organism',i.summary]);
+const file=csv(['public_id','mimic','model','receiver','type','signal_modalities','knowledge_status','evidence_grade','kingdom_flow','model_kind','mimicry_summary','data_status'],rows.map(r=>[...r,'DEMO']));
 const json=JSON.stringify(interactions,null,2);
+const types=[...new Set(interactions.map(i=>i.type))].sort();
+const kingdoms=[...new Set(interactions.flatMap(i=>i.kingdoms.split(' → ').map(k=>k.trim())))].sort();
+const modelKinds=[...new Set(interactions.map(i=>i.modelKind??'organism'))].sort();
+const islandRows=interactions.map(i=>({id:i.id,mimic:i.mimic,model:i.model,receiver:i.receiver,type:i.type,mods:(i.modalities??[]).join(';'),knowledge:i.knowledge??'reported',evidence:i.evidence,kingdoms:i.kingdoms,modelKind:i.modelKind??'organism',summary:i.summary}));
+const island=JSON.stringify({rows:islandRows}).replace(/<\/script/gi,'<\\/script');
+const sel='bg-transparent border border-white/25 rounded-sm px-2 py-1.5 text-xs text-white focus:border-gold outline-none';
+const lab='block text-[0.65rem] uppercase tracking-[0.2em] text-slate-500 mb-2';
 ---
-<Layout><div class="container py-12"><h1 class="text-4xl font-bold">Download data</h1><p class="mt-4">Prototype exports of the labeled sample dataset. Scientific data licensing and release versioning will be finalized before production release (docs/RELEASE_POLICY.md).</p><div class="mt-6 flex flex-wrap gap-4"><a class="btn btn-teal" download="mimicrydb-demo.csv" href={`data:text/csv;charset=utf-8,${encodeURIComponent(file)}`}>Download CSV</a><a class="btn btn-ink" download="mimicrydb-demo.json" href={`data:application/json;charset=utf-8,${encodeURIComponent(json)}`}>Download JSON</a></div><p class="mt-6 text-sm text-slate-400">{interactions.length} records · demo data only, not a scientific release. Versioned release sets are produced by <code>npm run release:data</code> (see docs/RELEASE_POLICY.md).</p></div></Layout>
+<Layout title="Download data · MimicryDB"><div class="container py-12"><h1 class="text-4xl font-bold">Download data</h1>
+<p class="mt-4 max-w-2xl text-slate-400">Prototype exports of the labeled sample dataset — filter to the slice you need, then download exactly that subset. {interactions.length} records · demo data only, not a scientific release; versioned release sets are produced by <code>npm run release:data</code> (docs/RELEASE_POLICY.md).</p>
+
+<div class="mt-6 flex flex-wrap gap-4"><a class="btn btn-teal" download="mimicrydb-demo.csv" href={`data:text/csv;charset=utf-8,${encodeURIComponent(file)}`}>Full dataset · CSV</a><a class="btn btn-ink" download="mimicrydb-demo.json" href={`data:application/json;charset=utf-8,${encodeURIComponent(json)}`}>Full dataset · JSON</a></div>
+
+<h2 class="mt-14 text-xs uppercase tracking-[0.25em] text-slate-500">Filter & export</h2>
+<div class="mt-6 grid gap-6 md:grid-cols-3 lg:grid-cols-6">
+<div><label class={lab} for="fq">Query</label><input id="fq" type="search" placeholder="mimic, model, summary…" class={sel+' w-full'}/></div>
+<div><label class={lab} for="ftype">Mimicry type</label><select id="ftype" class={sel+' w-full'}><option value="">All types</option>{types.map(t=><option value={t}>{t}</option>)}</select></div>
+<div><label class={lab} for="fev">Min. evidence</label><select id="fev" class={sel+' w-full'}><option value="0">Any grade</option><option value="1">E1+</option><option value="2">E2+</option><option value="3">E3+</option><option value="4">E4</option></select></div>
+<div><label class={lab} for="fmimick">Mimic kingdom</label><select id="fmimick" class={sel+' w-full'}><option value="">All kingdoms</option>{kingdoms.map(k=><option value={k}>{k}</option>)}</select></div>
+<div><label class={lab} for="fmodelk">Model side</label><select id="fmodelk" class={sel+' w-full'}><option value="">All model kinds</option>{modelKinds.map(k=><option value={k}>{k}</option>)}</select></div>
+<div><label class={lab} for="fxk">Cross-kingdom</label><label class="flex items-center gap-2 text-sm text-slate-300"><input id="fxk" type="checkbox" class="accent-[#d8c690]"/> only</label></div>
+</div>
+
+<p class="mt-8 text-sm text-slate-300"><span id="fcount" class="font-semibold text-gold"></span></p>
+<div class="mt-3 overflow-x-auto"><table class="data w-full"><thead><tr><th>public_id</th><th>mimic → model</th><th>type</th><th>grade</th><th>kingdom flow</th></tr></thead><tbody id="frows"></tbody></table></div>
+
+<div class="mt-8 flex flex-wrap gap-4"><a id="fcsv" class="btn btn-teal" download="mimicrydb-demo-filtered.csv" href="#">Download filtered · CSV</a><a id="fjson" class="btn btn-ink" download="mimicrydb-demo-filtered.json" href="#">Download filtered · JSON</a></div>
+
+<h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">Open data licence</h2>
+<div class="card mt-6 max-w-3xl text-sm leading-relaxed text-slate-300">
+<p><strong class="text-ink">The MimicryDB dataset is released under <a class="underline decoration-gold/60" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons Attribution 4.0 (CC BY 4.0)</a>.</strong></p>
+<p class="mt-3">You are free to share and adapt the data for any purpose — including commercial use — provided you give appropriate credit, link the licence, and indicate if changes were made. A convenient citation: <span class="text-ink">MimicryDB (2026), the open mimicry interaction database, github.com/ZyYang0124/MimicryDB, CC BY 4.0.</span></p>
+<p class="mt-3">Photographs keep their own open licences (PD / CC0 / CC BY / CC BY-SA, shown with every image); when you reuse a record that embeds a photograph, preserve that image's attribution. The DEMO label travels with every sample row: these records are placeholders, not observations.</p>
+</div>
+</div>
+<script type="application/json" id="ddata" set:html={island}/><script>
+const cfg=JSON.parse(document.getElementById('ddata')?.textContent??'{}');
+type Row={id:string;mimic:string;model:string;receiver:string;type:string;mods:string;knowledge:string;evidence:string;kingdoms:string;modelKind:string;summary:string};
+const rows:Row[]=cfg.rows??[];
+const q=document.getElementById('fq') as HTMLInputElement;
+const ftype=document.getElementById('ftype') as HTMLSelectElement;
+const fev=document.getElementById('fev') as HTMLSelectElement;
+const fmimick=document.getElementById('fmimick') as HTMLSelectElement;
+const fmodelk=document.getElementById('fmodelk') as HTMLSelectElement;
+const fxk=document.getElementById('fxk') as HTMLInputElement;
+const count=document.getElementById('fcount') as HTMLSpanElement;
+const tbody=document.getElementById('frows') as HTMLTableSectionElement;
+const csvA=document.getElementById('fcsv') as HTMLAnchorElement;
+const jsonA=document.getElementById('fjson') as HTMLAnchorElement;
+const esc=(v:string)=>/[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;
+const HEADER=['public_id','mimic','model','receiver','type','signal_modalities','knowledge_status','evidence_grade','kingdom_flow','model_kind','mimicry_summary','data_status'];
+let urls:{csv?:string;json?:string}={};
+function hit(r:Row):boolean{
+  const t=(q.value||'').trim().toLowerCase();
+  const okq=!t||[r.id,r.mimic,r.model,r.receiver,r.type,r.summary].join(' ').toLowerCase().includes(t);
+  const [mk,dk]=r.kingdoms.split(' → ').map(x=>x.trim());
+  const cross=mk!==dk&&r.modelKind==='organism';
+  return okq&&(!ftype.value||r.type===ftype.value)
+    &&(+(r.evidence[1]??0)>=+(fev.value||0))
+    &&(!fmimick.value||mk===fmimick.value)
+    &&(!fmodelk.value||r.modelKind===fmodelk.value)
+    &&(!fxk.checked||cross);
+}
+function render(){
+  const f=rows.filter(hit);
+  count.textContent=`${f.length} of ${rows.length} records match`;
+  tbody.innerHTML=f.map(r=>`<tr><td class="mono text-xs"><a class="underline" href="/MimicryDB/interactions/${r.id.replace(':','-')}/">${r.id}</a></td><td><em>${r.mimic}</em> <span class="text-coral">→</span> ${r.model}</td><td class="text-sm text-slate-400">${r.type}</td><td><span class="pill grade-${r.evidence}">${r.evidence}</span></td><td class="text-sm text-slate-400">${r.kingdoms}</td></tr>`).join('');
+  if(urls.csv)URL.revokeObjectURL(urls.csv); if(urls.json)URL.revokeObjectURL(urls.json);
+  const csvContent=HEADER.join(',')+'\n'+f.map(r=>[r.id,r.mimic,r.model,r.receiver,r.type,r.mods,r.knowledge,r.evidence,r.kingdoms,r.modelKind,r.summary,'DEMO'].map(esc).join(',')).join('\n');
+  urls.csv=URL.createObjectURL(new Blob([csvContent],{type:'text/csv;charset=utf-8'})); csvA.href=urls.csv;
+  urls.json=URL.createObjectURL(new Blob([JSON.stringify(f,null,2)],{type:'application/json;charset=utf-8'})); jsonA.href=urls.json;
+}
+for(const el of [q,ftype,fev,fmimick,fmodelk,fxk]){el.addEventListener('input',render);el.addEventListener('change',render);}
+render();
+</script>
+</Layout>

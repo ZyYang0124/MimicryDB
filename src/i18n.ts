@@ -1,7 +1,7 @@
 export type Lang='en'|'zh';
 const en={
  nav:{interactions:'Interactions',taxa:'Taxa',mimics:'Mimics',models:'Models',references:'References',evidence:'Evidence',search:'Search',about:'About'},
- footer:{tagline:'Open scientific infrastructure',download:'Download data',curator:'Curator (demo)',langToggle:'中文'},
+ footer:{tagline:'Open scientific infrastructure',download:'Download data',curator:'Curator (demo)',langToggle:'中文',license:'Data: CC BY 4.0'},
  demo:'DEMO / PROTOTYPE DATA',
  home:{h1:'Who mimics whom across the Tree of Life?',sub:'An open database of documented mimic–model interactions across animals, plants, fungi, and other lineages.',explore:'Explore interactions →',quick:['Browse taxa','Explore mimics','Explore models','References','Download data','About'],netTitle:'Mimic → Model',netNote:'Node size = number of sample records; teal edges are cross-kingdom interactions. A Tree-of-Life visualization is planned but deliberately not faked.',heroPhoto:{kicker:'The classic',title:'Ophrys apifera, the bee orchid',note:'A flower that imitates a female bee — in shape, scent and velvet texture — to lure male bees into pollinating it.',view:'View the record'}},
  common:{mimic:'Mimic',model:'Model',receiver:'Receiver',evidence:'Evidence',type:'Type',kingdoms:'Kingdoms',knowledge:'knowledge status',modelKind:'model kind',related:'Related records',provenance:'Provenance',all:'← All interactions',taxaAll:'← All taxa',refsAll:'← All references',notFound:'Not found',external:'External resources',externalNote:'Links open partner databases in a new tab — MimicryDB stores no content from them. AntWeb is shown for ants, xeno-canto for birds.',reportIssue:'Suggest a correction ↗',reportIssueNote:'opens a pre-filled GitHub issue; corrections are reviewed before any change.',supports:'Supports:',observed:'observed',recordedBy:'recorded by',lifeStage:'life stage'},
@@ -9,7 +9,7 @@ const en={
 };
 const zh={
  nav:{interactions:'交互记录',taxa:'分类单元',mimics:'模仿者',models:'模型',references:'文献',evidence:'证据等级',search:'搜索',about:'关于'},
- footer:{tagline:'开放的科学基础设施',download:'下载数据',curator:'策展台（演示）',langToggle:'English'},
+ footer:{tagline:'开放的科学基础设施',download:'下载数据',curator:'策展台（演示）',langToggle:'English',license:'数据采用 CC BY 4.0 开放共享'},
  demo:'演示 / 原型数据',
  home:{h1:'谁在模仿谁？——横跨生命之树',sub:'一个开放数据库：记录动物、植物、真菌等类群中"模仿者 → 模型 | 接收者"的定向拟态关系，附完整文献溯源。',explore:'浏览交互记录 →',quick:['分类单元','模仿者排行','模型排行','文献','下载数据','关于'],netTitle:'模仿者 → 模型',netNote:'节点大小 = 样本记录数；青色连线为跨界的交互。生命之树全貌可视化已在规划中，但绝不以假乱真。',heroPhoto:{kicker:'经典',title:'蜂兰 · Ophrys apifera',note:'一朵模仿雌蜂的花——从形态、气味到绒毛质感——以此诱使雄蜂为之传粉。',view:'查看记录'}},
  common:{mimic:'模仿者',model:'模型',receiver:'接收者',evidence:'证据等级',type:'拟态类型',kingdoms:'界',knowledge:'知识状态',modelKind:'模型类别',related:'相关记录',provenance:'文献溯源',all:'← 全部交互记录',taxaAll:'← 全部分类单元',refsAll:'← 全部文献',notFound:'未找到',external:'外部资源',externalNote:'链接在新标签页打开合作数据库——MimicryDB 不存储其内容。蚂蚁类群显示 AntWeb，鸟类显示 xeno-canto。',reportIssue:'提出修正 ↗',reportIssueNote:'将打开预填好的 GitHub issue；修正经审核后才会生效。',supports:'支持：',observed:'观察日期',recordedBy:'记录者',lifeStage:'生活期'},

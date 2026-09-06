@@ -1,8 +1,83 @@
 ---
-import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider'; import {csv} from '../../lib/csv.ts'; 
+import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider'; import {csv} from '../../lib/csv.ts'; import {summaryZh} from '../../data/demo';
 const interactions=data.all();
-const rows=interactions.map(i=>[i.id,i.mimic,i.model,i.modelKind??'organism',i.receiver,i.type,(i.modalities??[]).join(';'),i.knowledge??'reported',i.evidence,i.kingdoms,'DEMO']);
-const file=csv(['public_id','mimic','model','model_kind','receiver','type','signal_modalities','knowledge_status','evidence_grade','kingdom_flow','data_status'],rows);
+const rows=interactions.map(i=>[i.id,i.mimic,i.model,i.receiver,i.type,(i.modalities??[]).join(';'),i.knowledge??'reported',i.evidence,i.kingdoms,i.modelKind??'organism',i.summary]);
+const file=csv(['public_id','mimic','model','receiver','type','signal_modalities','knowledge_status','evidence_grade','kingdom_flow','model_kind','mimicry_summary','data_status'],rows.map(r=>[...r,'DEMO']));
 const json=JSON.stringify(interactions,null,2);
+const types=[...new Set(interactions.map(i=>i.type))].sort();
+const kingdoms=[...new Set(interactions.flatMap(i=>i.kingdoms.split(' → ').map(k=>k.trim())))].sort();
+const modelKinds=[...new Set(interactions.map(i=>i.modelKind??'organism'))].sort();
+const islandRows=interactions.map(i=>({id:i.id,mimic:i.mimic,model:i.model,receiver:i.receiver,type:i.type,mods:(i.modalities??[]).join(';'),knowledge:i.knowledge??'reported',evidence:i.evidence,kingdoms:i.kingdoms,modelKind:i.modelKind??'organism',summary:i.summary,summaryZh:summaryZh[i.id]??''}));
+const island=JSON.stringify({rows:islandRows}).replace(/<\/script/gi,'<\\/script');
+const sel='bg-transparent border border-white/25 rounded-sm px-2 py-1.5 text-xs text-white focus:border-gold outline-none';
+const lab='block text-[0.65rem] uppercase tracking-[0.2em] text-slate-500 mb-2';
+const kZh=(k:string)=>({Animalia:'动物界',Plantae:'植物界',Fungi:'真菌界',environment:'环境',object:'无生命对象',organism:'物种'}[k]??k);
 ---
-<Layout lang="zh" title="下载数据 · MimicryDB"><div class="container py-12"><h1 class="text-4xl font-bold">下载数据</h1><p class="mt-4">原型阶段的导出文件，内容为明确标注的演示数据集。科学数据许可与发布版本管理将在正式发布前确定（docs/RELEASE_POLICY.md）。</p><div class="mt-6 flex flex-wrap gap-4"><a class="btn btn-teal" download="mimicrydb-demo.csv" href={`data:text/csv;charset=utf-8,${encodeURIComponent(file)}`}>下载 CSV</a><a class="btn btn-ink" download="mimicrydb-demo.json" href={`data:application/json;charset=utf-8,${encodeURIComponent(json)}`}>下载 JSON</a></div><p class="mt-6 text-sm text-slate-400">共 {interactions.length} 条记录 · 仅为演示数据，不是科学发布版本。版本化数据发布由 <code>npm run release:data</code> 生成（见 docs/RELEASE_POLICY.md）。</p></div></Layout>
+<Layout lang="zh" title="下载数据 · MimicryDB"><div class="container py-12"><h1 class="text-4xl font-bold">下载数据</h1>
+<p class="mt-4 max-w-2xl text-slate-400">原型阶段的导出文件——先筛选出你需要的数据切片，再精确下载该子集。共 {interactions.length} 条记录 · 仅为演示数据，不是科学发布版本；版本化发布由 <code>npm run release:data</code> 生成（docs/RELEASE_POLICY.md）。</p>
+
+<div class="mt-6 flex flex-wrap gap-4"><a class="btn btn-teal" download="mimicrydb-demo.csv" href={`data:text/csv;charset=utf-8,${encodeURIComponent(file)}`}>完整数据 · CSV</a><a class="btn btn-ink" download="mimicrydb-demo.json" href={`data:application/json;charset=utf-8,${encodeURIComponent(json)}`}>完整数据 · JSON</a></div>
+
+<h2 class="mt-14 text-xs uppercase tracking-[0.25em] text-slate-500">筛选与导出</h2>
+<div class="mt-6 grid gap-6 md:grid-cols-3 lg:grid-cols-6">
+<div><label class={lab} for="fq">关键词</label><input id="fq" type="search" placeholder="模仿者、模型、摘要…" class={sel+' w-full'}/></div>
+<div><label class={lab} for="ftype">拟态类型</label><select id="ftype" class={sel+' w-full'}><option value="">全部类型</option>{types.map(t=><option value={t}>{t}</option>)}</select></div>
+<div><label class={lab} for="fev">最低证据等级</label><select id="fev" class={sel+' w-full'}><option value="0">不限</option><option value="1">E1+</option><option value="2">E2+</option><option value="3">E3+</option><option value="4">E4</option></select></div>
+<div><label class={lab} for="fmimick">模仿者所在界</label><select id="fmimick" class={sel+' w-full'}><option value="">全部界</option>{kingdoms.map(k=><option value={k}>{kZh(k)}</option>)}</select></div>
+<div><label class={lab} for="fmodelk">模型一侧</label><select id="fmodelk" class={sel+' w-full'}><option value="">全部类别</option>{modelKinds.map(k=><option value={k}>{kZh(k)}</option>)}</select></div>
+<div><label class={lab} for="fxk">仅跨界的</label><label class="flex items-center gap-2 text-sm text-slate-300"><input id="fxk" type="checkbox" class="accent-[#d8c690]"/> 只看跨界交互</label></div>
+</div>
+
+<p class="mt-8 text-sm text-slate-300"><span id="fcount" class="font-semibold text-gold"></span></p>
+<div class="mt-3 overflow-x-auto"><table class="data w-full"><thead><tr><th>记录号</th><th>模仿者 → 模型</th><th>拟态类型</th><th>证据</th><th>界流向</th></tr></thead><tbody id="frows"></tbody></table></div>
+
+<div class="mt-8 flex flex-wrap gap-4"><a id="fcsv" class="btn btn-teal" download="mimicrydb-demo-filtered.csv" href="#">下载筛选结果 · CSV</a><a id="fjson" class="btn btn-ink" download="mimicrydb-demo-filtered.json" href="#">下载筛选结果 · JSON</a></div>
+
+<h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">数据开放共享协议</h2>
+<div class="card mt-6 max-w-3xl text-sm leading-relaxed text-slate-300">
+<p><strong class="text-ink">MimicryDB 数据集以 <a class="underline decoration-gold/60" href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">知识共享署名 4.0 国际许可协议（CC BY 4.0）</a>开放共享。</strong></p>
+<p class="mt-3">你可以自由地共享和演绎本数据库——包括商业用途——前提是给出恰当署名、附上协议链接并注明是否做了修改。建议引用格式：<span class="text-ink">MimicryDB（2026），开放拟态交互数据库，github.com/ZyYang0124/MimicryDB，CC BY 4.0。</span></p>
+<p class="mt-3">页面中的照片各自保留其开放许可（PD / CC0 / CC BY / CC BY-SA，随图署名）；复用嵌入照片的记录时，请一并保留图片署名。每行样例数据都带有 DEMO 标注：它们是占位样例，不是真实观察。</p>
+</div>
+</div>
+<script type="application/json" id="ddata" set:html={island}/><script>
+const cfg=JSON.parse(document.getElementById('ddata')?.textContent??'{}');
+type Row={id:string;mimic:string;model:string;receiver:string;type:string;mods:string;knowledge:string;evidence:string;kingdoms:string;modelKind:string;summary:string;summaryZh:string};
+const rows:Row[]=cfg.rows??[];
+const q=document.getElementById('fq') as HTMLInputElement;
+const ftype=document.getElementById('ftype') as HTMLSelectElement;
+const fev=document.getElementById('fev') as HTMLSelectElement;
+const fmimick=document.getElementById('fmimick') as HTMLSelectElement;
+const fmodelk=document.getElementById('fmodelk') as HTMLSelectElement;
+const fxk=document.getElementById('fxk') as HTMLInputElement;
+const count=document.getElementById('fcount') as HTMLSpanElement;
+const tbody=document.getElementById('frows') as HTMLTableSectionElement;
+const csvA=document.getElementById('fcsv') as HTMLAnchorElement;
+const jsonA=document.getElementById('fjson') as HTMLAnchorElement;
+const esc=(v:string)=>/[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;
+const HEADER=['public_id','mimic','model','receiver','type','signal_modalities','knowledge_status','evidence_grade','kingdom_flow','model_kind','mimicry_summary','data_status'];
+let urls:{csv?:string;json?:string}={};
+function hit(r:Row):boolean{
+  const t=(q.value||'').trim().toLowerCase();
+  const okq=!t||[r.id,r.mimic,r.model,r.receiver,r.type,r.summary,r.summaryZh].join(' ').toLowerCase().includes(t);
+  const [mk,dk]=r.kingdoms.split(' → ').map(x=>x.trim());
+  const cross=mk!==dk&&r.modelKind==='organism';
+  return okq&&(!ftype.value||r.type===ftype.value)
+    &&(+(r.evidence[1]??0)>=+(fev.value||0))
+    &&(!fmimick.value||mk===fmimick.value)
+    &&(!fmodelk.value||r.modelKind===fmodelk.value)
+    &&(!fxk.checked||cross);
+}
+function render(){
+  const f=rows.filter(hit);
+  count.textContent=`${f.length} / ${rows.length} 条记录符合条件`;
+  tbody.innerHTML=f.map(r=>`<tr><td class="mono text-xs"><a class="underline" href="/MimicryDB/zh/interactions/${r.id.replace(':','-')}/">${r.id}</a></td><td><em>${r.mimic}</em> <span class="text-coral">→</span> ${r.model}</td><td class="text-sm text-slate-400">${r.type}</td><td><span class="pill grade-${r.evidence}">${r.evidence}</span></td><td class="text-sm text-slate-400">${r.kingdoms}</td></tr>`).join('');
+  if(urls.csv)URL.revokeObjectURL(urls.csv); if(urls.json)URL.revokeObjectURL(urls.json);
+  const csvContent=HEADER.join(',')+'\n'+f.map(r=>[r.id,r.mimic,r.model,r.receiver,r.type,r.mods,r.knowledge,r.evidence,r.kingdoms,r.modelKind,r.summary,'DEMO'].map(esc).join(',')).join('\n');
+  urls.csv=URL.createObjectURL(new Blob([csvContent],{type:'text/csv;charset=utf-8'})); csvA.href=urls.csv;
+  urls.json=URL.createObjectURL(new Blob([JSON.stringify(f,null,2)],{type:'application/json;charset=utf-8'})); jsonA.href=urls.json;
+}
+for(const el of [q,ftype,fev,fmimick,fmodelk,fxk]){el.addEventListener('input',render);el.addEventListener('change',render);}
+render();
+</script>
+</Layout>
