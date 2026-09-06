@@ -1,10 +1,59 @@
 ---
-import '../styles/global.css'; import {strings,twinPath,type Lang} from '../i18n';
+import '../styles/global.css'; import {strings,twinPath,type Lang} from '../i18n'; import {data} from '../data/provider';
 const {title='MimicryDB',lang='en' as Lang,description}=Astro.props;
 const s=strings(lang); const langAttr=lang==='zh'?'zh-CN':'en';
 const desc=description??(lang==='zh'
  ?'MimicryDB —— 一个开放数据库，记录动物、植物、真菌等类群中"模仿者 → 模型 | 接收者"的定向拟态关系。'
  :'MimicryDB — an open database of documented mimic → model | receiver interactions across animals, plants, and fungi.');
 const here=Astro.url.pathname; const other=twinPath(here,lang==='zh'?'en':'zh');
+const base=`/MimicryDB/${lang==='zh'?'zh/':''}`;
+const idx=[
+ ...data.taxa().map(t=>({k:'taxon',l:t.name,m:(lang==='zh'?'模仿者 ':'mimic ')+t.asMimic+' · '+(lang==='zh'?'模型 ':'model ')+t.asModel,h:`${base}taxa/${t.slug}/`})),
+ ...data.all().map(i=>({k:'interaction',l:`${i.mimic} → ${i.model}`,m:`${i.id} · ${i.type}`,h:`${base}interactions/${i.id.replace(':','-')}/`})),
+ ...data.references().map(r=>({k:'reference',l:r.ref.title,m:(lang==='zh'?'支持 ':'supports ')+r.supports,h:`${base}references/${r.ref.id}/`})),
+];
+const searchPath=lang==='zh'?'/MimicryDB/zh/search/':'/MimicryDB/search/';
+const ph=lang==='zh'?'搜索…':'Search…';
+const aria=lang==='zh'?'全局搜索':'Global search';
+const kindLabel:Record<string,string>=lang==='zh'?{taxon:'类群',interaction:'交互',reference:'文献'}:{taxon:'Taxon',interaction:'Interaction',reference:'Reference'};
+const idxJson=JSON.stringify({kindLabel,searchPath,items:idx}).replace(/<\/script/gi,'<\\/script');
 ---
-<html lang={langAttr}><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={desc}/><meta property="og:title" content={title}/><meta property="og:description" content={desc}/><meta property="og:type" content="website"/><link rel="alternate" hreflang={langAttr} href={here}/><link rel="alternate" hreflang={lang==='zh'?'en':'zh-CN'} href={other}/><title>{title}</title></head><body><a class="skip-link" href="#main">{lang==='zh'?'跳到正文':'Skip to content'}</a><header class="site-header text-white"><div class="container flex flex-wrap items-center justify-between gap-y-2 py-4"><a href={lang==='zh'?'/MimicryDB/zh/':'/MimicryDB/'} class="text-xl font-bold text-white">MimicryDB</a><nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm" aria-label={lang==='zh'?'主导航':'Main navigation'}><a class="text-white" href={`/MimicryDB/${lang==='zh'?'zh/':''}interactions/`}>{s.nav.interactions}</a><a class="text-white" href={`/MimicryDB/${lang==='zh'?'zh/':''}taxa/`}>{s.nav.taxa}</a><a class="text-white" href={`/MimicryDB/${lang==='zh'?'zh/':''}mimics/`}>{s.nav.mimics}</a><a class="text-white" href={`/MimicryDB/${lang==='zh'?'zh/':''}models/`}>{s.nav.models}</a><a class="text-white" href={`/MimicryDB/${lang==='zh'?'zh/':''}references/`}>{s.nav.references}</a><a class="text-white" href={`/MimicryDB/${lang==='zh'?'zh/':''}evidence/`}>{s.nav.evidence}</a><a class="text-white" href={`/MimicryDB/${lang==='zh'?'zh/':''}search/`}>{s.nav.search}</a><a class="text-white" href={`/MimicryDB/${lang==='zh'?'zh/':''}about/`}>{s.nav.about}</a></nav><form class="flex items-center" role="search" action={lang==='zh'?'/MimicryDB/zh/search/':'/MimicryDB/search/'} method="get"><input type="search" name="q" placeholder={lang==='zh'?'搜索…':'Search…'} aria-label={lang==='zh'?'全局搜索':'Global search'} class="w-28 md:w-40 bg-transparent border border-white/25 rounded-sm px-2 py-1 text-xs text-white placeholder:text-slate-400 focus:border-gold outline-none"/></form><a class="text-sm text-white/80 border border-white/30 rounded-md px-2 py-1 hover:bg-white/10" href={other}>{s.footer.langToggle}</a></div></header><main id="main"><slot /></main><footer class="mt-16 border-t border-white/10 py-8 text-sm"><div class="container flex flex-wrap items-center justify-between gap-3"><span>MimicryDB · {s.footer.tagline}</span><span><a href={`/MimicryDB/${lang==='zh'?'zh/':''}download/`}>{s.footer.download}</a> · <a href="/MimicryDB/curator/">{s.footer.curator}</a> · <a href="https://github.com/ZyYang0124/MimicryDB">GitHub ↗</a></span></div></footer></body></html>
+<html lang={langAttr}><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content={desc}/><meta property="og:title" content={title}/><meta property="og:description" content={desc}/><meta property="og:type" content="website"/><link rel="alternate" hreflang={langAttr} href={here}/><link rel="alternate" hreflang={lang==='zh'?'en':'zh-CN'} href={other}/><title>{title}</title></head><body><a class="skip-link" href="#main">{lang==='zh'?'跳到正文':'Skip to content'}</a><header class="site-header text-white"><div class="container flex flex-wrap items-center justify-between gap-y-2 py-4"><a href={lang==='zh'?'/MimicryDB/zh/':'/MimicryDB/'} class="text-xl font-bold text-white">MimicryDB</a><nav class="flex flex-wrap gap-x-5 gap-y-2 text-sm" aria-label={lang==='zh'?'主导航':'Main navigation'}><a class="text-white" href={`${base}interactions/`}>{s.nav.interactions}</a><a class="text-white" href={`${base}taxa/`}>{s.nav.taxa}</a><a class="text-white" href={`${base}mimics/`}>{s.nav.mimics}</a><a class="text-white" href={`${base}models/`}>{s.nav.models}</a><a class="text-white" href={`${base}references/`}>{s.nav.references}</a><a class="text-white" href={`${base}evidence/`}>{s.nav.evidence}</a><a class="text-white" href={`${base}search/`}>{s.nav.search}</a><a class="text-white" href={`${base}about/`}>{s.nav.about}</a></nav><div class="relative flex items-center gap-2" id="gsearch"><form class="flex items-center" role="search" action={searchPath} method="get"><input id="gq" type="search" name="q" placeholder={ph} aria-label={aria} autocomplete="off" class="w-28 md:w-40 bg-transparent border border-white/25 rounded-sm px-2 py-1 text-xs text-white placeholder:text-slate-400 focus:border-gold outline-none"/></form><ul id="gsugg" class="absolute right-0 top-full z-50 mt-2 hidden w-80 border border-white/10 bg-[#111] py-1 shadow-2xl" role="listbox"></ul><a class="text-sm text-white/80 border border-white/30 rounded-md px-2 py-1 hover:bg-white/10" href={other}>{s.footer.langToggle}</a></div></div></header><main id="main"><slot /></main><footer class="mt-16 border-t border-white/10 py-8 text-sm"><div class="container flex flex-wrap items-center justify-between gap-3"><span>MimicryDB · {s.footer.tagline}</span><span><a href={`${base}download/`}>{s.footer.download}</a> · <a href="/MimicryDB/curator/">{s.footer.curator}</a> · <a href="https://github.com/ZyYang0124/MimicryDB">GitHub ↗</a></span></div></footer><script type="application/json" id="gidx" set:html={idxJson}/><script>
+const cfg=JSON.parse(document.getElementById('gidx')?.textContent??'{}');
+const idx=cfg.items??[];
+const props={kindLabel:cfg.kindLabel??{},searchPath:cfg.searchPath??'/MimicryDB/search/'};
+const input=document.getElementById('gq') as HTMLInputElement;
+const box=document.getElementById('gsugg') as HTMLUListElement;
+let active=-1;let current:HTMLElement[]=[];
+const close=()=>{box.classList.add('hidden');box.innerHTML='';current=[];active=-1;};
+const kindCls:Record<string,string>={taxon:'text-teal',interaction:'text-coral',reference:'text-gold'};
+type Sugg={k:string;l:string;m:string;h:string};
+function render(){
+  const q=input.value.trim().toLowerCase();
+  if(!q){close();return;}
+  const hits=idx.filter((x:Sugg)=>(x.l+' '+x.m).toLowerCase().includes(q)).slice(0,7);
+  if(!hits.length){close();return;}
+  box.innerHTML='';current=hits.map((x:Sugg)=>{
+    const li=document.createElement('li');
+    li.setAttribute('role','option');
+    li.className='flex items-center justify-between gap-3 px-4 py-2 text-sm cursor-pointer';
+    li.innerHTML=`<span class="truncate text-white/90">${x.l}</span><span class="shrink-0 text-[0.65rem] uppercase tracking-[0.2em] ${kindCls[x.k]??''}">${props.kindLabel[x.k]??x.k}</span>`;
+    li.addEventListener('mousedown',(e)=>{e.preventDefault();location.href=x.h;});
+    box.appendChild(li);return li;});
+  box.classList.remove('hidden');active=-1;
+}
+function setActive(){
+  current.forEach((li,ii)=>{li.classList.toggle('bg-white/10',ii===active);li.classList.toggle('bg-transparent',ii!==active);});
+  if(active>=0)current[active].scrollIntoView({block:'nearest'});
+}
+function hitsNow(){const q=input.value.trim().toLowerCase();return idx.filter((x:Sugg)=>(x.l+' '+x.m).toLowerCase().includes(q)).slice(0,7);}
+input.addEventListener('input',render);
+input.addEventListener('keydown',(e)=>{
+  if(box.classList.contains('hidden')||!current.length){if(e.key==='Enter'){location.href=props.searchPath+'?q='+encodeURIComponent(input.value);}return;}
+  if(e.key==='ArrowDown'){e.preventDefault();active=(active+1)%current.length;setActive();}
+  else if(e.key==='ArrowUp'){e.preventDefault();active=(active-1+current.length)%current.length;setActive();}
+  else if(e.key==='Enter'){e.preventDefault();if(active>=0){const h=hitsNow()[active];if(h)location.href=h.h;}else{location.href=props.searchPath+'?q='+encodeURIComponent(input.value);}}
+  else if(e.key==='Escape'){close();}
+});
+document.addEventListener('click',(e)=>{if(!(e.target instanceof Element)||!e.target.closest('#gsearch'))close();});
+</script></body></html>
