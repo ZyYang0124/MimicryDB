@@ -19,9 +19,10 @@ const outPath=new URL('../data/live/live.json',import.meta.url);
 const env=loadEnv();
 if(!env){console.log('live-data: no Supabase credentials in .env — building on the demo dataset');process.exit(0);}
 const headers={apikey:env.key,Authorization:`Bearer ${env.key}`};
+const withRetry=async(url,opts,tries=3)=>{let last;for(let i=0;i<tries;i++){try{const r=await fetch(url,opts);if(r.ok)return r;last=new Error(`HTTP ${r.status}`);if(r.status<500&&r.status!==429)return r;}catch(e){last=e;}await new Promise(res=>setTimeout(res,800*(i+1)));}throw last;};
 try{
-  const select='public_id,receiver_description,knowledge_status,evidence_grade,mimicry_summary,model_kind,observed_on,recorded_by,interaction_status,mimic_taxon:mimic_taxon_id(scientific_name,kingdom),model_taxon:model_taxon_id(scientific_name,kingdom),interaction_reference(claim_roles,locator,reference(id,doi,title,authors,year,journal)),interaction_mimicry_type(vocabulary_term(term,label))';
-  const res=await fetch(`${env.url}/rest/v1/mimicry_interaction?select=${encodeURIComponent(select)}`,{headers});
+  const select='public_id,receiver_description,knowledge_status,evidence_grade,mimicry_summary,model_kind,observed_on,recorded_by,interaction_status,mimic_taxon:mimic_taxon_id(scientific_name,kingdom),model_taxon:model_taxon_id(scientific_name,kingdom),interaction_reference(claim_roles,locator,reference(id,doi,title,authors,year,journal)),interaction_mimicry_type(vocabulary_term(term,label)),interaction_signal_modality(vocabulary_term(term))';
+  const res=await withRetry(`${env.url}/rest/v1/mimicry_interaction?select=${encodeURIComponent(select)}`,{headers});
   if(!res.ok)throw new Error(`HTTP ${res.status} on mimicry_interaction`);
   const rows=await res.json();
   const interactions=rows.map(r=>{
@@ -30,6 +31,7 @@ try{
     return {
       id:r.public_id,mimic:r.mimic_taxon?.scientific_name??'unresolved',model:r.model_taxon?.scientific_name??'unresolved',
       receiver:r.receiver_description??'not recorded',type:(r.interaction_mimicry_type??[]).map(x=>x.vocabulary_term?.label??x.vocabulary_term?.term).filter(Boolean).join(' / ')||'unclassified',
+      modalities:(r.interaction_signal_modality??[]).map(x=>x.vocabulary_term?.term).filter(Boolean),
       evidence:r.evidence_grade??'E0',kingdoms:`${r.mimic_taxon?.kingdom??'unknown'} → ${modelSide}`,
       summary:r.mimicry_summary??'',reference:'live record',
       modalities:[],knowledge:r.knowledge_status??'reported',modelKind:mk,
@@ -40,7 +42,7 @@ try{
         claims:ir.claim_roles??[],locator:ir.locator??undefined})).filter(x=>x.id),
       dataStatus:r.interaction_status};
   }).filter(i=>i.id);
-  const sysRes=await fetch(`${env.url}/rest/v1/mimicry_system?select=public_id,name,description,system_type,notes,system_interaction(mimicry_interaction(public_id))`,{headers});
+  const sysRes=await withRetry(`${env.url}/rest/v1/mimicry_system?select=public_id,name,description,system_type,notes,system_interaction(mimicry_interaction(public_id))`,{headers});
   const systems=sysRes.ok?(await sysRes.json()).map(s=>({public_id:s.public_id,name:s.name,description:s.description??'',system_type:s.system_type??'other',notes:s.notes??'',members:(s.system_interaction??[]).map(si=>si.mimicry_interaction?.public_id).filter(Boolean)})):[];
   mkdirSync(new URL('../data/live/',import.meta.url),{recursive:true});
   if(interactions.length===0){

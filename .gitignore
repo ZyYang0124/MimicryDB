@@ -5,3 +5,4 @@ export/
 .env.local
 .env.*.local
 !.env.example
+data/live/
