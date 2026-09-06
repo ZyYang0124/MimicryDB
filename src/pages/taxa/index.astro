@@ -1,10 +1,48 @@
 ---
-import Layout from '../../layouts/Layout.astro'; import {data} from '../../data/provider';
+import Layout from '../../layouts/Layout.astro'; import {data,gbifFor,type TaxonSummary,type GbifMatch} from '../../data/provider';
 import StatBars from '../../components/StatBars.astro';
+const s={clsZh:{Aves:'birds',Insecta:'insects',Arachnida:'arachnids',Reptilia:'reptiles',Actinopterygii:'ray-finned fishes',Magnoliopsida:'flowering plants (dicots)',Liliopsida:'monocots',Pucciniomycetes:'rust fungi'} as Record<string,string>,
+ ordZh:{Passeriformes:'perching birds',Cuculiformes:'cuckoos',Squamata:'scaled reptiles',Perciformes:'perches',Lepidoptera:'butterflies & moths',Hymenoptera:'ants, bees & wasps',Coleoptera:'beetles',Diptera:'flies',Phasmatida:'stick insects',Phasmida:'stick insects',Asparagales:'orchids & allies',Pucciniales:'rusts'} as Record<string,string>,
+ kingdomZh:{Animalia:'animals',Plantae:'plants',Fungi:'fungi'} as Record<string,string>};
 const taxa=data.taxa();
+type Entry={name:string;slug:string;asMimic:number;asModel:number;zh?:string;kingdom:string;cls:string;order:string;family:string;descriptive:boolean};
+const entries:Entry[]=taxa.map((t:TaxonSummary)=>{
+  const g:GbifMatch|undefined=gbifFor(t.name);
+  const rank=(r:string)=>g?.gbif_classification?.find(c=>c.rank===r)?.name;
+  // GBIF class/order are trusted only for EXACT matches — a FUZZY match's
+  // classification belongs to a different taxon (docs/TAXONOMY_POLICY.md).
+  const trusted=g?.matchType==='EXACT';
+  const kingdom=trusted?rank('kingdom')??g?.gbif_kingdom??'Other':(g?.matchType==='NOT_A_SCIENTIFIC_NAME'||!g?.gbif_usageKey?'Descriptive':(t.lineages.split(' · ')[0]??'Other'));
+  return {name:t.name,slug:t.slug,asMimic:t.asMimic,asModel:t.asModel,
+    kingdom:kingdom??'Other',
+    cls:trusted?rank('class')??'—':'—',
+    order:trusted?rank('order')??'':'',
+    family:trusted?rank('family')??'':'',
+    descriptive:g?.matchType==='NOT_A_SCIENTIFIC_NAME'||!g?.gbif_usageKey};
+});
+const kingdomOrder=['Animalia','Plantae','Fungi','Other'];
 const lineageCount=new Map<string,number>();
 for(const t of taxa)for(const l of t.lineages.split(' · '))lineageCount.set(l,(lineageCount.get(l)??0)+1);
 const lineageBars=[...lineageCount].map(([label,value])=>({label,value})).sort((a,b)=>b.value-a.value);
+const structured=entries.filter(e=>!e.descriptive);
+const descriptive=entries.filter(e=>e.descriptive);
+const kingdoms=[...new Set(structured.map(e=>e.kingdom))].sort((a,b)=>kingdomOrder.indexOf(a)-kingdomOrder.indexOf(b));
+// group by class; when the GBIF chain omits the class rank, fall back to order,
+// and only truly unplaced taxa land in the reconciliation-needed bucket
+const groupKey=(e:Entry)=>e.cls!=='—'?'class:'+e.cls:(e.order?'order:'+e.order:'none');
+const groups=[...new Set(structured.map(groupKey))].map(k=>{
+  const [rank,label]=k.split(':');
+  const members=structured.filter(e=>groupKey(e)===k).sort((a,b)=>(b.asMimic+b.asModel)-(a.asMimic+a.asModel)||a.name.localeCompare(b.name));
+  return {kingdom:members[0].kingdom,rank:rank as 'class'|'order'|'none',label,members};
+}).sort((a,b)=>a.kingdom.localeCompare(b.kingdom)||b.members.length-a.members.length);
+const groupZh=(g:{rank:string;label:string})=>g.rank==='class'?(s.clsZh[g.label]??''):(g.rank==='order'?(s.ordZh[g.label]??''):'');
+const rowRank=(e:Entry,g:{rank:string})=>g.rank==='class'?e.order:(g.rank==='order'?e.family:'');
 ---
-<Layout><div class="container py-12"><h1 class="text-4xl font-bold">Taxa</h1><p class="mt-3">Mimics and models represented in the prototype dataset.</p><StatBars kicker="By lineage" items={lineageBars} />
-<div class="mt-10 grid gap-3 md:grid-cols-3">{taxa.map(t=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/taxa/${t.slug}/`}><div class="flex items-baseline justify-between gap-2"><span class="text-lg font-semibold">{t.name}</span><span class="pill">{t.lineages}</span></div><div class="mt-2 text-sm text-slate-400">mimic in {t.asMimic} · model in {t.asModel}</div></a>)}</div></div></Layout>
+<Layout title="Taxa · MimicryDB"><div class="container py-12"><h1 class="text-4xl font-bold">Taxa</h1><p class="mt-3 max-w-2xl text-slate-400">Mimics and models represented in the prototype dataset, grouped by the GBIF backbone — {structured.length} scientific taxa in {groups.length} lineage groups, plus {descriptive.length} descriptive model classes kept off-tree by design.</p><StatBars kicker="By lineage" items={lineageBars} />
+{kingdoms.map(k=><section class="mt-14"><h2 class="flex flex-wrap items-baseline gap-3 border-b border-white/15 pb-3"><span class="hasselblad-title text-xl text-gold">{k}</span><span class="text-sm text-slate-500">{s.kingdomZh[k]??''} · {structured.filter(e=>e.kingdom===k).length} taxa</span></h2>
+{groups.filter(g=>g.kingdom===k).map(g=><div class="mt-8"><h3 class="flex items-baseline gap-3"><span class="font-serif text-xl italic">{g.rank==='none'?'Unclassified':g.label}</span><span class="text-xs uppercase tracking-[0.2em] text-slate-500">{g.rank==='none'?'awaiting reconciliation':`${g.label}${groupZh(g)?` · ${groupZh(g)}`:''} · ${g.members.length}`}</span></h3>
+<div class="mt-3 divide-y divide-white/10 border-y border-white/10">{g.members.map(e=><a class="group flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3 transition-colors hover:bg-white/5" href={`/MimicryDB/taxa/${e.slug}/`}><span class="min-w-0"><em class="font-serif text-lg text-ink">{e.name}</em></span><span class="text-xs text-slate-500">{rowRank(e,g)}</span><span class="flex shrink-0 gap-4 text-[0.65rem] uppercase tracking-[0.18em]">{e.asMimic>0?<span class="text-teal">mimic ×{e.asMimic}</span>:null}{e.asModel>0?<span class="text-coral">model ×{e.asModel}</span>:null}</span></a>)}</div></div>)}
+</section>)}
+{descriptive.length?<section class="mt-16"><h2 class="flex flex-wrap items-baseline gap-3 border-b border-white/15 pb-3"><span class="hasselblad-title text-xl text-slate-300">Descriptive model classes</span><span class="text-sm text-slate-500">描述性模型类 · {descriptive.length} — not scientific names; kept off the tree by design (docs/TAXONOMY_POLICY.md)</span></h2>
+<div class="mt-6 grid gap-4 md:grid-cols-3">{descriptive.map(e=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/taxa/${e.slug}/`}><div class="font-serif text-lg">{e.name}</div><div class="mt-2 text-xs text-slate-400">model ×{e.asModel}</div></a>)}</div></section>:null}
+</div></Layout>

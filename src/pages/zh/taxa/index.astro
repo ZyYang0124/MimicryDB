@@ -1,11 +1,46 @@
 ---
-import Layout from '../../../layouts/Layout.astro'; import {data} from '../../../data/provider'; 
+import Layout from '../../../layouts/Layout.astro'; import {data,gbifFor,vernacularZh,type TaxonSummary,type GbifMatch} from '../../../data/provider';
 import StatBars from '../../../components/StatBars.astro';
+const clsZh={Aves:'鸟纲',Insecta:'昆虫纲',Arachnida:'蛛形纲',Reptilia:'爬行纲',Actinopterygii:'辐鳍鱼纲',Magnoliopsida:'木兰纲',Liliopsida:'单子叶植物纲',Pucciniomycetes:'冬孢菌纲'} as Record<string,string>;
+const ordZh={Passeriformes:'雀形目',Cuculiformes:'杜鹃目',Squamata:'有鳞目',Perciformes:'鲈形目',Lepidoptera:'鳞翅目',Hymenoptera:'膜翅目',Coleoptera:'鞘翅目',Diptera:'双翅目',Phasmatida:'竹节虫目',Phasmida:'竹节虫目',Asparagales:'天门冬目',Pucciniales:'柄锈菌目'} as Record<string,string>;
+const kingdomZh={Animalia:'动物界',Plantae:'植物界',Fungi:'真菌界',Descriptive:'描述性模型类',Other:'其它'} as Record<string,string>;
 const taxa=data.taxa();
+type Entry={name:string;slug:string;asMimic:number;asModel:number;zh?:string;kingdom:string;cls:string;order:string;family:string;descriptive:boolean};
+const entries:Entry[]=taxa.map((t:TaxonSummary)=>{
+  const g:GbifMatch|undefined=gbifFor(t.name);
+  const rank=(r:string)=>g?.gbif_classification?.find(c=>c.rank===r)?.name;
+  // 仅 EXACT 匹配才采信 GBIF 的纲/目——模糊匹配的分类信息属于别的分类单元
+  const trusted=g?.matchType==='EXACT';
+  const kingdom=trusted?rank('kingdom')??g?.gbif_kingdom??'Other':(g?.matchType==='NOT_A_SCIENTIFIC_NAME'||!g?.gbif_usageKey?'Descriptive':(t.lineages.split(' · ')[0]??'Other'));
+  return {name:t.name,slug:t.slug,asMimic:t.asMimic,asModel:t.asModel,zh:vernacularZh(t.name),
+    kingdom:kingdom??'Other',
+    cls:trusted?rank('class')??'—':'—',
+    order:trusted?rank('order')??'':'',
+    family:trusted?rank('family')??'':'',
+    descriptive:g?.matchType==='NOT_A_SCIENTIFIC_NAME'||!g?.gbif_usageKey};
+});
+const kingdomOrder=['Animalia','Plantae','Fungi','Other'];
 const lineageCount=new Map<string,number>();
 for(const t of taxa)for(const l of t.lineages.split(' · '))lineageCount.set(l,(lineageCount.get(l)??0)+1);
 const lineageBars=[...lineageCount].map(([label,value])=>({label,value})).sort((a,b)=>b.value-a.value);
-const kindZh=(l:string)=>({'Animalia':'动物界','Plantae':'植物界','Fungi':'真菌界','environment':'环境','object':'无生命对象'}[l]??l);
+const structured=entries.filter(e=>!e.descriptive);
+const descriptive=entries.filter(e=>e.descriptive);
+const kingdoms=[...new Set(structured.map(e=>e.kingdom))].sort((a,b)=>kingdomOrder.indexOf(a)-kingdomOrder.indexOf(b));
+// 按"纲"分组；GBIF 分类链缺纲时退回"目"，真正无处安放的才进"待对账"
+const groupKey=(e:Entry)=>e.cls!=='—'?'class:'+e.cls:(e.order?'order:'+e.order:'none');
+const groups=[...new Set(structured.map(groupKey))].map(k=>{
+  const [rank,label]=k.split(':');
+  const members=structured.filter(e=>groupKey(e)===k).sort((a,b)=>(b.asMimic+b.asModel)-(a.asMimic+a.asModel)||a.name.localeCompare(b.name));
+  return {kingdom:members[0].kingdom,rank:rank as 'class'|'order'|'none',label,members};
+}).sort((a,b)=>a.kingdom.localeCompare(b.kingdom)||b.members.length-a.members.length);
+const groupZh=(g:{rank:string;label:string})=>g.rank==='class'?(clsZh[g.label]??''):(g.rank==='order'?(ordZh[g.label]??''):'');
+const rowRank=(e:Entry,g:{rank:string})=>g.rank==='class'?e.order:(g.rank==='order'?e.family:'');
 ---
-<Layout lang="zh" title="分类单元 · MimicryDB"><div class="container py-12"><h1 class="text-4xl font-bold">分类单元</h1><p class="mt-3">演示数据集中出现的模仿者与模型。名称与 GBIF 名录的对齐结果见各分类页。</p><StatBars kicker="按世系分布" items={lineageBars} />
-<div class="mt-10 grid gap-3 md:grid-cols-3">{taxa.map(t=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/zh/taxa/${t.slug}/`}><div class="flex items-baseline justify-between gap-2"><span class="text-lg font-semibold italic">{t.name}</span><span class="pill">{t.lineages.split(' · ').map(kindZh).join(' · ')}</span></div><div class="mt-2 text-sm text-slate-400">作为模仿者 {t.asMimic} 次 · 作为模型 {t.asModel} 次</div></a>)}</div></div></Layout>
+<Layout lang="zh" title="分类单元 · MimicryDB"><div class="container py-12"><h1 class="text-4xl font-bold">分类单元</h1><p class="mt-3 max-w-2xl text-slate-400">演示数据集中出现的模仿者与模型，按 GBIF 名录分组浏览——{structured.length} 个科学名类群归入 {groups.length} 个世系组，另有 {descriptive.length} 个描述性模型类按设计不入树。</p><StatBars kicker="按世系分布" items={lineageBars} />
+{kingdoms.map(k=><section class="mt-14"><h2 class="flex flex-wrap items-baseline gap-3 border-b border-white/15 pb-3"><span class="hasselblad-title text-xl text-gold">{kingdomZh[k]??k}</span><span class="text-sm text-slate-500">{k} · {structured.filter(e=>e.kingdom===k).length} 类群</span></h2>
+{groups.filter(g=>g.kingdom===k).map(g=><div class="mt-8"><h3 class="flex items-baseline gap-3"><span class="font-serif text-xl italic">{g.rank==='none'?'待对账':g.label}</span><span class="text-xs uppercase tracking-[0.2em] text-slate-500">{g.rank==='none'?'分类地位待核实':`${groupZh(g)||(g.rank==='class'?'纲':'目')} · ${g.members.length}`}</span></h3>
+<div class="mt-3 divide-y divide-white/10 border-y border-white/10">{g.members.map(e=><a class="group flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3 transition-colors hover:bg-white/5" href={`/MimicryDB/zh/taxa/${e.slug}/`}><span class="min-w-0"><em class="font-serif text-lg text-ink">{e.name}</em>{e.zh?<span class="ml-3 text-sm text-gold/80">{e.zh}</span>:null}</span><span class="text-xs text-slate-500">{rowRank(e,g)}</span><span class="flex shrink-0 gap-4 text-[0.65rem] uppercase tracking-[0.18em]">{e.asMimic>0?<span class="text-teal">模仿者 ×{e.asMimic}</span>:null}{e.asModel>0?<span class="text-coral">模型 ×{e.asModel}</span>:null}</span></a>)}</div></div>)}
+</section>)}
+{descriptive.length?<section class="mt-16"><h2 class="flex flex-wrap items-baseline gap-3 border-b border-white/15 pb-3"><span class="hasselblad-title text-xl text-slate-300">描述性模型类</span><span class="text-sm text-slate-500">Descriptive model classes · {descriptive.length} —— 非学名，按设计不入树（docs/TAXONOMY_POLICY.md）</span></h2>
+<div class="mt-6 grid gap-4 md:grid-cols-3">{descriptive.map(e=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/zh/taxa/${e.slug}/`}><div class="font-serif text-lg">{e.name}</div><div class="mt-2 text-xs text-slate-400">模型 ×{e.asModel}</div></a>)}</div></section>:null}
+</div></Layout>
