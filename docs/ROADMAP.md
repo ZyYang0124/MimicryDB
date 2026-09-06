@@ -57,6 +57,31 @@ Crossref enrichment live; GBIF/CoL/OpenTree identifier sync; GloBI-compatible ex
 
 Schema frozen; ontology versioned; curation and public contribution working; stable API/exports; documentation complete; frozen release sets (interactions/taxa/entities/references/evidence/vocabularies CSV + README + schema.json + CHANGELOG + checksums.txt) published via GitHub Release → Zenodo DOI.
 
+## SOP v1 development order (2026-09-06 review)
+
+Priority order is fixed: Schema > Ontology > Provenance > Curation > Harvester > Search > Data quantity > Visualization > Macro-evolution analysis. Harvester MVP comes **before** any demo-data expansion. Full SOP: see the 2026-09-06 development SOP (40 phases, per-version DoD).
+
+| Version | Content | Status |
+|---|---|---|
+| 0.3.0 | Core schema stabilization | ✅ (migration 005) |
+| 0.3.1 | Ontology + Evidence | ✅ (ontology v1.1 hierarchical + defined; evidence_support dimensions × direction × strength; migration 006) |
+| 0.3.2 | Reference + Taxonomy normalization | ✅ (Crossref-shaped reference columns + importer groundwork; GBIF external identifiers + reconciliation guards) |
+| 0.4.0 | Live Supabase DB | ◻ needs Supabase project credentials |
+| 0.4.1 | Harvester: Crossref | ✅ MVP (docs/HARVESTER.md; profile-driven, dedupe ladder, run provenance, fixture-tested) |
+| 0.4.2 | Harvester: OpenAlex | ◻ |
+| 0.4.3 | Candidate corpus + dedupe | ✅ corpus + DOI/title ladder (fuzzy tier ◻) |
+| 0.5.0 | LLM screening | ◻ |
+| 0.5.1 | OA/fulltext resolver | ◻ |
+| 0.5.2 | LLM extraction | ◻ |
+| 0.6.0 | Curator UI | ◻ |
+| 0.6.1 | Publish pipeline | ◻ |
+| 0.7.0 | Advanced search | ◻ (basic filter+export live on the download page) |
+| 0.7.1 | Taxon/reference/system portal | ✅ first pass (research-portal taxon pages, reference hubs, /systems pages) |
+| 0.8.0 | Community contribution | ◻ |
+| 0.8.1 | Public API | ◻ |
+| 0.9.0 | Gold-standard scientific beta | ◻ |
+| 1.0.0 | First scientific release + DOI | ◻ |
+
 ## Design references
 
 MimicryDB borrows interaction-model and portal patterns from established biodiversity infrastructure:

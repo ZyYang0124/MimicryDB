@@ -1,0 +1,706 @@
+{
+  "generated": "2026-09-06T05:48:13.704Z",
+  "policy": "literature_candidate corpus — discovery layer only; screening_status new → screened; irrelevant records are EXCLUDED with a reason, never deleted (SOP Phase 10).",
+  "candidates": {
+    "10.1016/j.foodhyd.2026.113278": {
+      "doi": "10.1016/j.foodhyd.2026.113278",
+      "normalized_doi": "10.1016/j.foodhyd.2026.113278",
+      "normalized_title": "zein cyclodextrin composite particles for clove essential oil loaded high internal phase pickering emulsions preparation characterization and functional fat mimicry of meat products",
+      "title": "Zein-β-cyclodextrin composite particles for clove essential oil-loaded high internal phase Pickering emulsions: Preparation, characterization and functional fat mimicry of meat products",
+      "abstract": null,
+      "authors": "Lanxin Zhang; Lu Yang; Meihan Wang; Jun-Hua Shao; Yanwei Zhang; Chunqiang Li",
+      "journal": "Food Hydrocolloids",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.foodhyd.2026.113278",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.foodhyd.2026.113278"
+        }
+      ]
+    },
+    "10.1016/j.eswa.2026.134150": {
+      "doi": "10.1016/j.eswa.2026.134150",
+      "normalized_doi": "10.1016/j.eswa.2026.134150",
+      "normalized_title": "mimigen generative mimicry attacks against provenance based intrusion detection systems",
+      "title": "MimiGen: Generative mimicry attacks against provenance-based intrusion detection systems",
+      "abstract": null,
+      "authors": "Yujian Zhuang; Dehong Gao; Qichao Zhang; Libin Yang; Xiaoyan Cai; Wei Lou",
+      "journal": "Expert Systems with Applications",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.eswa.2026.134150",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.eswa.2026.134150"
+        }
+      ]
+    },
+    "10.1016/j.eswa.2026.133754": {
+      "doi": "10.1016/j.eswa.2026.133754",
+      "normalized_doi": "10.1016/j.eswa.2026.133754",
+      "normalized_title": "cooperation makes better multi agent interactive evolution framework in llm4or",
+      "title": "Cooperation makes better: Multi-agent interactive evolution framework in LLM4OR",
+      "abstract": null,
+      "authors": "Chengxi She; Xingyu Lu; Zhiqiang Chen; Jiguang Wang; Piaoyang Zhao",
+      "journal": "Expert Systems with Applications",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.eswa.2026.133754",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.eswa.2026.133754"
+        }
+      ]
+    },
+    "10.1016/j.molstruc.2026.147299": {
+      "doi": "10.1016/j.molstruc.2026.147299",
+      "normalized_doi": "10.1016/j.molstruc.2026.147299",
+      "normalized_title": "mannich base supported mn iii complex a mononuclear catalyst for catecholase mimicry",
+      "title": "Mannich Base Supported Mn(III) Complex: A Mononuclear Catalyst for Catecholase Mimicry",
+      "abstract": null,
+      "authors": "Mainak Debnath; Sreyasree Basu; Surajit Biswas; Arpan Dutta; Malay Dolai",
+      "journal": "Journal of Molecular Structure",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.molstruc.2026.147299",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.molstruc.2026.147299"
+        }
+      ]
+    },
+    "10.1016/j.carbon.2026.121962": {
+      "doi": "10.1016/j.carbon.2026.121962",
+      "normalized_doi": "10.1016/j.carbon.2026.121962",
+      "normalized_title": "hmox1 guided calcium single atom nanozymes with multienzyme mimicry for drug resistant glioblastoma therapy",
+      "title": "HMOX1-guided calcium single-atom nanozymes with multienzyme mimicry for drug-resistant glioblastoma therapy",
+      "abstract": null,
+      "authors": "Yan Wang; Xueli Pei; Yu Wan; Sumaira Hanif; Kehui Yuan; Yang Yang; Pir Muhammad; Yanli Wang",
+      "journal": "Carbon",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.carbon.2026.121962",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.carbon.2026.121962"
+        }
+      ]
+    },
+    "10.1016/j.fraope.2026.100760": {
+      "doi": "10.1016/j.fraope.2026.100760",
+      "normalized_doi": "10.1016/j.fraope.2026.100760",
+      "normalized_title": "training model based on genetic algorithm and ant colony algorithm",
+      "title": "Training model based on genetic algorithm and ant colony algorithm",
+      "abstract": null,
+      "authors": "Qi Niu; Jingshu Sun",
+      "journal": "Franklin Open",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.fraope.2026.100760",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.fraope.2026.100760"
+        }
+      ]
+    },
+    "10.1016/j.suscom.2026.101435": {
+      "doi": "10.1016/j.suscom.2026.101435",
+      "normalized_doi": "10.1016/j.suscom.2026.101435",
+      "normalized_title": "load adaptive task scheduling in fog cloud systems using markov prediction and ant colony optimization",
+      "title": "Load-adaptive task scheduling in fog–cloud systems using Markov prediction and Ant Colony optimization",
+      "abstract": null,
+      "authors": "Abdulbasit Darem; Amal Alshardan; Majed Nawaz; T.Sampath Kumar; Venubabu Rachapudi; S. Radhika",
+      "journal": "Sustainable Computing: Informatics and Systems",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.suscom.2026.101435",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.suscom.2026.101435"
+        }
+      ]
+    },
+    "10.1016/j.napere.2026.100210": {
+      "doi": "10.1016/j.napere.2026.100210",
+      "normalized_doi": "10.1016/j.napere.2026.100210",
+      "normalized_title": "bioactivity of essential oils against the vine mealybug planococcus ficus and its associated ant brachymyrmex patagonicus",
+      "title": "Bioactivity of essential oils against the vine mealybug Planococcus ficus and its associated ant Brachymyrmex patagonicus",
+      "abstract": null,
+      "authors": "Miriam del Valle Avila; Fernanda Achimón; Romina P. Pizzolitto; Mariana Pereyra; Alfonsina E. Andreatta; María P. Zunino; María L. Peschiutta",
+      "journal": "Journal of Natural Pesticide Research",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.napere.2026.100210",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.napere.2026.100210"
+        }
+      ]
+    },
+    "10.1016/j.eswa.2026.133411": {
+      "doi": "10.1016/j.eswa.2026.133411",
+      "normalized_doi": "10.1016/j.eswa.2026.133411",
+      "normalized_title": "an improved max min ant system with multi stage acceleration and elite refinement for non permutation flow shop scheduling problem",
+      "title": "An improved max-min ant system with multi-stage acceleration and elite refinement for non-permutation flow-shop scheduling problem",
+      "abstract": null,
+      "authors": "Yuwan Wang; Zhenhua Yu; Huazhong Wang; Qingchao Jiang; Weimin Zhong",
+      "journal": "Expert Systems with Applications",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.eswa.2026.133411",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.eswa.2026.133411"
+        }
+      ]
+    },
+    "10.1016/j.bioactmat.2026.06.040": {
+      "doi": "10.1016/j.bioactmat.2026.06.040",
+      "normalized_doi": "10.1016/j.bioactmat.2026.06.040",
+      "normalized_title": "immune cell derived membrane nanovesicles a promethean fire for autoimmune disease therapy through immune cell mimicry",
+      "title": "Immune cell-derived membrane nanovesicles: A promethean fire for autoimmune disease therapy through immune cell mimicry",
+      "abstract": null,
+      "authors": "Yan Li; Nasrullah Jan; Jimin Zhang; Yang Qin; Gang Liu; Chao Liu",
+      "journal": "Bioactive Materials",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.bioactmat.2026.06.040",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.bioactmat.2026.06.040"
+        }
+      ]
+    },
+    "10.1016/j.cois.2026.101603": {
+      "doi": "10.1016/j.cois.2026.101603",
+      "normalized_doi": "10.1016/j.cois.2026.101603",
+      "normalized_title": "vertebrate predators as hidden players in ant plant mutualisms costs resistance and recovery",
+      "title": "Vertebrate predators as hidden players in ant-plant mutualisms: costs, resistance, and recovery",
+      "abstract": null,
+      "authors": "Peter R Marting",
+      "journal": "Current Opinion in Insect Science",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.cois.2026.101603",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.cois.2026.101603"
+        }
+      ]
+    },
+    "10.1016/j.cois.2026.101572": {
+      "doi": "10.1016/j.cois.2026.101572",
+      "normalized_doi": "10.1016/j.cois.2026.101572",
+      "normalized_title": "to repel the red imported fire ant a review of progress limitations and prospects",
+      "title": "To repel the red imported fire ant: a review of progress, limitations, and prospects",
+      "abstract": null,
+      "authors": "Chengju Du; Chao Wen; Rui Pang; Cai Wang",
+      "journal": "Current Opinion in Insect Science",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.cois.2026.101572",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.cois.2026.101572"
+        }
+      ]
+    },
+    "10.1016/j.toxrep.2026.102311": {
+      "doi": "10.1016/j.toxrep.2026.102311",
+      "normalized_doi": "10.1016/j.toxrep.2026.102311",
+      "normalized_title": "pain in the acephate a case of protracted toxicity after an intentional ingestion of ant killer",
+      "title": "Pain in the acephate: A case of protracted toxicity after an intentional ingestion of ant killer",
+      "abstract": null,
+      "authors": "Max Trojano; Matthew Lippi; Solana Archuleta; Leanne Cook; Daniel Lasoff; Alicia Minns",
+      "journal": "Toxicology Reports",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.toxrep.2026.102311",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.toxrep.2026.102311"
+        }
+      ]
+    },
+    "10.1061/jcemd4.coeng-18790": {
+      "doi": "10.1061/jcemd4.coeng-18790",
+      "normalized_doi": "10.1061/jcemd4.coeng-18790",
+      "normalized_title": "an improved ant colony optimization algorithm for automated ready mixed concrete distribution",
+      "title": "An Improved Ant Colony Optimization Algorithm for Automated Ready-Mixed Concrete Distribution",
+      "abstract": "Abstract The dynamic scheduling of ready-mixed concrete constitutes a critical bottleneck in construction automation. Following the design science paradigm and informed by a systematic literature review, this study develops the multistrategy ant colony optimization (MSACO) algorithm, which integrates three mechanisms: adaptive pheromone evaporation, elite ant guidance, and genetic mutation. Empirical validation based on the road network of a major Chinese city (involving four batching plants, six customer sites, and a fleet of seven fuel vehicles and five electric vehicles) demonstrates that MSACO significantly outperforms algorithms including the genetic algorithm, ant colony optimization, particle swarm optimization, and multistrategy adaptive ant colony optimization in terms of solution accuracy, convergence speed, and stability. The proposed algorithm achieves an average reduction in distribution costs of 7.06%, with advantages reaching 10.7% under highly constrained conditions ( p &lt; 10 − 7 ). The main contributions are threefold: it proposes a triple adaptive mechanism tailored for dynamic scheduling scenarios; formulates a mathematical model incorporating plant capacity, load limits, and electric vehicle range; and provides a quantifiable basis for the digital transformation of construction logistics.",
+      "authors": "Yang Guan; Ge Shi; Jie Yang; Jinfa Shi",
+      "journal": "Journal of Construction Engineering and Management",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1061/jcemd4.coeng-18790",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1061/jcemd4.coeng-18790"
+        }
+      ]
+    },
+    "10.1016/j.foreco.2026.124177": {
+      "doi": "10.1016/j.foreco.2026.124177",
+      "normalized_doi": "10.1016/j.foreco.2026.124177",
+      "normalized_title": "a decade of experimental drought increases stability through homogenization of an amazonian ground dwelling ant community",
+      "title": "A decade of experimental drought increases stability through homogenization of an Amazonian ground-dwelling ant community",
+      "abstract": null,
+      "authors": "Rony P.S. Almeida; Reuber Antoniazzi; Arleu B. Viana-Junior; Rogério R. Silva",
+      "journal": "Forest Ecology and Management",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.foreco.2026.124177",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.foreco.2026.124177"
+        }
+      ]
+    },
+    "10.1016/j.aei.2026.105051": {
+      "doi": "10.1016/j.aei.2026.105051",
+      "normalized_doi": "10.1016/j.aei.2026.105051",
+      "normalized_title": "controlled emotion mimicry speech for classifying higher and lower anxiety symptom groups using a hybrid deep learning and machine learning framework",
+      "title": "Controlled emotion-mimicry speech for classifying higher- and lower-anxiety symptom groups using a hybrid deep learning and machine learning framework",
+      "abstract": null,
+      "authors": "Zhong Zhao; Chengwen Xiang; Xiaobin Zhang; Xinyao Hu; Xingda Qu",
+      "journal": "Advanced Engineering Informatics",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.aei.2026.105051",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.aei.2026.105051"
+        }
+      ]
+    },
+    "10.1016/j.seppur.2026.139848": {
+      "doi": "10.1016/j.seppur.2026.139848",
+      "normalized_doi": "10.1016/j.seppur.2026.139848",
+      "normalized_title": "defect engineered cu ceo2 nanozymes with boosted haloperoxidase mimicry for marine antifouling efficacy at ultra low dosage",
+      "title": "Defect-engineered Cu-CeO2 nanozymes with boosted haloperoxidase mimicry for marine antifouling efficacy at ultra-low dosage",
+      "abstract": null,
+      "authors": "Haihuan Sun; Xiaoyan He; Zongcheng Yang; Xiaoqing Dou; Wenhan Fan; Chengqing Yuan; Xiuqin Bai",
+      "journal": "Separation and Purification Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.seppur.2026.139848",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.seppur.2026.139848"
+        }
+      ]
+    },
+    "10.1016/j.tice.2026.103688": {
+      "doi": "10.1016/j.tice.2026.103688",
+      "normalized_doi": "10.1016/j.tice.2026.103688",
+      "normalized_title": "division of labor in workers of the leafcutter ant atta sexdens hymenoptera formicidae is correlated with brain structure",
+      "title": "Division of labor in workers of the leafcutter ant Atta sexdens (Hymenoptera: Formicidae) is correlated with brain structure",
+      "abstract": null,
+      "authors": "Ana Paula Pereira Raimundo; Elane Borba Alves; Erika Vanessa da Costa Carvalho; Lídia Aparecida Dourado; Júlia Martins Gonçalves; Diego dos Santos Souza; Laryssa Lemos da Silva; Giovanna dos Santos Pereira; José Eduardo Serrão",
+      "journal": "Tissue and Cell",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.tice.2026.103688",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.tice.2026.103688"
+        }
+      ]
+    },
+    "10.1016/j.toxicon.2026.109259": {
+      "doi": "10.1016/j.toxicon.2026.109259",
+      "normalized_doi": "10.1016/j.toxicon.2026.109259",
+      "normalized_title": "the brazilian contribution to ant toxinology challenges and perspectives",
+      "title": "The Brazilian contribution to ant toxinology: challenges and perspectives",
+      "abstract": null,
+      "authors": "Lucas Ian Veloso Correia; Ruan Pires da Silva; Lorena Polloni; Machado Martins; Fabiana de Almeida Araújo Santos; Belchiolina Beatriz Fonseca; Luiz Ricardo Goulart; Robson José de Oliveria; Luciana Machado Bastos",
+      "journal": "Toxicon",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.toxicon.2026.109259",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.toxicon.2026.109259"
+        }
+      ]
+    },
+    "10.1016/j.tifs.2026.106021": {
+      "doi": "10.1016/j.tifs.2026.106021",
+      "normalized_doi": "10.1016/j.tifs.2026.106021",
+      "normalized_title": "reconstructing dairy aroma in animal free milk through bio manufactured lipid structural mimicry",
+      "title": "Reconstructing dairy aroma in animal-free milk through bio-manufactured lipid structural mimicry",
+      "abstract": null,
+      "authors": "Manideep Pabba; Deepak Choudhury; Fawzi Banat; Bharath Bakaraju; Srinivas Mettu",
+      "journal": "Trends in Food Science &amp; Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.tifs.2026.106021",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-06T05:48:12.033Z",
+      "first_run": "RUN:202609060548:ANT_MIMICRY",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.tifs.2026.106021"
+        }
+      ]
+    }
+  }
+}

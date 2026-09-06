@@ -2,67 +2,105 @@
   "mimicry_type": [
     {
       "term": "batesian",
-      "label": "Batesian mimicry"
+      "label": "Batesian mimicry",
+      "parent": "protective",
+      "definition": "A palatable or harmless mimic resembles an unpalatable or dangerous model, deceiving predators that have learned to avoid the model."
     },
     {
       "term": "mullerian",
-      "label": "Müllerian mimicry"
+      "label": "Müllerian mimicry",
+      "parent": "protective",
+      "definition": "Two or more defended species converge on a shared warning signal, spreading the cost of predator education among them."
+    },
+    {
+      "term": "mertensian",
+      "label": "Mertensian mimicry",
+      "parent": "protective",
+      "definition": "A more deadly species mimics a less dangerous one, hypothesised to arise when moderately venomous prey benefits from mimicking a milder model."
     },
     {
       "term": "aggressive",
-      "label": "Aggressive mimicry"
+      "label": "Aggressive mimicry",
+      "parent": null,
+      "definition": "A predator or parasite resembles a harmless or attractive signal-bearer to approach its own prey or hosts."
     },
     {
       "term": "reproductive",
-      "label": "Reproductive mimicry"
+      "label": "Reproductive mimicry",
+      "parent": null,
+      "definition": "Mimicry that exploits the reproductive behaviour of another species, typically by imitating mates or reproductive resources."
     },
     {
       "term": "sexual_deception",
-      "label": "Sexual deception"
+      "label": "Sexual deception",
+      "parent": "reproductive",
+      "definition": "A mimic imitates the mate or mating signals of its receiver (often chemically and visually) to exploit their mating behaviour, as in pollinator sexual deception."
     },
     {
       "term": "brood",
-      "label": "Brood mimicry"
+      "label": "Brood mimicry",
+      "parent": "reproductive",
+      "definition": "A mimic exploits the parental care of another species, as in brood parasitism where the parasite's offspring are reared by the host."
     },
     {
       "term": "egg",
-      "label": "Egg mimicry"
+      "label": "Egg mimicry",
+      "parent": "brood",
+      "definition": "Mimicry of host eggs by a brood parasite's egg, reducing rejection by the incubating host."
     },
     {
       "term": "social",
-      "label": "Social mimicry"
+      "label": "Social mimicry",
+      "parent": null,
+      "definition": "A mimic infiltrates a social species' colony by imitating its members or their chemical identity."
     },
     {
       "term": "parasitic",
-      "label": "Parasitic mimicry"
+      "label": "Parasitic mimicry",
+      "parent": "social",
+      "definition": "A social parasite mimics its host species to gain acceptance inside the host colony or family unit."
     },
     {
       "term": "floral",
-      "label": "Floral mimicry"
+      "label": "Floral mimicry",
+      "parent": "reproductive",
+      "definition": "A mimic imitates the flowers or floral signals of another species to attract pollinators without offering a reward, or a plant imitates insect signals."
     },
     {
       "term": "food_deception",
-      "label": "Food deception"
+      "label": "Food deception",
+      "parent": "reproductive",
+      "definition": "A mimic imitates food or food-related signals to exploit the foraging behaviour of receivers."
     },
     {
       "term": "protective",
-      "label": "Protective mimicry"
+      "label": "Protective mimicry",
+      "parent": null,
+      "definition": "Mimicry in which the mimic gains protection from predation or aggression by resembling something the receiver avoids or ignores."
     },
     {
       "term": "automimicry",
-      "label": "Automimicry"
+      "label": "Automimicry",
+      "parent": null,
+      "definition": "Within one species, palatable individuals or body parts resemble unpalatable ones, so the receiver cannot distinguish them."
     },
     {
       "term": "masquerade",
-      "label": "Masquerade"
+      "label": "Masquerade",
+      "parent": null,
+      "definition": "A mimic prevents recognition as prey by resembling an inedible object or organism of no interest to the receiver, rather than a warning signal."
     },
     {
       "term": "uncertain",
-      "label": "Uncertain"
+      "label": "Uncertain",
+      "parent": null,
+      "definition": "The mimicry interpretation is unclear or contested; recorded with the dispute visible."
     },
     {
       "term": "other",
-      "label": "Other"
+      "label": "Other",
+      "parent": null,
+      "definition": "A mimicry pattern that does not fit the established categories."
     }
   ],
   "signal_modality": [

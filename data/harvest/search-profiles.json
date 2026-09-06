@@ -1,0 +1,42 @@
+{
+  "profiles": [
+    {
+      "id": "PROFILE:MIMICRY_GENERAL",
+      "version": "1.0.0",
+      "active": true,
+      "source": "crossref",
+      "description": "General mimicry-system discovery across the Tree of Life. Query changes require a version bump (SOP Phase 27) so systematic-review provenance stays answerable.",
+      "query": {
+        "endpoint": "https://api.crossref.org/works",
+        "params": {
+          "query": "mimicry OR mimetic OR masquerade",
+          "filter": "type:journal-article",
+          "sort": "published",
+          "order": "desc"
+        },
+        "rows": 20,
+        "pages": 1
+      },
+      "notes": "v1.0.0 initial profile. Known gaps to revisit: myrmecomorphy, myrmecomorphic, Pouyannian, deceptive pollination, aggressive mimicry by common name (planned v1.1.0)."
+    },
+    {
+      "id": "PROFILE:ANT_MIMICRY",
+      "version": "1.0.0",
+      "active": true,
+      "source": "crossref",
+      "description": "Ant-mimicry focused sweep (myrmecophily/myrmecomorphy): spiders, Hemiptera and other arthropods imitating Formicidae.",
+      "query": {
+        "endpoint": "https://api.crossref.org/works",
+        "params": {
+          "query": "ant mimicry myrmecomorphy",
+          "filter": "type:journal-article",
+          "sort": "published",
+          "order": "desc"
+        },
+        "rows": 20,
+        "pages": 1
+      },
+      "notes": "v1.0.0 initial profile."
+    }
+  ]
+}

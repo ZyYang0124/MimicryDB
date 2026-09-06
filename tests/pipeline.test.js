@@ -292,3 +292,56 @@ test('crossref import report is reviewable and verbatim',async()=>{
     assert.ok(r.crossref_metadata&&r.crossref_verified_at,`${doi}: raw Crossref provenance required`);
   }
 });
+
+test('harvest MVP: dedupe ladder and run accounting (offline fixtures)',async()=>{
+  const {normalizeDoi,normalizeTitle,dedupeCheck,applyItems,buildIndexes}=await import('../src/lib/harvest.ts');
+  assert.equal(normalizeDoi('https://doi.org/10.1126/SCIENCE.176.4037.936'),'10.1126/science.176.4037.936');
+  assert.equal(normalizeTitle('<i>Heliconius</i> Mimicry:   Reviews!'),'heliconius mimicry reviews');
+  const candidates={};
+  const run={run_id:'RUN:TEST',source:'crossref',search_profile:'PROFILE:TEST',profile_version:'1.0.0',
+    started_at:'',finished_at:'',records_seen:0,records_new:0,records_duplicate:0,records_error:0,status:'failed',error_log:[]};
+  const {byNormDoi,byNormTitle}=buildIndexes(candidates);
+  applyItems([
+    {doi:'10.1/a',title:'Ant mimicry in spiders'},
+    {doi:null,title:null}, // error: no doi and no title
+    {doi:'10.1/c',title:'Egg mimicry in cuckoos'},
+  ],candidates,run,byNormDoi,byNormTitle);
+  assert.equal(run.records_new,2);
+  assert.equal(run.records_error,1,'a bad record is logged, not fatal');
+  // exact-DOI duplicate + normalized-title duplicate (different DOI, same title)
+  applyItems([
+    {doi:'10.1/a',title:'Ant mimicry in spiders'},
+    {doi:'10.9/z',title:'Ant  Mimicry   in Spiders!'},
+  ],candidates,run,byNormDoi,byNormTitle);
+  assert.equal(run.records_duplicate,2,'DOI exact and normalized-title duplicates both caught');
+  assert.equal(run.records_new,2,'no duplicate candidates created');
+  const dup=candidates['10.9/z'];
+  assert.equal(dup,undefined,'title-collision item never creates a new candidate');
+  assert.ok(candidates['10.1/a'].dedupe.some(d=>d.method==='doi_exact'));
+  assert.ok(candidates['10.1/a'].dedupe.some(d=>d.method==='normalized_title'&&d.matched_doi==='10.9/z'),'collision recorded, never silently merged');
+});
+
+test('SOP Phase 3: mimicry_type ontology is hierarchical and defined',()=>{
+  const terms=new Set(vocab.mimicry_type.map(t=>t.term));
+  for(const t of vocab.mimicry_type){
+    assert.ok(t.definition,`${t.term}: definition required`);
+    if(t.parent)assert.ok(terms.has(t.parent),`${t.term}: parent ${t.parent} must exist`);
+  }
+  const parents=vocab.mimicry_type.filter(t=>t.parent).map(t=>t.parent);
+  assert.ok(parents.includes('protective'),'Batesian/Müllerian/Mertensian hang under protective');
+  assert.ok(terms.has('mertensian'),'Mertensian term added (ontology v1.1)');
+  assert.ok(terms.has('uncertain')&&terms.has('other'),'curators are never forced into a classification');
+});
+
+test('SOP Phase 2/4: migration 006 completes stable IDs and evidence v1',async()=>{
+  const {readFileSync}=await import('node:fs');
+  const sql=readFileSync(new URL('../supabase/migrations/006_evidence_v1.sql',import.meta.url),'utf8');
+  for(const frag of ['taxon add column if not exists public_id','receiver_entity_id',
+    'evidence add column if not exists public_id','locator_table','evidence_support_strength_check',
+    "'strong'","'moderate'","'weak'","'unknown'"]){
+    assert.ok(sql.includes(frag),`migration 006 missing ${frag}`);
+  }
+  const seed=readFileSync(new URL('../supabase/seed.sql',import.meta.url),'utf8');
+  assert.ok(seed.includes('TAXON:000001'),'taxa get stable public IDs');
+  assert.ok(seed.includes("'mimicry_type', 'batesian"), "ontology parents/definitions seeded");
+});
