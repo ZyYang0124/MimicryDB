@@ -1,0 +1,91 @@
+{
+  "generated": "2026-09-06T01:49:34.512Z",
+  "source": "Wikidata labels linked via GBIF usage key (P846)",
+  "policy": "Chinese common names for display only — scientific names remain canonical (docs/TAXONOMY_POLICY.md).",
+  "names": {
+    "formicidae": {
+      "input": "Formicidae",
+      "zh": "蚁科"
+    },
+    "ophrys-apifera": {
+      "input": "Ophrys apifera",
+      "zh": "蜂蘭"
+    },
+    "erythrolamprus-aesculapii": {
+      "input": "Erythrolamprus aesculapii",
+      "zh": null
+    },
+    "cuculus-canorus": {
+      "input": "Cuculus canorus",
+      "zh": "大杜鹃"
+    },
+    "acrocephalus-scirpaceus-eggs": {
+      "input": "Acrocephalus scirpaceus (eggs)",
+      "zh": "芦苇莺"
+    },
+    "photuris-versicolor": {
+      "input": "Photuris versicolor",
+      "zh": null
+    },
+    "photinus-flash-signals": {
+      "input": "Photinus (flash signals)",
+      "zh": null
+    },
+    "plagiotremus-rhinorhynchos": {
+      "input": "Plagiotremus rhinorhynchos",
+      "zh": "橫口鳚"
+    },
+    "labroides-dimidiatus": {
+      "input": "Labroides dimidiatus",
+      "zh": "裂唇鱼"
+    },
+    "heliconius-melpomene": {
+      "input": "Heliconius melpomene",
+      "zh": "紅帶袖蝶"
+    },
+    "heliconius-erato": {
+      "input": "Heliconius erato",
+      "zh": null
+    },
+    "boquila-trifoliolata": {
+      "input": "Boquila trifoliolata",
+      "zh": null
+    },
+    "puccinia-monoica": {
+      "input": "Puccinia monoica",
+      "zh": null
+    },
+    "myrmarachne-plataleoides": {
+      "input": "Myrmarachne plataleoides",
+      "zh": "黄蚁蛛"
+    },
+    "oecophylla-smaragdina": {
+      "input": "Oecophylla smaragdina",
+      "zh": "黄猄蚁"
+    },
+    "eristalis-tenax": {
+      "input": "Eristalis tenax",
+      "zh": "长尾管蚜蝇"
+    },
+    "apis-mellifera": {
+      "input": "Apis mellifera",
+      "zh": "西方蜜蜂"
+    },
+    "limenitis-archippus": {
+      "input": "Limenitis archippus",
+      "zh": null
+    },
+    "danaus-plexippus": {
+      "input": "Danaus plexippus",
+      "zh": "君主斑蝶"
+    },
+    "extatosoma-tiaratum": {
+      "input": "Extatosoma tiaratum",
+      "zh": "巨刺竹节虫"
+    },
+    "phrynarachne": {
+      "input": "Phrynarachne",
+      "zh": "瘤蟹蛛属"
+    }
+  }
+}

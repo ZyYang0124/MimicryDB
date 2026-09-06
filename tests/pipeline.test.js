@@ -1,6 +1,6 @@
 import test from 'node:test'; import assert from 'node:assert/strict';
 import {interactions} from '../src/data/demo.ts';
-import {data,detectDuplicates} from '../src/data/provider.ts';
+import {data,detectDuplicates,slugify} from '../src/data/provider.ts';
 import {csv,parseCsv} from '../src/lib/csv.ts';
 import {validateRow,HEADER} from '../src/lib/validation.ts';
 import vocab from '../data/controlled-vocabularies.json' with {type:'json'};
@@ -116,4 +116,49 @@ test('evidence export invariants: grades align between interaction and vocabular
   const grades=new Set(vocab.evidence_grade);
   for(const i of interactions)assert.ok(grades.has(i.evidence),`${i.id}: grade not in vocabulary`);
   assert.ok(data.all().length===interactions.length);
+});
+
+test('references carry claim-level citations inside the controlled vocabulary',()=>{
+  const roles=new Set(vocab.claim_role.map(t=>t.term));
+  for(const i of interactions){
+    assert.ok(i.refs?.length,`${i.id}: at least one reference row`);
+    for(const r of i.refs??[]){
+      assert.ok(r.claims&&r.claims.length>0,`${i.id}/${r.id}: claims[] required (AntWeb/AntCat lesson)`);
+      for(const c of r.claims)assert.ok(roles.has(c),`${i.id}/${r.id}: claim "${c}" outside vocabulary`);
+      assert.equal(new Set(r.claims).size,r.claims.length,`${i.id}/${r.id}: duplicate claims`);
+    }
+  }
+});
+
+test('demo records fabricate no observation metadata',()=>{
+  for(const i of interactions){
+    assert.equal(i.observedOn,undefined,`${i.id}: demo records must not invent observation dates`);
+    assert.equal(i.recordedBy,undefined,`${i.id}: demo records must not invent recorders`);
+  }
+});
+
+test('image manifest asset ids are unique and stable-format',async()=>{
+  const {readFileSync,existsSync}=await import('node:fs');
+  const p=new URL('../data/images.json',import.meta.url); if(!existsSync(p))return;
+  const m=JSON.parse(readFileSync(p,'utf8'));
+  const ids=Object.values(m.images).map(x=>x.id).filter(Boolean);
+  assert.equal(new Set(ids).size,ids.length,'asset ids must be unique');
+  for(const id of ids)assert.match(id,/^IMG-\d{4}$/);
+});
+
+test('vernacular report is display-only and guarded against fuzzy GBIF matches',async()=>{
+  const {readFileSync,existsSync}=await import('node:fs');
+  const {gbifFor}=await import('../src/data/provider.ts');
+  const p=new URL('../data/reconciliation/vernacular.json',import.meta.url);
+  if(!existsSync(p))return;
+  const v=JSON.parse(readFileSync(p,'utf8'));
+  assert.match(v.policy,/display only/i,'vernacular report must state the display-only policy');
+  for(const e of Object.values(v.names)){
+    if(!e.zh)continue;
+    const g=gbifFor(e.input);
+    const canon=(g?.gbif_canonical??'').toLowerCase();
+    const bare=e.input.replace(/\s*\([^)]*\)\s*$/,'').toLowerCase();
+    assert.ok(!canon||canon===e.input.toLowerCase()||canon===bare,
+      `${e.input}: zh name attached despite non-exact GBIF match (${canon})`);
+  }
 });

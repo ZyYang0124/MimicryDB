@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css'; import {strings,twinPath,type Lang} from '../i18n'; import {data} from '../data/provider';
+import '../styles/global.css'; import {strings,twinPath,type Lang} from '../i18n'; import {data,vernacularZh} from '../data/provider';
 const {title='MimicryDB',lang='en' as Lang,description}=Astro.props;
 const s=strings(lang); const langAttr=lang==='zh'?'zh-CN':'en';
 const desc=description??(lang==='zh'
@@ -8,7 +8,7 @@ const desc=description??(lang==='zh'
 const here=Astro.url.pathname; const other=twinPath(here,lang==='zh'?'en':'zh');
 const base=`/MimicryDB/${lang==='zh'?'zh/':''}`;
 const idx=[
- ...data.taxa().map(t=>({k:'taxon',l:t.name,m:(lang==='zh'?'模仿者 ':'mimic ')+t.asMimic+' · '+(lang==='zh'?'模型 ':'model ')+t.asModel,h:`${base}taxa/${t.slug}/`})),
+ ...data.taxa().map(t=>({k:'taxon',l:lang==='zh'&&vernacularZh(t.name)?`${vernacularZh(t.name)} · ${t.name}`:t.name,m:(lang==='zh'?((vernacularZh(t.name)?'中文名 '+vernacularZh(t.name)+' · ':'')+'模仿者 '):'mimic ')+t.asMimic+' · '+(lang==='zh'?'模型 ':'model ')+t.asModel,h:`${base}taxa/${t.slug}/`})),
  ...data.all().map(i=>({k:'interaction',l:`${i.mimic} → ${i.model}`,m:`${i.id} · ${i.type}`,h:`${base}interactions/${i.id.replace(':','-')}/`})),
  ...data.references().map(r=>({k:'reference',l:r.ref.title,m:(lang==='zh'?'支持 ':'supports ')+r.supports,h:`${base}references/${r.ref.id}/`})),
 ];

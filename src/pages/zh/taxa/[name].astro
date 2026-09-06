@@ -1,10 +1,26 @@
 ---
-import Layout from '../../../layouts/Layout.astro'; import {data,gbifFor} from '../../../data/provider'; 
+import Layout from '../../../layouts/Layout.astro'; import {data,gbifFor,vernacularZh} from '../../../data/provider'; import {strings} from '../../../i18n';
 export const prerender=true; export function getStaticPaths(){return data.taxa().map(t=>({params:{name:t.slug}}));}
+const s=strings('zh');
 const t=data.taxa().find(x=>x.slug===Astro.params.name); const related=t?data.all().filter(i=>i.mimic===t.name||i.model===t.name):[];
-const g=t?gbifFor(t.name):undefined;
+const g=t?gbifFor(t.name):undefined; const zhName=t?vernacularZh(t.name):undefined;
+const binomial=t&&/^[A-Z][a-zà-ÿ-]+ [a-zà-ÿ-]+(\s[^()]+)?$/.test(t.name)&&!t.name.includes('(')?t.name:null;
+const rank=(r:string)=>g?.gbif_classification?.find(c=>c.rank===r)?.name;
+const ext=t?[
+ {label:'GBIF',href:g?.gbif_usageKey?`https://www.gbif.org/species/${g.gbif_usageKey}`:`https://www.gbif.org/search?q=${encodeURIComponent(t.name)}`},
+ {label:'Catalogue of Life',href:`https://www.catalogueoflife.org/data/search?q=${encodeURIComponent(t.name)}`},
+ {label:'iNaturalist',href:`https://www.inaturalist.org/search?q=${encodeURIComponent(t.name)}`},
+ ...(rank('family')==='Formicidae'&&binomial?[{label:'AntWeb（蚂蚁）',href:`https://www.antweb.org/description.do?genus=${encodeURIComponent(binomial.split(' ')[0])}&species=${encodeURIComponent(binomial.split(' ')[1])}&rank=species`}]:[]),
+ ...(rank('class')==='Aves'&&binomial?[{label:'xeno-canto（鸟声）',href:`https://xeno-canto.org/species/${encodeURIComponent(binomial.replace(/\s+/g,'-'))}`}]:[]),
+]:[];
+const issueUrl=t?'https://github.com/ZyYang0124/MimicryDB/issues/new?title='+encodeURIComponent(`[Taxon ${t.name}] Correction`)+'&body='+encodeURIComponent(`Taxon: ${t.name}\nPage: https://zyyang0124.github.io/MimicryDB/zh/taxa/${t.slug}/\n\n问题：\n`):'#';
 const matchZh:Record<string,string>={EXACT:'精确匹配',FUZZY:'模糊匹配',HIGHERRANK:'高阶单元匹配',NONE:'未匹配',NOT_A_SCIENTIFIC_NAME:'描述性/功能性模型类',LOOKUP_FAILED:'查询失败'};
 ---
-<Layout lang="zh" title={`${t?.name??'未找到'} · MimicryDB`}>{t?<div class="container py-12"><a href="/MimicryDB/zh/taxa/">← 全部分类单元</a><h1 class="mt-6 text-4xl font-bold italic">{t.name}</h1><p class="mt-3">{t.lineages} · 作为模仿者 {t.asMimic} 条 · 作为模型 {t.asModel} 条</p>
+<Layout lang="zh" title={`${zhName??t?.name??'未找到'} · MimicryDB`}>{t?<div class="container py-12"><a href="/MimicryDB/zh/taxa/">← 全部分类单元</a>{zhName?<p class="mt-6 text-xs uppercase tracking-[0.3em] text-gold">{zhName}</p>:null}<h1 class={`font-bold italic ${zhName?'mt-2 text-4xl':'mt-6 text-4xl'}`}>{t.name}</h1><p class="mt-3">{t.lineages} · 作为模仿者 {t.asMimic} 条 · 作为模型 {t.asModel} 条</p>
 {g&&g.matchType==='NOT_A_SCIENTIFIC_NAME'?<div class="card mt-5 text-sm text-slate-400">描述性或功能性模型类——未与分类名牌对账，需策展人进一步处理。</div>:g&&g.gbif_usageKey?<div class="card mt-5 text-sm"><strong>GBIF 名录：</strong><span class="pill">{matchZh[g.matchType]??g.matchType}</span>{g.gbif_canonical&&g.gbif_canonical!==t.name?<span> · 接受名 <em>{g.gbif_canonical}</em></span>:null}{g.gbif_kingdom?<span> · {g.gbif_kingdom}</span>:null}{g.confidence?<span> · 匹配置信度 {g.confidence}</span>:null} · <a class="hover:underline" href={`https://www.gbif.org/species/${g.gbif_usageKey}`}>在 GBIF 查看 ↗</a>{g.warning?<span class="text-coral"> · ⚠ {g.warning}</span>:null}<p class="mt-2 text-xs text-slate-400">对账仅供参考——数据集中的原始文献名称原样保留（docs/TAXONOMY_POLICY.md）。</p></div>:null}
-<h2 class="mt-10 text-2xl font-bold">相关交互</h2><div class="mt-6 grid gap-4">{related.map(i=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/zh/interactions/${i.id.replace(':','-')}/`}><div class="flex flex-wrap items-center justify-between gap-3"><div class="text-lg font-semibold">{i.mimic} <span class="text-coral">→</span> {i.model}</div><span class={`pill grade-${i.evidence}`}>{i.evidence}</span></div><div class="mt-2 text-sm text-slate-400">{i.id} · {i.type}</div></a>)}</div><p class="mt-8 text-sm text-slate-400">原型数据——名称按样例记录原样呈现。</p></div>:<div class="container py-16"><h1 class="text-3xl font-bold">未找到该分类单元</h1></div>}</Layout>
+<h2 class="mt-10 text-2xl font-bold">外部资源</h2>
+<div class="mt-4 flex flex-wrap gap-3">{ext.map(l=><a class="btn" href={l.href} target="_blank" rel="noopener">{l.label} ↗</a>)}</div>
+<p class="mt-3 text-xs text-slate-500">{s.common.externalNote}</p>
+<h2 class="mt-10 text-2xl font-bold">相关交互</h2><div class="mt-6 grid gap-4">{related.map(i=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/zh/interactions/${i.id.replace(':','-')}/`}><div class="flex flex-wrap items-center justify-between gap-3"><div class="text-lg font-semibold">{i.mimic} <span class="text-coral">→</span> {i.model}</div><span class={`pill grade-${i.evidence}`}>{i.evidence}</span></div><div class="mt-2 text-sm text-slate-400">{i.id} · {i.type}</div></a>)}</div>
+<p class="mt-10 text-xs text-slate-500"><a class="underline decoration-gold/60 hover:text-gold" href={issueUrl} target="_blank" rel="noopener">{s.common.reportIssue}</a>——{s.common.reportIssueNote}</p>
+<p class="mt-4 text-sm text-slate-400">原型数据——名称按样例记录原样呈现。</p></div>:<div class="container py-16"><h1 class="text-3xl font-bold">未找到该分类单元</h1></div>}</Layout>

@@ -1,9 +1,25 @@
 ---
-import Layout from '../../layouts/Layout.astro'; import {data,gbifFor} from '../../data/provider';
+import Layout from '../../layouts/Layout.astro'; import {data,gbifFor} from '../../data/provider'; import {strings} from '../../i18n';
 export const prerender=true; export function getStaticPaths(){return data.taxa().map(t=>({params:{name:t.slug}}));}
+const s=strings('en');
 const t=data.taxa().find(x=>x.slug===Astro.params.name); const related=t?data.all().filter(i=>i.mimic===t.name||i.model===t.name):[];
 const g=t?gbifFor(t.name):undefined;
+const binomial=t&&/^[A-Z][a-zà-ÿ-]+ [a-zà-ÿ-]+(\s[^()]+)?$/.test(t.name)&&!t.name.includes('(')?t.name:null;
+const rank=(r:string)=>g?.gbif_classification?.find(c=>c.rank===r)?.name;
+const ext=t?[
+ {label:'GBIF',href:g?.gbif_usageKey?`https://www.gbif.org/species/${g.gbif_usageKey}`:`https://www.gbif.org/search?q=${encodeURIComponent(t.name)}`},
+ {label:'Catalogue of Life',href:`https://www.catalogueoflife.org/data/search?q=${encodeURIComponent(t.name)}`},
+ {label:'iNaturalist',href:`https://www.inaturalist.org/search?q=${encodeURIComponent(t.name)}`},
+ ...(rank('family')==='Formicidae'&&binomial?[{label:'AntWeb',href:`https://www.antweb.org/description.do?genus=${encodeURIComponent(binomial.split(' ')[0])}&species=${encodeURIComponent(binomial.split(' ')[1])}&rank=species`}]:[]),
+ ...(rank('class')==='Aves'&&binomial?[{label:'xeno-canto',href:`https://xeno-canto.org/species/${encodeURIComponent(binomial.replace(/\s+/g,'-'))}`}]:[]),
+]:[];
+const issueUrl=t?'https://github.com/ZyYang0124/MimicryDB/issues/new?title='+encodeURIComponent(`[Taxon ${t.name}] Correction`)+'&body='+encodeURIComponent(`Taxon: ${t.name}\nPage: https://zyyang0124.github.io/MimicryDB/taxa/${t.slug}/\n\nProblem:\n`):'#';
 ---
-<Layout>{t?<div class="container py-12"><a href="/MimicryDB/taxa/">← All taxa</a><h1 class="mt-6 text-4xl font-bold italic">{t.name}</h1><p class="mt-3">Lineage{t.lineages.includes(' · ')?'s':''}: {t.lineages} · mimic in {t.asMimic} record{t.asMimic===1?'':'s'} · model in {t.asModel} record{t.asModel===1?'':'s'}</p>
+<Layout title={`${t?.name??'Not found'} · MimicryDB`}>{t?<div class="container py-12"><a href="/MimicryDB/taxa/">← All taxa</a><h1 class="mt-6 text-4xl font-bold italic">{t.name}</h1><p class="mt-3">Lineage{t.lineages.includes(' · ')?'s':''}: {t.lineages} · mimic in {t.asMimic} record{t.asMimic===1?'':'s'} · model in {t.asModel} record{t.asModel===1?'':'s'}</p>
 {g&&g.matchType==='NOT_A_SCIENTIFIC_NAME'?<div class="card mt-5 text-sm text-slate-400">Descriptive or functional model class — not reconciled against a taxonomic backbone; curation required to resolve it.</div>:g&&g.gbif_usageKey?<div class="card mt-5 text-sm"><strong>GBIF backbone:</strong> <span class="pill">{g.matchType}</span>{g.gbif_canonical&&g.gbif_canonical!==t.name?<span> · accepted as <em>{g.gbif_canonical}</em></span>:null}{g.gbif_kingdom?<span> · {g.gbif_kingdom}</span>:null}{g.confidence?<span> · confidence {g.confidence}</span>:null} · <a class="hover:underline" href={`https://www.gbif.org/species/${g.gbif_usageKey}`}>view on GBIF ↗</a>{g.warning?<span class="text-coral"> · ⚠ {g.warning}</span>:null}<p class="mt-2 text-xs text-slate-400">Reconciliation is reviewable only — the verbatim dataset name is preserved (docs/TAXONOMY_POLICY.md).</p></div>:null}
-<h2 class="mt-10 text-2xl font-bold">Interactions</h2><div class="mt-6 grid gap-4">{related.map(i=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/interactions/${i.id.replace(':','-')}/`}><div class="flex flex-wrap items-center justify-between gap-3"><div class="text-lg font-semibold">{i.mimic} <span class="text-coral">→</span> {i.model}</div><span class={`pill grade-${i.evidence}`}></span></div><div class="mt-2 text-sm text-slate-400">{i.id} · {i.type} · receiver: {i.receiver}</div></a>)}</div><p class="mt-8 text-sm text-slate-400">Prototype data — names are used as written in the sample records.</p></div>:<div class="container py-16"><h1 class="text-3xl font-bold">Taxon not found</h1></div>}</Layout>
+<h2 class="mt-10 text-2xl font-bold">External resources</h2>
+<div class="mt-4 flex flex-wrap gap-3">{ext.map(l=><a class="btn" href={l.href} target="_blank" rel="noopener">{l.label} ↗</a>)}</div>
+<p class="mt-3 text-xs text-slate-500">{s.common.externalNote}</p>
+<h2 class="mt-10 text-2xl font-bold">Interactions</h2><div class="mt-6 grid gap-4">{related.map(i=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/interactions/${i.id.replace(':','-')}/`}><div class="flex flex-wrap items-center justify-between gap-3"><div class="text-lg font-semibold">{i.mimic} <span class="text-coral">→</span> {i.model}</div><span class={`pill grade-${i.evidence}`}>{i.evidence}</span></div><div class="mt-2 text-sm text-slate-400">{i.id} · {i.type} · receiver: {i.receiver}</div></a>)}</div>
+<p class="mt-10 text-xs text-slate-500"><a class="underline decoration-gold/60 hover:text-gold" href={issueUrl} target="_blank" rel="noopener">{s.common.reportIssue}</a> — {s.common.reportIssueNote}.</p>
+<p class="mt-4 text-sm text-slate-400">Prototype data — names are used as written in the sample records.</p></div>:<div class="container py-16"><h1 class="text-3xl font-bold">Taxon not found</h1></div>}</Layout>

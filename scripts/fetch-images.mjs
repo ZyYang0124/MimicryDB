@@ -71,7 +71,9 @@ for(const t of taxa){
       if(!img.ok)throw new Error(`image HTTP ${img.status}`);
       const buf=Buffer.from(await img.arrayBuffer());
       writeFileSync(new URL(`../public/images/${slug}.${ext}`,import.meta.url),buf);
-      out.images[slug]={taxon:t.name,file:`/MimicryDB/images/${slug}.${ext}`,title:pick.title,page:pick.page,license:pick.license,licenseUrl:pick.licenseUrl,artist:pick.artist};
+      // stable asset ids (AntWeb/Macaulay pattern): continue the max existing IMG-nnnn
+      const next=1+Math.max(0,...Object.values(out.images).map(x=>+(x.id??'IMG-0').slice(4)||0));
+      out.images[slug]={taxon:t.name,file:`/MimicryDB/images/${slug}.${ext}`,title:pick.title,page:pick.page,license:pick.license,licenseUrl:pick.licenseUrl,artist:pick.artist,id:'IMG-'+String(next).padStart(4,'0')};
       found++;
     } else misses.push(`${t.name} (no licensed candidate)`);
   }catch(e){misses.push(`${t.name} (${e.message})`);}

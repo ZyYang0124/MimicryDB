@@ -1,60 +1,252 @@
 {
   "mimicry_type": [
-    {"term": "batesian", "label": "Batesian mimicry"},
-    {"term": "mullerian", "label": "Müllerian mimicry"},
-    {"term": "aggressive", "label": "Aggressive mimicry"},
-    {"term": "reproductive", "label": "Reproductive mimicry"},
-    {"term": "sexual_deception", "label": "Sexual deception"},
-    {"term": "brood", "label": "Brood mimicry"},
-    {"term": "egg", "label": "Egg mimicry"},
-    {"term": "social", "label": "Social mimicry"},
-    {"term": "parasitic", "label": "Parasitic mimicry"},
-    {"term": "floral", "label": "Floral mimicry"},
-    {"term": "food_deception", "label": "Food deception"},
-    {"term": "protective", "label": "Protective mimicry"},
-    {"term": "automimicry", "label": "Automimicry"},
-    {"term": "masquerade", "label": "Masquerade"},
-    {"term": "uncertain", "label": "Uncertain"},
-    {"term": "other", "label": "Other"}
+    {
+      "term": "batesian",
+      "label": "Batesian mimicry"
+    },
+    {
+      "term": "mullerian",
+      "label": "Müllerian mimicry"
+    },
+    {
+      "term": "aggressive",
+      "label": "Aggressive mimicry"
+    },
+    {
+      "term": "reproductive",
+      "label": "Reproductive mimicry"
+    },
+    {
+      "term": "sexual_deception",
+      "label": "Sexual deception"
+    },
+    {
+      "term": "brood",
+      "label": "Brood mimicry"
+    },
+    {
+      "term": "egg",
+      "label": "Egg mimicry"
+    },
+    {
+      "term": "social",
+      "label": "Social mimicry"
+    },
+    {
+      "term": "parasitic",
+      "label": "Parasitic mimicry"
+    },
+    {
+      "term": "floral",
+      "label": "Floral mimicry"
+    },
+    {
+      "term": "food_deception",
+      "label": "Food deception"
+    },
+    {
+      "term": "protective",
+      "label": "Protective mimicry"
+    },
+    {
+      "term": "automimicry",
+      "label": "Automimicry"
+    },
+    {
+      "term": "masquerade",
+      "label": "Masquerade"
+    },
+    {
+      "term": "uncertain",
+      "label": "Uncertain"
+    },
+    {
+      "term": "other",
+      "label": "Other"
+    }
   ],
   "signal_modality": [
-    {"term": "visual", "label": "Visual"},
-    {"term": "morphological", "label": "Morphological"},
-    {"term": "colour", "label": "Colour"},
-    {"term": "pattern", "label": "Pattern"},
-    {"term": "behavioural", "label": "Behavioural"},
-    {"term": "locomotor", "label": "Locomotor"},
-    {"term": "acoustic", "label": "Acoustic"},
-    {"term": "chemical", "label": "Chemical"},
-    {"term": "olfactory", "label": "Olfactory"},
-    {"term": "tactile", "label": "Tactile"},
-    {"term": "vibrational", "label": "Vibrational"},
-    {"term": "multimodal", "label": "Multimodal"},
-    {"term": "unknown", "label": "Unknown"},
-    {"term": "other", "label": "Other"}
+    {
+      "term": "visual",
+      "label": "Visual"
+    },
+    {
+      "term": "morphological",
+      "label": "Morphological"
+    },
+    {
+      "term": "colour",
+      "label": "Colour"
+    },
+    {
+      "term": "pattern",
+      "label": "Pattern"
+    },
+    {
+      "term": "behavioural",
+      "label": "Behavioural"
+    },
+    {
+      "term": "locomotor",
+      "label": "Locomotor"
+    },
+    {
+      "term": "acoustic",
+      "label": "Acoustic"
+    },
+    {
+      "term": "chemical",
+      "label": "Chemical"
+    },
+    {
+      "term": "olfactory",
+      "label": "Olfactory"
+    },
+    {
+      "term": "tactile",
+      "label": "Tactile"
+    },
+    {
+      "term": "vibrational",
+      "label": "Vibrational"
+    },
+    {
+      "term": "multimodal",
+      "label": "Multimodal"
+    },
+    {
+      "term": "unknown",
+      "label": "Unknown"
+    },
+    {
+      "term": "other",
+      "label": "Other"
+    }
   ],
   "model_kind": [
-    {"term": "organism", "label": "Another organism (species/taxon as model)", "sort_order": 1},
-    {"term": "environment", "label": "Environment or background (foliage, bark, sand, water)", "sort_order": 2},
-    {"term": "object", "label": "Inanimate object (bird droppings, stones, dew)", "sort_order": 3},
-    {"term": "self", "label": "Same species / self (automimicry contexts)", "sort_order": 4},
-    {"term": "unknown", "label": "Unknown", "sort_order": 5},
-    {"term": "other", "label": "Other", "sort_order": 6}
+    {
+      "term": "organism",
+      "label": "Another organism (species/taxon as model)",
+      "sort_order": 1
+    },
+    {
+      "term": "environment",
+      "label": "Environment or background (foliage, bark, sand, water)",
+      "sort_order": 2
+    },
+    {
+      "term": "object",
+      "label": "Inanimate object (bird droppings, stones, dew)",
+      "sort_order": 3
+    },
+    {
+      "term": "self",
+      "label": "Same species / self (automimicry contexts)",
+      "sort_order": 4
+    },
+    {
+      "term": "unknown",
+      "label": "Unknown",
+      "sort_order": 5
+    },
+    {
+      "term": "other",
+      "label": "Other",
+      "sort_order": 6
+    }
   ],
   "receiver_role": [
-    {"term": "predator", "label": "Predator"},
-    {"term": "prey", "label": "Prey"},
-    {"term": "pollinator", "label": "Pollinator"},
-    {"term": "mate", "label": "Mate"},
-    {"term": "host", "label": "Host"},
-    {"term": "parasite", "label": "Parasite"},
-    {"term": "competitor", "label": "Competitor"},
-    {"term": "herbivore", "label": "Herbivore"},
-    {"term": "social_partner", "label": "Social partner"},
-    {"term": "unknown", "label": "Unknown"},
-    {"term": "other", "label": "Other"}
+    {
+      "term": "predator",
+      "label": "Predator"
+    },
+    {
+      "term": "prey",
+      "label": "Prey"
+    },
+    {
+      "term": "pollinator",
+      "label": "Pollinator"
+    },
+    {
+      "term": "mate",
+      "label": "Mate"
+    },
+    {
+      "term": "host",
+      "label": "Host"
+    },
+    {
+      "term": "parasite",
+      "label": "Parasite"
+    },
+    {
+      "term": "competitor",
+      "label": "Competitor"
+    },
+    {
+      "term": "herbivore",
+      "label": "Herbivore"
+    },
+    {
+      "term": "social_partner",
+      "label": "Social partner"
+    },
+    {
+      "term": "unknown",
+      "label": "Unknown"
+    },
+    {
+      "term": "other",
+      "label": "Other"
+    }
   ],
-  "interaction_status": ["candidate", "draft", "needs_review", "reviewed", "published", "rejected", "disputed", "withdrawn"],
-  "knowledge_status": ["reported", "supported", "inferred"],
-  "evidence_grade": ["E0", "E1", "E2", "E3", "E4"]
+  "interaction_status": [
+    "candidate",
+    "draft",
+    "needs_review",
+    "reviewed",
+    "published",
+    "rejected",
+    "disputed",
+    "withdrawn"
+  ],
+  "knowledge_status": [
+    "reported",
+    "supported",
+    "inferred"
+  ],
+  "evidence_grade": [
+    "E0",
+    "E1",
+    "E2",
+    "E3",
+    "E4"
+  ],
+  "claim_role": [
+    {
+      "term": "mimic-resemblance",
+      "label": "Mimic resemblance"
+    },
+    {
+      "term": "model-identity",
+      "label": "Model identity"
+    },
+    {
+      "term": "receiver-response",
+      "label": "Receiver response"
+    },
+    {
+      "term": "mechanism",
+      "label": "Mechanism"
+    },
+    {
+      "term": "distribution",
+      "label": "Distribution / sympatry"
+    },
+    {
+      "term": "taxonomy",
+      "label": "Taxonomy"
+    }
+  ]
 }

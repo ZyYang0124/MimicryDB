@@ -42,3 +42,8 @@ table.data tbody tr:hover{background:#111}
 .hasselblad-title{font-family:"Source Serif 4",Georgia,serif;font-weight:300;text-transform:uppercase;letter-spacing:.3em;line-height:1.35}
 .figure-fade{background:linear-gradient(to top,rgba(0,0,0,.78),transparent 55%)}
 }
+/* claim-level citation badges (AntWeb/AntCat lesson): colour = what the source supports */
+.pill.claim-mimic-resemblance{border-color:rgba(45,212,191,.55);color:#2dd4bf;background:rgba(45,212,191,.07)}
+.pill.claim-model-identity{border-color:rgba(224,139,109,.55);color:#e08b6d;background:rgba(224,139,109,.07)}
+.pill.claim-receiver-response{border-color:rgba(216,198,144,.6);color:#d8c690;background:rgba(216,198,144,.07)}
+.pill.claim-mechanism,.pill.claim-distribution,.pill.claim-taxonomy{border-color:rgba(236,231,221,.25);color:#ece7dd;background:rgba(236,231,221,.05)}

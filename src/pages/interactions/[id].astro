@@ -1,24 +1,26 @@
 ---
-import Layout from '../../layouts/Layout.astro'; import {data,imageFor,slugify} from '../../data/provider';
+import Layout from '../../layouts/Layout.astro'; import {data,imageFor,slugify} from '../../data/provider'; import {strings} from '../../i18n';
 export const prerender=true; export function getStaticPaths(){return data.all().map(i=>({params:{id:i.id.replace(':','-')}}));}
+const s=strings('en');
 const i=data.byId(Astro.params.id??''); const refs=i?data.refsFor(i.id):[];
 const imgMimic=i?imageFor(i.mimic):undefined; const imgModel=i?imageFor(i.model):undefined;
-const litRows=(refs??[]).map(r=>({id:r.id,title:r.title,meta:r.id+(r.doi?' · DOI '+r.doi:'')+' · supports '+data.interactionsForRef(r.id).length+' record(s)'}));
+const litRows=(refs??[]).map(r=>({id:r.id,title:r.title,claims:r.claims??[],locator:r.locator,meta:r.id+(r.doi?' · DOI '+r.doi:'')+' · supports '+data.interactionsForRef(r.id).length+' record(s)'}));
 const related=i?data.all().filter(x=>x.id!==i.id&&(x.mimic===i.mimic||x.model===i.model||x.type===i.type)).slice(0,4):[];
 const two=!!(imgMimic&&imgModel); const figH=two?'lg:h-1/2 h-[340px]':'lg:h-full h-[340px]';
+const issueUrl=i?'https://github.com/ZyYang0124/MimicryDB/issues/new?title='+encodeURIComponent(`[Record ${i.id}] Correction`)+'&body='+encodeURIComponent(`Record: ${i.id}\nPage: https://zyyang0124.github.io/MimicryDB/interactions/${i.id.replace(':','-')}/\n\nProblem:\n`):'#';
 ---
 <Layout title={i?`${i.mimic} → ${i.model} · MimicryDB`:'Not found · MimicryDB'}>{i?<article>
 <div class="grid lg:grid-cols-2">
 <div class="relative bg-mist lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)]">
-{imgMimic?<figure class={`relative w-full overflow-hidden ${figH}`}><img src={imgMimic.file} alt={`${i.mimic} — photograph`} class="absolute inset-0 h-full w-full object-cover"/><span class="absolute left-4 top-4 z-10 bg-black/60 px-2 py-1 text-[0.65rem] uppercase tracking-[0.25em] text-white/90">Mimic · {imgMimic.taxon}</span><figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 to-transparent p-4 text-xs text-white/85">© {imgMimic.artist}, {imgMimic.license}, via <a class="underline" href={imgMimic.page}>Wikimedia Commons</a></figcaption></figure>:null}
-{imgModel?<figure class={`relative w-full overflow-hidden ${figH}`}><img src={imgModel.file} alt={`${i.model} — photograph`} class="absolute inset-0 h-full w-full object-cover"/><span class="absolute left-4 top-4 z-10 bg-black/60 px-2 py-1 text-[0.65rem] uppercase tracking-[0.25em] text-white/90">Model · {imgModel.taxon}</span><figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 to-transparent p-4 text-xs text-white/85">© {imgModel.artist}, {imgModel.license}, via <a class="underline" href={imgModel.page}>Wikimedia Commons</a></figcaption></figure>:null}
+{imgMimic?<figure class={`relative w-full overflow-hidden ${figH}`}><img src={imgMimic.file} alt={`${i.mimic} — photograph`} class="absolute inset-0 h-full w-full object-cover"/><span class="absolute left-4 top-4 z-10 bg-black/60 px-2 py-1 text-[0.65rem] uppercase tracking-[0.25em] text-white/90">Mimic · {imgMimic.taxon}</span><figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 to-transparent p-4 text-xs text-white/85">{imgMimic.id?`Asset ${imgMimic.id} · `:''}{imgMimic.lifeStage?`${imgMimic.lifeStage} · `:''}© {imgMimic.artist}, {imgMimic.license}, via <a class="underline" href={imgMimic.page}>Wikimedia Commons</a></figcaption></figure>:null}
+{imgModel?<figure class={`relative w-full overflow-hidden ${figH}`}><img src={imgModel.file} alt={`${i.model} — photograph`} class="absolute inset-0 h-full w-full object-cover"/><span class="absolute left-4 top-4 z-10 bg-black/60 px-2 py-1 text-[0.65rem] uppercase tracking-[0.25em] text-white/90">Model · {imgModel.taxon}</span><figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 to-transparent p-4 text-xs text-white/85">{imgModel.id?`Asset ${imgModel.id} · `:''}{imgModel.lifeStage?`${imgModel.lifeStage} · `:''}© {imgModel.artist}, {imgModel.license}, via <a class="underline" href={imgModel.page}>Wikimedia Commons</a></figcaption></figure>:null}
 {!imgMimic&&!imgModel?<div class="flex h-[420px] w-full items-center justify-center lg:h-full"><span class="select-none font-serif text-[9rem] italic text-white/10">M</span></div>:null}
 {(!imgMimic||!imgModel)?<div class="p-4 text-center text-xs text-slate-500">photograph pending — sourced from Wikimedia Commons with attribution once available</div>:null}
 </div>
 <div class="max-w-2xl px-6 py-14 lg:px-16">
 <p class="text-xs uppercase tracking-[0.25em] text-slate-500">{i.id} · {i.type} <span class="pill ml-3">DEMO</span></p>
 <h1 class="mt-6 font-serif text-5xl font-bold leading-[1.08]"><em>{i.mimic}</em> <span class="text-coral">→</span> {i.model}</h1>
-<p class="mt-4 text-sm text-slate-400">{i.kingdoms} · model kind: {i.modelKind??'organism'} · knowledge status: {i.knowledge??'reported'} · evidence <span class={`pill grade-${i.evidence}`}>{i.evidence}</span></p>
+<p class="mt-4 text-sm text-slate-400">{i.kingdoms} · model kind: {i.modelKind??'organism'} · knowledge status: {i.knowledge??'reported'}{i.observedOn?<span> · {s.common.observed} {i.observedOn}</span>:null}{i.recordedBy?<span> · {s.common.recordedBy} {i.recordedBy}</span>:null} · evidence <span class={`pill grade-${i.evidence}`}>{i.evidence}</span></p>
 <h2 class="mt-12 text-xs uppercase tracking-[0.25em] text-slate-500">Scientific summary</h2>
 <p class="mt-4 text-xl leading-relaxed">{i.summary}</p>
 <dl class="mt-12 grid grid-cols-2 gap-x-8 gap-y-6 text-sm">
@@ -28,12 +30,14 @@ const two=!!(imgMimic&&imgModel); const figH=two?'lg:h-1/2 h-[340px]':'lg:h-full
 <div><dt class="text-xs uppercase tracking-[0.2em] text-slate-500">Model</dt><dd class="mt-2"><a class="underline" href={`/MimicryDB/taxa/${slugify(i.model)}/`}>{i.model}</a></dd></div>
 </dl>
 <h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">Literature support</h2>
-<div class="mt-6 space-y-4 border-l-2 border-white/10 pl-6">
-{litRows.map(r=><div><p class="font-serif italic">{r.title}</p><p class="mono mt-1 text-xs text-slate-400">{r.meta} · <a class="underline" href={"/MimicryDB/references/"+r.id+'/'}>view record</a></p></div>)}
+<div class="mt-6 space-y-5 border-l-2 border-white/10 pl-6">
+{litRows.map(r=><div><p class="font-serif italic">{r.title}</p><p class="mono mt-1 text-xs text-slate-400">{r.meta}{r.locator?` · ${r.locator}`:''} · <a class="underline" href={"/MimicryDB/references/"+r.id+'/'}>view record</a></p>
+{r.claims.length?<p class="mt-2 flex flex-wrap items-center gap-2 text-[0.65rem] uppercase tracking-[0.18em] text-slate-500"><span>{s.common.supports}</span>{r.claims.map(c=><span class={`pill claim-${c}`}>{s.claims[c]??c}</span>)}</p>:null}</div>)}
 <p class="text-sm text-slate-400">In production, every published claim links to the exact passage — page, section, figure — of these sources, with the curator's grade reason attached. This demo record carries placeholder references and makes no scientific claim.</p>
 </div>
 <h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">Related records</h2>
 <div class="mt-6 grid gap-4 sm:grid-cols-2">{related.map(x=><a class="card" href={`/MimicryDB/interactions/${x.id.replace(':','-')}/`}><div class="font-semibold"><em>{x.mimic}</em> <span class="text-coral">→</span> {x.model}</div><div class="mt-2 text-xs text-slate-400">{x.type} · <span class={`pill grade-${x.evidence}`}>{x.evidence}</span></div></a>)}</div>
+<p class="mt-14 text-xs text-slate-500"><a class="underline decoration-gold/60 hover:text-gold" href={issueUrl} target="_blank" rel="noopener">{s.common.reportIssue}</a> — {s.common.reportIssueNote}.</p>
 </div>
 </div>
 </article>:<div class="container py-16"><h1 class="text-3xl font-bold">Interaction not found</h1></div>}</Layout>
