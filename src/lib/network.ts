@@ -16,6 +16,22 @@ export const buildNetwork=():{nodes:NetNode[];edges:NetEdge[]}=>{
 export const layoutNetwork=(nodes:NetNode[],edges:NetEdge[]):{width:number;height:number;pos:{x:number;y:number}[]}=>{
   const n=nodes.length; const W=1040,H=620;
   const idx=new Map<string,number>(nodes.map((nd,i)=>[nd.name,i]));
+  // similarity = Jaccard overlap of the mimicry-type sets each taxon participates in
+  // (as mimic OR model); species sharing a pattern get a weak clustering spring.
+  const typeSets=new Map<string,Set<string>>();
+  for(const e of edges){
+    if(!typeSets.has(e.from))typeSets.set(e.from,new Set());
+    if(!typeSets.has(e.to))typeSets.set(e.to,new Set());
+    typeSets.get(e.from)!.add(e.type); typeSets.get(e.to)!.add(e.type);
+  }
+  const S:number[][]=Array.from({length:n},()=>new Array(n).fill(0));
+  for(let a=0;a<n;a++)for(let b=a+1;b<n;b++){
+    const A=typeSets.get(nodes[a].name),B=typeSets.get(nodes[b].name);
+    if(!A||!B)continue;
+    let inter=0; for(const t of A)if(B.has(t))inter++;
+    const union=A.size+B.size-inter;
+    S[a][b]=S[b][a]=union?inter/union:0;
+  }
   // deterministic initial ring by dataset order — no RNG anywhere
   const pos=nodes.map((_,i)=>({x:W/2+Math.cos(2*Math.PI*i/Math.max(n,1))*W*0.36,y:H/2+Math.sin(2*Math.PI*i/Math.max(n,1))*H*0.36}));
   const deg=(i:number)=>nodes[i].mimic+nodes[i].model;
@@ -34,6 +50,15 @@ export const layoutNetwork=(nodes:NetNode[],edges:NetEdge[]):{width:number;heigh
       const dx=pos[b].x-pos[a].x,dy=pos[b].y-pos[a].y;
       const d=Math.max(Math.sqrt(dx*dx+dy*dy),1);
       const att=(d-235)*0.014*cool;
+      const ux=dx/d,uy=dy/d;
+      fx[a]+=ux*att;fy[a]+=uy*att;fx[b]-=ux*att;fy[b]-=uy*att;
+    }
+    // pattern clustering: similar species drift toward each other
+    for(let a=0;a<n;a++)for(let b=a+1;b<n;b++){
+      const s=S[a][b]; if(!s)continue;
+      const dx=pos[b].x-pos[a].x,dy=pos[b].y-pos[a].y;
+      const d=Math.max(Math.sqrt(dx*dx+dy*dy),1);
+      const att=s*(d-190)*0.011;
       const ux=dx/d,uy=dy/d;
       fx[a]+=ux*att;fy[a]+=uy*att;fx[b]-=ux*att;fy[b]-=uy*att;
     }

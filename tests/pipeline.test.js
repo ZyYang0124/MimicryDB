@@ -201,3 +201,23 @@ test('directed network covers every interaction once and lays out deterministica
     assert.ok(p.x>=0&&p.x<=l1.width&&p.y>=0&&p.y<=l1.height,'node inside viewBox');
   }
 });
+
+test('layout clusters species that share a mimicry pattern',async()=>{
+  const {buildNetwork,layoutNetwork}=await import('../src/lib/network.ts');
+  const net=buildNetwork();
+  const l=layoutNetwork(net.nodes,net.edges);
+  const typeSets=new Map();
+  for(const e of net.edges)for(const k of [e.from,e.to]){
+    if(!typeSets.has(k))typeSets.set(k,new Set());
+    typeSets.get(k).add(e.type);
+  }
+  let wS=0,wN=0,xS=0,xN=0;
+  for(let a=0;a<net.nodes.length;a++)for(let b=a+1;b<net.nodes.length;b++){
+    const d=Math.hypot(l.pos[a].x-l.pos[b].x,l.pos[a].y-l.pos[b].y);
+    const A=typeSets.get(net.nodes[a].name),B=typeSets.get(net.nodes[b].name);
+    const share=A&&B?[...A].some(tp=>B.has(tp)):false;
+    if(share){wS+=d;wN++;}else{xS+=d;xN++;}
+  }
+  assert.ok(wN>0&&xN>0,'both groups must exist');
+  assert.ok(wS/wN<xS/xN,'species sharing a mimicry pattern must sit closer on average ('+(wS/wN).toFixed(0)+' vs '+(xS/xN).toFixed(0)+')');
+});
