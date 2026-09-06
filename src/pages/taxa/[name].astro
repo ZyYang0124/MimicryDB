@@ -1,5 +1,5 @@
 ---
-import Layout from '../../layouts/Layout.astro'; import {data,gbifFor} from '../../data/provider'; import {strings} from '../../i18n';
+import Layout from '../../layouts/Layout.astro'; import {data,gbifFor,imageFor} from '../../data/provider'; import {strings} from '../../i18n';
 export const prerender=true; export function getStaticPaths(){return data.taxa().map(t=>({params:{name:t.slug}}));}
 const s=strings('en');
 const t=data.taxa().find(x=>x.slug===Astro.params.name); const related=t?data.all().filter(i=>i.mimic===t.name||i.model===t.name):[];
@@ -14,12 +14,40 @@ const ext=t?[
  ...(rank('class')==='Aves'&&binomial?[{label:'xeno-canto',href:`https://xeno-canto.org/species/${encodeURIComponent(binomial.replace(/\s+/g,'-'))}`}]:[]),
 ]:[];
 const issueUrl=t?'https://github.com/ZyYang0124/MimicryDB/issues/new?title='+encodeURIComponent(`[Taxon ${t.name}] Correction`)+'&body='+encodeURIComponent(`Taxon: ${t.name}\nPage: https://zyyang0124.github.io/MimicryDB/taxa/${t.slug}/\n\nProblem:\n`):'#';
+const asMimic=related.filter(i=>i.mimic===t.name);
+const asModel=related.filter(i=>i.model===t.name);
+const models=[...new Set(asMimic.map(i=>i.model))];
+const mimics=[...new Set(asModel.map(i=>i.mimic))];
+const modalities=[...new Set(related.flatMap(i=>i.modalities??[]))];
+const types=[...new Set(related.map(i=>i.type))];
+const eProfile={};
+for(const i of related)eProfile[i.evidence]=(eProfile[i.evidence]??0)+1;
+const eBars=['E4','E3','E2','E1','E0'].filter(e=>eProfile[e]).map(e=>({e,n:eProfile[e]}));
+const refs=[...new Map(related.flatMap(i=>i.refs??[]).map(r=>[r.id,r])).values()];
+const systems=data.systems().filter(sys=>sys.members.some(m=>related.some(i=>i.id===m)));
+const img=imageFor(t.name);
+const slugify=(n)=>n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+const head='mt-10 text-xs uppercase tracking-[0.25em] text-slate-500';
 ---
-<Layout title={`${t?.name??'Not found'} · MimicryDB`}>{t?<div class="container py-12"><a href="/MimicryDB/taxa/">← All taxa</a><h1 class="mt-6 text-4xl font-bold italic">{t.name}</h1><p class="mt-3">Lineage{t.lineages.includes(' · ')?'s':''}: {t.lineages} · mimic in {t.asMimic} record{t.asMimic===1?'':'s'} · model in {t.asModel} record{t.asModel===1?'':'s'}</p>
-{g&&g.matchType==='NOT_A_SCIENTIFIC_NAME'?<div class="card mt-5 text-sm text-slate-400">Descriptive or functional model class — not reconciled against a taxonomic backbone; curation required to resolve it.</div>:g&&g.gbif_usageKey?<div class="card mt-5 text-sm"><strong>GBIF backbone:</strong> <span class="pill">{g.matchType}</span>{g.gbif_canonical&&g.gbif_canonical!==t.name?<span> · accepted as <em>{g.gbif_canonical}</em></span>:null}{g.gbif_kingdom?<span> · {g.gbif_kingdom}</span>:null}{g.confidence?<span> · confidence {g.confidence}</span>:null} · <a class="hover:underline" href={`https://www.gbif.org/species/${g.gbif_usageKey}`}>view on GBIF ↗</a>{g.warning?<span class="text-coral"> · ⚠ {g.warning}</span>:null}<p class="mt-2 text-xs text-slate-400">Reconciliation is reviewable only — the verbatim dataset name is preserved (docs/TAXONOMY_POLICY.md).</p></div>:null}
+<Layout title={`${t?.name??'Not found'} · MimicryDB`}>{t?<article class="container py-12"><a href="/MimicryDB/taxa/">← All taxa</a>
+<h1 class="mt-6 text-4xl font-bold italic">{t.name}</h1>
+<p class="mt-3 text-slate-400">Lineage{t.lineages.includes(' · ')?'s':''}: {t.lineages} · mimic in {t.asMimic} record{t.asMimic===1?'':'s'} · model in {t.asModel} record{t.asModel===1?'':'s'}{img?<span> · photo {img.id}</span>:null}</p>
+{g&&g.matchType==='NOT_A_SCIENTIFIC_NAME'?<div class="card mt-5 text-sm text-slate-400">Descriptive or functional model class — not reconciled against a taxonomic backbone; curation required to resolve it.</div>:g&&g.gbif_usageKey?<div class="card mt-5 text-sm"><strong>Taxonomy — GBIF backbone:</strong> <span class="pill">{g.matchType}</span>{g.gbif_canonical&&g.gbif_canonical!==t.name?<span> · accepted as <em>{g.gbif_canonical}</em></span>:null}{g.gbif_kingdom?<span> · {g.gbif_kingdom}</span>:null}{g.confidence?<span> · confidence {g.confidence}</span>:null} · <a class="hover:underline" href={`https://www.gbif.org/species/${g.gbif_usageKey}`}>view on GBIF ↗</a>{g.warning?<span class="text-coral"> · ⚠ {g.warning}</span>:null}<p class="mt-2 text-xs text-slate-400">Reconciliation is reviewable only — the verbatim dataset name is preserved (docs/TAXONOMY_POLICY.md).{g.gbif_classification?.length?<span> Chain: {g.gbif_classification.map(c=>c.name).join(' › ')}.</span>:null}</p></div>:null}
+<div class="mt-10 grid gap-6 md:grid-cols-3">
+<div class="card"><h2 class={head}>Mimicry roles</h2><dl class="mt-4 space-y-2 text-sm"><div class="flex justify-between"><dt class="text-teal">As mimic</dt><dd>{t.asMimic} interaction{t.asMimic===1?'':'s'}</dd></div><div class="flex justify-between"><dt class="text-coral">As model</dt><dd>{t.asModel} interaction{t.asModel===1?'':'s'}</dd></div><div class="flex justify-between"><dt class="text-slate-500">As receiver</dt><dd>0 — receiver roles live on the interaction</dd></div></dl></div>
+<div class="card"><h2 class={head}>Evidence profile</h2>{eBars.length?eBars.map(b=><div class="mt-3 flex items-center gap-3 text-sm"><span class={`pill grade-${b.e}`}>{b.e}</span><div class="h-1.5 flex-1 rounded bg-white/10"><div class="h-full rounded bg-gold/70" style={`width:${Math.round(100*b.n/related.length)}%`}></div></div><span class="text-slate-400">{b.n}</span></div>):<p class="mt-4 text-sm text-slate-500">no interactions</p>}</div>
+<div class="card"><h2 class={head}>Modalities & types</h2><p class="mt-4 flex flex-wrap gap-2 text-sm">{modalities.length?modalities.map(m=><span class="pill">{m}</span>):<span class="text-slate-500">—</span>}</p><p class="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-sm text-slate-300">{types.map(tp=><span>{tp}</span>)}</p></div>
+</div>
+{models.length?<div><h2 class={head}>What it imitates (models)</h2><div class="mt-4 flex flex-wrap gap-3">{models.map(m=><a class="btn" href={`/MimicryDB/taxa/${slugify(m)}/`}>{m}</a>)}</div></div>:null}
+{mimics.length?<div><h2 class={head}>Imitated by (mimics)</h2><div class="mt-4 flex flex-wrap gap-3">{mimics.map(m=><a class="btn" href={`/MimicryDB/taxa/${slugify(m)}/`}>{m}</a>)}</div></div>:null}
+<h2 class={head}>Interactions</h2><div class="mt-4 grid gap-4">{related.map(i=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/interactions/${i.id.replace(':','-')}/`}><div class="flex flex-wrap items-center justify-between gap-3"><div class="text-lg font-semibold">{i.mimic} <span class="text-coral">→</span> {i.model}</div><span class={`pill grade-${i.evidence}`}>{i.evidence}</span></div><div class="mt-2 text-sm text-slate-400">{i.id} · {i.type} · receiver: {i.receiver}</div></a>)}</div>
+{refs.length?<div><h2 class={head}>References</h2><div class="mt-4 space-y-2 border-l-2 border-white/10 pl-5">{refs.map(r=><p class="text-sm"><a class="underline" href={`/MimicryDB/references/${r.id}/`}>{r.title}</a>{r.doi?<span> · DOI {r.doi}</span>:null}</p>)}</div></div>:null}
+{systems.length?<div><h2 class={head}>Related mimicry systems</h2><div class="mt-4 grid gap-4">{systems.map(sys=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/systems/${sys.public_id.replace(':','-')}/`}><div class="font-semibold">{sys.name}</div><div class="mt-1 text-xs text-slate-400">{sys.public_id} · {sys.system_type}</div></a>)}</div></div>:null}
+<div><h2 class={head}>Geographic records</h2><p class="mt-3 text-sm text-slate-500">No geographic records in the demo dataset — the schema is ready (interaction_geography); curation will populate it.</p></div>
 <h2 class="mt-10 text-2xl font-bold">External resources</h2>
 <div class="mt-4 flex flex-wrap gap-3">{ext.map(l=><a class="btn" href={l.href} target="_blank" rel="noopener">{l.label} ↗</a>)}</div>
 <p class="mt-3 text-xs text-slate-500">{s.common.externalNote}</p>
-<h2 class="mt-10 text-2xl font-bold">Interactions</h2><div class="mt-6 grid gap-4">{related.map(i=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/interactions/${i.id.replace(':','-')}/`}><div class="flex flex-wrap items-center justify-between gap-3"><div class="text-lg font-semibold">{i.mimic} <span class="text-coral">→</span> {i.model}</div><span class={`pill grade-${i.evidence}`}>{i.evidence}</span></div><div class="mt-2 text-sm text-slate-400">{i.id} · {i.type} · receiver: {i.receiver}</div></a>)}</div>
-<p class="mt-10 text-xs text-slate-500"><a class="underline decoration-gold/60 hover:text-gold" href={issueUrl} target="_blank" rel="noopener">{s.common.reportIssue}</a> — {s.common.reportIssueNote}</p>
-<p class="mt-4 text-sm text-slate-400">Prototype data — names are used as written in the sample records.</p></div>:<div class="container py-16"><h1 class="text-3xl font-bold">Taxon not found</h1></div>}</Layout>
+<p class="mt-10 text-xs text-slate-500"><a class="underline decoration-gold/60 hover:text-gold" href={issueUrl} target="_blank" rel="noopener">{s.common.reportIssue}</a> — {s.common.reportIssueNote}.</p>
+<p class="mt-4 text-sm text-slate-400">Prototype data — names are used as written in the sample records.</p></article>:<div class="container py-16"><h1 class="text-3xl font-bold">Taxon not found</h1></div>}
+
+<div class="container py-16"><h1 class="text-3xl font-bold">Taxon not found</h1></div>}</Layout>

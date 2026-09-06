@@ -261,3 +261,20 @@ test('seed carries stable term IDs, GBIF external identifiers and the demo syste
   assert.ok(seed.includes('SYSTEM:000001'),'demo mimicry_system must be seeded');
   assert.ok(seed.includes('MIMICRY:000007'),'ring membership links the Müllerian pair');
 });
+
+test('mimicry systems: grouping layer above atomic interactions',()=>{
+  const systems=data.systems();
+  assert.ok(systems.length>=1,'at least one demo system');
+  for(const sys of systems){
+    assert.match(sys.public_id,/^SYSTEM:\d{6}$/);
+    const members=data.interactionsForSystem(sys.public_id);
+    assert.equal(members.length,sys.members.length,'all members resolve');
+    for(const m of members)assert.ok(data.byId(m.id),`member ${m.id} must exist`);
+  }
+  const ring=systems.find(s=>s.system_type==='ring');
+  assert.ok(ring,'demo dataset includes a Müllerian ring');
+  const ringInteractions=data.interactionsForSystem(ring.public_id);
+  const taxa=[...new Set(ringInteractions.flatMap(i=>[i.mimic,i.model]))];
+  assert.ok(ringInteractions.length>=2,'ring has reciprocal edges');
+  assert.equal(taxa.length,ringInteractions.length,'ring taxa are mutual co-mimics (each is both)');
+});

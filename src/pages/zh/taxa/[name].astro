@@ -1,9 +1,22 @@
 ---
-import Layout from '../../../layouts/Layout.astro'; import {data,gbifFor,vernacularZh} from '../../../data/provider'; import {strings} from '../../../i18n';
+import Layout from '../../../layouts/Layout.astro'; import {data,gbifFor,vernacularZh,imageFor} from '../../../data/provider'; import {strings} from '../../../i18n';
 export const prerender=true; export function getStaticPaths(){return data.taxa().map(t=>({params:{name:t.slug}}));}
 const s=strings('zh');
 const t=data.taxa().find(x=>x.slug===Astro.params.name); const related=t?data.all().filter(i=>i.mimic===t.name||i.model===t.name):[];
 const g=t?gbifFor(t.name):undefined; const zhName=t?vernacularZh(t.name):undefined;
+const asMimic=related.filter(i=>i.mimic===t.name);
+const asModel=related.filter(i=>i.model===t.name);
+const models=[...new Set(asMimic.map(i=>i.model))];
+const mimics=[...new Set(asModel.map(i=>i.mimic))];
+const modalities=[...new Set(related.flatMap(i=>i.modalities??[]))];
+const modZh=(m:string)=>({visual:'视觉',morphological:'形态',colour:'颜色',pattern:'斑纹',behavioural:'行为',locomotor:'运动',acoustic:'声学',chemical:'化学',olfactory:'嗅觉',tactile:'触觉',vibrational:'振动',multimodal:'多模态',unknown:'未知',other:'其它'}[m]??m);
+const types=[...new Set(related.map(i=>i.type))];
+const eProfile:Record<string,number>={};
+for(const i of related)eProfile[i.evidence]=(eProfile[i.evidence]??0)+1;
+const eBars=['E4','E3','E2','E1','E0'].filter(e=>eProfile[e]).map(e=>({e,n:eProfile[e]}));
+const refs=[...new Map(related.flatMap(i=>i.refs??[]).map(r=>[r.id,r])).values()];
+const systems=data.systems().filter(sys=>sys.members.some(m=>related.some(i=>i.id===m)));
+const img=t?imageFor(t.name):undefined;
 const binomial=t&&/^[A-Z][a-zà-ÿ-]+ [a-zà-ÿ-]+(\s[^()]+)?$/.test(t.name)&&!t.name.includes('(')?t.name:null;
 const rank=(r:string)=>g?.gbif_classification?.find(c=>c.rank===r)?.name;
 const ext=t?[
@@ -15,12 +28,26 @@ const ext=t?[
 ]:[];
 const issueUrl=t?'https://github.com/ZyYang0124/MimicryDB/issues/new?title='+encodeURIComponent(`[Taxon ${t.name}] Correction`)+'&body='+encodeURIComponent(`Taxon: ${t.name}\nPage: https://zyyang0124.github.io/MimicryDB/zh/taxa/${t.slug}/\n\n问题：\n`):'#';
 const matchZh:Record<string,string>={EXACT:'精确匹配',FUZZY:'模糊匹配',HIGHERRANK:'高阶单元匹配',NONE:'未匹配',NOT_A_SCIENTIFIC_NAME:'描述性/功能性模型类',LOOKUP_FAILED:'查询失败'};
+const slugify=(n:string)=>n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+const head='mt-10 text-xs uppercase tracking-[0.25em] text-slate-500';
 ---
-<Layout lang="zh" title={`${zhName??t?.name??'未找到'} · MimicryDB`}>{t?<div class="container py-12"><a href="/MimicryDB/zh/taxa/">← 全部分类单元</a>{zhName?<p class="mt-6 text-xs uppercase tracking-[0.3em] text-gold">{zhName}</p>:null}<h1 class={`font-bold italic ${zhName?'mt-2 text-4xl':'mt-6 text-4xl'}`}>{t.name}</h1><p class="mt-3">{t.lineages} · 作为模仿者 {t.asMimic} 条 · 作为模型 {t.asModel} 条</p>
-{g&&g.matchType==='NOT_A_SCIENTIFIC_NAME'?<div class="card mt-5 text-sm text-slate-400">描述性或功能性模型类——未与分类名牌对账，需策展人进一步处理。</div>:g&&g.gbif_usageKey?<div class="card mt-5 text-sm"><strong>GBIF 名录：</strong><span class="pill">{matchZh[g.matchType]??g.matchType}</span>{g.gbif_canonical&&g.gbif_canonical!==t.name?<span> · 接受名 <em>{g.gbif_canonical}</em></span>:null}{g.gbif_kingdom?<span> · {g.gbif_kingdom}</span>:null}{g.confidence?<span> · 匹配置信度 {g.confidence}</span>:null} · <a class="hover:underline" href={`https://www.gbif.org/species/${g.gbif_usageKey}`}>在 GBIF 查看 ↗</a>{g.warning?<span class="text-coral"> · ⚠ {g.warning}</span>:null}<p class="mt-2 text-xs text-slate-400">对账仅供参考——数据集中的原始文献名称原样保留（docs/TAXONOMY_POLICY.md）。</p></div>:null}
+<Layout lang="zh" title={`${zhName??t?.name??'未找到'} · MimicryDB`}>{t?<article class="container py-12"><a href="/MimicryDB/zh/taxa/">← 全部分类单元</a>
+{zhName?<p class="mt-6 text-xs uppercase tracking-[0.3em] text-gold">{zhName}</p>:null}<h1 class={`font-bold italic ${zhName?'mt-2':'mt-6'} text-4xl`}>{t.name}</h1>
+<p class="mt-3 text-slate-400">{t.lineages} · 作为模仿者 {t.asMimic} 条 · 作为模型 {t.asModel} 条{img?<span> · 照片 {img.id}</span>:null}</p>
+{g&&g.matchType==='NOT_A_SCIENTIFIC_NAME'?<div class="card mt-5 text-sm text-slate-400">描述性或功能性模型类——未与分类名牌对账，需策展人进一步处理。</div>:g&&g.gbif_usageKey?<div class="card mt-5 text-sm"><strong>分类——GBIF 名录：</strong><span class="pill">{matchZh[g.matchType]??g.matchType}</span>{g.gbif_canonical&&g.gbif_canonical!==t.name?<span> · 接受名 <em>{g.gbif_canonical}</em></span>:null}{g.gbif_kingdom?<span> · {g.gbif_kingdom}</span>:null}{g.confidence?<span> · 匹配置信度 {g.confidence}</span>:null} · <a class="hover:underline" href={`https://www.gbif.org/species/${g.gbif_usageKey}`}>在 GBIF 查看 ↗</a>{g.warning?<span class="text-coral"> · ⚠ {g.warning}</span>:null}<p class="mt-2 text-xs text-slate-400">对账仅供参考——数据集中的原始名称原样保留（docs/TAXONOMY_POLICY.md）。{g.gbif_classification?.length?<span> 分类链：{g.gbif_classification.map(c=>c.name).join(' › ')}。</span>:null}</p></div>:null}
+<div class="mt-10 grid gap-6 md:grid-cols-3">
+<div class="card"><h2 class={head}>拟态角色</h2><dl class="mt-4 space-y-2 text-sm"><div class="flex justify-between"><dt class="text-teal">作为模仿者</dt><dd>{t.asMimic} 条</dd></div><div class="flex justify-between"><dt class="text-coral">作为模型</dt><dd>{t.asModel} 条</dd></div><div class="flex justify-between"><dt class="text-slate-500">作为接收者</dt><dd>0——接收者角色记录在交互上</dd></div></dl></div>
+<div class="card"><h2 class={head}>证据档案</h2>{eBars.length?eBars.map(b=><div class="mt-3 flex items-center gap-3 text-sm"><span class={`pill grade-${b.e}`}>{b.e}</span><div class="h-1.5 flex-1 rounded bg-white/10"><div class="h-full rounded bg-gold/70" style={`width:${Math.round(100*b.n/related.length)}%`}></div></div><span class="text-slate-400">{b.n}</span></div>):<p class="mt-4 text-sm text-slate-500">暂无交互</p>}</div>
+<div class="card"><h2 class={head}>信号模态与类型</h2><p class="mt-4 flex flex-wrap gap-2 text-sm">{modalities.length?modalities.map(m=><span class="pill">{modZh(m)}</span>):<span class="text-slate-500">—</span>}</p><p class="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-sm text-slate-300">{types.map(tp=><span>{tp}</span>)}</p></div>
+</div>
+{models.length?<div><h2 class={head}>它模仿的模型</h2><div class="mt-4 flex flex-wrap gap-3">{models.map(m=><a class="btn" href={`/MimicryDB/zh/taxa/${slugify(m)}/`}>{m}</a>)}</div></div>:null}
+{mimics.length?<div><h2 class={head}>模仿它的物种</h2><div class="mt-4 flex flex-wrap gap-3">{mimics.map(m=><a class="btn" href={`/MimicryDB/zh/taxa/${slugify(m)}/`}>{m}</a>)}</div></div>:null}
+<h2 class={head}>相关交互</h2><div class="mt-4 grid gap-4">{related.map(i=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/zh/interactions/${i.id.replace(':','-')}/`}><div class="flex flex-wrap items-center justify-between gap-3"><div class="text-lg font-semibold">{i.mimic} <span class="text-coral">→</span> {i.model}</div><span class={`pill grade-${i.evidence}`}>{i.evidence}</span></div><div class="mt-2 text-sm text-slate-400">{i.id} · {i.type} · 接收者：{i.receiver}</div></a>)}</div>
+{refs.length?<div><h2 class={head}>文献</h2><div class="mt-4 space-y-2 border-l-2 border-white/10 pl-5">{refs.map(r=><p class="text-sm"><a class="underline" href={`/MimicryDB/zh/references/${r.id}/`}>{r.title}</a>{r.doi?<span> · DOI {r.doi}</span>:null}</p>)}</div></div>:null}
+{systems.length?<div><h2 class={head}>相关拟态系统</h2><div class="mt-4 grid gap-4">{systems.map(sys=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/zh/systems/${sys.public_id.replace(':','-')}/`}><div class="font-semibold">{sys.name}</div><div class="mt-1 text-xs text-slate-400">{sys.public_id} · {sys.system_type}</div></a>)}</div></div>:null}
+<div><h2 class={head}>地理记录</h2><p class="mt-3 text-sm text-slate-500">演示数据集暂无地理记录——表结构已就绪（interaction_geography），待策展填充。</p></div>
 <h2 class="mt-10 text-2xl font-bold">外部资源</h2>
 <div class="mt-4 flex flex-wrap gap-3">{ext.map(l=><a class="btn" href={l.href} target="_blank" rel="noopener">{l.label} ↗</a>)}</div>
 <p class="mt-3 text-xs text-slate-500">{s.common.externalNote}</p>
-<h2 class="mt-10 text-2xl font-bold">相关交互</h2><div class="mt-6 grid gap-4">{related.map(i=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/zh/interactions/${i.id.replace(':','-')}/`}><div class="flex flex-wrap items-center justify-between gap-3"><div class="text-lg font-semibold">{i.mimic} <span class="text-coral">→</span> {i.model}</div><span class={`pill grade-${i.evidence}`}>{i.evidence}</span></div><div class="mt-2 text-sm text-slate-400">{i.id} · {i.type}</div></a>)}</div>
 <p class="mt-10 text-xs text-slate-500"><a class="underline decoration-gold/60 hover:text-gold" href={issueUrl} target="_blank" rel="noopener">{s.common.reportIssue}</a>——{s.common.reportIssueNote}</p>
-<p class="mt-4 text-sm text-slate-400">原型数据——名称按样例记录原样呈现。</p></div>:<div class="container py-16"><h1 class="text-3xl font-bold">未找到该分类单元</h1></div>}</Layout>
+<p class="mt-4 text-sm text-slate-400">原型数据——名称按样例记录原样呈现。</p></article>:<div class="container py-16"><h1 class="text-3xl font-bold">未找到该分类单元</h1></div>}</Layout>

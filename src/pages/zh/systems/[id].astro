@@ -1,0 +1,16 @@
+---
+import Layout from '../../../layouts/Layout.astro'; import {data} from '../../../data/provider';
+export const prerender=true; export function getStaticPaths(){return data.systems().map(s=>({params:{id:s.public_id.replace(':','-')}}));}
+const sys=data.systems().find(s=>s.public_id.replace(':','-')===Astro.params.id);
+const members=sys?data.interactionsForSystem(sys.public_id):[];
+const taxaInvolved=sys?[...new Set(members.flatMap(m=>[m.mimic,m.model]))]:[];
+const slugify=(n:string)=>n.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+const typeZh:Record<string,string>={ring:'穆氏环',complex:'物种复合群',polymorphic:'多态系统',series:'层级序列',other:'其它'};
+const issueUrl=sys?'https://github.com/ZyYang0124/MimicryDB/issues/new?title='+encodeURIComponent(`[System ${sys.public_id}] Correction`)+'&body='+encodeURIComponent(`System: ${sys.public_id}\nPage: https://zyyang0124.github.io/MimicryDB/zh/systems/${sys.public_id.replace(':','-')}/\n\n问题：\n`):'#';
+---
+<Layout lang="zh" title={sys?`${sys.name} · MimicryDB`:'未找到 · MimicryDB'}>{sys?<div class="container py-12"><a href="/MimicryDB/zh/systems/">← 全部拟态系统</a><p class="mt-6 text-xs uppercase tracking-[0.3em] text-slate-500">{sys.public_id} <span class="pill ml-2">{typeZh[sys.system_type]??sys.system_type}</span> <span class="pill ml-2">DEMO</span></p><h1 class="mt-4 text-4xl font-bold">{sys.name}</h1><p class="mt-4 max-w-2xl leading-relaxed text-slate-300">{sys.description}</p>
+<div class="card mt-6 max-w-2xl text-sm text-slate-400"><strong class="text-ink">{members.length}</strong> 条成员交互 · 涉及 {taxaInvolved.length} 个类群。系统只是原子交互之上的视图——分析请以有向边为准。</div>
+<h2 class="mt-10 text-2xl font-bold">成员交互</h2><div class="mt-6 grid gap-4">{members.map(i=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/zh/interactions/${i.id.replace(':','-')}/`}><div class="flex flex-wrap items-center justify-between gap-3"><div class="text-lg font-semibold"><em>{i.mimic}</em> <span class="text-coral">→</span> {i.model}</div><span class={`pill grade-${i.evidence}`}>{i.evidence}</span></div><div class="mt-2 text-sm text-slate-400">{i.id} · {i.type} · 接收者：{i.receiver}</div></a>)}</div>
+<h2 class="mt-10 text-2xl font-bold">涉及的类群</h2><div class="mt-4 flex flex-wrap gap-3">{taxaInvolved.map(t=><a class="btn" href={`/MimicryDB/zh/taxa/${slugify(t)}/`}>{t}</a>)}</div>
+<p class="mt-10 text-sm text-slate-400">{sys.notes}</p>
+<p class="mt-6 text-xs text-slate-500"><a class="underline decoration-gold/60 hover:text-gold" href={issueUrl} target="_blank" rel="noopener">提出修正 ↗</a>——将打开预填好的 GitHub issue；修正经审核后才会生效</p></div>:<div class="container py-16"><h1 class="text-3xl font-bold">未找到该系统</h1></div>}</Layout>
