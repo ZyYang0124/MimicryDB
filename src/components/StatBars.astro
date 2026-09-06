@@ -1,0 +1,19 @@
+---
+// Minimal editorial bar chart (Hasselblad-style: thin bars, micro labels, no chart junk)
+interface Props{kicker:string;items:{label:string;value:number}[];color?:string;max?:number}
+const {kicker,items,color='#2dd4bf',max}=Astro.props;
+const top=items.slice(0,8);
+const maxValue=max??Math.max(...top.map(i=>i.value),1);
+---
+<div class="mt-10">
+  <p class="kicker">{kicker}</p>
+  <div class="mt-5 space-y-3">
+    {top.map(i=><div class="flex items-center gap-4">
+      <span class="w-44 shrink-0 truncate text-sm text-slate-400" title={i.label}>{i.label}</span>
+      <div class="h-[3px] flex-1 bg-white/5">
+        <div class="h-full" style={`width:${Math.max(Math.round(i.value/maxValue*100),2)}%;background:${color}`}></div>
+      </div>
+      <span class="w-8 text-right text-sm text-slate-400">{i.value}</span>
+    </div>)}
+  </div>
+</div>

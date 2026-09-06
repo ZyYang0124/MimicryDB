@@ -2,21 +2,22 @@
 import Layout from '../../layouts/Layout.astro'; import {data,imageFor,slugify} from '../../data/provider';
 export const prerender=true; export function getStaticPaths(){return data.all().map(i=>({params:{id:i.id.replace(':','-')}}));}
 const i=data.byId(Astro.params.id??''); const refs=i?data.refsFor(i.id):[];
-const img=i?(imageFor(i.mimic)??imageFor(i.model)):undefined;
+const imgMimic=i?imageFor(i.mimic):undefined; const imgModel=i?imageFor(i.model):undefined;
 const litRows=(refs??[]).map(r=>({id:r.id,title:r.title,meta:r.id+(r.doi?' · DOI '+r.doi:'')+' · supports '+data.interactionsForRef(r.id).length+' record(s)'}));
 const related=i?data.all().filter(x=>x.id!==i.id&&(x.mimic===i.mimic||x.model===i.model||x.type===i.type)).slice(0,4):[];
+const two=!!(imgMimic&&imgModel); const figH=two?'lg:h-1/2 h-[340px]':'lg:h-full h-[340px]';
 ---
 <Layout title={i?`${i.mimic} → ${i.model} · MimicryDB`:'Not found · MimicryDB'}>{i?<article>
 <div class="grid lg:grid-cols-2">
-<figure class="relative bg-mist lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] min-h-[320px] overflow-hidden">
-{img?<img src={img.file} alt={`${i.mimic} — photograph`} class="absolute inset-0 h-full w-full object-cover"/>:
-<div class="absolute inset-0 flex items-center justify-center bg-ink"><span class="font-serif text-[10rem] text-white/10 italic">{i.mimic.slice(0,1)}</span></div>}
-{img?<figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-xs text-white/85">{img.taxon} · © {img.artist}, {img.license}, via <a class="underline" href={img.page}>Wikimedia Commons</a></figcaption>:
-<figcaption class="absolute bottom-4 left-0 right-0 text-center text-xs text-white/60">photograph pending — sourced from Wikimedia Commons with attribution once available</figcaption>}
-</figure>
-<div class="px-6 lg:px-16 py-14 max-w-2xl">
+<div class="relative bg-mist lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)]">
+{imgMimic?<figure class={`relative w-full overflow-hidden ${figH}`}><img src={imgMimic.file} alt={`${i.mimic} — photograph`} class="absolute inset-0 h-full w-full object-cover"/><span class="absolute left-4 top-4 z-10 bg-black/60 px-2 py-1 text-[0.65rem] uppercase tracking-[0.25em] text-white/90">Mimic · {imgMimic.taxon}</span><figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 to-transparent p-4 text-xs text-white/85">© {imgMimic.artist}, {imgMimic.license}, via <a class="underline" href={imgMimic.page}>Wikimedia Commons</a></figcaption></figure>:null}
+{imgModel?<figure class={`relative w-full overflow-hidden ${figH}`}><img src={imgModel.file} alt={`${i.model} — photograph`} class="absolute inset-0 h-full w-full object-cover"/><span class="absolute left-4 top-4 z-10 bg-black/60 px-2 py-1 text-[0.65rem] uppercase tracking-[0.25em] text-white/90">Model · {imgModel.taxon}</span><figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 to-transparent p-4 text-xs text-white/85">© {imgModel.artist}, {imgModel.license}, via <a class="underline" href={imgModel.page}>Wikimedia Commons</a></figcaption></figure>:null}
+{!imgMimic&&!imgModel?<div class="flex h-[420px] w-full items-center justify-center lg:h-full"><span class="select-none font-serif text-[9rem] italic text-white/10">M</span></div>:null}
+{(!imgMimic||!imgModel)?<div class="p-4 text-center text-xs text-slate-500">photograph pending — sourced from Wikimedia Commons with attribution once available</div>:null}
+</div>
+<div class="max-w-2xl px-6 py-14 lg:px-16">
 <p class="text-xs uppercase tracking-[0.25em] text-slate-500">{i.id} · {i.type} <span class="pill ml-3">DEMO</span></p>
-<h1 class="mt-6 text-5xl font-bold font-serif leading-[1.08]"><em>{i.mimic}</em> <span class="text-coral">→</span> {i.model}</h1>
+<h1 class="mt-6 font-serif text-5xl font-bold leading-[1.08]"><em>{i.mimic}</em> <span class="text-coral">→</span> {i.model}</h1>
 <p class="mt-4 text-sm text-slate-400">{i.kingdoms} · model kind: {i.modelKind??'organism'} · knowledge status: {i.knowledge??'reported'} · evidence <span class={`pill grade-${i.evidence}`}>{i.evidence}</span></p>
 <h2 class="mt-12 text-xs uppercase tracking-[0.25em] text-slate-500">Scientific summary</h2>
 <p class="mt-4 text-xl leading-relaxed">{i.summary}</p>
@@ -28,7 +29,7 @@ const related=i?data.all().filter(x=>x.id!==i.id&&(x.mimic===i.mimic||x.model===
 </dl>
 <h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">Literature support</h2>
 <div class="mt-6 space-y-4 border-l-2 border-white/10 pl-6">
-{litRows.map(r=><div><p class="font-serif italic">{r.title}</p><p class="mt-1 text-xs text-slate-400 mono">{r.meta} · <a class="underline" href={"/MimicryDB/references/"+r.id+'/'}>view record</a></p></div>)}
+{litRows.map(r=><div><p class="font-serif italic">{r.title}</p><p class="mono mt-1 text-xs text-slate-400">{r.meta} · <a class="underline" href={"/MimicryDB/references/"+r.id+'/'}>view record</a></p></div>)}
 <p class="text-sm text-slate-400">In production, every published claim links to the exact passage — page, section, figure — of these sources, with the curator's grade reason attached. This demo record carries placeholder references and makes no scientific claim.</p>
 </div>
 <h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">Related records</h2>

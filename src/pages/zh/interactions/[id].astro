@@ -2,23 +2,24 @@
 import Layout from '../../../layouts/Layout.astro'; import {data,imageFor,slugify} from '../../../data/provider'; import {summaryZh} from '../../../data/demo';
 export const prerender=true; export function getStaticPaths(){return data.all().map(i=>({params:{id:i.id.replace(':','-')}}));}
 const i=data.byId(Astro.params.id??''); const refs=i?data.refsFor(i.id):[];
-const img=i?(imageFor(i.mimic)??imageFor(i.model)):undefined;
+const imgMimic=i?imageFor(i.mimic):undefined; const imgModel=i?imageFor(i.model):undefined;
 const litRows=(refs??[]).map(r=>({id:r.id,title:r.title,meta:r.id+(r.doi?' · DOI '+r.doi:'')+' · 支持 '+data.interactionsForRef(r.id).length+' 条记录'}));
 const related=i?data.all().filter(x=>x.id!==i.id&&(x.mimic===i.mimic||x.model===i.model||x.type===i.type)).slice(0,4):[];
 const kindZh=(k?:string)=>({organism:'物种',environment:'环境',object:'无生命对象',self:'自身',unknown:'未知',other:'其它'}[k??'organism']??k??'物种');
 const modZh=(m:string)=>({visual:'视觉',morphological:'形态',colour:'颜色',pattern:'斑纹',behavioural:'行为',locomotor:'运动',acoustic:'声学',chemical:'化学',olfactory:'嗅觉',tactile:'触觉',vibrational:'振动',multimodal:'多模态',unknown:'未知',other:'其它'}[m]??m);
+const two=!!(imgMimic&&imgModel); const figH=two?'lg:h-1/2 h-[340px]':'lg:h-full h-[340px]';
 ---
 <Layout lang="zh" title={i?`${i.mimic} → ${i.model} · MimicryDB`:'未找到 · MimicryDB'}>{i?<article>
 <div class="grid lg:grid-cols-2">
-<figure class="relative bg-mist lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] min-h-[320px] overflow-hidden">
-{img?<img src={img.file} alt={`${i.mimic} 照片`} class="absolute inset-0 h-full w-full object-cover"/>:
-<div class="absolute inset-0 flex items-center justify-center bg-ink"><span class="font-serif text-[10rem] text-white/10 italic">{i.mimic.slice(0,1)}</span></div>}
-{img?<figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-xs text-white/85">{img.taxon} · © {img.artist}，{img.license}，来自 <a class="underline" href={img.page}>Wikimedia Commons</a></figcaption>:
-<figcaption class="absolute bottom-4 left-0 right-0 text-center text-xs text-white/60">照片待补充——获得可用授权图片后将附署名展示</figcaption>}
-</figure>
-<div class="px-6 lg:px-16 py-14 max-w-2xl">
+<div class="relative bg-mist lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)]">
+{imgMimic?<figure class={`relative w-full overflow-hidden ${figH}`}><img src={imgMimic.file} alt={`${i.mimic} 照片`} class="absolute inset-0 h-full w-full object-cover"/><span class="absolute left-4 top-4 z-10 bg-black/60 px-2 py-1 text-[0.65rem] uppercase tracking-[0.25em] text-white/90">模仿者 · {imgMimic.taxon}</span><figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 to-transparent p-4 text-xs text-white/85">© {imgMimic.artist}，{imgMimic.license}，来自 <a class="underline" href={imgMimic.page}>Wikimedia Commons</a></figcaption></figure>:null}
+{imgModel?<figure class={`relative w-full overflow-hidden ${figH}`}><img src={imgModel.file} alt={`${i.model} 照片`} class="absolute inset-0 h-full w-full object-cover"/><span class="absolute left-4 top-4 z-10 bg-black/60 px-2 py-1 text-[0.65rem] uppercase tracking-[0.25em] text-white/90">模型 · {imgModel.taxon}</span><figcaption class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 to-transparent p-4 text-xs text-white/85">© {imgModel.artist}，{imgModel.license}，来自 <a class="underline" href={imgModel.page}>Wikimedia Commons</a></figcaption></figure>:null}
+{!imgMimic&&!imgModel?<div class="flex h-[420px] w-full items-center justify-center lg:h-full"><span class="select-none font-serif text-[9rem] italic text-white/10">M</span></div>:null}
+{(!imgMimic||!imgModel)?<div class="p-4 text-center text-xs text-slate-500">照片待补充——获得可用授权图片后将附署名展示</div>:null}
+</div>
+<div class="max-w-2xl px-6 py-14 lg:px-16">
 <p class="text-xs uppercase tracking-[0.25em] text-slate-500">{i.id} · {i.type} <span class="pill ml-3">DEMO</span></p>
-<h1 class="mt-6 text-5xl font-bold font-serif leading-[1.08]"><em>{i.mimic}</em> <span class="text-coral">→</span> {i.model}</h1>
+<h1 class="mt-6 font-serif text-5xl font-bold leading-[1.08]"><em>{i.mimic}</em> <span class="text-coral">→</span> {i.model}</h1>
 <p class="mt-4 text-sm text-slate-400">{i.kingdoms} · 模型类别：{kindZh(i.modelKind)} · 知识状态：{i.knowledge??'reported'} · 证据 <span class={`pill grade-${i.evidence}`}>{i.evidence}</span></p>
 <h2 class="mt-12 text-xs uppercase tracking-[0.25em] text-slate-500">科学摘要</h2>
 <p class="mt-4 text-xl leading-relaxed">{summaryZh[i.id]??i.summary}</p>
@@ -31,7 +32,7 @@ const modZh=(m:string)=>({visual:'视觉',morphological:'形态',colour:'颜色'
 </dl>
 <h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">文献支持</h2>
 <div class="mt-6 space-y-4 border-l-2 border-white/10 pl-6">
-{litRows.map(r=><div><p class="font-serif italic">{r.title}</p><p class="mt-1 text-xs text-slate-400 mono">{r.meta} · <a class="underline" href={"/MimicryDB/zh/references/"+r.id+'/'}>查看记录</a></p></div>)}
+{litRows.map(r=><div><p class="font-serif italic">{r.title}</p><p class="mono mt-1 text-xs text-slate-400">{r.meta} · <a class="underline" href={"/MimicryDB/zh/references/"+r.id+'/'}>查看记录</a></p></div>)}
 <p class="text-sm text-slate-400">正式上线后，每条公开发表的主张都将链接到上述来源的精确原文（页码/章节/图表），并附策展人的定级理由。本演示记录仅使用占位文献，不构成科学结论。</p>
 </div>
 <h2 class="mt-16 text-xs uppercase tracking-[0.25em] text-slate-500">相关记录</h2>

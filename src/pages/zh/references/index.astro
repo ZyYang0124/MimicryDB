@@ -1,6 +1,8 @@
 ---
 import Layout from '../../../layouts/Layout.astro'; import {data} from '../../../data/provider'; import {strings} from '../../../i18n';
 const s=strings('zh');
+import StatBars from '../../../components/StatBars.astro';
 const refs=data.references().sort((a,b)=>b.supports-a.supports);
 ---
-<Layout lang="zh" title="文献 · MimicryDB"><div class="container py-12"><span class="pill">{s.demo}</span><h1 class="mt-4 text-4xl font-bold">文献</h1><p class="mt-3">支持 MimicryDB 交互记录的来源文献。当前条目均为演示占位——尚无真实引文元数据，也绝不会编造。</p><div class="mt-8 grid gap-3">{refs.map(r=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/zh/references/${r.ref.id}/`}><div class="flex flex-wrap items-center justify-between gap-3"><span class="font-semibold">{r.ref.title}</span><span class="pill">支持 {r.supports} 条记录</span></div><div class="mt-2 text-sm text-slate-400">{r.ref.id}{r.ref.doi?` · DOI ${r.ref.doi}`:''}</div></a>)}</div></div></Layout>
+<Layout lang="zh" title="文献 · MimicryDB"><div class="container py-12"><span class="pill">{s.demo}</span><h1 class="mt-4 text-4xl font-bold">文献</h1><p class="mt-3">支持 MimicryDB 交互记录的来源文献。当前条目均为演示占位——尚无真实引文元数据，也绝不会编造。</p><StatBars kicker="支持记录最多的文献" items={refs.slice(0,8).map(r=>({label:r.ref.title,value:r.supports}))} color="#d8c690" />
+<div class="mt-10 grid gap-3">{refs.map(r=><a class="card block text-ink hover:border-gold/60" href={`/MimicryDB/zh/references/${r.ref.id}/`}><div class="flex flex-wrap items-center justify-between gap-3"><span class="font-semibold">{r.ref.title}</span><span class="pill">支持 {r.supports} 条记录</span></div><div class="mt-2 text-sm text-slate-400">{r.ref.id}{r.ref.doi?` · DOI ${r.ref.doi}`:''}</div></a>)}</div></div></Layout>
