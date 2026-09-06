@@ -22,6 +22,17 @@ export const gbifAll=():GbifMatch[]=>gbifResults;
 let vernacular:Record<string,{input:string;zh:string|null}>={};
 try{vernacular=(JSON.parse(readFileSync(new URL('../../data/reconciliation/vernacular.json',import.meta.url),'utf8')).names??{}) as Record<string,{input:string;zh:string|null}>;}catch{vernacular={};}
 export const vernacularZh=(name:string):string|undefined=>vernacular[slugify(name)]?.zh??undefined;
+// Live Supabase overlay (v0.4.0): scripts/fetch-live-data.mjs pulls the PUBLIC view
+// (RLS: interaction_status='published') into data/live/live.json at build time when
+// credentials exist. Absent file, empty database, or an unreachable project all fall
+// back to the labeled demo dataset — the build never breaks and never fakes.
+type LiveFile={fetched_at:string;published:number;interactions:Interaction[];systems:DemoSystem[]};
+let live:LiveFile|undefined;
+try{
+  const f=JSON.parse(readFileSync(new URL('../../data/live/live.json',import.meta.url),'utf8')) as LiveFile;
+  if(f.published>0&&f.interactions?.length)live=f;
+}catch{live=undefined;}
+export const liveSource=():boolean=>!!live;
 export type TaxonSummary={name:string;slug:string;asMimic:number;asModel:number;lineages:string};
 export type ReferenceSummary={ref:DemoReference;supports:number};
 /** Documented query patterns (prompt.md §48): the live Supabase adapter must answer the
@@ -49,29 +60,31 @@ export const detectDuplicates=(list:Interaction[])=>{const acc=new Map<string,{p
   for(const i of list){const key=`${i.mimic} → ${i.model}`;
     if(!acc.has(key))acc.set(key,{pair:key,ids:[]}); acc.get(key)!.ids.push(i.id);}
   return [...acc.values()].filter(x=>x.ids.length>1);};
-const splitKingdoms=(i:Interaction)=>{const [a,b]=i.kingdoms.split(' → ');return [a?.trim()??'',b?.trim()??''];};
-export const demoProvider:DataProvider={
-  all:()=>interactions,
-  byId:(publicId)=>interactions.find(i=>i.id===publicId||i.id.replace(':','-')===publicId),
+/** Build a DataProvider over any interaction list — the demo dataset and the live
+ *  Supabase overlay share this one implementation, so query/filter semantics are
+ *  identical for both. */
+export const makeProvider=(ints:Interaction[],systemsList:DemoSystem[],cands:Candidate[]):DataProvider=>({
+  all:()=>ints,
+  byId:(publicId)=>ints.find(i=>i.id===publicId||i.id.replace(':','-')===publicId),
   taxa:()=>{const acc=new Map<string,{name:string;slug:string;asMimic:number;asModel:number;lineages:Set<string>}>();
     const touch=(name:string,side:'asMimic'|'asModel',lineage:string)=>{let t=acc.get(name);
       if(!t){t={name,slug:slugify(name),asMimic:0,asModel:0,lineages:new Set()};acc.set(name,t);}
       t[side]++; if(lineage)t.lineages.add(lineage);};
-    for(const i of interactions){const [mk,dk]=splitKingdoms(i);
-      touch(i.mimic,'asMimic',mk); touch(i.model,'asModel',dk);}
+    for(const i of ints){const [mk,dk]=i.kingdoms.split(' → ');const a=mk?.trim()??'',b=dk?.trim()??'';
+      touch(i.mimic,'asMimic',a); touch(i.model,'asModel',b);}
     return [...acc.values()].map(t=>({...t,lineages:[...t.lineages].sort().join(' · ')}));},
   references:()=>{const acc=new Map<string,ReferenceSummary>();
-    for(const i of interactions)for(const r of i.refs??[]){
+    for(const i of ints)for(const r of i.refs??[]){
       if(!acc.has(r.id))acc.set(r.id,{ref:r,supports:0}); acc.get(r.id)!.supports++;}
     return [...acc.values()];},
-  refsFor:(publicId)=>{const i=interactions.find(x=>x.id===publicId||x.id.replace(':','-')===publicId);return i?.refs??[];},
-  interactionsForRef:(refId)=>interactions.filter(i=>(i.refs??[]).some(r=>r.id===refId)),
-  systems:()=>systems,
-  interactionsForSystem:(publicId)=>{const sys=systems.find(s=>s.public_id===publicId);return sys?sys.members.map(m=>interactions.find(i=>i.id===m)).filter((x):x is Interaction=>!!x):[];},
-  candidates:()=>candidates,
+  refsFor:(publicId)=>{const i=ints.find(x=>x.id===publicId||x.id.replace(':','-')===publicId);return i?.refs??[];},
+  interactionsForRef:(refId)=>ints.filter(i=>(i.refs??[]).some(r=>r.id===refId)),
+  candidates:()=>cands,
+  systems:()=>systemsList,
+  interactionsForSystem:(publicId)=>{const sys=systemsList.find(s=>s.public_id===publicId);return sys?sys.members.map(m=>ints.find(i=>i.id===m)).filter((x):x is Interaction=>!!x):[];},
   query:(f)=>{const g=(i:Interaction)=>+(i.evidence[1]??0);
     const min=f.minEvidence?+(f.minEvidence[1]):0;
-    const hit=interactions.filter(i=>(!f.mimic||i.mimic===f.mimic)&&(!f.model||i.model===f.model)
+    const hit=ints.filter(i=>(!f.mimic||i.mimic===f.mimic)&&(!f.model||i.model===f.model)
       &&(!f.type||i.type===f.type)&&(g(i)>=min)
       &&(!f.modelKind||i.modelKind===f.modelKind)
       &&(!f.mimicKingdom||i.kingdoms.split(' → ')[0]?.trim()===f.mimicKingdom)
@@ -79,6 +92,8 @@ export const demoProvider:DataProvider={
       &&(!f.crossKingdomOnly||i.kingdoms.split(' → ')[0]?.trim()!==i.kingdoms.split(' → ')[1]?.trim()&&(i.modelKind??'organism')==='organism'));
     const pageSize=Math.max(1,f.pageSize??20); const page=Math.max(1,f.page??1);
     return {total:hit.length,page,pageSize,items:hit.slice((page-1)*pageSize,page*pageSize)};}
-};
-/** Single swap point for a future live adapter (e.g. Supabase); pages import only `data`. */
-export const data:DataProvider=demoProvider;
+});
+export const demoProvider:DataProvider=makeProvider(interactions,systems,candidates);
+/** The active provider: the live Supabase overlay when the build fetched published
+ *  records, otherwise the labeled demo dataset. */
+export const data:DataProvider=live?makeProvider(live.interactions,live.systems,[]):demoProvider;
