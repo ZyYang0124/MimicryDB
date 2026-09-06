@@ -162,3 +162,18 @@ test('vernacular report is display-only and guarded against fuzzy GBIF matches',
       `${e.input}: zh name attached despite non-exact GBIF match (${canon})`);
   }
 });
+
+test('twinPath mirrors every EN page to /zh/ and back (language toggle + hreflang)',async()=>{
+  const {twinPath}=await import('../src/i18n.ts');
+  const pairs=[
+    ['/MimicryDB/','/MimicryDB/zh/'],
+    ['/MimicryDB/interactions/','/MimicryDB/zh/interactions/'],
+    ['/MimicryDB/interactions/MIMICRY-000004/','/MimicryDB/zh/interactions/MIMICRY-000004/'],
+    ['/MimicryDB/taxa/cuculus-canorus/','/MimicryDB/zh/taxa/cuculus-canorus/'],
+  ];
+  for(const [en,zh] of pairs){
+    assert.equal(twinPath(en,'zh'),zh,`EN→ZH failed for ${en}`);
+    assert.equal(twinPath(zh,'en'),en,`ZH→EN failed for ${zh}`);
+  }
+  assert.equal(twinPath('/MimicryDB/zh/interactions/','zh'),'/MimicryDB/zh/interactions/','zh→zh stays put');
+});

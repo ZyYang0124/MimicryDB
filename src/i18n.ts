@@ -20,6 +20,10 @@ export const strings=(lang:Lang)=>lang==='zh'?zh:en;
 /** Bilingual pages mirror paths: /MimicryDB/x/ ⇄ /MimicryDB/zh/x/ */
 export const twinPath=(pathname:string,target:Lang)=>{
   const p=pathname.replace(/index\.html$/,'');
-  if(target==='zh')return p.endsWith('/')?`${p.replace(/\/$/,'')}/zh/`:`${p}/zh/`;
-  return p.replace(/\/zh\/?/,'/');
+  if(target==='zh'){
+    if(p.includes('/zh/'))return p;
+    const t=p.replace(/^\/MimicryDB\/?/,'/MimicryDB/zh/');
+    return t.endsWith('/')?t:t+'/';
+  }
+  return p.replace(/^\/MimicryDB\/zh\/?/,'/MimicryDB/');
 };
