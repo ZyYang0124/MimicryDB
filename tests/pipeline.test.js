@@ -417,3 +417,37 @@ test('curation 0.6.0: decisions validate, apply, and leave an audit trail',async
   assert.equal(refs['10.2/y'].curator_status,'confirmed');
   assert.equal(refs['10.2/y'].curator,'C');
 });
+
+test('publish pipeline (0.6.1): SOP Phase 18 battery and stable ID assignment',async()=>{
+  const {validateForPublish,buildPublishSet}=await import('../src/lib/publish.ts');
+  const base={id:'CAND-T1',review_status:'reviewed',reviewed_by:'Curator A',
+    proposed_mimic:'Myrmarachne formicaria',proposed_model:'Formica rufa',proposed_receiver:'predator',
+    proposed_mimicry_type:'batesian',proposed_evidence_grade:'E2',
+    evidence_text:'predators avoided the mimic',reference:'Smith 2024',
+    extraction_model:'glm-4-flash',extraction_prompt_version:'v1'};
+  const ok=validateForPublish(base,100001);
+  assert.ok(ok.ready,ok.checks.filter(c=>!c.ok).map(c=>c.field+': '+c.detail).join('; '));
+  assert.equal(ok.public_id,'MIMICRY:100001');
+  // each guard fires
+  for(const mutate of [
+    {review_status:'pending'},{reviewed_by:''},{proposed_mimic:''},
+    {proposed_model:base.proposed_mimic},{proposed_receiver:''},
+    {proposed_mimicry_type:'invented_type'},{proposed_evidence_grade:'E9'},
+    {evidence_text:''},{reference:''},{extraction_model:''},
+  ]){
+    const r=validateForPublish({...base,...mutate},1);
+    assert.ok(!r.ready,`expected block for ${JSON.stringify(mutate)}`);
+  }
+  // buildPublishSet: accepted promoted in order, others skipped with reasons
+  const {ready,report}=buildPublishSet([
+    {...base},
+    {...base,id:'CAND-T2',review_status:'rejected'},
+    {...base,id:'CAND-T3',evidence_text:'',proposed_evidence_grade:'E1'},
+  ],100001);
+  assert.equal(ready.length,1);
+  assert.equal(ready[0].public_id,'MIMICRY:100001');
+  assert.equal(ready[0].data_status,'published');
+  assert.equal(report.length,3,'every candidate gets a report line');
+  assert.ok(report[1].checks[0].detail.includes('rejected'));
+  assert.ok(!report[2].ready,'E1 without evidence passage is blocked');
+});
