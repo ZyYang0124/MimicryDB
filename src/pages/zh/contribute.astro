@@ -1,0 +1,81 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const TYPES=['batesian','mullerian','mertensian','aggressive','reproductive','sexual_deception','brood','egg','social','parasitic','floral','food_deception','protective','automimicry','masquerade','uncertain','other'];
+const GRADES=['E0','E1','E2','E3','E4'];
+const typeZh:Record<string,string>={batesian:'贝氏拟态',mullerian:'穆氏拟态',mertensian:'门氏拟态',aggressive:'攻击性拟态',reproductive:'繁殖拟态',sexual_deception:'性欺骗',brood:'巢寄生拟态',egg:'卵拟态',social:'社会性拟态',parasitic:'寄生性拟态',floral:'花拟态',food_deception:'食物欺骗',protective:'保护性拟态',automimicry:'种内拟态',masquerade:'伪装',uncertain:'不确定',other:'其它'};
+const island=JSON.stringify({types:TYPES,grades:GRADES}).replace(/<\/script/gi,'<\/script');
+const sel='bg-transparent border border-white/25 rounded-sm px-2 py-1.5 text-xs text-white focus:border-gold outline-none';
+const lab='block text-[0.65rem] uppercase tracking-[0.2em] text-slate-500 mb-2';
+---
+<Layout lang="zh" title="贡献 · MimicryDB"><div class="container py-12"><span class="pill">候选层——经审核才会发布</span><h1 class="mt-4 text-4xl font-bold">参与贡献</h1>
+<p class="mt-3 max-w-2xl text-slate-400">任何人都可以提交提案；未经策展人审核不会发布（docs/CURATION_GUIDE.md）。提交会带您的署名进入候选层，成为正式记录时您将获得贡献署名。</p>
+<div class="mt-8 flex gap-2 text-xs" id="tabs">
+<button class="pill !border-gold !text-gold" data-tab="interaction">提交拟态交互</button>
+<button class="pill" data-tab="reference">提交文献</button>
+<button class="pill" data-tab="correction">建议修正</button>
+</div>
+
+<form id="form-interaction" class="mt-8 grid gap-5 md:grid-cols-2 max-w-3xl">
+<div class="md:col-span-2"><label class={lab} for="ci-name">您的姓名 / ORCID *</label><input id="ci-name" class={sel+' w-full'} required/></div>
+<div><label class={lab} for="ci-mimic">模仿者（学名）*</label><input id="ci-mimic" class={sel+' w-full'} placeholder="如 Myrmarachne formicaria" required/></div>
+<div><label class={lab} for="ci-model">模型 *</label><input id="ci-model" class={sel+' w-full'} placeholder="物种，或描述性对象如"鸟粪"" required/></div>
+<div><label class={lab} for="ci-receiver">接收者 *</label><input id="ci-receiver" class={sel+' w-full'} placeholder="如捕食者、传粉者" required/></div>
+<div><label class={lab} for="ci-type">拟态类型 *</label><select id="ci-type" class={sel+' w-full'}>{TYPES.map(t=><option value={t}>{typeZh[t]??t}</option>)}</select></div>
+<div><label class={lab} for="ci-grade">证据等级</label><select id="ci-grade" class={sel+' w-full'}>{GRADES.map(t=><option value={t}>{t}</option>)}</select></div>
+<div class="md:col-span-2"><label class={lab} for="ci-doi">支持文献（优先 DOI）*</label><input id="ci-doi" class={sel+' w-full'} placeholder="10.xxxx/xxxxx" required/></div>
+<div class="md:col-span-2"><label class={lab} for="ci-passage">证据原文（引自文献）</label><textarea id="ci-passage" rows="3" class={sel+' w-full'}></textarea></div>
+<div class="md:col-span-2"><button type="submit" class="btn">导出提交 ↓</button><span class="ml-3 text-sm text-gold" id="ci-msg"></span></div>
+</form>
+
+<form id="form-reference" class="mt-8 hidden max-w-3xl">
+<div class="grid gap-5 md:grid-cols-2">
+<div><label class={lab} for="cr-name">您的姓名 / ORCID *</label><input id="cr-name" class={sel+' w-full'} required/></div>
+<div><label class={lab} for="cr-doi">DOI *</label><input id="cr-doi" class={sel+' w-full'} placeholder="10.xxxx/xxxxx" required/></div>
+<div class="md:col-span-2"><label class={lab} for="cr-note">这篇论文为什么与拟态相关？</label><textarea id="cr-note" rows="2" class={sel+' w-full'}></textarea></div>
+</div>
+<div class="mt-5"><button type="submit" class="btn">导出提交 ↓</button><span class="ml-3 text-sm text-gold" id="cr-msg"></span></div>
+</form>
+
+<form id="form-correction" class="mt-8 hidden max-w-3xl">
+<div class="grid gap-5 md:grid-cols-2">
+<div><label class={lab} for="cc-name">您的姓名 / ORCID *</label><input id="cc-name" class={sel+' w-full'} required/></div>
+<div><label class={lab} for="cc-target">要修正的记录 / 类群 *</label><input id="cc-target" class={sel+' w-full'} placeholder="如 MIMICRY:000004 或 Cuculus canorus" required/></div>
+<div class="md:col-span-2"><label class={lab} for="cc-problem">问题是什么？*</label><textarea id="cc-problem" rows="3" class={sel+' w-full'} required></textarea></div>
+<div class="md:col-span-2"><label class={lab} for="cc-fix">建议的修正与来源</label><textarea id="cc-fix" rows="2" class={sel+' w-full'}></textarea></div>
+</div>
+<div class="mt-5"><button type="submit" class="btn">导出提交 ↓</button><span class="ml-3 text-sm text-gold" id="cc-msg"></span></div>
+</form>
+
+<div class="card mt-12 max-w-3xl text-sm text-slate-400">
+<p><strong class="text-ink">提交后会发生什么。</strong>导出会生成一个 JSON 提交文件。请发送至（邮件或附在 GitHub issue 里：<a class="underline" href="https://github.com/ZyYang0124/MimicryDB/issues">github.com/ZyYang0124/MimicryDB/issues</a>）——策展人验证后进入候选收件箱，只有经审核后才会成为正式发布记录（SOP Phase 14–17）。提交不会直接修改已发布数据。</p>
+</div>
+</div>
+<script type="application/json" id="cdata" set:html={island}/><script>
+const $=(id:string)=>document.getElementById(id) as HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement|HTMLElement;
+const msg=(id:string,t:string)=>{($(id) as HTMLElement).textContent=t;setTimeout(()=>{($(id) as HTMLElement).textContent='';},3000);};
+document.querySelectorAll('#tabs button').forEach(b=>b.addEventListener('click',()=>{
+  const tab=(b as HTMLElement).dataset.tab!;
+  document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('!border-gold',x===b));
+  for(const f of ['interaction','reference','correction'])($('form-'+f) as HTMLElement).classList.toggle('hidden',f!==tab);
+}));
+const download=(name:string,obj:any)=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}));a.download=name;a.click();URL.revokeObjectURL(a.href);};
+$('form-interaction').addEventListener('submit',ev=>{ev.preventDefault();
+  download(`interaction-proposal-${Date.now()}.json`,{type:'interaction_proposal',format:1,submitted_at:new Date().toISOString(),
+    contributor:($('ci-name') as HTMLInputElement).value,mimic:($('ci-mimic') as HTMLInputElement).value,
+    model:($('ci-model') as HTMLInputElement).value,receiver:($('ci-receiver') as HTMLInputElement).value,
+    mimicry_type:($('ci-type') as HTMLSelectElement).value,evidence_grade:($('ci-grade') as HTMLSelectElement).value,
+    reference:($('ci-doi') as HTMLInputElement).value,evidence_text:($('ci-passage') as HTMLTextAreaElement).value,
+    review_status:'pending'});
+  msg('#ci-msg','已导出——请将文件发给策展人（见下）');});
+$('form-reference').addEventListener('submit',ev=>{ev.preventDefault();
+  download(`reference-proposal-${Date.now()}.json`,{type:'reference_proposal',format:1,submitted_at:new Date().toISOString(),
+    contributor:($('cr-name') as HTMLInputElement).value,doi:($('cr-doi') as HTMLInputElement).value,
+    note:($('cr-note') as HTMLTextAreaElement).value,review_status:'pending'});
+  msg('#cr-msg','已导出——请将文件发给策展人（见下）');});
+$('form-correction').addEventListener('submit',ev=>{ev.preventDefault();
+  download(`correction-proposal-${Date.now()}.json`,{type:'correction_proposal',format:1,submitted_at:new Date().toISOString(),
+    contributor:($('cc-name') as HTMLInputElement).value,target:($('cc-target') as HTMLInputElement).value,
+    problem:($('cc-problem') as HTMLTextAreaElement).value,proposed_fix:($('cc-fix') as HTMLTextAreaElement).value,
+    review_status:'pending'});
+  msg('#cc-msg','已导出——请将文件发给策展人（见下）');});
+</script></Layout>

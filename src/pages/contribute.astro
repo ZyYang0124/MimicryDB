@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+const TYPES=['batesian','mullerian','mertensian','aggressive','reproductive','sexual_deception','brood','egg','social','parasitic','floral','food_deception','protective','automimicry','masquerade','uncertain','other'];
+const GRADES=['E0','E1','E2','E3','E4'];
+const island=JSON.stringify({types:TYPES,grades:GRADES}).replace(/<\/script/gi,'<\\/script');
+const sel='bg-transparent border border-white/25 rounded-sm px-2 py-1.5 text-xs text-white focus:border-gold outline-none';
+const lab='block text-[0.65rem] uppercase tracking-[0.2em] text-slate-500 mb-2';
+---
+<Layout title="Contribute · MimicryDB"><div class="container py-12"><span class="pill">CANDIDATE LAYER — REVIEWED BEFORE PUBLICATION</span><h1 class="mt-4 text-4xl font-bold">Contribute</h1>
+<p class="mt-3 max-w-2xl text-slate-400">Anyone may propose; nothing is published without curator review (docs/CURATION_GUIDE.md). Your submission lands in the candidate layer with your name attached and gets credit when it becomes a record.</p>
+<div class="mt-8 flex gap-2 text-xs" id="tabs">
+<button class="pill !border-gold !text-gold" data-tab="interaction">Propose an interaction</button>
+<button class="pill" data-tab="reference">Submit a publication</button>
+<button class="pill" data-tab="correction">Suggest a correction</button>
+</div>
+
+<form id="form-interaction" class="mt-8 grid gap-5 md:grid-cols-2 max-w-3xl">
+<div class="md:col-span-2"><label class={lab} for="ci-name">Your name / ORCID *</label><input id="ci-name" class={sel+' w-full'} required/></div>
+<div><label class={lab} for="ci-mimic">Mimic (scientific name) *</label><input id="ci-mimic" class={sel+' w-full'} placeholder="e.g. Myrmarachne formicaria" required/></div>
+<div><label class={lab} for="ci-model">Model *</label><input id="ci-model" class={sel+' w-full'} placeholder="species, or object like 'bird droppings'" required/></div>
+<div><label class={lab} for="ci-receiver">Receiver *</label><input id="ci-receiver" class={sel+' w-full'} placeholder="e.g. predator, pollinator" required/></div>
+<div><label class={lab} for="ci-type">Mimicry type *</label><select id="ci-type" class={sel+' w-full'}>{TYPES.map(t=><option value={t}>{t}</option>)}</select></div>
+<div><label class={lab} for="ci-grade">Evidence grade</label><select id="ci-grade" class={sel+' w-full'}>{GRADES.map(t=><option value={t}>{t}</option>)}</select></div>
+<div class="md:col-span-2"><label class={lab} for="ci-doi">Supporting reference (DOI preferred) *</label><input id="ci-doi" class={sel+' w-full'} placeholder="10.xxxx/xxxxx" required/></div>
+<div class="md:col-span-2"><label class={lab} for="ci-passage">Evidence passage (quote from the source)</label><textarea id="ci-passage" rows="3" class={sel+' w-full'} placeholder="quote the passage that supports this mimicry claim"></textarea></div>
+<div class="md:col-span-2"><button type="submit" class="btn">Export submission ↓</button><span class="ml-3 text-sm text-gold" id="ci-msg"></span></div>
+</form>
+
+<form id="form-reference" class="mt-8 hidden max-w-3xl">
+<div class="grid gap-5 md:grid-cols-2">
+<div><label class={lab} for="cr-name">Your name / ORCID *</label><input id="cr-name" class={sel+' w-full'} required/></div>
+<div><label class={lab} for="cr-doi">DOI *</label><input id="cr-doi" class={sel+' w-full'} placeholder="10.xxxx/xxxxx" required/></div>
+<div class="md:col-span-2"><label class={lab} for="cr-note">Why is this paper relevant to mimicry?</label><textarea id="cr-note" rows="2" class={sel+' w-full'}></textarea></div>
+</div>
+<div class="mt-5"><button type="submit" class="btn">Export submission ↓</button><span class="ml-3 text-sm text-gold" id="cr-msg"></span></div>
+</form>
+
+<form id="form-correction" class="mt-8 hidden max-w-3xl">
+<div class="grid gap-5 md:grid-cols-2">
+<div><label class={lab} for="cc-name">Your name / ORCID *</label><input id="cc-name" class={sel+' w-full'} required/></div>
+<div><label class={lab} for="cc-target">Record / taxon to correct *</label><input id="cc-target" class={sel+' w-full'} placeholder="e.g. MIMICRY:000004 or Cuculus canorus" required/></div>
+<div class="md:col-span-2"><label class={lab} for="cc-problem">What is wrong? *</label><textarea id="cc-problem" rows="3" class={sel+' w-full'} required></textarea></div>
+<div class="md:col-span-2"><label class={lab} for="cc-fix">Proposed correction + source</label><textarea id="cc-fix" rows="2" class={sel+' w-full'}></textarea></div>
+</div>
+<div class="mt-5"><button type="submit" class="btn">Export submission ↓</button><span class="ml-3 text-sm text-gold" id="cc-msg"></span></div>
+</form>
+
+<div class="card mt-12 max-w-3xl text-sm text-slate-400">
+<p><strong class="text-ink">What happens next.</strong> Export produces a JSON submission file. Send it in (email or attach to a GitHub issue at <a class="underline" href="https://github.com/ZyYang0124/MimicryDB/issues">github.com/ZyYang0124/MimicryDB/issues</a>) — a curator validates it into the candidate inbox, and it only becomes a published record after review (SOP Phases 14-17). Submissions never modify published data directly.</p>
+</div>
+</div>
+<script type="application/json" id="cdata" set:html={island}/><script>
+document.getElementById('cdata')!.textContent;
+const $=(id:string)=>document.getElementById(id) as HTMLInputElement|HTMLSelectElement|HTMLTextAreaElement|HTMLElement;
+const msg=(id:string,t:string)=>{($(id) as HTMLElement).textContent=t;setTimeout(()=>{($(id) as HTMLElement).textContent='';},3000);};
+document.querySelectorAll('#tabs button').forEach(b=>b.addEventListener('click',()=>{
+  const tab=(b as HTMLElement).dataset.tab!;
+  document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('!border-gold',x===b));
+  for(const f of ['interaction','reference','correction'])($('form-'+f) as HTMLElement).classList.toggle('hidden',f!==tab);
+}));
+const download=(name:string,obj:any)=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(obj,null,2)],{type:'application/json'}));a.download=name;a.click();URL.revokeObjectURL(a.href);};
+$('form-interaction').addEventListener('submit',ev=>{ev.preventDefault();
+  download(`interaction-proposal-${Date.now()}.json`,{type:'interaction_proposal',format:1,submitted_at:new Date().toISOString(),
+    contributor:($('ci-name') as HTMLInputElement).value,mimic:($('ci-mimic') as HTMLInputElement).value,
+    model:($('ci-model') as HTMLInputElement).value,receiver:($('ci-receiver') as HTMLInputElement).value,
+    mimicry_type:($('ci-type') as HTMLSelectElement).value,evidence_grade:($('ci-grade') as HTMLSelectElement).value,
+    reference:($('ci-doi') as HTMLInputElement).value,evidence_text:($('ci-passage') as HTMLTextAreaElement).value,
+    review_status:'pending'});
+  msg('#ci-msg','exported — send the file to a curator (see below)');});
+$('form-reference').addEventListener('submit',ev=>{ev.preventDefault();
+  download(`reference-proposal-${Date.now()}.json`,{type:'reference_proposal',format:1,submitted_at:new Date().toISOString(),
+    contributor:($('cr-name') as HTMLInputElement).value,doi:($('cr-doi') as HTMLInputElement).value,
+    note:($('cr-note') as HTMLTextAreaElement).value,review_status:'pending'});
+  msg('#cr-msg','exported — send the file to a curator (see below)');});
+$('form-correction').addEventListener('submit',ev=>{ev.preventDefault();
+  download(`correction-proposal-${Date.now()}.json`,{type:'correction_proposal',format:1,submitted_at:new Date().toISOString(),
+    contributor:($('cc-name') as HTMLInputElement).value,target:($('cc-target') as HTMLInputElement).value,
+    problem:($('cc-problem') as HTMLTextAreaElement).value,proposed_fix:($('cc-fix') as HTMLTextAreaElement).value,
+    review_status:'pending'});
+  msg('#cc-msg','exported — send the file to a curator (see below)');});
+</script></Layout>
