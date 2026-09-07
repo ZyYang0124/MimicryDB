@@ -1,17 +1,69 @@
 ---
 import Layout from '../layouts/Layout.astro'; import {data} from '../data/provider';
-const idx=[
- ...data.taxa().map(t=>({kind:'taxon',text:t.name,label:t.name,href:`/MimicryDB/taxa/${t.slug}/`,meta:`mimic in ${t.asMimic} · model in ${t.asModel}`})),
- ...data.all().map(i=>({kind:'interaction',text:`${i.mimic} ${i.model} ${i.id} ${i.type} ${i.receiver} ${i.summary}`,label:`${i.mimic} → ${i.model}`,href:`/MimicryDB/interactions/${i.id.replace(':','-')}/`,meta:`${i.id} · ${i.type} · ${i.evidence}`})),
- ...data.references().map(r=>({kind:'reference',text:`${r.ref.title} ${r.ref.id} ${r.ref.doi??''}`,label:r.ref.title,href:`/MimicryDB/references/${r.ref.id}/`,meta:`supports ${r.supports}`}))];
-const kinds=[['taxon','Taxa'],['interaction','Interactions'],['reference','References']] as const;
+import vocab from '../../data/controlled-vocabularies.json';
+// Faceted search (v0.7.0, SOP Phase 20): AND-composed filters over the atomic edges,
+// backed by the same DataProvider.query semantics as the documented API patterns.
+const interactions=data.all().map(i=>({id:i.id,mimic:i.mimic,model:i.model,receiver:i.receiver,type:i.type,
+  evidence:i.evidence,kingdoms:i.kingdoms,modelKind:i.modelKind??'organism',modalities:i.modalities??[],
+  summary:i.summary,href:`/MimicryDB/interactions/${i.id.replace(':','-')}/`}));
+const facets={
+  type:[...new Set(interactions.map(i=>i.type))].sort(),
+  modality:vocab.signal_modality.map(t=>t.term).filter(m=>interactions.some(i=>i.modalities?.includes(m))),
+  evidence:['E4','E3','E2','E1','E0'],
+  modelKind:vocab.model_kind.map(t=>t.term),
+  kingdom:[...new Set(interactions.flatMap(i=>i.kingdoms.split(' → ').map(k=>k.trim())))].sort(),
+};
+const island=JSON.stringify({interactions,facets}).replace(/<\/script/gi,'<\\/script');
+const sel='bg-transparent border border-white/25 rounded-sm px-2 py-1.5 text-xs text-white focus:border-gold outline-none';
+const lab='block text-[0.65rem] uppercase tracking-[0.2em] text-slate-500 mb-2';
 ---
-<Layout><div class="container py-12"><h1 class="text-4xl font-bold">Search</h1><p class="mt-3">Scientific names first, then interactions (by ID or content), then references. Prototype search runs client-side over the labeled sample dataset.</p><form class="mt-6 flex gap-3" id="searchForm"><input id="q" type="search" class="card py-3 px-4 text-base w-full max-w-xl" placeholder="e.g. formicidae, MIMICRY:000002, orchid…" aria-label="Global search"/></form><div id="results" class="mt-8">{kinds.map(([kind,label])=><section class="mb-8" data-kind={kind}><h2 class="text-xl font-bold">{label}</h2><div class="mt-3 grid gap-2">{idx.filter(x=>x.kind===kind&&x.href).map(x=><a class="result card block text-ink hover:border-gold/60 py-3" data-kind={kind} data-text={x.text.toLowerCase()} href={x.href}><span class="font-semibold">{x.label}</span><span class="block text-sm text-slate-400">{x.meta}</span></a>)}</div><p class="none hidden text-sm text-slate-400 mt-2">No matches.</p></section>)}</div></div>
-<script>const q=document.getElementById('q') as HTMLInputElement;const sections=[...document.querySelectorAll('section[data-kind]')] as HTMLElement[];
-function apply(){const s=q.value.trim().toLowerCase();const url=new URL(location.href);
-if(s)url.searchParams.set('q',s);else url.searchParams.delete('q');history.replaceState(null,'',url);
-for(const sec of sections){let n=0;for(const a of sec.querySelectorAll('.result') as NodeListOf<HTMLElement>){
-const ok=!s||(a.dataset.text??'').includes(s);a.classList.toggle('hidden',!ok);if(ok)n++;}
-sec.querySelector('.none')!.classList.toggle('hidden',n>0);sec.classList.toggle('hidden',n===0&&!!s);}}
-q.addEventListener('input',apply);const initial=new URL(location.href).searchParams.get('q');if(initial){q.value=initial;}apply();</script>
-</Layout>
+<Layout title="Search · MimicryDB"><div class="container py-12"><h1 class="text-4xl font-bold">Search</h1>
+<p class="mt-3 max-w-2xl text-slate-400">Faceted search over the atomic interactions — compose filters with AND, inspect, export exactly the matching slice. Free text covers names, ids, receivers and summaries.</p>
+
+<div class="mt-8 grid gap-6 md:grid-cols-3 lg:grid-cols-6">
+<div><label class={lab} for="fq">Query</label><input id="fq" type="search" placeholder="formicidae, orchid…" class={sel+' w-full'}/></div>
+<div><label class={lab} for="ftype">Mimicry type</label><select id="ftype" class={sel+' w-full'}><option value="">All</option>{facets.type.map(t=><option value={t}>{t}</option>)}</select></div>
+<div><label class={lab} for="fmod">Modality</label><select id="fmod" class={sel+' w-full'}><option value="">All</option>{facets.modality.map(t=><option value={t}>{t}</option>)}</select></div>
+<div><label class={lab} for="fev">Min. evidence</label><select id="fev" class={sel+' w-full'}><option value="0">Any</option><option value="1">E1+</option><option value="2">E2+</option><option value="3">E3+</option><option value="4">E4</option></select></div>
+<div><label class={lab} for="fmk">Model side</label><select id="fmk" class={sel+' w-full'}><option value="">All</option>{facets.modelKind.map(t=><option value={t}>{t}</option>)}</select></div>
+<div><label class={lab} for="fkg">Kingdom</label><select id="fkg" class={sel+' w-full'}><option value="">All</option>{facets.kingdom.map(t=><option value={t}>{t}</option>)}</select></div>
+</div>
+<p class="mt-6 text-sm"><span id="count" class="font-semibold text-gold"></span> <button id="reset" class="ml-4 text-xs text-slate-400 underline">reset</button></p>
+<div class="mt-3 overflow-x-auto"><table class="data w-full"><thead><tr><th>record</th><th>mimic → model</th><th>type</th><th>evidence</th><th>flow</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="mt-6"><a id="dl" class="btn" download="mimicrydb-search-results.csv" href="#">Download these ↓ CSV</a></div>
+</div>
+<script type="application/json" id="sdata" set:html={island}/><script>
+const {interactions,facets}=JSON.parse(document.getElementById('sdata')!.textContent??'{}') as {interactions:any[];facets:any};
+const $=(id:string)=>document.getElementById(id) as HTMLInputElement|HTMLSelectElement|HTMLAnchorElement|HTMLElement;
+const els={q:$('fq') as HTMLInputElement,type:$('ftype') as HTMLSelectElement,mod:$('fmod') as HTMLSelectElement,ev:$('fev') as HTMLSelectElement,mk:$('fmk') as HTMLSelectElement,kg:$('fkg') as HTMLSelectElement};
+const rows=$('rows') as HTMLTableSectionElement; const count=$('count') as HTMLElement; const dl=$('dl') as HTMLAnchorElement;
+const esc=(v:string|null|undefined)=>(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const csvEsc=(v:string)=>/[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v;
+function hit(i:any):boolean{
+  const t=(els.q.value||'').trim().toLowerCase();
+  const okq=!t||[i.id,i.mimic,i.model,i.receiver,i.type,i.summary].join(' ').toLowerCase().includes(t);
+  const [mk,dk]=i.kingdoms.split(' → ').map((x:string)=>x.trim());
+  return okq&&(!els.type.value||i.type===els.type.value)
+    &&(!els.mod.value||i.modalities.includes(els.mod.value))
+    &&(+(i.evidence[1]??0)>=+(els.ev.value||0))
+    &&(!els.mk.value||i.modelKind===els.mk.value)
+    &&(!els.kg.value||mk===els.kg.value||dk===els.kg.value);
+}
+function apply(){
+  const f=interactions.filter(hit);
+  count.textContent=`${f.length} of ${interactions.length} interactions match`;
+  rows.innerHTML=f.map((i:any)=>`<tr><td class="mono text-xs"><a class="underline" href="${i.href}">${esc(i.id)}</a></td><td><em>${esc(i.mimic)}</em> <span class="text-coral">→</span> ${esc(i.model)}</td><td class="text-sm text-slate-400">${esc(i.type)}</td><td><span class="pill grade-${i.evidence}">${i.evidence}</span></td><td class="text-sm text-slate-400">${esc(i.kingdoms)}</td></tr>`).join('');
+  const header='public_id,mimic,model,receiver,type,signal_modalities,evidence_grade,kingdom_flow,model_kind,mimicry_summary,data_status';
+  const csv=header+'\n'+f.map((i:any)=>[i.id,i.mimic,i.model,i.receiver,i.type,i.modalities.join(';'),i.evidence,i.kingdoms,i.modelKind,i.summary,'DEMO'].map(csvEsc).join(',')).join('\n');
+  dl.href='data:text/csv;charset=utf-8,'+encodeURIComponent(csv);
+  const url=new URL(location.href);
+  for(const [k,el] of Object.entries(els)){const v=(el as HTMLInputElement).value;if(v)url.searchParams.set(k,v);else url.searchParams.delete(k);}
+  history.replaceState(null,'',url);
+}
+for(const el of Object.values(els)){el.addEventListener('input',apply);el.addEventListener('change',apply);}
+$('reset').addEventListener('click',()=>{for(const el of Object.values(els))(el as HTMLInputElement).value='';apply();});
+// URL state restore
+const p=new URL(location.href).searchParams;
+for(const [k,el] of Object.entries(els)){const v=p.get(k);if(v)(el as HTMLInputElement).value=v;}
+apply();
+</script></Layout>
