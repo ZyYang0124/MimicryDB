@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T07:45:49.363Z",
+  "generated": "2026-09-07T08:02:23.053Z",
   "policy": "literature_candidate corpus — discovery layer only; screening_status new → screened; irrelevant records are EXCLUDED with a reason, never deleted (SOP Phase 10).",
   "candidates": {
     "10.1016/j.foodhyd.2026.113278": {
@@ -734,6 +734,11 @@
           "method": "normalized_title",
           "confidence": 0.9,
           "matched_doi": "10.5281/zenodo.19862260"
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.5281/zenodo.17776605"
         }
       ]
     },
@@ -764,6 +769,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.17613/xd840-6v157"
         }
       ]
     },
@@ -793,6 +803,10 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9
         }
       ]
     },
@@ -822,6 +836,10 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9
         }
       ]
     },
@@ -852,6 +870,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1021/acs.jcim.6c01530"
         }
       ]
     },
@@ -882,6 +905,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1038/s41422-026-01287-9"
         }
       ]
     },
@@ -912,6 +940,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1007/s40267-026-01274-5"
         }
       ]
     },
@@ -942,6 +975,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.14740/jmc5364"
         }
       ]
     },
@@ -1265,6 +1303,731 @@
       "profile_version": "1.0.0",
       "discovered_at": "2026-09-06T07:45:52.446Z",
       "first_run": "RUN:202609060745:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.jbtep.2026.102134": {
+      "doi": "10.1016/j.jbtep.2026.102134",
+      "normalized_doi": "10.1016/j.jbtep.2026.102134",
+      "normalized_title": "gaze aversion and emotional mimicry deficits in individuals with schizophrenia during naturalistic interaction",
+      "title": "Gaze aversion and emotional mimicry deficits in individuals with schizophrenia during naturalistic interaction",
+      "abstract": null,
+      "authors": "Mathilde Parisi; Stéphane Raffard; Tifenn Fauviaux; Victor Vattier; Dorra Mrabet; Delphine Capdevielle; Jean Dumoncel; Christel Bidet Ildei; Ludovic Marin",
+      "journal": "Journal of Behavior Therapy and Experimental Psychiatry",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.jbtep.2026.102134",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.804Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.jbtep.2026.102134"
+        }
+      ]
+    },
+    "10.1016/j.talanta.2026.130313": {
+      "doi": "10.1016/j.talanta.2026.130313",
+      "normalized_doi": "10.1016/j.talanta.2026.130313",
+      "normalized_title": "trimetallic cofezn nanozymes with enhanced peroxidase mimetic activity for ultrasensitive electrochemical immunosensing of he4 toward ovarian cancer monitoring",
+      "title": "Trimetallic CoFeZn nanozymes with enhanced peroxidase-mimetic activity for ultrasensitive electrochemical immunosensing of HE4: Toward ovarian cancer monitoring",
+      "abstract": null,
+      "authors": "Xin Zhou; Zhicheng Zhao; Qing Wang; Peng Zhao; Jingli Shen; Tingting Zhou; Qingwu Tian; Chao Xuan; Deng Pan",
+      "journal": "Talanta",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.talanta.2026.130313",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.805Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.bioelechem.2026.109405": {
+      "doi": "10.1016/j.bioelechem.2026.109405",
+      "normalized_doi": "10.1016/j.bioelechem.2026.109405",
+      "normalized_title": "innovative zr mof driven ecl ret system highly specific rituximab detection with epitope mimetic peptide cn 14",
+      "title": "Innovative Zr-MOF-driven ECL-RET system: highly specific rituximab detection with epitope mimetic peptide CN-14",
+      "abstract": null,
+      "authors": "Mengyue Gan; Xuefei Gao; Lina Chen; Shaolong He; Jingyang Mou; Lingchen Meng; Hongwan Dang; Huiqin Yao",
+      "journal": "Bioelectrochemistry",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.bioelechem.2026.109405",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.806Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.avrs.2026.100420": {
+      "doi": "10.1016/j.avrs.2026.100420",
+      "normalized_doi": "10.1016/j.avrs.2026.100420",
+      "normalized_title": "mimetic birdsong affects automated bioacoustic species classification a case study using the northern mockingbird a ubiquitous north american mimic",
+      "title": "Mimetic birdsong affects automated bioacoustic species classification: A case study using the Northern Mockingbird, a ubiquitous North American mimic",
+      "abstract": null,
+      "authors": "Carmen S. Reisdorf; Andrew C. Kasner; Justin P. Wied; Jacquelyn K. Grace; X. Ben Wu",
+      "journal": "Avian Research",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.avrs.2026.100420",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.806Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.talanta.2026.130114": {
+      "doi": "10.1016/j.talanta.2026.130114",
+      "normalized_doi": "10.1016/j.talanta.2026.130114",
+      "normalized_title": "temperature responsive ptfe nanowire peroxidase mimetic array for colorimetric discrimination of biogenic amines",
+      "title": "Temperature-responsive PtFe nanowire peroxidase mimetic array for colorimetric discrimination of biogenic amines",
+      "abstract": null,
+      "authors": "Li Li; Xiang Zhang; Junli Wang; Zhengbo Chen",
+      "journal": "Talanta",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.talanta.2026.130114",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.807Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.colsurfa.2026.141429": {
+      "doi": "10.1016/j.colsurfa.2026.141429",
+      "normalized_doi": "10.1016/j.colsurfa.2026.141429",
+      "normalized_title": "cerium doped carbon dots as superoxide dismutase mimetic nanozymes for mitigating oxidative damage in aged soybean seeds",
+      "title": "Cerium-doped carbon dots as superoxide dismutase-mimetic nanozymes for mitigating oxidative damage in aged soybean seeds",
+      "abstract": null,
+      "authors": "Huiyu Zhao; Wei Zhu; Yuqing Sun; Ke Chen; Fang Zhang; Fengshou Wu",
+      "journal": "Colloids and Surfaces A: Physicochemical and Engineering Aspects",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.colsurfa.2026.141429",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.808Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.bioadv.2026.215113": {
+      "doi": "10.1016/j.bioadv.2026.215113",
+      "normalized_doi": "10.1016/j.bioadv.2026.215113",
+      "normalized_title": "engineered mxene based nanozyme platform nir ii photothermal and dual enzyme mimetic potentiated chemodynamic synergy for precision tumor eradication",
+      "title": "Engineered MXene-based nanozyme platform: NIR-II photothermal and dual enzyme-mimetic potentiated chemodynamic synergy for precision tumor eradication",
+      "abstract": null,
+      "authors": "Jingyi Peng; Shubin Li; Xuefeng Tang; Hanyu Liu; Jingjing Zhao; Changxin Shi; Xinyu Cui; Xiaojun Han",
+      "journal": "Biomaterials Advances",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.bioadv.2026.215113",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.808Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.ijpx.2026.100639": {
+      "doi": "10.1016/j.ijpx.2026.100639",
+      "normalized_doi": "10.1016/j.ijpx.2026.100639",
+      "normalized_title": "srt1720 loaded exosome mimetic nanovesicles promote mitophagy via sirt1 parkin activation to ameliorate diabetic cerebral infarction in a preclinical rat model",
+      "title": "SRT1720-loaded exosome-mimetic nanovesicles promote mitophagy via SIRT1/PARKIN activation to ameliorate diabetic cerebral infarction in a preclinical rat model",
+      "abstract": null,
+      "authors": "Qifeng Huang; Fang Zhao; Bo Sun; Xie Yang; Miao Chen",
+      "journal": "International Journal of Pharmaceutics: X",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.ijpx.2026.100639",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.808Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.jshs.2025.101092": {
+      "doi": "10.1016/j.jshs.2025.101092",
+      "normalized_doi": "10.1016/j.jshs.2025.101092",
+      "normalized_title": "kidney betaine a potential broad spectrum exercise mimetic against aging",
+      "title": "Kidney betaine: A potential broad spectrum exercise mimetic against aging",
+      "abstract": null,
+      "authors": "Hongyun Wang; Xiaoying Yang; Chi Jin; T Scott Bowen; Junjie Xiao",
+      "journal": "Journal of Sport and Health Science",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.jshs.2025.101092",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.809Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.cam.2026.117731": {
+      "doi": "10.1016/j.cam.2026.117731",
+      "normalized_doi": "10.1016/j.cam.2026.117731",
+      "normalized_title": "mimetic differences and variational approach to perona malik problem",
+      "title": "Mimetic differences and variational approach to Perona-Malik problem",
+      "abstract": null,
+      "authors": "H. Cuti Gutiérrez; M. Gonzales Herrera; César E. Torres Ledesma; L. Venturo Orbegoso",
+      "journal": "Journal of Computational and Applied Mathematics",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.cam.2026.117731",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.809Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.foodchem.2026.150936": {
+      "doi": "10.1016/j.foodchem.2026.150936",
+      "normalized_doi": "10.1016/j.foodchem.2026.150936",
+      "normalized_title": "multienzyme mimetic nanozym es for food safety detection cascade catalytic design activity regulation and sensing applications",
+      "title": "Multienzyme-mimetic nanozym es for food safety detection: Cascade catalytic design, activity regulation, and sensing applications",
+      "abstract": null,
+      "authors": "Chengyu Li; Yong Pan; Tingting Liu; Siyu Shen; Xiaofeng Hou; Xuedong Wang",
+      "journal": "Food Chemistry",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.foodchem.2026.150936",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.810Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.tice.2026.103721": {
+      "doi": "10.1016/j.tice.2026.103721",
+      "normalized_doi": "10.1016/j.tice.2026.103721",
+      "normalized_title": "hypoxia mimetic activation of hif 1 by a dmog loaded collagen scaffold enhances angiogenesis and tissue remodeling in type 2 diabetic wounds",
+      "title": "Hypoxia-mimetic activation of HIF-1α by a DMOG-loaded collagen scaffold enhances angiogenesis and tissue remodeling in type 2 diabetic wounds",
+      "abstract": null,
+      "authors": "Ahmed Hjazi",
+      "journal": "Tissue and Cell",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.tice.2026.103721",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.810Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.bioactmat.2026.05.025": {
+      "doi": "10.1016/j.bioactmat.2026.05.025",
+      "normalized_doi": "10.1016/j.bioactmat.2026.05.025",
+      "normalized_title": "mechanically preconditioned stem cells therapy using bioinspired liver mimetic microspheres for functional liver repair",
+      "title": "Mechanically preconditioned stem cells therapy using bioinspired liver-mimetic microspheres for functional liver repair",
+      "abstract": null,
+      "authors": "Tiantian Xue; Jiabin Zhang; Bin Wang; Fenfang Li; Guipan Chen; Yanteng Xu; Yuechen Luo; Jiali Sun; Yeh-Hsing Lao; Jin Wang; Haixia Wang; Enguo Ju; Xi Xie; Haochen Yao; Mingqiang Li; Yu Tao",
+      "journal": "Bioactive Materials",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.bioactmat.2026.05.025",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:21.811Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s10207-026-01323-0": {
+      "doi": "10.1007/s10207-026-01323-0",
+      "normalized_doi": "10.1007/s10207-026-01323-0",
+      "normalized_title": "phantom polymorphic honeytoken adaptation with narrative tailored organisational mimicry contextually convincing cyber deception at scale",
+      "title": "PHANTOM: polymorphic honeytoken adaptation with narrative-tailored organisational mimicry contextually convincing cyber deception at scale",
+      "abstract": null,
+      "authors": "Abraham Itzhak Weinberg",
+      "journal": "International Journal of Information Security",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s10207-026-01323-0",
+        "openalex": "https://openalex.org/W7160017524",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:22.858Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1186/s12862-026-02583-z": {
+      "doi": "10.1186/s12862-026-02583-z",
+      "normalized_doi": "10.1186/s12862-026-02583-z",
+      "normalized_title": "dynamic expression and functional transformation of microrna isoforms induced by osmotic stress in invasive ciona robusta",
+      "title": "Dynamic expression and functional transformation of microRNA isoforms induced by osmotic stress in invasive Ciona robusta",
+      "abstract": "Abstract Understanding the mechanisms underlying invasion success is crucial for addressing the rapidly increasing frequency of biological invasions and their escalating ecological and economic impacts worldwide. Phenotypic plasticity plays a crucial role in facilitating invasion success by enabling organisms to respond rapidly to environmental fluctuations. Among molecular regulators of such plasticity, microRNAs (miRNAs) mediate stress adaptation through post-transcriptional gene regulation. Increasing evidence suggests that a single miRNA locus can generate multiple variants (isomiRs), which may diversify regulatory functions and enhance environmental resilience. However, their expression dynamics and functional significance under environmental stress remain largely unexplored during biological invasions. Here, using the highly invasive ascidian Ciona robusta as a model, we examined the dynamic expression and functional divergence of miRNA isoforms in response to osmotic stress. Integrative analysis of miRNAome and transcriptome revealed 10 miRNAs that produced 5’ isomiRs with time-dependent and stress-specific expression patterns. Both canonical miRNAs and their isomiRs targeted overlapping yet distinct gene sets, particularly in pathways related to free amino acid metabolism and ion transport. Functional analysis demonstrated that isomiRs underwent neo-functionalization, sub-functionalization, or mixed functional shifts relative to their canonical counterparts, and in some cases exerted opposite regulatory effects on the same target genes. These results reveal that osmotic stress induces rapid diversification and functional transformation of miRNA isoforms, forming a flexible and dynamic regulatory network. Such plasticity in isomiR regulation likely contributes to enhanced stress tolerance and environmental adaptability, thereby promoting invasion success across diverse, harsh, or rapidly changing environments.",
+      "authors": "Weijie Yan; Ruiying Fu; Xuena Huang; Aibin Zhan",
+      "journal": "BMC Ecology and Evolution",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1186/s12862-026-02583-z",
+        "openalex": "https://openalex.org/W4416971066",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:22.858Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.mtchem.2026.104008": {
+      "doi": "10.1016/j.mtchem.2026.104008",
+      "normalized_doi": "10.1016/j.mtchem.2026.104008",
+      "normalized_title": "cerium single atom nanozyme resolves drug induced liver injury via broad spectrum ros scavenging and redox microenvironment reprogramming",
+      "title": "Cerium single-atom nanozyme resolves drug-induced liver injury via broad-spectrum ROS scavenging and redox microenvironment reprogramming",
+      "abstract": null,
+      "authors": "Pengxuan Zhao; Tiantian Wu; Shun Zhang; Chen Li; Penghui Wei; Yang Zhu",
+      "journal": "Materials Today Chemistry",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.mtchem.2026.104008",
+        "openalex": "https://openalex.org/W7208811989",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:22.859Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s12602-026-11199-0": {
+      "doi": "10.1007/s12602-026-11199-0",
+      "normalized_doi": "10.1007/s12602-026-11199-0",
+      "normalized_title": "scorpion peptides in antiviral drug discovery an in depth review",
+      "title": "Scorpion Peptides in Antiviral Drug Discovery: An In-depth Review",
+      "abstract": null,
+      "authors": "Mojtaba Memariani; Hamed Memariani",
+      "journal": "Probiotics and Antimicrobial Proteins",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s12602-026-11199-0",
+        "openalex": "https://openalex.org/W7208826058",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:22.860Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s12108-026-09704-7": {
+      "doi": "10.1007/s12108-026-09704-7",
+      "normalized_doi": "10.1007/s12108-026-09704-7",
+      "normalized_title": "emotions as lines a process sociology",
+      "title": "Emotions as Lines: A Process Sociology",
+      "abstract": "Abstract This article develops a sociological account of emotions as lines : dynamic processes that unfold over time, undergo interruptions, intensifications, and transformations, and become entangled with other emotional and social trajectories. Drawing on classical pragmatism and Ingold’s linealogy, it challenges static and substantialist accounts that treat emotions as discrete states or entities. Instead, emotions are understood as trajectories shaped through ongoing adjustments within conduct. The article advances three interconnected concepts—emotions as lines , correspondences , and meshworks —to show how affective life develops through relational entanglements, mutual responsiveness, and temporal continuity. By integrating insights from sociology, affect studies, developmental psychology, and process philosophy, it argues that emotions are best understood through their trajectories and practical effects rather than through their presumed foundations, offering a relational and process-oriented framework for the study of emotional experience.",
+      "authors": "Giacomo Lampredi",
+      "journal": "The American Sociologist",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s12108-026-09704-7",
+        "openalex": "https://openalex.org/W7208830476",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:22.860Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s00011-026-02357-9": {
+      "doi": "10.1007/s00011-026-02357-9",
+      "normalized_doi": "10.1007/s00011-026-02357-9",
+      "normalized_title": "synthetic viral rna mimetics induce neuronal loss through microglial phagocytosis",
+      "title": "Synthetic viral RNA mimetics induce neuronal loss through microglial phagocytosis",
+      "abstract": null,
+      "authors": "Katryna Pampuščenko; Silvija Jankevičiūtė; Danielius Umbrasas; Vilmantė Borutaitė",
+      "journal": "Inflammation Research",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s00011-026-02357-9",
+        "openalex": "https://openalex.org/W7208835604",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:22.861Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1002/cbic.70518": {
+      "doi": "10.1002/cbic.70518",
+      "normalized_doi": "10.1002/cbic.70518",
+      "normalized_title": "a small molecule substrate mimic to inhibit bacterial hsp70 chaperone function",
+      "title": "A Small Molecule Substrate Mimic to Inhibit Bacterial Hsp70 Chaperone Function",
+      "abstract": "Given the rapid spread of antibiotic resistance worldwide, it is imperative to develop new strategies against pathogenic bacteria. Here, we report a small-molecule inhibitor of bacterial heat shock protein 70 (Hsp70), called DnaK, a central component of the bacterial protein chaperone network. Screening of an in-house pyridylamide-based peptidomimetic library identified M7 as an inhibitor of DnaK ATPase and substrate refolding activity with intrinsic fluorescence properties. Mechanistic studies revealed that M7 likely engages the substrate-binding pocket of DnaK. Treatment of bacterial cells with M7 led to the accumulation of σ-32, without affecting protein translation, consistent with impaired DnaK function. Microscopy images of Escherichia coli AS19 cells treated with M7 revealed filamentous growth, a phenotypic defect consistent with compromised DnaK function. Moreover, M7 effectively inhibited the growth of E. coli AS19 and some Gram-positive bacteria, including Staphylococcus aureus and Bacillus cereus. These findings highlight a promising class of peptidomimetic DnaK inhibitors as potential antibacterial agents, as well as a chemical biology tool to interrogate the broader network of chaperone-mediated protein folding.",
+      "authors": "Tulsi Upadhyay; Reshma Kumari; Yogesh M. Gangarde; Upasana S. Potteth; Rishij Roychowdhury; Anirban Das; Deepanshi Saxena; Rahul Maitra; Sidharth Chopra; Ishu Saraogi",
+      "journal": "ChemBioChem",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1002/cbic.70518",
+        "openalex": "https://openalex.org/W4412635520",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:22.861Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s41540-026-00822-z": {
+      "doi": "10.1038/s41540-026-00822-z",
+      "normalized_doi": "10.1038/s41540-026-00822-z",
+      "normalized_title": "comparative modelling of large scale 3d genome re arrangements in different viral infections",
+      "title": "Comparative modelling of large-scale 3D genome re-arrangements in different viral infections",
+      "abstract": "Abstract Viruses can re-structure the architecture of host cells genome and also alter their epigenomic landscape. In this study, we investigate with polymer physics modelling virus induced genome re-organization by using available datasets from different viral infections causing: COVID-19 syndrome (SARS-CoV-2 virus), human common cold (HCoV-OC43 virus) and avian influenza (IAV-H5N1 virus). By combining recent experimental Hi-C data from virally infected human cells with in-silico polymer models, we find that each pathogen induces peculiar re-structuring at the level of A/B compartments, which can be encoded by pathogen specific re-modulations of protein-chromatin binding affinities. Specifically, more pronounced effects are observed in SARS-CoV-2 and IAV-H5N1 infected cells, where a generally enhanced A/B mixing is observed, whose symmetry degree depends on the infection. On the other hand, HCoV-OC43 infection exhibits comparatively milder effects. Overall, our results suggest that viruses associated with more severe disease phenotypes could induce deeper, large-scale chromatin architectural changes.",
+      "authors": "Andrea Fontana; Simona Bianco; Andrea Esposito; Andrea M. Chiariello",
+      "journal": "npj Systems Biology and Applications",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s41540-026-00822-z",
+        "openalex": "https://openalex.org/W7154583038",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:22.861Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.17129/botsci.3880": {
+      "doi": "10.17129/botsci.3880",
+      "normalized_doi": "10.17129/botsci.3880",
+      "normalized_title": "an lisis del rea de distribuci n del g nero dendrophthora santalaceae en cuba",
+      "title": "Análisis del área de distribución del género Dendrophthora (Santalaceae) en Cuba",
+      "abstract": "Antecedentes: En Cuba los estudios de distribución del género Dendrophthora se restringen a la distribución geográfica y por formaciones vegetales de sus especies, con mención de preferencias por algún hospedero. La presencia de numerosos especímenes de herbario, junto al trabajo de campo, permite actualizar el tratamiento taxonómico y por lo tanto el área de distribución de sus especies. Preguntas: ¿Cuáles son los patrones que caracterizan a las especies de Dendrophthora en su área de distribución en Cuba (distribución por regiones, hábitat, gradiente altitudinal y afinidad por hospederos)? Especies estudiadas: especies del género Dendrophthora. Sitio y año de estudio: Cuba, 1914-2025. Métodos: Se georreferenciaron los registros de presencia de las especies y de cada una se determinó la distribución geográfica por macrorregiones y regiones, así como la altitud, por formaciones vegetales y las relaciones con sus hospederos. Resultados: Las 26 especies de Dendrophthora en Cuba están distribuidas por todo el país, con 12 endemismos y las nativas están compartidas con otras Antillas. La mayoría de sus especies presentan un amplio rango de distribución altitudinal y habitan en el matorral xeromorfo subespinoso sobre serpentina y el bosque pluvial montano. La polifagia es predominante y todas las especies prefieren hospederos endémicos. Conclusiones: Se actualizó el área de distribución de Dendrophthora en Cuba, se obtuvieron los mapas de distribución geográfica actual para todas sus especies, la altitud en la que se encuentran y se reevaluó su presencia en las formaciones vegetales. Se determinaron los patrones de afinidad y preferencias por sus hospederos.",
+      "authors": "Eddy Martínez Quesada; Eldis R. Bécquer; Ernesto Testé",
+      "journal": "Botanical Sciences",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.17129/botsci.3880",
+        "openalex": "https://openalex.org/W7208705843",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:22.862Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1002/sce.70097": {
+      "doi": "10.1002/sce.70097",
+      "normalized_doi": "10.1002/sce.70097",
+      "normalized_title": "who can afford to fail investigating science students perceptions of failure through the lens of their identities",
+      "title": "Who Can Afford to Fail? Investigating Science Students' Perceptions of Failure Through the Lens of Their Identities",
+      "abstract": "ABSTRACT Scientists agree that learning to cope with failures is an important skill for science students to develop, and students who participate in science research often have positive outcomes after coping with science failures. However, the experience of failure in undergraduate science education more broadly seems to have an overall negative impact on students, particularly those who hold minoritized identities in STEM settings. Past work centering on failure has rarely directly addressed the role that students’ identities play in shaping students’ coping and outcomes of STEM failure experiences. This leaves the following question unanswered: How do students see their identities as informing their perception of failure in science settings? We asked undergraduate science students enrolled in course‐based undergraduate research experiences to reflect on the relationship between their identities and their view or experience of failure within the course. Guided by hermeneutic phenomenology principles in research design, we used intersectionality theory and phenomenological variant of ecological systems theory in concert to collect and thematically analyze student survey responses. From this, we distilled five novel themes that add to prior work. These themes share how students see their identities as vulnerabilities in encountering failure as well as strengths. Notably, students holding identities that can remain undisclosed recognize the privilege they have in navigating failure, above and beyond those who hold visible minoritized identities.",
+      "authors": "Sandhya Krishnan; Isobel D Cobb; Joseph A. Harsh; Manuela Mejia; Lisa A. Corwin",
+      "journal": "Science Education",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1002/sce.70097",
+        "openalex": "https://openalex.org/W7208709466",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:22.862Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.3389/fnsyn.2026.1949833": {
+      "doi": "10.3389/fnsyn.2026.1949833",
+      "normalized_doi": "10.3389/fnsyn.2026.1949833",
+      "normalized_title": "sleep disturbances as an early indicator of psychotic disorders in adolescents and young adults",
+      "title": "Sleep disturbances as an early indicator of psychotic disorders in adolescents and young adults",
+      "abstract": "Sleep disturbances are increasingly recognized as clinically relevant markers in the early detection of psychotic disorders among adolescents and young adults. These disturbances, including insomnia, circadian rhythm disruptions, parasomnias, and fragmented sleep, affect up to 70% of individuals at clinical high risk for psychosis, rising to 80% in fully developed schizophrenia. This review synthesizes current evidence on the relationship between sleep problems and early psychotic symptoms, emphasizing their potential as observable and possibly modifiable indicators of illness onset. Neurobiological mechanisms suggest overlapping pathways for both sleep problems and the development of psychotic symptoms involving dopaminergic, serotonergic, and hormonal dysregulation, which are additionally exacerbated by psychological factors such as stress, substance use, and poor sleep hygiene. Screening methods, such as self-report questionnaires, actigraphy, and polysomnography, have demonstrated utility in identifying individuals at risk. Furthermore, sleep-focused interventions, particularly cognitive behavioral therapy, show promise in alleviating both sleep and psychiatric symptoms. Despite methodological limitations of available research, including heterogeneous study designs and short follow-ups, sleep assessment can represent a low-cost, scalable tool for early intervention. Future research should prioritize longitudinal, multimodal studies and explore personalized, sleep-centered preventive strategies. Furthermore, sleep disorders could be considered not only as early signs of developing psychosis but also as a potential therapeutic target in psychosis prevention.",
+      "authors": "Julia Jaromirska; Dominik Strzelecki; Magdalena Kotlicka-Antczak; Piotr Białasiewicz; Agata Gabryelska",
+      "journal": "Frontiers in Synaptic Neuroscience",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.3389/fnsyn.2026.1949833",
+        "openalex": "https://openalex.org/W7208709628",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-07T08:02:22.863Z",
+      "first_run": "RUN:202609070802:MIMICRY_GENERAL_OPENALEX:op",
       "screening_status": "new",
       "relevance_score": null,
       "exclusion_reason": null,
