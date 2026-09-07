@@ -1,0 +1,108 @@
+vocabulary,term_id,term,label,parent,definition,ontology_version
+mimicry_type,TERM:MIMICRY_TYPE:BATESIAN,batesian,Batesian mimicry,protective,"A palatable or harmless mimic resembles an unpalatable or dangerous model, deceiving predators that have learned to avoid the model.",1.1
+mimicry_type,TERM:MIMICRY_TYPE:MULLERIAN,mullerian,Müllerian mimicry,protective,"Two or more defended species converge on a shared warning signal, spreading the cost of predator education among them.",1.1
+mimicry_type,TERM:MIMICRY_TYPE:MERTENSIAN,mertensian,Mertensian mimicry,protective,"A more deadly species mimics a less dangerous one, hypothesised to arise when moderately venomous prey benefits from mimicking a milder model.",1.1
+mimicry_type,TERM:MIMICRY_TYPE:AGGRESSIVE,aggressive,Aggressive mimicry,,A predator or parasite resembles a harmless or attractive signal-bearer to approach its own prey or hosts.,1.1
+mimicry_type,TERM:MIMICRY_TYPE:REPRODUCTIVE,reproductive,Reproductive mimicry,,"Mimicry that exploits the reproductive behaviour of another species, typically by imitating mates or reproductive resources.",1.1
+mimicry_type,TERM:MIMICRY_TYPE:SEXUAL_DECEPTION,sexual_deception,Sexual deception,reproductive,"A mimic imitates the mate or mating signals of its receiver (often chemically and visually) to exploit their mating behaviour, as in pollinator sexual deception.",1.1
+mimicry_type,TERM:MIMICRY_TYPE:BROOD,brood,Brood mimicry,reproductive,"A mimic exploits the parental care of another species, as in brood parasitism where the parasite's offspring are reared by the host.",1.1
+mimicry_type,TERM:MIMICRY_TYPE:EGG,egg,Egg mimicry,brood,"Mimicry of host eggs by a brood parasite's egg, reducing rejection by the incubating host.",1.1
+mimicry_type,TERM:MIMICRY_TYPE:SOCIAL,social,Social mimicry,,A mimic infiltrates a social species' colony by imitating its members or their chemical identity.,1.1
+mimicry_type,TERM:MIMICRY_TYPE:PARASITIC,parasitic,Parasitic mimicry,social,A social parasite mimics its host species to gain acceptance inside the host colony or family unit.,1.1
+mimicry_type,TERM:MIMICRY_TYPE:FLORAL,floral,Floral mimicry,reproductive,"A mimic imitates the flowers or floral signals of another species to attract pollinators without offering a reward, or a plant imitates insect signals.",1.1
+mimicry_type,TERM:MIMICRY_TYPE:FOOD_DECEPTION,food_deception,Food deception,reproductive,A mimic imitates food or food-related signals to exploit the foraging behaviour of receivers.,1.1
+mimicry_type,TERM:MIMICRY_TYPE:PROTECTIVE,protective,Protective mimicry,,Mimicry in which the mimic gains protection from predation or aggression by resembling something the receiver avoids or ignores.,1.1
+mimicry_type,TERM:MIMICRY_TYPE:AUTOMIMICRY,automimicry,Automimicry,,"Within one species, palatable individuals or body parts resemble unpalatable ones, so the receiver cannot distinguish them.",1.1
+mimicry_type,TERM:MIMICRY_TYPE:MASQUERADE,masquerade,Masquerade,,"A mimic prevents recognition as prey by resembling an inedible object or organism of no interest to the receiver, rather than a warning signal.",1.1
+mimicry_type,TERM:MIMICRY_TYPE:UNCERTAIN,uncertain,Uncertain,,The mimicry interpretation is unclear or contested — recorded with the dispute visible.,1.1
+mimicry_type,TERM:MIMICRY_TYPE:OTHER,other,Other,,A mimicry pattern that does not fit the established categories.,1.1
+signal_modality,TERM:SIGNAL_MODALITY:VISUAL,visual,Visual,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:MORPHOLOGICAL,morphological,Morphological,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:COLOUR,colour,Colour,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:PATTERN,pattern,Pattern,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:BEHAVIOURAL,behavioural,Behavioural,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:LOCOMOTOR,locomotor,Locomotor,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:ACOUSTIC,acoustic,Acoustic,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:CHEMICAL,chemical,Chemical,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:OLFACTORY,olfactory,Olfactory,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:TACTILE,tactile,Tactile,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:VIBRATIONAL,vibrational,Vibrational,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:MULTIMODAL,multimodal,Multimodal,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:UNKNOWN,unknown,Unknown,,,1.1
+signal_modality,TERM:SIGNAL_MODALITY:OTHER,other,Other,,,1.1
+model_kind,TERM:MODEL_KIND:ORGANISM,organism,Another organism (species/taxon as model),,,1.1
+model_kind,TERM:MODEL_KIND:ENVIRONMENT,environment,"Environment or background (foliage, bark, sand, water)",,,1.1
+model_kind,TERM:MODEL_KIND:OBJECT,object,"Inanimate object (bird droppings, stones, dew)",,,1.1
+model_kind,TERM:MODEL_KIND:SELF,self,Same species / self (automimicry contexts),,,1.1
+model_kind,TERM:MODEL_KIND:UNKNOWN,unknown,Unknown,,,1.1
+model_kind,TERM:MODEL_KIND:OTHER,other,Other,,,1.1
+receiver_role,TERM:RECEIVER_ROLE:PREDATOR,predator,Predator,,,1.1
+receiver_role,TERM:RECEIVER_ROLE:PREY,prey,Prey,,,1.1
+receiver_role,TERM:RECEIVER_ROLE:POLLINATOR,pollinator,Pollinator,,,1.1
+receiver_role,TERM:RECEIVER_ROLE:MATE,mate,Mate,,,1.1
+receiver_role,TERM:RECEIVER_ROLE:HOST,host,Host,,,1.1
+receiver_role,TERM:RECEIVER_ROLE:PARASITE,parasite,Parasite,,,1.1
+receiver_role,TERM:RECEIVER_ROLE:COMPETITOR,competitor,Competitor,,,1.1
+receiver_role,TERM:RECEIVER_ROLE:HERBIVORE,herbivore,Herbivore,,,1.1
+receiver_role,TERM:RECEIVER_ROLE:SOCIAL_PARTNER,social_partner,Social partner,,,1.1
+receiver_role,TERM:RECEIVER_ROLE:UNKNOWN,unknown,Unknown,,,1.1
+receiver_role,TERM:RECEIVER_ROLE:OTHER,other,Other,,,1.1
+interaction_status,TERM:INTERACTION_STATUS:UNDEFINED,,,,,1.1
+interaction_status,TERM:INTERACTION_STATUS:UNDEFINED,,,,,1.1
+interaction_status,TERM:INTERACTION_STATUS:UNDEFINED,,,,,1.1
+interaction_status,TERM:INTERACTION_STATUS:UNDEFINED,,,,,1.1
+interaction_status,TERM:INTERACTION_STATUS:UNDEFINED,,,,,1.1
+interaction_status,TERM:INTERACTION_STATUS:UNDEFINED,,,,,1.1
+interaction_status,TERM:INTERACTION_STATUS:UNDEFINED,,,,,1.1
+interaction_status,TERM:INTERACTION_STATUS:UNDEFINED,,,,,1.1
+knowledge_status,TERM:KNOWLEDGE_STATUS:UNDEFINED,,,,,1.1
+knowledge_status,TERM:KNOWLEDGE_STATUS:UNDEFINED,,,,,1.1
+knowledge_status,TERM:KNOWLEDGE_STATUS:UNDEFINED,,,,,1.1
+evidence_grade,TERM:EVIDENCE_GRADE:UNDEFINED,,,,,1.1
+evidence_grade,TERM:EVIDENCE_GRADE:UNDEFINED,,,,,1.1
+evidence_grade,TERM:EVIDENCE_GRADE:UNDEFINED,,,,,1.1
+evidence_grade,TERM:EVIDENCE_GRADE:UNDEFINED,,,,,1.1
+evidence_grade,TERM:EVIDENCE_GRADE:UNDEFINED,,,,,1.1
+claim_role,TERM:CLAIM_ROLE:MIMIC_RESEMBLANCE,mimic-resemblance,Mimic resemblance,,,1.1
+claim_role,TERM:CLAIM_ROLE:MODEL_IDENTITY,model-identity,Model identity,,,1.1
+claim_role,TERM:CLAIM_ROLE:RECEIVER_RESPONSE,receiver-response,Receiver response,,,1.1
+claim_role,TERM:CLAIM_ROLE:MECHANISM,mechanism,Mechanism,,,1.1
+claim_role,TERM:CLAIM_ROLE:DISTRIBUTION,distribution,Distribution / sympatry,,,1.1
+claim_role,TERM:CLAIM_ROLE:TAXONOMY,taxonomy,Taxonomy,,,1.1
+entity_type,TERM:ENTITY_TYPE:TAXON,taxon,Taxon (standardized name usage),,,1.1
+entity_type,TERM:ENTITY_TYPE:ORGANISM,organism,Organism (individual or life-form),,,1.1
+entity_type,TERM:ENTITY_TYPE:SEX,sex,Sex-specific form,,,1.1
+entity_type,TERM:ENTITY_TYPE:LIFE_STAGE,life_stage,"Life stage (egg, larva, nymph, adult…)",,,1.1
+entity_type,TERM:ENTITY_TYPE:ANATOMICAL_STRUCTURE,anatomical_structure,Anatomical structure,,,1.1
+entity_type,TERM:ENTITY_TYPE:SIGNAL,signal,"Signal (colour patch, pheromone, flash pattern…)",,,1.1
+entity_type,TERM:ENTITY_TYPE:ENVIRONMENTAL_OBJECT,environmental_object,"Environmental object (bird dropping, twig, leaf…)",,,1.1
+entity_type,TERM:ENTITY_TYPE:BIOLOGICAL_MATERIAL,biological_material,"Biological material (faeces, silk, wax…)",,,1.1
+entity_type,TERM:ENTITY_TYPE:FUNCTIONAL_CLASS,functional_class,Functional class (descriptive model class),,,1.1
+entity_type,TERM:ENTITY_TYPE:UNRESOLVED,unresolved,Unresolved,,,1.1
+evidence_dimension,TERM:EVIDENCE_DIMENSION:RESEMBLANCE,resemblance,Phenotypic resemblance,,,1.1
+evidence_dimension,TERM:EVIDENCE_DIMENSION:MODEL_IDENTITY,model_identity,Model identity,,,1.1
+evidence_dimension,TERM:EVIDENCE_DIMENSION:RECEIVER_IDENTITY,receiver_identity,Receiver identity,,,1.1
+evidence_dimension,TERM:EVIDENCE_DIMENSION:RECEIVER_PERCEPTION,receiver_perception,Receiver perception,,,1.1
+evidence_dimension,TERM:EVIDENCE_DIMENSION:RECEIVER_RESPONSE,receiver_response,Receiver response,,,1.1
+evidence_dimension,TERM:EVIDENCE_DIMENSION:FITNESS_CONSEQUENCE,fitness_consequence,Fitness consequence,,,1.1
+evidence_dimension,TERM:EVIDENCE_DIMENSION:GEOGRAPHIC_OVERLAP,geographic_overlap,Geographic overlap / sympatry,,,1.1
+evidence_dimension,TERM:EVIDENCE_DIMENSION:TEMPORAL_OVERLAP,temporal_overlap,Temporal overlap,,,1.1
+evidence_dimension,TERM:EVIDENCE_DIMENSION:MECHANISM,mechanism,Mechanism,,,1.1
+evidence_dimension,TERM:EVIDENCE_DIMENSION:SIGNAL_CHARACTERIZATION,signal_characterization,Signal characterization,,,1.1
+support_direction,TERM:SUPPORT_DIRECTION:SUPPORTS,supports,Supports the claim,,,1.1
+support_direction,TERM:SUPPORT_DIRECTION:CONTRADICTS,contradicts,Contradicts the claim,,,1.1
+support_direction,TERM:SUPPORT_DIRECTION:MIXED,mixed,Mixed evidence,,,1.1
+support_direction,TERM:SUPPORT_DIRECTION:UNCERTAIN,uncertain,Uncertain / inconclusive,,,1.1
+system_type,TERM:SYSTEM_TYPE:RING,ring,Müllerian ring / multi-species ring,,,1.1
+system_type,TERM:SYSTEM_TYPE:COMPLEX,complex,Species complex centred on one lineage,,,1.1
+system_type,TERM:SYSTEM_TYPE:POLYMORPHIC,polymorphic,Polymorphic mimicry system,,,1.1
+system_type,TERM:SYSTEM_TYPE:SERIES,series,Hierarchical series of models,,,1.1
+system_type,TERM:SYSTEM_TYPE:OTHER,other,Other grouping,,,1.1
+model_resolution,TERM:MODEL_RESOLUTION:SPECIES,species,Resolved to species,,,1.1
+model_resolution,TERM:MODEL_RESOLUTION:GENUS,genus,Resolved to genus,,,1.1
+model_resolution,TERM:MODEL_RESOLUTION:FAMILY,family,Resolved to family,,,1.1
+model_resolution,TERM:MODEL_RESOLUTION:HIGHER_TAXON,higher_taxon,Higher taxon only,,,1.1
+model_resolution,TERM:MODEL_RESOLUTION:FUNCTIONAL_GROUP,functional_group,Functional group,,,1.1
+model_resolution,TERM:MODEL_RESOLUTION:OBJECT,object,Inanimate object,,,1.1
+model_resolution,TERM:MODEL_RESOLUTION:SIGNAL,signal,Signal only (not the signal-bearer),,,1.1
+model_resolution,TERM:MODEL_RESOLUTION:UNKNOWN,unknown,Unknown,,,1.1

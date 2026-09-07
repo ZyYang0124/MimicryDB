@@ -1,0 +1,29 @@
+scientific_name,as_mimic,as_model,lineages
+Myia fugax,1,0,Animalia
+Formicidae,0,1,Animalia
+Ophrys apifera,1,0,Plantae
+female bee,0,1,Animalia
+Erythrolamprus aesculapii,1,0,Animalia
+Micrurus,0,1,Animalia
+Cuculus canorus,1,0,Animalia
+Acrocephalus scirpaceus (eggs),0,1,Animalia
+Photuris versicolor,1,0,Animalia
+Photinus (flash signals),0,1,Animalia
+Plagiotremus rhinorhynchos,1,0,Animalia
+Labroides dimidiatus,0,1,Animalia
+Heliconius melpomene,1,1,Animalia
+Heliconius erato,1,1,Animalia
+Boquila trifoliolata,1,0,Plantae
+neighbouring plant leaves,0,1,Plantae
+Puccinia monoica,1,0,Fungi
+flowering plant inflorescences,0,1,Plantae
+Myrmarachne plataleoides,1,0,Animalia
+Oecophylla smaragdina,0,1,Animalia
+Eristalis tenax,1,0,Animalia
+Apis mellifera,0,1,Animalia
+Limenitis archippus,1,0,Animalia
+Danaus plexippus,0,1,Animalia
+Extatosoma tiaratum,1,0,Animalia
+foliage and twigs,0,1,environment
+Phrynarachne,1,0,Animalia
+bird droppings,0,1,object
