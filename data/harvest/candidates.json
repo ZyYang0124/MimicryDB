@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-07T08:02:23.053Z",
+  "generated": "2026-09-14T08:39:45.261Z",
   "policy": "literature_candidate corpus — discovery layer only; screening_status new → screened; irrelevant records are EXCLUDED with a reason, never deleted (SOP Phase 10).",
   "candidates": {
     "10.1016/j.foodhyd.2026.113278": {
@@ -807,6 +807,10 @@
         {
           "method": "normalized_title",
           "confidence": 0.9
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9
         }
       ]
     },
@@ -836,6 +840,10 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9
         },
         {
           "method": "normalized_title",
@@ -1375,6 +1383,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.talanta.2026.130313"
         }
       ]
     },
@@ -1405,6 +1418,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.bioelechem.2026.109405"
         }
       ]
     },
@@ -1435,6 +1453,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.avrs.2026.100420"
         }
       ]
     },
@@ -1465,6 +1488,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.talanta.2026.130114"
         }
       ]
     },
@@ -1495,6 +1523,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.colsurfa.2026.141429"
         }
       ]
     },
@@ -1525,6 +1558,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.bioadv.2026.215113"
         }
       ]
     },
@@ -1555,6 +1593,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.ijpx.2026.100639"
         }
       ]
     },
@@ -1585,6 +1628,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.jshs.2025.101092"
         }
       ]
     },
@@ -1615,6 +1663,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.cam.2026.117731"
         }
       ]
     },
@@ -1645,6 +1698,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.foodchem.2026.150936"
         }
       ]
     },
@@ -1675,6 +1733,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.tice.2026.103721"
         }
       ]
     },
@@ -2028,6 +2091,516 @@
       "profile_version": "1.0.0",
       "discovered_at": "2026-09-07T08:02:22.863Z",
       "first_run": "RUN:202609070802:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.nantod.2026.103172": {
+      "doi": "10.1016/j.nantod.2026.103172",
+      "normalized_doi": "10.1016/j.nantod.2026.103172",
+      "normalized_title": "tumor microenvironment activatable virus mimetic reactors reprogram cell fate defining repressive epigenetic machineries to augment radio immunotherapy",
+      "title": "Tumor microenvironment-activatable virus-mimetic reactors reprogram cell fate-defining repressive epigenetic machineries to augment radio-immunotherapy",
+      "abstract": null,
+      "authors": "Qiqi Zhang; Xuemei Yao; Xiyuan Li; Yifeng Yang; Zhong Luo; Menghuan Li",
+      "journal": "Nano Today",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.nantod.2026.103172",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:44.293Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.17613/yatd0-g6635": {
+      "doi": "10.17613/yatd0-g6635",
+      "normalized_doi": "10.17613/yatd0-g6635",
+      "normalized_title": "sign language linguistic knowledge perceived difficulty and accessibility a questionnaire study among secondary school students",
+      "title": "Sign Language Linguistic Knowledge, Perceived Difficulty, and Accessibility: A Questionnaire Study Among Secondary School Students",
+      "abstract": "This study examines changes in secondary school students' perception of the difficulty of Chinese Sign Language (CSL), and analyzes the suggestions proposed by participants. Through a questionnaire survey, data on sign language awareness were collected from 184 secondary school students. The results indicate that although most students had been exposed to sign language through online platforms, public welfare activities, and other channels, their perception of its difficulty shifted noticeably after exposure to basic sign language linguistics. Notably, students commonly reported that their unfamiliarity with sign language stemmed primarily from a lack of formal learning platforms.",
+      "authors": "Zilin Sun",
+      "journal": null,
+      "year": 2026,
+      "ids": {
+        "crossref": "10.17613/yatd0-g6635",
+        "openalex": "https://openalex.org/W7204193262",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:44.999Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1021/acsnano.6c05500": {
+      "doi": "10.1021/acsnano.6c05500",
+      "normalized_doi": "10.1021/acsnano.6c05500",
+      "normalized_title": "scavenger receptor class b type 1 mediated transport enables delivery across capillarized liver sinusoids in metabolic dysfunction associated steatohepatitis",
+      "title": "Scavenger Receptor Class B Type 1 Mediated Transport Enables Delivery Across Capillarized Liver Sinusoids in Metabolic Dysfunction-Associated Steatohepatitis",
+      "abstract": "Abstract Liver fibrosis in metabolic dysfunction associated steatohepatitis (MASH) lacks effective therapies, in part because therapeutic agents poorly penetrate the capillarized sinusoidal endothelium. As fibrosis progresses, liver sinusoidal endothelial cells (LSECs) become defenestrated and restrict trans-sinusoidal exchange, thereby limiting drug access to hepatic stellate cells (HSCs) within the perisinusoidal space. Here, we developed a lipoprotein mimetic liposomal nanocarrier, SV@SRB-Lip, to exploit scavenger receptor class B type 1 (SR-B1)-associated transendothelial transport across capillarized LSECs and enhance downstream delivery toward HSC-associated fibrotic regions. SV@SRB-Lip was engineered as a simvastatin loaded liposomal platform incorporating an ApoA-I-mimetic SRB peptide, an MMP-responsive linker, and a vitamin A modified lipid moiety. SV@SRB-Lip promoted transport across the LSEC monolayer in vitro, and this effect was reduced by SR-B1 silencing, supporting the involvement of SR-B1-associated endothelial transport. In MASH mice, SV@SRB-Lip enhanced hepatic delivery and distributed toward HSC associated fibrotic regions. The MMP-responsive design increased the relative accessibility of vitamin A within the fibrotic microenvironment, supporting downstream HSC associated uptake. As a result, SV@SRB-Lip increased hepatic simvastatin accumulation, suppressed HSC activation and collagen deposition, and improved MASH associated fibrosis. These findings suggest that SR-B1-associated endothelial transport can be harnessed to overcome the capillarized sinusoidal barrier and improve antifibrotic nanomedicine delivery in MASH.",
+      "authors": "Ruyan Yuan; Jiamin Zhang; Yamei Huang; Yiyang Meng; Siyan Liu; Wanqing Yang; Xinru Zhang; Mengyu Yang; Menglei Liang; Yipei Huang; Chang Liu; Zhaoxia Cheng; Xiaotian Li; Cong Wang; Jundong Yao; Xiao Zhang; Dongdong Zhang; Ying Zhao; Fenfen Li; Lei Wang",
+      "journal": "ACS Nano",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1021/acsnano.6c05500",
+        "openalex": "https://openalex.org/W7212418883",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.000Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.21275/sr26826143650": {
+      "doi": "10.21275/sr26826143650",
+      "normalized_doi": "10.21275/sr26826143650",
+      "normalized_title": "clinical spectrum and electroencephalographic correlation in subacute sclerosing panencephalitis a case series",
+      "title": "Clinical Spectrum and Electroencephalographic Correlation in Subacute Sclerosing Panencephalitis: A Case Series",
+      "abstract": "Background: Subacute Sclerosing Panencephalitis (SSPE) is a fatal, progressive neurodegenerative disorder caused by persistent, aberrant measles virus infection in the central nervous system. Characterized by cognitive deterioration, behavioral abnormalities, progressive motor deficit, and stereotyped slow myoclonic jerks, its clinical hallmarks are intricately linked to classic electroencephalographic (EEG) periodic slow-wave complexes (Radermecker complexes). Case Presentation: We report a series of four distinct clinical presentations of SSPE Case 1 describes a 20-year-old male with initial focal myoclonic seizures, asymmetric hemiparesis, cognitive decline, subsequent progression to generalized myoclonus, and typical generalized Radermecker complexes post-intrathecal interferon-alpha therapy. Case 2 illustrates an unimmunized 10-year-old boy presenting with classic scholastic failure, prominent axial and proximal appendicular slow myoclonus, gait impairment, and stereotypic high-voltage periodic slow complexes. Case 3 details an 18-year-old female with a confounding history of hydrocephalus requiring surgical decompression, presenting with scholastic decline, periodic slow-wave discharges, and slow myoclonus. Case 4 outlines an atypical, protracted decade-long course in a 20-year-old male misdiagnosed with primary psychiatric illness and movement disorders before presenting with severe cognitive failure, gait cessation, and classic periodic discharges. Discussion & Conclusion: These cases demonstrate the broad phenotypic spectrum of SSPE-spanning classic juvenile presentation, focal onset, neurosurgical confounders, and protracted psychiatric-extrapyramidal masquerades. Electroencephalography remains the pivotal real-time neurophysiological biomarker. Early clinico-electrophysiological suspicion is mandatory to avoid catastrophic diagnostic delays.",
+      "authors": "Sansmon Thomas; N Veena; G Sree Ranga Lakshmi",
+      "journal": "International Journal of Science and Research (IJSR)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.21275/sr26826143650",
+        "openalex": "https://openalex.org/W7212420319",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.002Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1080/01676830.2026.2732091": {
+      "doi": "10.1080/01676830.2026.2732091",
+      "normalized_doi": "10.1080/01676830.2026.2732091",
+      "normalized_title": "primary orbital liposarcoma masquerading as thyroid associated orbitopathy",
+      "title": "Primary orbital liposarcoma masquerading as thyroid-associated orbitopathy",
+      "abstract": null,
+      "authors": "Namita Kumari; Arpan Gandhi; Sima Das",
+      "journal": "Orbit",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1080/01676830.2026.2732091",
+        "openalex": "https://openalex.org/W7212426583",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.002Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.7860/njlm/2026/88297.3006": {
+      "doi": "10.7860/njlm/2026/88297.3006",
+      "normalized_doi": "10.7860/njlm/2026/88297.3006",
+      "normalized_title": "anaplastic large cell lymphoma a series of four cases",
+      "title": "Anaplastic Large Cell Lymphoma: A Series of Four Cases",
+      "abstract": "Anaplastic Large Cell Lymphoma (ALCL) is a distinct subtype of mature T-cell lymphoma characterised by uniform and strong CD30 expression across all neoplastic cells, along with wide clinicopathological heterogeneity. It encompasses biologically and prognostically distinct subtypes, namely Anaplastic Lymphoma Kinase (ALK)-positive and ALK-negative ALCL, in addition to the primary cutaneous variant. Despite sharing certain morphological and immunophenotypic features, these subtypes differ considerably in their clinical behaviour, treatment response and overall prognosis. This case series aims to illustrate the diverse clinicopathological manifestations of ALCL encountered in routine diagnostic practice and to highlight the challenges faced in reaching a timely and accurate diagnosis. This retrospective case series includes four patients (3 males, 1 female) diagnosed with ALCL at a tertiary care Government Medical College Hospital over a defined study period. Clinical presentation, haematological and biochemical laboratory parameters, radiological findings, histopathological features and Immunohistochemistry (IHC) results were systematically analysed and documented. The patients ranged from eight to 63 years of age, reflecting the broad age distribution seen in ALCL. Clinical presentations were varied and included prolonged fever with bilateral cervical lymphadenopathy, enlarging soft-tissue swellings, non healing cutaneous ulcers and an ulceroproliferative lesion involving the lip. Extranodal involvement was a prominent feature in three out of four cases. Notably, one paediatric patient fulfilled the established diagnostic criteria for secondary Haemophagocytic Lymphohistiocytosis (HLH), an uncommon but life-threatening complication. Histopathological examination revealed variable morphology with sheets of large pleomorphic cells showing hallmark cell morphology in the majority of cases. On immunohistochemistry, all four cases demonstrated strong CD30 positivity; two cases were ALK-positive and two were ALK-negative. This series underscores the importance of maintaining a high index of suspicion for ALCL across diverse clinical scenarios and age groups and reiterates the indispensable role of integrated histopathological and immunohistochemical evaluation in establishing a definitive diagnosis. The novelty of the present case series is that it highlights the protean clinical and pathological manifestations of ALCL encountered in routine practice. The inclusion of an ALK-negative ALCL with retained CD3, CD5 and CD8 expression which is seen in less than 50% of Alk-negative ALCL, alongside cases with varied extranodal presentations and HLH-associated disease, underscores the diagnostic challenges posed by this lymphoma and emphasises the need for careful clinicopathological correlation and comprehensive immunohistochemical workup for accurate diagnosis. ALCL demonstrates marked clinicopathological heterogeneity and frequently masquerades as other disease entities. Adequate tissue sampling and immunohistochemistry are essential for early and accurate diagnosis.",
+      "authors": "M Sindhu; K Chandramouleeswari; M Dougul Regis; U. Srinivasan",
+      "journal": "National Journal of Laboratory Medicine",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.7860/njlm/2026/88297.3006",
+        "openalex": "https://openalex.org/W7212458342",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.003Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.47191/jefms/v9-i9-15": {
+      "doi": "10.47191/jefms/v9-i9-15",
+      "normalized_doi": "10.47191/jefms/v9-i9-15",
+      "normalized_title": "inserting environmental social governance esg principles into pension fund investments in nigeria implications for risk management returns and sustainable growth",
+      "title": "Inserting Environmental, Social, Governance (ESG) Principles into Pension Fund Investments in Nigeria: Implications for Risk Management, Returns, And Sustainable Growth",
+      "abstract": "This study assessed the outcome of inserting Environmental, Social, Governance (ESG) principles into pension fund investments in Nigeria, focusing on the interchange between risk management, financial performance and sustainable economic growth. Relying on panel data from Nigerian Pension Fund Administrators (PFAs), the study employed various analytical and data diagnostic methods including pooled Ordinary Least Squares (OLS), Fixed Effects (FE), Random Effects (RE), and System Generalized Method of Moments (GMM) estimators. Also, the study used Sharpe ratio to gauge risk-adjusted performance and breaks down ESG integration into components into climate risk exposure, governance quality, infrastructure investment, and ESG screening mechanisms. The results show that integrating ESG principles has on general note significantly boost pension fund performance, mainly by enhancing risk-adjusted returns and lowering exposure to environmental and governance risks. Specifically, Climate risk exposure tends to limit performance, governance quality stands out as the most significant positive factor. Sustainable infrastructure investment also plays an enhancing role, albeit modestly, reflecting its long-term return potential. The study therefore recommends, amongst others that policymakers should focus on strengthening ESG regulatory frameworks, inject accurate disclosure standards, and as well encourage pension fund managers to invest in sustainable infrastructure projects.",
+      "authors": "Caleb Kehinde OSAMO; John Sunday OJOMA; Ojo Benjamin OBAFEMI; Stanley Eno ABANG; Leonard Achile Ogwuche",
+      "journal": "Journal of Economics Finance and Management Studies",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.47191/jefms/v9-i9-15",
+        "openalex": "https://openalex.org/W7212254496",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.003Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s44319-026-00923-0": {
+      "doi": "10.1038/s44319-026-00923-0",
+      "normalized_doi": "10.1038/s44319-026-00923-0",
+      "normalized_title": "orphan gpr84 facilitates uropod de adhesion at multiple steps during leukocyte extravasation",
+      "title": "Orphan GPR84 facilitates uropod de-adhesion at multiple steps during leukocyte extravasation",
+      "abstract": "Leukocyte migration through venular walls is an essential component of effective immunity. While the key molecular players driving the initial steps of this response are known, the terminating signals remain unclear. Here, we identify a conserved role for GPR84 family GPCRs in the successful completion of the final stages of leukocyte extravasation through acutely inflamed vessels. The integration of high-resolution intravital imaging with cell-specific genetics reveals that the deficiency of GPR84 orthologs in mice and Drosophila results in flawed detachment of transmigrating immune cells from vessel walls. Mechanistically, transcriptomics reveals that GPR84-deficient neutrophils exhibit defective actin cytoskeletal regulation and cellular adhesion/de-adhesion. Consistent with this, our fly-murine pipeline shows that GPR84 supports localized and dynamic Rho activation to enable detachment of the immune cell uropod from vessel exit sites. Moreover, pharmacological blockade of GPR84 signaling dampens immune cell migration in multiple murine acute inflammatory settings. Collectively, our findings present GPR84 as a novel physiological regulator of immune cell extravasation that is amenable to therapeutic targeting for modulating leukocyte infiltration into inflamed tissues.",
+      "authors": "Clare Latta; Terrence M Trinca; Francesca Robertson; Rachel Lau; Anna Barkaway; Loïc Rolas; Matthew Golding; Paul R. C. Imbert; Haitao Wang; Almke Bader; Liam Hill; Lorna Hodgson; Yue Yang; Aleksandar Ívetic; Barbara Walzog; Myles Lewis; Mathieu-Benoı̂t Voisin; Paul Martin; Sussan Nourshargh; Helen Weavers",
+      "journal": "EMBO Reports",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s44319-026-00923-0",
+        "openalex": "https://openalex.org/W7212350954",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.004Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1002/adfm.78375": {
+      "doi": "10.1002/adfm.78375",
+      "normalized_doi": "10.1002/adfm.78375",
+      "normalized_title": "self assembled crystalline peptoid nanomaterials as metal free enzyme mimics for enhanced carbon dioxide hydration and precipitation",
+      "title": "Self‐Assembled Crystalline Peptoid Nanomaterials as Metal‐Free Enzyme Mimics for Enhanced Carbon Dioxide Hydration and Precipitation",
+      "abstract": "ABSTRACT Inspired by recently discovered metal‐free carbonic anhydrases (CAs) and other natural enzymes that achieve efficient catalysis without metal cofactors, we herein report a sequence‐defined supramolecular peptoid platform that mimics metal‐free CAs and exhibits hydrolytic activity via a supramolecular assembly‐mediated proton‐transfer mechanism. This rational peptoid design employs a spatially distributed histidine‐inspired functionality within a cyclen‐based macrocyclic scaffold embedded in an amphiphilic peptoid system, enabling self‐assembly into highly crystalline nanosheets and nanotubes. These peptoid assemblies exhibit efficient hydrolysis of 4‐nitrophenyl acetate (4‐NPA) under physiological conditions, with catalytic activity strongly correlated with the spatial organization of imidazole groups and the assembly morphology. Extensive mechanistic studies suggest that the catalysis relies on assembly‐confined proton transfer within the H‐bonding network of peptoid assemblies, thereby promoting general acid‐base catalysis. Additionally, peptoid catalysts enhance CO 2 hydration and precipitation, providing sequence‐defined nanomaterials as a flexible, metal‐free artificial enzyme platform for hydrolytic catalysis and biomimetic mineralization.",
+      "authors": "Progyateg Chakma; Ying Chen; Thi Kim Hoang Trinh; Anthony R. Perez; Jonathan Gil; Maria Casco Hidalgo; Botao Hao; Kyle Whitaker; Chun‐Long Chen",
+      "journal": "Advanced Functional Materials",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1002/adfm.78375",
+        "openalex": "https://openalex.org/W7212351703",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.005Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1021/jacs.6c11510": {
+      "doi": "10.1021/jacs.6c11510",
+      "normalized_doi": "10.1021/jacs.6c11510",
+      "normalized_title": "chemical editing reveals atomic level control of supramolecular structure in self assembling peptides",
+      "title": "Chemical Editing Reveals Atomic-Level Control of Supramolecular Structure in Self-Assembling Peptides",
+      "abstract": "Abstract Can replacement of single atoms within amino acid sequences redirect peptide self-assembly into different supramolecular structures? To address this question, we investigated a compositionally similar class of bola-amphiphilic peptides that were designed to self-assemble into filamentous nanostructures. The chemical differences between these peptides were confined to minimally perturbative substitutions on a phenylalanine side chain at a single site within the sequence. Cryo-EM structural analysis of five peptide filaments at near-atomic resolution revealed the presence of distinct supramolecular architectures between the different peptides. Despite sharing a common cross-β framework, the filament structures displayed distinct helical symmetries, protofilament organizations, and steric zipper interfaces. We hypothesize that the observed structural divergence between filaments arises from subtle changes in side-chain polarity and solvent interactions that remodel peptide packing at structural interfaces within cross-sectional amyloid layers. These findings demonstrate that the supramolecular structural landscape of self-assembling peptides is sensitive to atomic-level substitution and suggest that chemical editing provides a strategy for interrogating and potentially controlling biomolecular assembly. These results further highlight a fundamental limitation in the predictive design of peptide-based materials in that subtle chemical modifications in local composition can produce disproportionate changes in higher-order structure.",
+      "authors": "A.K. Das; Ayisha Zia; Gunnar N. Eastep; Fengbin Wang; Vincent P. Conticello",
+      "journal": "Journal of the American Chemical Society",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1021/jacs.6c11510",
+        "openalex": "https://openalex.org/W7212355069",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.006Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s41598-026-71296-6": {
+      "doi": "10.1038/s41598-026-71296-6",
+      "normalized_doi": "10.1038/s41598-026-71296-6",
+      "normalized_title": "development and external validation of a machine learning risk model for pediatric iga vasculitis nephritis in the post pandemic era",
+      "title": "Development and external validation of a machine learning risk model for pediatric IgA vasculitis nephritis in the post-pandemic era",
+      "abstract": "To investigate shifts in clinical characteristics and risk factors for IgA vasculitis nephritis (IgAVN) in children before and after the COVID-19 pandemic, and to develop a risk prediction model adapted to the post-pandemic era. Clinical data from children with IgAV were retrospectively collected from two cohorts: pre-pandemic period (January 2017 to January 2019, n = 123) and post-pandemic period (January 2023 to January 2025, n = 216). Univariate analysis and LASSO regression identified candidate predictors. A machine learning model was transferred to evaluate temporal generalization, and a new Random Forest ( RF ) model was constructed and externally validated. Post-pandemic children exhibited higher BMI, lower albumin, and elevated complement levels. The risk factor spectrum for IgAVN shifted; the pre-pandemic model showed decreased performance (∆AUC = -0.136, P = 0.014). The post-pandemic RF model demonstrated favorable predictive performance and potential clinical net benefit in external validation. Rash duration, cystatin C, erythrocyte sedimentation rate (ESR), and BMI were the principal contributors to model predictions. Clinical characteristics and predictor distributions differed between the two calendar-based cohorts. The Random Forest model developed in the later cohort demonstrated promising performance in regional external validation and may support future risk-stratification research. Further prospective multicenter validation is required before routine clinical implementation.",
+      "authors": "Hua Yu; Juan Liang; Biao Su; Ling-Jian Meng; Chen Dong; Feng-Jun Guan; Bin Wang",
+      "journal": "Scientific Reports",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s41598-026-71296-6",
+        "openalex": "https://openalex.org/W7212358967",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.006Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.22722295": {
+      "doi": "10.5281/zenodo.22722295",
+      "normalized_doi": "10.5281/zenodo.22722295",
+      "normalized_title": "impoliteness strategies used by characters in j p clark s three plays songs of a goat the masquerade and the raft",
+      "title": "IMPOLITENESS STRATEGIES USED BY CHARACTERS IN J. P. CLARK'S THREE PLAYS (SONGS OF A GOAT, THE MASQUERADE AND THE RAFT)",
+      "abstract": "This paper examines impoliteness strategies used by characters in J. P. Clark’s three plays: Songs of a Goat, The Masquerade and The Raft. The plays focus on Ijaw cultural cosmic orders, marital discord and existential despair. Characters often violate customs and politeness norms to express anger, assert dominance or navigate tragic crises. Culpeper’s (2005) impoliteness model is adopted as theoretical framework, while qualitative descriptive approach is employed as method of data analyses. The result shows that the characters deployed impoliteness strategies such as bald-on-record impoliteness, positive impoliteness, negative impoliteness and withhold politeness to attack one another’s face needs. The dominant impoliteness strategy the characters used to attack one another’s face needs is bald-on-record and it was found 16 times with 35.56 per cent of the total use of impoliteness strategies in the plays. The second dominant impoliteness strategy the characters employed to attack one another’s face is positive impoliteness and it occurred 15 times with 33.33 per cent of the total use of impoliteness strategies in the plays. The third predominant impoliteness strategy that some characters used to attack face needs of other characters is negative impoliteness; it occurred 13 times with 28.89 per cent of the total use of impoliteness strategies in the plays. The fourth predominant impoliteness strategy the characters used to attack the face wants of others is withhold politeness and it occurred 1 time with 2.22 per cent of the total use of impoliteness strategies in the plays. The study concludes that knowledge of impoliteness strategies may provide valuable insights for improving social interaction protocols.",
+      "authors": "Samaila Yakubu",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.22722295",
+        "openalex": "https://openalex.org/W7212364249",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.008Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1002/pi.70197": {
+      "doi": "10.1002/pi.70197",
+      "normalized_doi": "10.1002/pi.70197",
+      "normalized_title": "latest advancements in nanofiber fabrication and drug delivery pondering tissue engineered scaffolds current status and future challenges",
+      "title": "Latest advancements in nanofiber fabrication and drug delivery, pondering tissue‐engineered scaffolds: current status and future challenges",
+      "abstract": "Abstract Transformative platforms in the pharmaceutical sciences include nanofiber‐based drug delivery systems, engineered to overcome the limitations of conventional methods. Their remarkable properties, such as high surface area, tunable porosity and biomimetic architecture, make them ideal for enhancing the solubility of poorly water‐soluble drugs, controlling release kinetics and enabling targeted delivery. In this review, we examine the details of the advancement of nanofiber technology, starting with the methods of nanofiber fabrication. Electrospinning remains the most widely used method of nanofiber fabrication; therefore, exploring its critical parameters and advanced configurations is crucial. We further highlight innovative alternatives, such as solution blow spinning, pressurized gyration and centrifugal spinning, that address scalability and versatility requirements. Furthermore, we discuss an extensive material repertoire for nanofiber synthesis, encompassing natural, synthetic and semi‐synthetic polymers, as well as inorganic and carbon‐based materials. The core of the review focuses on diverse therapeutic applications, demonstrating the efficacy of nanofibers in localized delivery and systemic disease management. The paper explains the significant progress in cancer therapy, cardiovascular diseases, neurodegenerative disorders and tissue engineering. The capability of these nanofibers for advanced delivery, including genes, proteins and growth factors, is also explored. Moreover, the mechanisms and mathematical models of drug release are elucidated to predict and design a controlled‐release profile. Finally, the review concludes by addressing the challenges in manufacturing scalability, long‐term biocompatibility and regulatory pathways. It also outlines future directions involving smart materials and green fabrication. By bridging multidisciplinary innovations, nanofiber‐based systems aim to redefine therapeutic models and significantly improve patient outcomes globally. © 2026 Society of Chemical Industry.",
+      "authors": "Sumayah Shakil Wani; Anjum Hamid Rather; Rumysa Saleem Khan; Salsabeel Amin Kabli; Ibtisam Hamid; Touseef Amna; M. Shamshi Hassan; Sami-ullah Rather; Faheem A. Sheikh",
+      "journal": "Polymer International",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1002/pi.70197",
+        "openalex": "https://openalex.org/W7212365289",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.008Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.ymssp.2026.114929": {
+      "doi": "10.1016/j.ymssp.2026.114929",
+      "normalized_doi": "10.1016/j.ymssp.2026.114929",
+      "normalized_title": "modelling and characterization of the unzipping dynamics of dielectric fluid actuators",
+      "title": "Modelling and characterization of the unzipping dynamics of dielectric fluid actuators",
+      "abstract": "Dielectric Fluid Actuators (DFAs) are variable capacitors that contract as a result of electrostatic forces acting on a compliant multilayer structure composed of a polymer film and an insulating liquid. Differences in the dielectric time constants of the liquid and polymeric layers lead to charge retention at their interface, causing a decay in Maxwell stress that ultimately leads to a relaxation of the actuator stroke in the presence of a constant applied voltage. In this work, we introduce a new physics-based continuum framework that extends electrostatic force modelling from fixed parallel-plate capacitors to actuator-level modelling, by coupling continuum electrical dynamics with a lumped mechanical model of the DFA. The DFA is represented as a continuum of infinitesimal variable capacitors, each modelled using simple RC elements. The framework is experimentally validated on a simple multi-layer open-pouch DFA, and on an established layout of hydraulically amplified self-healing electrostatic actuator. Even with a simplified description of the material electrical response (e.g., constant resistivities) and lumped deformation mechanics, the framework captures the relevant trends in unzipping dynamics with respect to geometry and operating conditions (applied voltage and external forces). The proposed framework lays the foundations for electro-mechanical dynamic continuum modelling of DFAs.",
+      "authors": "Marco Riva; Rajat Chaudhary; Sandra Dirè; Luca Fambri; Marco Fontana; Giacomo Moretti",
+      "journal": "Mechanical Systems and Signal Processing",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.ymssp.2026.114929",
+        "openalex": "https://openalex.org/W7212367486",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.009Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.53097/jmv.10159": {
+      "doi": "10.53097/jmv.10159",
+      "normalized_doi": "10.53097/jmv.10159",
+      "normalized_title": "artificial intelligence supported ventilator management current applications clinical evidence and future directions",
+      "title": "Artificial Intelligence supported ventilator management: Current applications, clinical evidence, and future directions",
+      "abstract": "Background Mechanical ventilation remains a complex intervention requiring continuous adjustment to balance oxygenation, ventilation, lung protection, patient–ventilator synchrony, and readiness for liberation. Artificial intelligence (AI) may support more individualized ventilator management by integrating multidimensional intensive care unit data. Methods We conducted a targeted narrative review of PubMed and Embase for studies evaluating AI, machine learning, deep learning, reinforcement learning, and closed-loop systems in ventilator management. Findings AI applications in ventilator management include outcome prediction, patient–ventilator asynchrony detection, ventilator setting optimization, and closed-loop ventilation. Current studies show promising performance in predicting extubation and weaning outcomes, detecting asynchrony from ventilator waveforms, forecasting high risk ventilation patterns, and supporting automated ventilator adjustments. However, most evidence remains retrospective, singlecenter, simulation based, or focused on model performance rather than patient centered outcomes. Conclusions AI-supported ventilator management is a rapidly evolving field with potential to enhance individualized respiratory care. Future studies should prioritize external validation, prospective trials, workflow integration, explainability, and safety frameworks to determine whether AI can improve clinically meaningful outcomes in mechanically ventilated patients. Keywords: artificial intelligence, mechanical ventilation, ventilator management, patient–ventilator asynchrony, closed-loop ventilation",
+      "authors": "Shun Nakahara; Shunsuke Kondo; Abulhassan Ali; Collin Clarke; Scott Nishioka; Ehab Daoud",
+      "journal": "Journal of Mechanical Ventilation",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.53097/jmv.10159",
+        "openalex": "https://openalex.org/W7212367957",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.010Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s41598-026-70428-2": {
+      "doi": "10.1038/s41598-026-70428-2",
+      "normalized_doi": "10.1038/s41598-026-70428-2",
+      "normalized_title": "autophagy associated marker and stress response changes in asa and 5 fu treated 3d colorectal cancer spheroid models exposed to 3 ma or cq",
+      "title": "Autophagy-associated marker and stress-response changes in ASA- and 5-FU-treated 3D colorectal cancer spheroid models exposed to 3-MA or CQ",
+      "abstract": "Abstract Autophagy-associated pathways are implicated in colorectal cancer (CRC) progression and therapy resistance. CRC is among the most frequently diagnosed malignancies worldwide and remains a major challenge in oncology due to its complex therapeutic management. We evaluated marker profiles and treatment-related responses in colonospheres derived from HCT116 and HT29 CRC cell lines exposed to aspirin (ASA), 5-fuorouracil (5-FU), or their combinations after pretreatment with 3-methyladenine (3-MA) or chloroquine (CQ). CRC cells were cultured as colonospheres and treated with the drugs, followed by assessment of colonosphere size and morphology via transmission electron microscopy (TEM), cell death-associated membrane permeabilization changes, proliferation, bulk metabolic readouts, including lactate and ATP levels, and bulk caspase-3/7 activity. Western blotting was performed to examine autophagy-related pathways and cell death-associated regulators, including BECN1, SQSTM1, LC3A/B-I, LC3A/B-II, and RIP3. The results showed treatment- and cell line-dependent changes in colonosphere size, membrane permeability, metabolic activity and autophagy-associated marker profiles under the applied experimental conditions. ATP levels showed treatment- and cell line-dependent changes, including marked reductions under selected ASA-containing conditions. The co-treatment with ASA and 5-FU combined with 3-MA and CQ differentially influenced colonospheres characteristics and autophagy-related proteins. These findings highlight the interplay between autophagy and cell death pathways in CRC colonosphere models and support further investigation of autophagy-targeting strategies under carefully defined experimental conditions.",
+      "authors": "Agata Olejniczak; Kamila Siedlecka-Kroplewska; Agata Wrońska; Kamil Myszczyński; Michał A. Żmijewski; Magdalena Szaryńska",
+      "journal": "Scientific Reports",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s41598-026-70428-2",
+        "openalex": "https://openalex.org/W7212369016",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:45.011Z",
+      "first_run": "RUN:202609140839:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1504/eg.2027.10080941": {
+      "doi": "10.1504/eg.2027.10080941",
+      "normalized_doi": "10.1504/eg.2027.10080941",
+      "normalized_title": "srla high secure optimised routing protocol for wireless ad hoc networks using log likelihood ratio enabled ant colony optimisation",
+      "title": "SRLA - high secure optimised routing protocol for wireless ad hoc networks using log likelihood ratio enabled ant colony optimisation",
+      "abstract": null,
+      "authors": "Vijayalakshmi Khagga; Sangeetha Priya Nachimuthu; A.M. Prasad",
+      "journal": "Electronic Government, an International Journal",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1504/eg.2027.10080941",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-14T08:39:47.936Z",
+      "first_run": "RUN:202609140839:ANT_MIMICRY:cr",
       "screening_status": "new",
       "relevance_score": null,
       "exclusion_reason": null,
