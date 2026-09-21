@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T08:39:45.261Z",
+  "generated": "2026-09-21T08:41:16.554Z",
   "policy": "literature_candidate corpus — discovery layer only; screening_status new → screened; irrelevant records are EXCLUDED with a reason, never deleted (SOP Phase 10).",
   "candidates": {
     "10.1016/j.foodhyd.2026.113278": {
@@ -811,6 +811,10 @@
         {
           "method": "normalized_title",
           "confidence": 0.9
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9
         }
       ]
     },
@@ -840,6 +844,10 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9
         },
         {
           "method": "normalized_title",
@@ -2128,6 +2136,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.nantod.2026.103172"
         }
       ]
     },
@@ -2601,6 +2614,536 @@
       "profile_version": "1.0.0",
       "discovered_at": "2026-09-14T08:39:47.936Z",
       "first_run": "RUN:202609140839:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1504/eg.2027.10080941"
+        }
+      ]
+    },
+    "10.1016/j.biomaterials.2026.124631": {
+      "doi": "10.1016/j.biomaterials.2026.124631",
+      "normalized_doi": "10.1016/j.biomaterials.2026.124631",
+      "normalized_title": "a bioactive hydrogel regulates chondrocyte fate with hypoxia mimetic chondrogenic induction and vascular invasion suppression for full thickness cartilage repair",
+      "title": "A bioactive hydrogel regulates chondrocyte fate with hypoxia-mimetic chondrogenic induction and vascular invasion suppression for full-thickness cartilage repair",
+      "abstract": null,
+      "authors": "Jiahui Liang; Huichun Yan; Xuemiao Liu; Zhiqiang Song; Weiguo Zhang; Kang Tian; Xing Wang",
+      "journal": "Biomaterials",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.biomaterials.2026.124631",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:15.649Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.clinph.2026.2112397": {
+      "doi": "10.1016/j.clinph.2026.2112397",
+      "normalized_doi": "10.1016/j.clinph.2026.2112397",
+      "normalized_title": "the fluctuating connectome graph theoretical dissection of metabolic mimicry in late onset ornithine transcarbamylase deficiency",
+      "title": "The fluctuating Connectome: Graph-Theoretical dissection of metabolic mimicry in Late-Onset ornithine transcarbamylase deficiency",
+      "abstract": null,
+      "authors": "José Augusto Bragatti; Letícia Grigoletto",
+      "journal": "Clinical Neurophysiology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.clinph.2026.2112397",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:15.650Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.clinph.2026.2112397"
+        }
+      ]
+    },
+    "10.1016/j.omta.2026.201832": {
+      "doi": "10.1016/j.omta.2026.201832",
+      "normalized_doi": "10.1016/j.omta.2026.201832",
+      "normalized_title": "sequence based artificial intelligence guided inhibitory peptides to counteract aav neutralizing antibodies in gene therapy",
+      "title": "Sequence-based artificial intelligence-guided inhibitory peptides to counteract AAV neutralizing antibodies in gene therapy.",
+      "abstract": "Adeno-associated virus (AAV) vectors have demonstrated strong clinical efficacy across multiple monogenic disorders, yet neutralizing antibodies (NAbs) remain major barriers to vector redosing and durable transduction. To address this limitation, we developed a sequence-based artificial intelligence framework integrating Bidirectional Encoder Representations from Transformers (BERT) and Evolutionary Scale Modeling with Low-Rank Adaptation (ESM-LoRA) to identify human-tolerant, virus-specific motifs across human and viral proteins using sliding-window analyses and multi-layer fine-tuning. Using capsid-derived segments from AAV2 and AAV843, we prioritized surface-accessible, virus-polarized peptides as candidate decoys and evaluated their ability to block AAV-targeted antibodies. The models achieved high accuracy in distinguishing human versus viral fragments, and selected peptides bound AAV-specific antibodies with nanomolar affinity, competitively restored capsid binding, and recovered >60% of baseline transduction in the presence of NAbs. In mouse models with pre-existing or redosing-induced antibodies, coadministration of decoy peptides and an IgG-degrading enzyme reduced high-titer NAbs to approximately 1:4 and restored hepatic transgene expression without detectable inflammatory or peptide-specific immune responses. A contrastive variational autoencoder (VAE) further generated non-natural peptides with broader epitope coverage. These results support sequence-driven AI design of short, low-immunogenicity decoy peptides as a translational strategy to mitigate NAb interference and enhance the feasibility of AAV redosing.",
+      "authors": "Bingqi Xu; Xin Zhang; Dandan Yu; Panjing Wang; Ying Chi; Wei Liu; Feng Xue; Lingling Chen; Huiyuan Li; Wentian Wang; Yunfei Chen; Xiaofan Liu; Rongfeng Fu; Renchi Yang; Wenwei Shao; Siwei Yu; Xiaolei Pei; Lei Zhang",
+      "journal": "PubMed",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.omta.2026.201832",
+        "openalex": "https://openalex.org/W7197044566",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.333Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.breast.2026.104890": {
+      "doi": "10.1016/j.breast.2026.104890",
+      "normalized_doi": "10.1016/j.breast.2026.104890",
+      "normalized_title": "multiscale modeling uncovers macrophage infiltration and tnf signaling networks for targeting in inflammatory breast cancer tumor emboli",
+      "title": "Multiscale modeling uncovers macrophage infiltration and TNF-α signaling networks for targeting in inflammatory breast cancer tumor emboli.",
+      "abstract": null,
+      "authors": "Pritha PAI; Christophe Van Berckelaer; Steven Van Laere; Alexandra Bennion; Theresa Charity; Jinming Yang; François Bertucci; Peter van Dam; Gregory M Palmer; S. J. McCall; Luc Y Dirix; Naoto T Ueno; Gayathri R. Devi",
+      "journal": "PubMed",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.breast.2026.104890",
+        "openalex": "https://openalex.org/W7172225985",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.335Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.22780751": {
+      "doi": "10.5281/zenodo.22780751",
+      "normalized_doi": "10.5281/zenodo.22780751",
+      "normalized_title": "one tumour biphasic morphology a case series of hpv related multiphenotypic sinonasal carcinoma and diagnostic schema",
+      "title": "One Tumour, Biphasic Morphology: A Case Series of HPV-related Multiphenotypic Sinonasal Carcinoma and Diagnostic Schema",
+      "abstract": "ABSTRACTHuman papillomavirus (HPV)-related multiphenotypic sinonasal carcinoma (HMSC) is a rare malignancy displaying a biphasic histomorphology that mimics both conventional squamous cell carcinoma and true salivary adenoid cystic carcinoma, frequently leading to diagnostic confusion with these distinct entities. Herein, we present two clinical cases sharing a common histomorphological signature: a 56-year-old male presenting with an aggressive left sinonasal mass invading the orbital floor with intracranial extension of 3 months' duration, and a 65-year-old female with a destructiveleft external nasal mass of 2 years' duration masquerading as granulomatosis with polyangiitis. Histopathological evaluation confirmed HPV-related multiphenotypic sinonasal carcinoma in both cases, identifying the pathognomonic transition. Following confirmation, entirely non-surgical management was pursued; the first patient was commenced on a six-month chemotherapy course followed by radiotherapy, while the second patient is currently on follow-up awaiting chemotherapy. Ultimately, diagnostic precision hinges on identifying this distinct biphasic architectural pattern on routine microscopy, a prerequisite for distinguishing HMSC from its mimics",
+      "authors": "ZA Adamu; A Mohammed; NA Shofoluwe; R Ifusumu; KO Sani",
+      "journal": "Western Journal of Medical and Biomedical Sciences",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.22780751",
+        "openalex": "https://openalex.org/W7213413760",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.336Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9,
+          "matched_doi": "10.5281/zenodo.22780750"
+        }
+      ]
+    },
+    "10.5281/zenodo.22847798": {
+      "doi": "10.5281/zenodo.22847798",
+      "normalized_doi": "10.5281/zenodo.22847798",
+      "normalized_title": "tracking endogenously moving marginal stability surfaces local tracking reserve patch localized escape and feedback reactive boundary motion",
+      "title": "Tracking Endogenously Moving Marginal-Stability Surfaces: Local Tracking Reserve, Patch-Localized Escape, and Feedback-Reactive Boundary Motion",
+      "abstract": "Moving-boundary failure is established territory in rate-induced tipping, transition-path analysis, and safety control. This paper asks whether independently calibrated geometry, restoration, service margins, and feedback channels improve prospective prediction of first-failure time and location. We distinguish subsystem spectral marginality from finite-time growth and from service failure. Constructive and hidden-mode counterexamples delimit physical identification. Conditional comparison arguments treat moving margins, retained memory, and a restricted stochastic first-hit bound; calibration separates boundary position from its derivatives. Spatial evaluation decomposes joint first-event scores so timing gains cannot masquerade as location gains. Direct-input deletion, nominal-schedule replay, and parameter clamping remain distinct policies. Exact controls, reproducible simulations, and external quantitative comparisons support these distinctions, but establish neither empirical GGT4 validity nor predictive superiority. The contribution is a testable representation and intervention protocol whose practical value requires equally informed, budget-matched comparisons. Evidence status. Conditional analysis, reproducible implementation checks, and a targeted external quantitative comparison. External physical experiments and published predictor scores are attributed to their authors, not to GGT4. The proposed M1-M3 comparisons on learned AI or organizational systems have not been run; their practical effect sizes remain unestimated. Note on this release. Version 1.0 working paper, dated 19 September 2026 (about 14,900 words). The upload contains the manuscript and a supplement archive with the reproduction scripts and their reference outputs: reproduce.py and external_checks.py (all 393 numeric entries reproduce the preserved results), the analytic controls, and five additional check scripts covering the mathematical, memory, stochastic, empirical, and physical statements, together with an external-source evidence ledger, README, MANIFEST.json, and SHA-256 checksums. These are implementation and identity checks of the declared models; no external raw-data fitting, model retraining, or physical experiment was performed, and reproducibility is not evidence of empirical validity. Series Paper IV of the Governance Geometry Theory (GGT) papers within the author's Deficit-Fractal Governance (DFG) framework. The moving-boundary question originates in the author's GGT parent note, which remains unpublished at the time of this release; this manuscript does not inherit that note's asserted equivalences, fractal generation, or cascade exponents.",
+      "authors": "Bin Seol",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.22847798",
+        "openalex": "https://openalex.org/W7213647938",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.336Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9,
+          "matched_doi": "10.5281/zenodo.22847797"
+        }
+      ]
+    },
+    "10.1080/14712598.2026.2736539": {
+      "doi": "10.1080/14712598.2026.2736539",
+      "normalized_doi": "10.1080/14712598.2026.2736539",
+      "normalized_title": "an evaluation of denecimig for bleeding prophylaxis in hemophilia a",
+      "title": "An evaluation of denecimig for bleeding prophylaxis in hemophilia A",
+      "abstract": "Introduction Despite advances in factor VIII (FVIII) replacement and emicizumab prophylaxis, people with hemophilia A may experience breakthrough bleeding, progressive joint disease, treatment burden, and inhibitor-related limitations. Denecimig (Mim8) is a fully human, next-generation FVIIIa-mimetic bispecific antibody engineered to provide subcutaneous prophylaxis irrespective of FVIII inhibitor status.Areas covered This review examines denecimig’s molecular design, mechanism, pharmacokinetic and pharmacodynamic properties, tiered fixed-volume dosing, laboratory implications, efficacy, safety, and patient-reported outcomes. This review evaluates evidence from FRONTIER studies across adults, adolescents, and children, with and without FVIII inhibitors, including long-term extension data and direct transition from emicizumab. We also consider breakthrough bleeding and perioperative management, therapeutic positioning, implementation, access, and regulatory status. We identified evidence through targeted searches of biomedical databases, trial registries, regulatory documents, and proceedings from major hematology congresses through July 2026.Expert opinion Denecimig provides potent bleed prevention and flexible weekly-to-monthly administration, with encouraging early safety across age groups and inhibitor status. However, it has not demonstrated superiority over established prophylactic therapies. Its clinical value will ultimately depend on mature thrombotic and immunogenic safety, perioperative evidence, head-to-head or real-world comparative effectiveness, treatment persistence, cost-effectiveness, and equitable global access rather than apparently favorable early pivotal-trial annualized bleeding rates alone.",
+      "authors": "Johnny Mahlangu",
+      "journal": "Expert Opinion on Biological Therapy",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1080/14712598.2026.2736539",
+        "openalex": "https://openalex.org/W7213614260",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.337Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s41467-026-77027-9": {
+      "doi": "10.1038/s41467-026-77027-9",
+      "normalized_doi": "10.1038/s41467-026-77027-9",
+      "normalized_title": "anti thymocyte globulin triggers tnf dependent cell death in t cell acute lymphoblastic leukemia",
+      "title": "Anti-thymocyte globulin triggers TNF-dependent cell death in T-cell acute lymphoblastic leukemia",
+      "abstract": "T-cell acute lymphoblastic leukemia (T-ALL) accounts for one of the most aggressive hematological tumors associated with poor prognosis, notably for relapsed and refractory patients. Hence, an unmet medical need persists for T-ALL patients who fail to durably respond to conventional treatments. Herein, we report the antileukemic efficacy of anti-thymocyte globulin (ATG), a polyclonal cocktail of IgG enriched in antibodies directed against human thymocyte antigens. The treatment of preclinical models of T-ALL reveals a cytotoxic mechanism of ATG mediated by TNFα signaling. We demonstrate that ATG resistance may occur via the induction of negative regulators of TNFα-induced cell death and can be circumvented by SMAC mimetic birinapant ex vivo and in vivo. These results are validated in a series of prospective primary relapsed/refractory T-ALL samples. Here, we provide a strong rationale for clinically relevant ATG-based immunotherapy in combination with birinapant to treat T-ALL patients. Anti-thymocyte globulin (ATG) is a potent immunosuppressant used to prevent and treat acute organ transplant rejection and severe aplastic anemia. Here, the authors discover that ATG can be repurposed to induce TNF-driven cell death in T cell acute lymphoblastic leukemia.",
+      "authors": "Marie-Émilie Dourthe; Mehdi Latiri; Étienne Lengliné; Guillaume Charbonnier; Chaimae Saji; Grégoire Huré; Camille Gillet; Jérome Doss; Aurore Touzart; Lucien Courtois; Agata Cieślak; Mathieu Simonin; Norbert Ifrah; Hervé Dombret; Olivier Hermine; Nicolas Boissel; André Baruchel; Jacques Ghysdael; Elizabeth Macintyre; Philippe Rousselot; Christine Tran Quang; Guillaume P. Andrieu; Vahid Asnafi",
+      "journal": "Nature Communications",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s41467-026-77027-9",
+        "openalex": "https://openalex.org/W7213636142",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.338Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s12010-026-05922-4": {
+      "doi": "10.1007/s12010-026-05922-4",
+      "normalized_doi": "10.1007/s12010-026-05922-4",
+      "normalized_title": "sodium sulfite as an oxygen depletion based chemical model of tumor hypoxia in vitro",
+      "title": "Sodium Sulfite as an Oxygen-Depletion-Based Chemical Model of Tumor Hypoxia In Vitro",
+      "abstract": null,
+      "authors": "Özge Bayrak; Meltem Alper; Yasemin Başbınar; Halil Ateş; Serdar Bayrak",
+      "journal": "Applied Biochemistry and Biotechnology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s12010-026-05922-4",
+        "openalex": "https://openalex.org/W7213665429",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.339Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1002/jbm.a.70162": {
+      "doi": "10.1002/jbm.a.70162",
+      "normalized_doi": "10.1002/jbm.a.70162",
+      "normalized_title": "scalable scaffold materials for structured cultivated meat",
+      "title": "Scalable Scaffold Materials for Structured Cultivated Meat",
+      "abstract": "ABSTRACT Cultivated meat (CM) seeks to decouple meat production from animal agriculture, but producing structured products that consumers recognize as whole‐cut meat remains both difficult and central to the field's ambitions. Scaffolds are key to this goal, providing architecture, cell‐adhesion sites, and instructive cues required to organize cells into texturally mimetic tissue. To date, CM scaffold research has largely borrowed from tissue engineering, which optimizes for therapeutic function and does not account for the constraints that define a food product: edibility, low cost, and large scale. Here, we review scalable scaffold materials and fabrication methods for structured CM through this food‐first lens. We identify relevant elements of the native muscle microenvironment and assess how these characteristics have been recapitulated. We then evaluate the major classes of scaffold materials, including those of synthetic, animal, plant, fungal, and microbial origin, as well as waste‐stream‐derived materials, and compare their biological suitability and scalability. We organize fabrication methods by the biological function they address: cell expansion, alignment, bulk structure, and multi‐material assembly, treating mass transport as a constraint that cuts across these methods rather than a separate function. Throughout, we emphasize that consumer perception of meat quality is driven by architecture rather than physiological function, and throughput and cost determine commercial viability. We conclude by identifying critical gaps that warrant scientific focus to bring structured CM to market.",
+      "authors": "Alex Kermani; Andrea C. Filler; J. Kent Leach",
+      "journal": "Journal of Biomedical Materials Research Part A",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1002/jbm.a.70162",
+        "openalex": "https://openalex.org/W7213673605",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.340Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1021/acsomega.6c06047": {
+      "doi": "10.1021/acsomega.6c06047",
+      "normalized_doi": "10.1021/acsomega.6c06047",
+      "normalized_title": "hla drb1 polymorphisms modulate the dynamic compatibility between the presentation of ebna1400 413 and mbp85 99",
+      "title": "HLA-DRB1 Polymorphisms Modulate the Dynamic Compatibility between the Presentation of EBNA1400–413 and MBP85–99",
+      "abstract": "Abstract Multiple sclerosis (MS) shows a strong genetic association with HLA-DRB1 alleles and a consistent epidemiological association with Epstein–Barr virus (EBV) infection. However, it remains unclear how HLA-DRB1 polymorphisms modulate the presentation of autoantigens and viral antigens potentially involved in cross-reactivity. In this study, peptide–HLA (pHLA) complexes formed by six HLA-DRB1 alleles associated with different MS risk profiles were investigated in interaction with CLIP103–117, MBP85–99, and EBNA1400–413. To this end, molecular dynamics simulations were integrated with machine learning models trained using inter-residue distances at the pHLA interface as input attributes, allowing evaluation of how different peptides modulate the conformational stability of the complexes and identification of which interface regions contribute to distinguishing alleles associated with higher and lower risk. The results show that EBNA1400–413 does not globally reproduce the interaction mode of MBP85–99 within the binding groove. Compared with MBP85–99 and CLIP103–117, EBNA1400–413 exhibited fewer intermolecular contacts, greater solvent exposure, and less favorable binding energy. Despite this, in the higher-risk alleles DRB1*15:01 and DRB1*15:03, complexes containing EBNA1400–413 showed lower conformational variability and occupied low-energy regions that partially overlapped with those observed for MBP85–99. The machine learning models indicated distinct discriminatory patterns for the autoantigen and the viral antigen. However, in the combined MBP85–99 and EBNA1400–413 model, the most informative pairs converged on the β:70−β:72 region, including β:71, with more pronounced differences in complexes containing EBNA1400–413. This result suggests that β:71 contributes to interface organization in a peptide- and allele-dependent manner. In addition, the proximity between C:R402 of EBNA1400–413 and the region occupied by C:K93 in MBP85–99 suggests a local physicochemical similarity between the complexes, despite the absence of global structural equivalence between the peptides. These findings indicate that EBNA1400–413 does not act as an ideal structural mimic of MBP85–99, but may favor partially compatible conformational states in alleles associated with higher MS risk. Thus, this study proposes a mechanism of functional mimicry dependent on pHLA interface dynamics, in which HLA-DRB1 polymorphisms modulate the presentation of self and viral peptides. This model provides a molecular basis for investigating how the interaction between HLA-associated genetic risk and the immune response to EBV may contribute to autoimmune mechanisms in MS.",
+      "authors": "Levy Bueno Alves; Silvana Giuliatti",
+      "journal": "ACS Omega",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1021/acsomega.6c06047",
+        "openalex": "https://openalex.org/W7213509663",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.341Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1186/s12951-026-04996-w": {
+      "doi": "10.1186/s12951-026-04996-w",
+      "normalized_doi": "10.1186/s12951-026-04996-w",
+      "normalized_title": "macrophage mimetic liposomal nanovesicles deliver cxcr2 antagonists to suppress cxcl2 driven breast cancer and atherosclerotic progression",
+      "title": "Macrophage-mimetic liposomal nanovesicles deliver CXCR2 antagonists to suppress CXCL2-driven breast cancer and atherosclerotic progression",
+      "abstract": "The coexistence of breast cancer (BC) and atherosclerosis (AS) is increasingly recognized as an inflammation-driven comorbidity. This study identifies the CXCL2–CXCR2 signaling axis as a pivotal mechanistic link underlying both diseases and introduces a macrophage-mimetic nanoplatform for its targeted inhibition. Differential gene expression and PPI network analyses of GEO datasets revealed CXCL2 as a shared hub gene in BC and AS. Clinical sample analyses further showed that female BC patients with vulnerable carotid plaques or high tumor CXCL2 expression had significantly shorter overall survival and disease-free survival, and multivariate regression confirmed vulnerable carotid plaques as an independent risk factor for poor BC prognosis. Co-expression with CXCR2 was validated in murine comorbidity models, where axis activation enhanced proliferation of BC cells, migration of human carotid artery smooth-muscle cells (HCASMCs), and M2 macrophage polarization through PI3K–AKT–mTOR signaling. To selectively disrupt this pathway, we engineered macrophage membrane-coated liposomal nanovesicles loaded with the CXCR2 antagonist SB225002 (MmLip@SB). The biomimetic coating endowed inflammation-site targeting and immune-evasive properties, enabling efficient delivery to tumor and plaque regions. MmLip@SB treatment markedly reduced tumor growth, plaque burden, and inflammatory cytokine expression while improving tissue architecture. These results establish CXCL2–CXCR2 as a shared inflammatory driver of BC and AS and highlight macrophage-mimetic nanovesicles as a promising dual-acting therapeutic approach.",
+      "authors": "Lianlian Zhang; Guofu Shi; Qi Lyu; Su Ai; Lili Pan; Xinyuan Zhang; Leilei Tao; Xi Wei",
+      "journal": "Journal of Nanobiotechnology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1186/s12951-026-04996-w",
+        "openalex": "https://openalex.org/W7213518071",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.341Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.63108/ijlmh.12852": {
+      "doi": "10.63108/ijlmh.12852",
+      "normalized_doi": "10.63108/ijlmh.12852",
+      "normalized_title": "the costs of accessible easier education",
+      "title": "The Costs of Accessible (Easier) Education!",
+      "abstract": "This article explores how increasingly accessible, flexible, and easier education has undermined the overall academic culture globally. It highlights several pitfalls of easier education, often masquerading as accessible and flexible education, that have devalued credentials and have had serious ramifications for those who truly are diligent and strive for excellence. It also highlights the illusion of equality thus created and provides directions for balancing accessibility with excellence.",
+      "authors": "Piyush Pranjal",
+      "journal": "International Journal of Law Management & Humanities",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.63108/ijlmh.12852",
+        "openalex": "https://openalex.org/W7213533801",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.342Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1177/19418744261491840": {
+      "doi": "10.1177/19418744261491840",
+      "normalized_doi": "10.1177/19418744261491840",
+      "normalized_title": "secondary cns lymphoma masquerading as recurrent basal ganglia stroke",
+      "title": "Secondary CNS Lymphoma Masquerading as Recurrent Basal Ganglia Stroke",
+      "abstract": "The basal ganglia comprise a metabolically active group of nuclei implicated in refining movement and emotion. We present the case of a 52-year-old man with common variable immunodeficiency (CVID) who presented to the hospital with severe thrombocytopenia and concern for recurrent basal ganglia stroke. Three months prior, the patient presented for acute confusion and mydriasis and underwent MRI brain, revealing restricted diffusion in the right basal ganglia. Two months prior, he experienced difficulty speaking, and repeat MRI brain revealed new left basal ganglia diffusion restriction. During this admission, MRI brain was obtained again after presentation for urinary incontinence, hypophonia, and flat affect, showing bilateral basal ganglia diffusion restriction. He subsequently underwent closure of his patent foramen ovale (PFO) and had a repeat MRI brain demonstrating new enhancing lesions in the right external capsule and left lentiform nucleus. Lymph node biopsy confirmed a diagnosis of diffuse large B-cell lymphoma (DLBCL) and his basal ganglia lesions were diagnosed as secondary CNS lymphoma that was responsive to chemotherapy. In retrospect, several salient features of the presentation could have raised suspicion for an etiology other than stroke, notably the recurrence of subcortical lesions, dearth of evidence suggesting hypercoagulability of malignancy, and increased risk of lymphoma in the setting of the patient’s longstanding history of CVID. Making the diagnosis of lymphoma more promptly would have enabled sooner treatment and prevented unnecessary procedures and exposure to long-term anticoagulation.",
+      "authors": "Eileen Yung; Michael Chen; Jonah P. Zuflacht",
+      "journal": "The Neurohospitalist",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1177/19418744261491840",
+        "openalex": "https://openalex.org/W7213539807",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.342Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.3897/afrinvertebr.67.194158": {
+      "doi": "10.3897/afrinvertebr.67.194158",
+      "normalized_doi": "10.3897/afrinvertebr.67.194158",
+      "normalized_title": "fatumocoris flattirei a new genus and species of cotyledon associated plant bugs from south africa hemiptera miridae bryocorinae",
+      "title": "Fatumocoris flattirei, a new genus and species of Cotyledon-associated plant bugs from South Africa (Hemiptera, Miridae, Bryocorinae)",
+      "abstract": "The Cape Floristic Region (CFR) is the most plant-dense Mediterranean-type ecosystem on Earth, but the number of described plant bugs (Heteroptera, Miridae) is relatively small. While Miridae are often host-plant specific, an association with succulent plants is only found in ~20 plant bug species worldwide. A combination of recent fieldwork in South Africa’s Western Cape region and iNaturalist [http://www.inaturalist.org/] observations allows us to document and describe a new genus and species of dicyphine Bryocorinae, Fatumocoris flattirei gen. et sp. nov ., associated with Cotyledon orbiculata L. (Crassulaceae). This new plant bug genus is unusual among dicyphines as it possesses prominent spines on the pronotum, a wider posterior margin of the pronotum, and distinctive dark, white, and reddish coloration. The placement is confirmed with morphological examination and inclusion of Sanger sequence data in a recently published molecular dataset of Miridae. Light microphotographs, SEM micrographs, and female and male genitalic images are provided.",
+      "authors": "M. C. Fox; Veronica Tyts; Sarah Schroeder; Rochelle Hoey-Chamberlain; Nokuthula Mbanyana; Michael Forthman; Christiane Weirauch",
+      "journal": "African Invertebrates",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.3897/afrinvertebr.67.194158",
+        "openalex": "https://openalex.org/W7213541215",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:16.343Z",
+      "first_run": "RUN:202609210841:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.asoc.2026.116416": {
+      "doi": "10.1016/j.asoc.2026.116416",
+      "normalized_doi": "10.1016/j.asoc.2026.116416",
+      "normalized_title": "an adaptive multifactor ant colony optimisation framework with dynamic window integration for mobile robot path planning",
+      "title": "An adaptive multifactor ant colony optimisation framework with dynamic window integration for mobile robot path planning",
+      "abstract": null,
+      "authors": "Jun Zhou; Fan Zhan; Canru Jiang; Yuxuan He",
+      "journal": "Applied Soft Computing",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.asoc.2026.116416",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:18.333Z",
+      "first_run": "RUN:202609210841:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.jisa.2026.104639": {
+      "doi": "10.1016/j.jisa.2026.104639",
+      "normalized_doi": "10.1016/j.jisa.2026.104639",
+      "normalized_title": "ant vat knowledge guided virtual adversarial training for robust vulnerability detection",
+      "title": "ANT-VAT: Knowledge-guided virtual adversarial training for robust vulnerability detection",
+      "abstract": null,
+      "authors": "Xiaoya Li; Na Yang; Wen Chen",
+      "journal": "Journal of Information Security and Applications",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.jisa.2026.104639",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-21T08:41:18.334Z",
+      "first_run": "RUN:202609210841:ANT_MIMICRY:cr",
       "screening_status": "new",
       "relevance_score": null,
       "exclusion_reason": null,
