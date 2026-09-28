@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T08:41:16.554Z",
+  "generated": "2026-09-28T09:29:22.045Z",
   "policy": "literature_candidate corpus — discovery layer only; screening_status new → screened; irrelevant records are EXCLUDED with a reason, never deleted (SOP Phase 10).",
   "candidates": {
     "10.1016/j.foodhyd.2026.113278": {
@@ -844,6 +844,10 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9
         },
         {
           "method": "normalized_title",
@@ -2656,6 +2660,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.biomaterials.2026.124631"
         }
       ]
     },
@@ -2721,6 +2730,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.omta.2026.201832"
         }
       ]
     },
@@ -2751,6 +2765,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.breast.2026.104890"
         }
       ]
     },
@@ -3121,6 +3140,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.asoc.2026.116416"
         }
       ]
     },
@@ -3144,6 +3168,621 @@
       "profile_version": "1.0.0",
       "discovered_at": "2026-09-21T08:41:18.334Z",
       "first_run": "RUN:202609210841:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.jisa.2026.104639"
+        }
+      ]
+    },
+    "10.1016/j.bioactmat.2026.09.012": {
+      "doi": "10.1016/j.bioactmat.2026.09.012",
+      "normalized_doi": "10.1016/j.bioactmat.2026.09.012",
+      "normalized_title": "micellar lytac engineered bionic coatings abrogate rank dependent osteocatabolism and boost fibrillogenesis mimetic mineral accretion for empowering osteoporotic osseointegration",
+      "title": "Micellar LYTAC-engineered bionic coatings abrogate RANK-dependent osteocatabolism and boost fibrillogenesis-mimetic mineral accretion for empowering osteoporotic osseointegration",
+      "abstract": null,
+      "authors": "Youbo Zhao; Jie Zhou; Yi He; Yueting Ren; Jiayi Zhang; Maohua Chen; Zhong Luo; Zipeng Gong",
+      "journal": "Bioactive Materials",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.bioactmat.2026.09.012",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.222Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.tice.2026.103969": {
+      "doi": "10.1016/j.tice.2026.103969",
+      "normalized_doi": "10.1016/j.tice.2026.103969",
+      "normalized_title": "a bioengineered ecm mimetic dermal collagen derived hydrogel co delivering sdf 1 and bfgf promotes cellular recruitment angiogenesis and regenerative healing of type 2 diabetic wounds",
+      "title": "A bioengineered ECM-mimetic dermal collagen-derived hydrogel co-delivering SDF-1α and bFGF promotes cellular recruitment, angiogenesis, and regenerative healing of type 2 diabetic wounds",
+      "abstract": null,
+      "authors": "Ahmed Hjazi",
+      "journal": "Tissue and Cell",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.tice.2026.103969",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.224Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.jddst.2026.108949": {
+      "doi": "10.1016/j.jddst.2026.108949",
+      "normalized_doi": "10.1016/j.jddst.2026.108949",
+      "normalized_title": "exosome mimetic nanoparticles versus natural exosomes as drug delivery vehicles the identity crisis of biomimetic therapeutics addressing the scientific gaps in production cargo fidelity and clinical translation",
+      "title": "Exosome-mimetic nanoparticles versus natural exosomes as drug delivery vehicles: The identity crisis of biomimetic therapeutics - addressing the scientific gaps in production, cargo fidelity, and clinical translation",
+      "abstract": null,
+      "authors": "Aditya Prajapati; Prachi Pimple",
+      "journal": "Journal of Drug Delivery Science and Technology",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.jddst.2026.108949",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.225Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.bioadv.2026.215189": {
+      "doi": "10.1016/j.bioadv.2026.215189",
+      "normalized_doi": "10.1016/j.bioadv.2026.215189",
+      "normalized_title": "injectable ecm mimetic dynamic schiff base hydrogels deliver 5 aminosalicylic acid for immunomodulatory and alleviation of ferroptosis associated injury of intervertebral disc degeneration",
+      "title": "Injectable ECM-mimetic dynamic Schiff-base hydrogels deliver 5-aminosalicylic acid for immunomodulatory and alleviation of ferroptosis-associated injury of intervertebral disc degeneration",
+      "abstract": null,
+      "authors": "Yichen Jiang; Guantong Sun; Haixin Wei; Hanwen Xiao; Derong Xu; Chuanli Zhou",
+      "journal": "Biomaterials Advances",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.bioadv.2026.215189",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.227Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.seppur.2026.140154": {
+      "doi": "10.1016/j.seppur.2026.140154",
+      "normalized_doi": "10.1016/j.seppur.2026.140154",
+      "normalized_title": "peg bsa aqueous biphasic systems for selective interleukin extraction introducing the matrix mimetic phase strategy",
+      "title": "PEG-BSA aqueous biphasic systems for selective interleukin extraction: Introducing the matrix-mimetic phase strategy",
+      "abstract": null,
+      "authors": "Maria S.M. Mendes; Mara G. Freire; Francisca A. e Silva; John P. Frampton",
+      "journal": "Separation and Purification Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.seppur.2026.140154",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.227Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.jtemb.2026.127965": {
+      "doi": "10.1016/j.jtemb.2026.127965",
+      "normalized_doi": "10.1016/j.jtemb.2026.127965",
+      "normalized_title": "vanadium in environmental and biological systems from industrial contaminant to insulin mimetic agent",
+      "title": "Vanadium in environmental and biological systems: From industrial contaminant to insulin-mimetic agent",
+      "abstract": null,
+      "authors": "Jose L. Domingo",
+      "journal": "Journal of Trace Elements in Medicine and Biology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.jtemb.2026.127965",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.228Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.6084/m9.figshare.34004598": {
+      "doi": "10.6084/m9.figshare.34004598",
+      "normalized_doi": "10.6084/m9.figshare.34004598",
+      "normalized_title": "when cleverness becomes its own undoing gb n gb nj excess and the ethics of wisdom in yor b thought",
+      "title": "When Cleverness Becomes Its Own Undoing: Ọgbọn Àgbọnjù, Excess and the Ethics of Wisdom in Yorùbá Thought",
+      "abstract": "This essay examines the Yorùbá proverb “Ọgbọ́n àgbọ́n jù, a máa pa ọlọ́gbọ́n lára,” understood in the author's family transmission as warning that excessive cleverness can ultimately harm the person who considers himself or herself wise. The reflection emerged from an interactive scholarly session at the Institute of African Studies, University of Ibadan, and was subsequently developed through an intergenerational conversation with the author's 91-year-old father, Samuel Ayọ̀ọlá, who responded to the proverb with a Yorùbá narrative concerning a contested kingship, a disguised masquerader, and the limits of strategic manipulation. Rather than treating the narrative as independently verified historical evidence, the essay approaches it as an orally transmitted interpretive tradition. It situates this material within documented Yorùbá proverbial thought, particularly the cluster of proverbs concerning ọgbọ́n Àgbọ́njù, excessive cleverness or cunning, and related reflections on wisdom, moderation, patience, and learning from others. The essay argues that Yorùbá thought does not reject cleverness; rather, it distinguishes productive wisdom from cleverness that becomes excessive, self-regarding, deceptive, or detached from communal judgement. The discussion further considers the relationship between intelligence and humility, strategy and excess, sacred authority and performance, and individual cleverness and collective knowledge. Haruna Ishola's aláṣejù repertoire is brought into conversation with the proverb as a later popular-cultural articulation of the moral problem of excess, while the precise wording of the cited song passage is treated as family-transmitted rather than independently verified. The essay proposes ọgbọ́n àgbọ́njù as a useful indigenous conceptual category for analysing the paradox whereby an attribute that ordinarily produces success, cleverness, can become destructive when it loses its regulating virtues of humility, restraint, and responsiveness to other people's knowledge.",
+      "authors": "Grace Olúwayẹ́misí Ayọ̀ọ́lá",
+      "journal": "Figshare",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.6084/m9.figshare.34004598",
+        "openalex": "https://openalex.org/W7214518793",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.866Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9,
+          "matched_doi": "10.6084/m9.figshare.34004598.v1"
+        }
+      ]
+    },
+    "10.1002/smll.75929": {
+      "doi": "10.1002/smll.75929",
+      "normalized_doi": "10.1002/smll.75929",
+      "normalized_title": "m2 macrophage mimetic metal organic framework nanozyme with visible light driven hydrogen evolution for uveitis therapy",
+      "title": "M2 Macrophage‐Mimetic Metal‐Organic Framework Nanozyme With Visible‐Light‐Driven Hydrogen Evolution for Uveitis Therapy",
+      "abstract": "ABSTRACT Uveitis poses a severe threat to vision and represents a critical clinical challenge. Conventional therapeutic approaches often exhibit limited efficacy in controlling disease progression and lack efficient mechanisms for managing localized oxidative stress. Given that molecular hydrogen (H 2 ) holds substantial promise for treating oxidative and inflammatory diseases via its selective antioxidant properties, we report a metal–organic framework (MOF) nanozyme‐based hydrogen nanogenerator. This system integrates photocatalytic visible‐light‐triggered H 2 generation with multi‐enzyme‐like antioxidant functions for targeted uveitis management. The engineered Pt‐embedded MOF nanozymes (Pt@MOF) concurrently catalyze hydrogen evolution under visible light and display superoxide dismutase‐ and catalase‐like activities, achieving comprehensive scavenging of overproduced reactive oxygen species (ROS). Furthermore, camouflaging the nanozyme with M2 macrophage‐derived cell membrane vesicles (CMVs) endows the nanoplatform with active inflammation‐targeting ability, thereby enhancing the accumulation in inflamed ocular tissues. Following topical administration, this biomimetic nanomedicine successfully mitigates oxidative stress and suppresses pro‐inflammatory cytokines both in vitro and in a rat model of acute uveitis. Overall, this study underscores the immense potential of integrating light‐driven hydrogen therapy with nanozyme therapy, offering a highly effective strategy that could revolutionize future therapeutic interventions for inflammatory eye diseases.",
+      "authors": "Shundong Cai; Mengdie Li; Jingbin Zhuang; Jinfa Ye; Songyi Wang; Jinglei Zhang; Mingyou Zhang; Qixuan Dai; Yun Han; Min Su; Wei Shan Li; Gang Liu; Chengchao Chu",
+      "journal": "Small",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1002/smll.75929",
+        "openalex": "https://openalex.org/W7214524489",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.867Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s12288-026-02580-8": {
+      "doi": "10.1007/s12288-026-02580-8",
+      "normalized_doi": "10.1007/s12288-026-02580-8",
+      "normalized_title": "somatic and germline mutation analysis in inherited and acquired aplastic anemia",
+      "title": "Somatic and Germline Mutation Analysis in Inherited and Acquired Aplastic Anemia",
+      "abstract": null,
+      "authors": "Ekta Jajodia; Ankit Jitani",
+      "journal": "Indian Journal of Hematology and Blood Transfusion",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s12288-026-02580-8",
+        "openalex": "https://openalex.org/W7214549228",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.868Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.7759/cureus.117008": {
+      "doi": "10.7759/cureus.117008",
+      "normalized_doi": "10.7759/cureus.117008",
+      "normalized_title": "high grade undifferentiated pleomorphic sarcoma of the distal femur masquerading as a medial collateral ligament sprain in a recreational runner a case report",
+      "title": "High-Grade Undifferentiated Pleomorphic Sarcoma of the Distal Femur Masquerading as a Medial Collateral Ligament Sprain in a Recreational Runner: A Case Report",
+      "abstract": null,
+      "authors": "Nina Reddy; Vahini Srikakulapu; David Anthony Ross",
+      "journal": "Cureus",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.7759/cureus.117008",
+        "openalex": "https://openalex.org/W7214553791",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.869Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.23002227": {
+      "doi": "10.5281/zenodo.23002227",
+      "normalized_doi": "10.5281/zenodo.23002227",
+      "normalized_title": "architecture de la souverainet biologique r tro ing nierie du crack de la long vit 2026",
+      "title": "Architecture de la Souveraineté Biologique : Rétro-ingénierie du Crack de la Longévité 2026",
+      "abstract": "Résumé FRCe document, produit avec l’assistance de Gemini 3 Raisonnement, est publié sous licence Apache 2.0. Il constitue une publication défensive volontaire (antériorité) et entre de ce fait dans l’état de la technique au sens des législations applicables : art. L 611-11 CPI / art. 54(2) CBE. Le rapport détaille la rétro-ingénierie systémique du « Crack de la Longévité » de 2026, transformant les thérapies géniques coûteuses en protocoles « Low-Tech » souverains. Il catalogue 40 innovations de rupture, incluant la reprogrammation épigénétique par petites molécules , le nettoyage de l’entropie circulatoire par don de plasma , et des vecteurs de livraison optimisés par IA. Chaque proposition est décrite de manière opérationnelle (enabling), classée avec des codes IPC/CPC, et accompagnée d'une preuve d'horodatage. Ce corpus vise à garantir l’accessibilité universelle aux outils de régénération biologique face aux monopoles technologiques. Abstract EN This document, produced with the assistance of Gemini 3 Raisonnement, is released under the Apache 2.0 licence. It is a voluntary defensive publication (prior art) and therefore enters the prior art upon release under the applicable patent statutes: EPC Art. 54(2); French IPC Art. L 611-11; 35 U.S.C. §102(a); Chinese Patent Law Art. 22(5) (中华人民共和国专利法); and Japanese Patent Act Art. 29(1) (特許法). It details the systemic reverse-engineering of the 2026 \"Longevity Crack,\" shifting high-cost gene therapies toward sovereign \"Low-Tech\" protocols. The report catalogs 40 breakthrough innovations, including small-molecule epigenetic reprogramming , circulatory entropy dilution via plasma donation , and AI-optimized delivery vectors. Every proposal is described in an enabling manner, classified with IPC and CPC codes, and accompanied by timestamp proof (RFC 3161 / FreeTSA). This work ensures universal access to biological regeneration tools against technological monopolies. Timestamp: 2026-03-01T21:37:59ZSHA-256: f9153f440ef2484ca7f030524e82660b89adefb902305b2d7b212ace35502c12 1. Cumulative Proteomic Dilution Protocol [IPC A61M 1/34 ; CPC A61M 1/36] 2. Chemical Reprogramming SMs Cocktail [IPC A61K 31/00 ; CPC A61P 43/00] 3. Pulse-Phase-Lock Temporal Scheduler [IPC G16H 20/10 ; CPC G16H 40/67] 4. High-dose TET Enzyme Activator [IPC A61K 31/375 ; CPC A61P 3/02] 5. Hepatic STAT3/EZH2 Mimetic System [IPC A61K 31/155 ; CPC A61P 1/16] 6. PBM-Lutein Neuroprotection Kit [IPC A61N 5/06 ; CPC A61N 2005/06] 7. Tissue Coherence (Ctiss) Compaction [IPC A61M 37/00 ; CPC A61Q 19/08] 8. Osteogenic Wnt/Lithium Formulation [IPC A61K 33/00 ; CPC A61P 19/10] 9. Sovereign Edge Health IoT Hub [IPC G06F 21/62 ; CPC G16H 10/60] 10. Post-Cycle RCQ-P Locking Complex [IPC A61K 36/00 ; CPC A61P 35/00] 11. AI-Engineered RetroSOX/RetroKLF Factors [IPC C07K 14/47 ; CPC C12N 15/85] 12. Pan-cerebral Dyno-ahq BBB Vectors [IPC C12N 15/86 ; CPC A61K 48/00] 13. Selective SASP Nanoporous Filter [IPC B01D 71/02 ; CPC A61M 1/34] 14. SSA-Thymosine α1 Reset Protocol [IPC A61K 38/00 ; CPC A61P 37/04] 15. Ovarian miR-17-5p Exosome Therapy [IPC A61K 35/54 ; CPC A61P 15/08] 16. TRDP Perturb-seq Discovery Platform [IPC C12Q 1/68 ; CPC G16B 25/00] 17. DASC Pulmonary Pod Transplantation [IPC A61K 35/42 ; CPC A61P 11/00] 18. VC6TF Rapid CiPSC Induction [IPC A61K 31/506 ; CPC C12N 5/06] 19. GNOME-based Biosensor Materials [IPC G01N 33/48 ; CPC H10N 30/00] 20. Youth Signal (Γplasma}) Algorithm [IPC G16H 50/30 ; CPC G16H 10/40] 21. MCCS Humoral Factory Reset [IPC A61M 1/36 ; CPC A61M 1/3693] 22. Biological Learning Coefficient (ηbio) [IPC G16B 40/00 ; CPC G16B 5/00] 23. Dyno-bn8 Cardiac/Muscle Vector [IPC C12N 15/86 ; CPC A61K 48/00] 24. Modular WMP MQTT Sovereign IoT [IPC G06F 21/62 ; CPC G16H 10/60] 25. Protein Syntax Logic Simulation [IPC G16H 50/50 ; CPC G16B 5/20] 26. Multi-Peptide-Silybin Matrix Stabilizer [IPC A61K 8/64 ; CPC A61Q 19/08] 27. Nutritional Thymic Reset Method [IPC A23L 33/00 ; CPC A61P 37/04] 28. Selective Protein Exclusion Kidney [IPC A61M 1/34 ; CPC A61M 1/3696] 29. Modular 12-Factor Safety Module [IPC C12N 5/06 ; CPC C12N 15/85] 30. Accelerated Material Engine (Dacc) [IPC G16C 60/00 ; CPC G06N 3/00] 31. Reduced Liver Toxicity Neuro-delivery [IPC C12N 15/86 ; CPC A61K 48/00] 32. Transcriptomic Cell Hashing Workflow [IPC C12Q 1/68 ; CPC G16B 25/00] 33. AF3 Transient State Capture [IPC G16C 20/30 ; CPC G16B 15/00] 34. Scell Thermodynamic Phase Modeling [IPC G16H 50/50 ; CPC G16B 5/20] 35. Automated Lab-Loop Lab-to-GPT [IPC G16B 30/00 ; CPC G16H 50/00] 36. ER-100 Retinal Methylation Reset [IPC A61K 48/00 ; CPC A61P 27/02] 37. SM-based STAT3 Phosphorylation Target [IPC A61K 31/00 ; CPC A61P 43/00] 38. SVCT2 Saturation Kinetic Delivery [IPC A61K 9/127 ; CPC A61K 31/375] 39. SIRT3 Mitochondrial Rescue Exosomes [IPC A61K 35/54 ; CPC A61P 15/08] 40. Biological Identity Quiddity Protection [IPC G06F 21/60 ; CPC G16H 10/00] Keywords Longevity Reverse Engineering, Epigenetic Reprogramming, Sovereign Biology, Pulse-Phase-Lock, Small Molecules Rejuvenation, Plasma Dilution Proxy, TET Enzyme Activation, Biological Sovereignty, Low-Tech Longevity, Edge Health Monitoring, RetroSOX, Dyno-ahq, Nanoporous Filtration, Thymic Reset, Ovarian Exosome, TRDP, DASC Alveolar Repair, VC6TF, GNOME, Youth Signal, MCCS, eta-bio, Dyno-bn8, MQTT, Cell Logic, HD Human, Nutritional Reset, Safety Module, Accelerated Discovery, Neuro-delivery, Cell Hashing, AF3 Binding, Scell Phase, ER-100, STAT3 Inhibition, SVCT2 Saturation, SIRT3 Rescue, Quiddity Protection, Biological OS, Cellular Stability.",
+      "authors": "Pillet Xavier",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.23002227",
+        "openalex": "https://openalex.org/W7214561073",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.870Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.22981426": {
+      "doi": "10.5281/zenodo.22981426",
+      "normalized_doi": "10.5281/zenodo.22981426",
+      "normalized_title": "comparative history of the autonomy of form",
+      "title": "Comparative History of the Autonomy of Form",
+      "abstract": "This paper does not ask who first “invented” pictorial abstraction—a question that presupposes a single, implicitly Eurocentric origin. It asks instead how many independent visual traditions rendered form autonomous from its depicted subject, and through which internal logics. Grounded in a comparative dataset of fifty works drawn from eight cultural areas (China, Japan, India, Sub-Saharan Africa, Europe, Oceania, the pre-colonial Americas, the Islamic world), dated from the second millennium BCE to the twentieth century, the analysis records for each work the dominant visual phenomenon, the relation to the visible (mimetic, transformed, non-mimetic), the type of relation to its own tradition (internal, documented transmission, open hypothesis), and the primary museum source. The autonomy of form emerges as a recurrent and structurally plural phenomenon articulated through four distinct logics: calligraphic gesture and active emptiness (China, Japan); ritual and cosmological geometry (India, Africa, Oceania, the Americas); atmospheric and perceptual dissolution (Europe); and doctrinal aniconism (Islamic world). The paper offers neither a linear genealogy nor a claim of priority, but a shared methodological framework and an explicitly incomplete, improvable corpus for future comparative research.",
+      "authors": "Pietro Franesi",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.22981426",
+        "openalex": "https://openalex.org/W7214424138",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.871Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9,
+          "matched_doi": "10.5281/zenodo.22981427"
+        }
+      ]
+    },
+    "10.5281/zenodo.22974372": {
+      "doi": "10.5281/zenodo.22974372",
+      "normalized_doi": "10.5281/zenodo.22974372",
+      "normalized_title": "indigenous communication practices and their role in conflict resolution and peacebuilding in mararaba udege nasarawa state",
+      "title": "Indigenous Communication Practices and Their Role in Conflict Resolution and Peacebuilding in Mararaba Udege, Nasarawa State",
+      "abstract": "Background: The persistence of communal conflicts in Nigeria has renewed research interest in indigenous communication practices as locally grounded resources for sustainable peace, yet the specific practices used in communities like Mararaba Udege, Nasarawa State, receive less attention from researchers. Objective: This study examines the indigenous communication practices used for conflict resolution and peacebuilding in Mararaba Udege, Nasarawa L.G.A., Nasarawa State. Method: Anchored in a qualitative case study design, the study examined communicative practices such as oral traditions, proverbs, storytelling, communal dialogues, and the mediatory roles of traditional leaders and elders. Data were collected through semi-structured interviews, focus group discussions, and non-participant observation involving community leaders, women, youth, and other key informants and were analysed using thematic analysis, guided by the Indigenous Communication System Theory (ICST). Result: Masquerades and festivals serve as public enforcement and promote peace communication channels; fines and compensation function as restorative rather than punitive justice; and the council of elders and traditional leadership structures serve as central judicial bodies for conflict resolution. Conclusion: These indigenous communication practices build trust, legitimacy, and local ways of conflict resolution, contributing to violence prevention and peace consolidation in Mararaba Udege, Nasarawa State. Unique Contribution: The study provides empirically grounded documentation of indigenous communication practices in a community affected by conflicts and under-researched, extending ICST to explain how communication legitimacy is locally constructed and sustained. Key Recommendation: Documenting and integrating indigenous communication practices into formal peacebuilding strategies can strengthen local approaches to conflict management in Nigeria, requiring closer collaboration between state institutions, peace practitioners, and local custodians of these practices.",
+      "authors": "Ogba E.Likita & Dango E. Salamatu",
+      "journal": "International Journal of Sub-Saharan African Research",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.22974372",
+        "openalex": "https://openalex.org/W7214447360",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.871Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1111/trf.70411": {
+      "doi": "10.1111/trf.70411",
+      "normalized_doi": "10.1111/trf.70411",
+      "normalized_title": "a functionally distinct hpa 1a specific alloantibody associated with fetal neonatal alloimmune thrombocytopenia that activates platelets via fc riia",
+      "title": "A functionally distinct HPA ‐1a‐specific alloantibody associated with fetal/neonatal alloimmune thrombocytopenia that activates platelets via FcγRIIa",
+      "abstract": "Abstract Background Fetal/neonatal alloimmune thrombocytopenia (FNAIT) is caused by maternal alloantibodies directed against fetal platelet antigens, most commonly human platelet antigen‐1a (HPA‐1a). These antibodies mediate platelet destruction and can lead to fetal and neonatal thrombocytopenia severe enough to cause life‐threatening organ bleeds. Antibody titer and isotype do not reliably predict disease severity, suggesting additional heterogeneity among anti‐HPA‐1a antibodies. Study Design and Methods We evaluated the effects of five previously characterized HPA‐1a‐specific monoclonal antibodies (mAbs) on platelet activation, platelet aggregation, and induction of intracellular signaling. The involvement of FcγRIIa was examined using FcγRIIa‐blocking antibody IV.3, protein tyrosine kinase inhibitors, and selected monoclonal antibody Fab fragments. Results At saturating concentrations, all five mAbs inhibited thrombin‐induced aggregation. At sub‐saturating concentrations, however, mAb M‐204 uniquely induced spontaneous aggregation and α‐granule secretion in HPA‐1a‐positive human, but not mouse, platelets, which lack FcγRIIa. M‐204‐induced aggregation was abolished by mAb IV.3 and inhibitors of Src‐ and Syk‐family kinases and was absent using M‐204 Fab fragments. M‐204 induced tyrosine phosphorylation of Syk and PLCγ2 in an FcγRIIa‐dependent manner. Finally, despite persistent platelet activation induced by M‐204, saturating concentrations of this antibody blocked the binding of the fibrinogen mimetic antibody, PAC‐1, to HPA‐1a homozygous, but not HPA‐1a/1b heterozygous, platelets, consistent with the known ability of HPA‐1a‐specific antibodies to sterically interfere with ligand binding to HPA‐1a‐positive αIIbβ3. Conclusion These findings identify a previously unrecognized, functionally distinct subset of HPA‐1a antibodies capable of activating platelets via FcγRIIa, suggesting a potential mechanism contributing to variability in disease severity in FNAIT.",
+      "authors": "Huiying Zhi; Cathy Paddock; Daniel Villalobos-García; Janita J. Oosterhoff; Heng Zhang; Gestur Vidarsson; 温仁人; Jieqing Zhu; Debra K. Newman; Peter J. Newman",
+      "journal": "Transfusion",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1111/trf.70411",
+        "openalex": "https://openalex.org/W7214447529",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.872Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1021/acssensors.6c02671": {
+      "doi": "10.1021/acssensors.6c02671",
+      "normalized_doi": "10.1021/acssensors.6c02671",
+      "normalized_title": "fingerprint mimetic fibrous glove via shear induced alignment and dynamic compensation for multimodal tactile sensing",
+      "title": "Fingerprint-Mimetic Fibrous Glove via Shear-Induced Alignment and Dynamic Compensation for Multimodal Tactile Sensing",
+      "abstract": "Abstract Flexible devices are key for human–machine interaction in smart homes and virtual reality. However, existing wearable devices are limited by single-mode sensing, irreversible conductive network damage under deformation, and a lack of tactile enhancement, hindering high sensitivity and multimodal perception. Herein, inspired by the arc-shaped topology of human fingerprints, we propose a fiber-based multimodal tactile smart glove (silver/ionic liquid/TPU glove, named SIT Glove). Using Jeffery orbit dynamics, shear flow during wet-spinning aligned silver nanoflakes (AgNFs) axially, while an ionic liquid served as a dynamic conductive compensation medium, yielding SIT fibers with an “electronic network + ionic polarization” synergy. The fibers exhibit excellent strain, pressure, and temperature sensing properties: conductivity 1.66 × 104 S/m, elongation at break 387.96%, gauge factor 9826.244 (80–100% strain), pressure sensitivity 4.4340 kPa–1 (50–60 kPa), and TCR –0.0453 °C–1 (30–40 °C). Meanwhile, embroidering SIT fibers onto glove fingertips in fingerprint patterns created an 18-channel tactile array. Furthermore, with machine learning for gesture recognition and deep learning (1D-CNN) for fabric classification, the glove achieved 93.98% accuracy for 6 gestures and 86.84% for 4 fabrics and demonstrated body temperature monitoring, hot/cold sensing, virtual game interaction, and fan control. This work offers a bioinspired paradigm for wearable devices with high sensitivity, a wide response range, and multifunctional integration.",
+      "authors": "Zhixuan Liu; Yujun Xu; Jiayan Song; Zhefei Li; Miao Su; Hui Li",
+      "journal": "ACS Sensors",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1021/acssensors.6c02671",
+        "openalex": "https://openalex.org/W7214454286",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.873Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.22976740": {
+      "doi": "10.5281/zenodo.22976740",
+      "normalized_doi": "10.5281/zenodo.22976740",
+      "normalized_title": null,
+      "title": "ଉତତର-ଉପନବଶବଦ ପରପରକଷର ପରବସ ମନସତତତୱ ଓ ଆତମପରଚୟର ଅନୱଷଣ: 'ଅଭଳଷ ଓ ଅନୟନୟ ଗଳପ'ର ଏକ ତତତୱକ ବଶଳଷଣ",
+      "abstract": "ଉତ୍ତର-ଉପନିବେଶବାଦ (Post-colonial) ସମୟଖଣ୍ଡରେ ପ୍ରବାସୀ ମନସ୍ତତ୍ତ୍ୱ, ନିର୍ବାସନ, ବିସ୍ଥାପନ ଓ ଆତ୍ମପରିଚୟର ଅନ୍ୱେଷଣ ସମକାଳୀନ ସାହିତ୍ୟ ତତ୍ତ୍ୱର ମୁଖ୍ୟ ବିଷୟବସ୍ତୁ ଭାବେ ଉଭା ହୋଇଛି।। ଓଡ଼ିଆ କଥାକାର ଶରତ ଚନ୍ଦ୍ର ମିଶ୍ରଙ୍କ ଗଳ୍ପ ସଙ୍କଳନ ‘ଅଭିଳାଷ ଓ ଅନ୍ୟାନ୍ୟ ଗଳ୍ପ’ (୧୯୯୪) ଏହି ଦୃଷ୍ଟିକୋଣରୁ ଏକ ଅତ୍ୟନ୍ତ ଉଲ୍ଲେଖନୀୟ ଦୃଷ୍ଟାନ୍ତ। ଓଡ଼ିଆ କ୍ଷୁଦ୍ରଗଳ୍ପର ଧାରାରେ ଆଞ୍ଚଳିକତା ତଥା ପାରମ୍ପରିକ ଗ୍ରାମୀଣ-ମଧ୍ୟବିତ୍ତ ପରିସରରୁ ଊର୍ଦ୍ଧ୍ୱକୁ ଯାଇ ଏକ ବିଶ୍ୱସ୍ତରୀୟ ପରିପ୍ରେକ୍ଷୀ (Global Perspective) ପ୍ରଦାନ କରିବାରେ ଶରତ ଚନ୍ଦ୍ର ମିଶ୍ରଙ୍କ ଗଳ୍ପଗୁଡ଼ିକ ଅନନ୍ୟ। 'ଅଭିଳାଷ ଓ ଅନ୍ୟାନ୍ୟ ଗଳ୍ପ' ସଙ୍କଳନରେ ଥିବା ବାରଟି ଗଳ୍ପ ମାଧ୍ୟମରେ ଲେଖକ ଆଧୁନିକ ମଣିଷର ଆତ୍ମପରିଚୟ ସନ୍ଧାନ (Identity Crisis), ପ୍ରବାସୀ ଜୀବନର ବିଛିନ୍ନତାବୋଧ (Alienation), ଭୌଗୋଳିକ ସୀମାରେଖା ଅତିକ୍ରମ କରି ମଧ୍ୟ ମାନସିକ ସ୍ତରରେ ରହିଯାଉଥିବା ଅପୂର୍ଣ୍ଣତା ବା ‘ଅନୁପସ୍ଥିତି’ (Sense of Absence) ଏବଂ ପ୍ରଶାସନିକ-ଅମଲାତାନ୍ତ୍ରିକ ଦ୍ୱନ୍ଦ୍ୱକୁ ନିଖୁଣ ଭାବେ ରୂପାୟିତ କରିଛନ୍ତି। ଏହା କ୍ଷୁଦ୍ରଗଳ୍ପର ଭୌଗୋଳିକ ସୀମାକୁ ବିଶ୍ୱ ପରିସର ମଧ୍ୟକୁ ପ୍ରସାରିତ କରିଛି। ଉପନିବେଶବାଦୀ ଶାସନର ପରବର୍ତ୍ତୀ କାଳରେ ଘଟିଥିବା ଦେଶ ବିଭାଜନ, ରାଜନୈତିକ ଉତ୍ଥାନ-ପତନ ଏବଂ ଅର୍ଥନୈତିକ ସ୍ୱପ୍ନ, ରାଜନୈତିକ ସୀମାରେଖା ଓ ପାଶ୍ଚାତ୍ୟ ଭୌତିକତାବାଦ କିପରି ତୃତୀୟ ବିଶ୍ୱର ମଣିଷକୁ ନିଜ ମାଟିରୁ ବିଚ୍ଛିନ୍ନ କରି ବିଦେଶୀ ଭୂଖଣ୍ଡରେ ଏକ ‘ଅନ୍ୟାନ୍ୟ’ (Other) ବା ଦ୍ୱିତୀୟ ଶ୍ରେଣୀର ନାଗରିକ ଭାବେ ଠିଆ କରିଦିଏ, ତାହା ଏହି ସଙ୍କଳନର ମୂଳ ସ୍ୱର। ହୋମି ଭାଭା (Homi Bhabha)ଙ୍କ ‘ସଙ୍କରତା’ (Hybridity), ‘ଅନୁକରଣ’ (Mimicry) ଏବଂ ଷ୍ଟୁଆର୍ଟ ହଲ୍ (Stuart Hall)ଙ୍କ ‘ସାଂସ୍କୃତିକ ଆତ୍ମପରିଚୟ’ (Cultural Identity) ତତ୍ତ୍ୱକୁ ଆଧାର କରି ଏହି ନିବନ୍ଧରେ ଶରତ ମିଶ୍ରଙ୍କ ପ୍ରମୁଖ ଗଳ୍ପଗୁଡ଼ିକର ଏକ ତାତ୍ତ୍ୱିକ ଅନୁଶୀଳନ କରାଯାଇଛି।",
+      "authors": "ଆଶିଷ ନନ୍ଦ",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.22976740",
+        "openalex": "https://openalex.org/W7214459408",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.874Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s41746-026-03276-z": {
+      "doi": "10.1038/s41746-026-03276-z",
+      "normalized_doi": "10.1038/s41746-026-03276-z",
+      "normalized_title": "quantifying the plausibility gap in generative ai for surgical video generation with expert assessment",
+      "title": "Quantifying the plausibility gap in generative AI for surgical video generation with expert assessment",
+      "abstract": "Generative artificial intelligence (AI) shows promise for physical simulation, yet its clinical application remains critically unexplored. We present SurgVeo, a pioneering expert-guided benchmark paired with the Surgical Plausibility Pyramid framework. Evaluating the Veo-3 and Wan2.2 models reveals a consistent plausibility gap: despite high visual fidelity, the majority of errors are surgical logic failures rather than visual quality deficits. By exposing this reliance on visual synthesis, this study provides a roadmap for developing surgical world models.",
+      "authors": "Zhen Chen; Qing Xu; Jinlin Wu; Biao Yang; Yuhao Zhai; Geng Guo; Jing Zhang; Yinlu Ding; Nassir Navab; Jiebo Luo",
+      "journal": "npj Digital Medicine",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s41746-026-03276-z",
+        "openalex": "https://openalex.org/W7214467995",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.874Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.22976665": {
+      "doi": "10.5281/zenodo.22976665",
+      "normalized_doi": "10.5281/zenodo.22976665",
+      "normalized_title": null,
+      "title": "ଉତତର-ଉପନବଶବଦ ପରପରକଷର ପରବସ ମନସତତତୱ ଓ ଆତମପରଚୟର ଅନୱଷଣ: 'ଅଭଳଷ ଓ ଅନୟନୟ ଗଳପ'ର ଏକ ତତତୱକ ବଶଳଷଣ",
+      "abstract": "ଉତ୍ତର-ଉପନିବେଶବାଦ (Post-colonial) ସମୟଖଣ୍ଡରେ ପ୍ରବାସୀ ମନସ୍ତତ୍ତ୍ୱ, ନିର୍ବାସନ, ବିସ୍ଥାପନ ଓ ଆତ୍ମପରିଚୟର ଅନ୍ୱେଷଣ ସମକାଳୀନ ସାହିତ୍ୟ ତତ୍ତ୍ୱର ମୁଖ୍ୟ ବିଷୟବସ୍ତୁ ଭାବେ ଉଭା ହୋଇଛି।। ଓଡ଼ିଆ କଥାକାର ଶରତ ଚନ୍ଦ୍ର ମିଶ୍ରଙ୍କ ଗଳ୍ପ ସଙ୍କଳନ ‘ଅଭିଳାଷ ଓ ଅନ୍ୟାନ୍ୟ ଗଳ୍ପ’ (୧୯୯୪) ଏହି ଦୃଷ୍ଟିକୋଣରୁ ଏକ ଅତ୍ୟନ୍ତ ଉଲ୍ଲେଖନୀୟ ଦୃଷ୍ଟାନ୍ତ। ଓଡ଼ିଆ କ୍ଷୁଦ୍ରଗଳ୍ପର ଧାରାରେ ଆଞ୍ଚଳିକତା ତଥା ପାରମ୍ପରିକ ଗ୍ରାମୀଣ-ମଧ୍ୟବିତ୍ତ ପରିସରରୁ ଊର୍ଦ୍ଧ୍ୱକୁ ଯାଇ ଏକ ବିଶ୍ୱସ୍ତରୀୟ ପରିପ୍ରେକ୍ଷୀ (Global Perspective) ପ୍ରଦାନ କରିବାରେ ଶରତ ଚନ୍ଦ୍ର ମିଶ୍ରଙ୍କ ଗଳ୍ପଗୁଡ଼ିକ ଅନନ୍ୟ। 'ଅଭିଳାଷ ଓ ଅନ୍ୟାନ୍ୟ ଗଳ୍ପ' ସଙ୍କଳନରେ ଥିବା ବାରଟି ଗଳ୍ପ ମାଧ୍ୟମରେ ଲେଖକ ଆଧୁନିକ ମଣିଷର ଆତ୍ମପରିଚୟ ସନ୍ଧାନ (Identity Crisis), ପ୍ରବାସୀ ଜୀବନର ବିଛିନ୍ନତାବୋଧ (Alienation), ଭୌଗୋଳିକ ସୀମାରେଖା ଅତିକ୍ରମ କରି ମଧ୍ୟ ମାନସିକ ସ୍ତରରେ ରହିଯାଉଥିବା ଅପୂର୍ଣ୍ଣତା ବା ‘ଅନୁପସ୍ଥିତି’ (Sense of Absence) ଏବଂ ପ୍ରଶାସନିକ-ଅମଲାତାନ୍ତ୍ରିକ ଦ୍ୱନ୍ଦ୍ୱକୁ ନିଖୁଣ ଭାବେ ରୂପାୟିତ କରିଛନ୍ତି। ଏହା କ୍ଷୁଦ୍ରଗଳ୍ପର ଭୌଗୋଳିକ ସୀମାକୁ ବିଶ୍ୱ ପରିସର ମଧ୍ୟକୁ ପ୍ରସାରିତ କରିଛି। ଉପନିବେଶବାଦୀ ଶାସନର ପରବର୍ତ୍ତୀ କାଳରେ ଘଟିଥିବା ଦେଶ ବିଭାଜନ, ରାଜନୈତିକ ଉତ୍ଥାନ-ପତନ ଏବଂ ଅର୍ଥନୈତିକ ସ୍ୱପ୍ନ, ରାଜନୈତିକ ସୀମାରେଖା ଓ ପାଶ୍ଚାତ୍ୟ ଭୌତିକତାବାଦ କିପରି ତୃତୀୟ ବିଶ୍ୱର ମଣିଷକୁ ନିଜ ମାଟିରୁ ବିଚ୍ଛିନ୍ନ କରି ବିଦେଶୀ ଭୂଖଣ୍ଡରେ ଏକ ‘ଅନ୍ୟାନ୍ୟ’ (Other) ବା ଦ୍ୱିତୀୟ ଶ୍ରେଣୀର ନାଗରିକ ଭାବେ ଠିଆ କରିଦିଏ, ତାହା ଏହି ସଙ୍କଳନର ମୂଳ ସ୍ୱର। ହୋମି ଭାଭା (Homi Bhabha)ଙ୍କ ‘ସଙ୍କରତା’ (Hybridity), ‘ଅନୁକରଣ’ (Mimicry) ଏବଂ ଷ୍ଟୁଆର୍ଟ ହଲ୍ (Stuart Hall)ଙ୍କ ‘ସାଂସ୍କୃତିକ ଆତ୍ମପରିଚୟ’ (Cultural Identity) ତତ୍ତ୍ୱକୁ ଆଧାର କରି ଏହି ନିବନ୍ଧରେ ଶରତ ମିଶ୍ରଙ୍କ ପ୍ରମୁଖ ଗଳ୍ପଗୁଡ଼ିକର ଏକ ତାତ୍ତ୍ୱିକ ଅନୁଶୀଳନ କରାଯାଇଛି।",
+      "authors": "ଆଶିଷ ନନ୍ଦ",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.22976665",
+        "openalex": "https://openalex.org/W7214482969",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:21.875Z",
+      "first_run": "RUN:202609280929:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.radphyschem.2026.114481": {
+      "doi": "10.1016/j.radphyschem.2026.114481",
+      "normalized_doi": "10.1016/j.radphyschem.2026.114481",
+      "normalized_title": "variance reduction techniques driven with an ant colony algorithm calculating the electron beam quality correction factor kq q0 for ionization chambers of small active volume with penelope",
+      "title": "Variance reduction techniques driven with an ant colony algorithm: Calculating the electron beam quality correction factor kQ,Q0 for ionization chambers of small active volume with penelope",
+      "abstract": null,
+      "authors": "A.M. Garví; A.M. Lallena; S. García-Pareja",
+      "journal": "Radiation Physics and Chemistry",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.radphyschem.2026.114481",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:24.079Z",
+      "first_run": "RUN:202609280929:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.ejsobi.2026.103880": {
+      "doi": "10.1016/j.ejsobi.2026.103880",
+      "normalized_doi": "10.1016/j.ejsobi.2026.103880",
+      "normalized_title": "relationship between ant activity and microaggregate stability",
+      "title": "Relationship between ant activity and microaggregate stability",
+      "abstract": null,
+      "authors": "Edivaldo L. Thomaz; Vitor G. Cristofolini",
+      "journal": "European Journal of Soil Biology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.ejsobi.2026.103880",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-09-28T09:29:24.081Z",
+      "first_run": "RUN:202609280929:ANT_MIMICRY:cr",
       "screening_status": "new",
       "relevance_score": null,
       "exclusion_reason": null,
