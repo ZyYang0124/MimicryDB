@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-28T09:29:22.045Z",
+  "generated": "2026-10-05T10:08:14.042Z",
   "policy": "literature_candidate corpus — discovery layer only; screening_status new → screened; irrelevant records are EXCLUDED with a reason, never deleted (SOP Phase 10).",
   "candidates": {
     "10.1016/j.foodhyd.2026.113278": {
@@ -3210,6 +3210,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.bioactmat.2026.09.012"
         }
       ]
     },
@@ -3240,6 +3245,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.tice.2026.103969"
         }
       ]
     },
@@ -3270,6 +3280,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.jddst.2026.108949"
         }
       ]
     },
@@ -3300,6 +3315,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.bioadv.2026.215189"
         }
       ]
     },
@@ -3760,6 +3780,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.radphyschem.2026.114481"
         }
       ]
     },
@@ -3783,6 +3808,766 @@
       "profile_version": "1.0.0",
       "discovered_at": "2026-09-28T09:29:24.081Z",
       "first_run": "RUN:202609280929:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.ejsobi.2026.103880"
+        }
+      ]
+    },
+    "10.1016/j.biomaterials.2026.124663": {
+      "doi": "10.1016/j.biomaterials.2026.124663",
+      "normalized_doi": "10.1016/j.biomaterials.2026.124663",
+      "normalized_title": "bioinspired ecm mimetic peptide nanofibrous coatings promote re endothelialization on vascular stents",
+      "title": "Bioinspired ECM-mimetic peptide nanofibrous coatings promote re-endothelialization on vascular stents",
+      "abstract": null,
+      "authors": "Qianru Guo; Yuting Huang; Ho-Pan Bei; Xiaohui Mou; Wentai Zhang; Zeyu Du; Qing Ma; Hao Li; Nan Huang; Xin Zhao; Chi Chen; Jing Lu; Zhilu Yang",
+      "journal": "Biomaterials",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.biomaterials.2026.124663",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:12.598Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.ijimpeng.2026.105921": {
+      "doi": "10.1016/j.ijimpeng.2026.105921",
+      "normalized_doi": "10.1016/j.ijimpeng.2026.105921",
+      "normalized_title": "a nacre mimetic multi layered composite under combined blast and fragments",
+      "title": "A nacre-mimetic multi-layered composite under combined blast and fragments",
+      "abstract": null,
+      "authors": "Ye Yuan; Jiawei Cui; Qiang Suo; Haoshun Luo; Guangze Xu; Yifan Huang; Yan Liu",
+      "journal": "International Journal of Impact Engineering",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.ijimpeng.2026.105921",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:12.600Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.bioadv.2026.215196": {
+      "doi": "10.1016/j.bioadv.2026.215196",
+      "normalized_doi": "10.1016/j.bioadv.2026.215196",
+      "normalized_title": "the application of engineered exosome mimetic lipid nanoparticles in the hepatic rejuvenation of aged donor livers",
+      "title": "The application of engineered exosome-mimetic lipid nanoparticles in the hepatic rejuvenation of aged donor livers",
+      "abstract": null,
+      "authors": "Lianghao Zhang; Ruidong Ding; Dongpei Zheng; Yingying Liu; Zhanbo Sun; Mei Liu; Shunjie Wu; Guojie Liu; Bingni Li; Zhiwen Zhao; Kun Yu; Xinwei Li; Feng Wang; Chuanshen Xu",
+      "journal": "Biomaterials Advances",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.bioadv.2026.215196",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:12.601Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.snb.2026.141013": {
+      "doi": "10.1016/j.snb.2026.141013",
+      "normalized_doi": "10.1016/j.snb.2026.141013",
+      "normalized_title": "integrated microfluidic platform for continuous downstream purification and in line residual ethanol monitoring of exosome mimetic nanoparticles",
+      "title": "Integrated microfluidic platform for continuous downstream purification and in-line residual ethanol monitoring of exosome-mimetic nanoparticles",
+      "abstract": null,
+      "authors": "Hyoju Jang; Qingyang Wang; Jaejeung Kim; Vasita Lapee-e; Abdulhadee Yakoh; Seoyeon Choi; Kyung-A Hyun; Hyo-Il Jung",
+      "journal": "Sensors and Actuators B: Chemical",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.snb.2026.141013",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:12.602Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.aca.2026.346344": {
+      "doi": "10.1016/j.aca.2026.346344",
+      "normalized_doi": "10.1016/j.aca.2026.346344",
+      "normalized_title": "photothermally enhanced laccase mimetic camno3 enables full dimensional signal harvesting for self powered electrochromic immunosensing of stratifin",
+      "title": "Photothermally enhanced laccase-mimetic CaMnO3 enables full-dimensional signal harvesting for self-powered electrochromic immunosensing of stratifin",
+      "abstract": null,
+      "authors": "Xiaosong Wang; Lihong Gao; Boxun Li; Shuaibo Hu; Xiangyu Ma; Xuejun Zhou; Hong Dai",
+      "journal": "Analytica Chimica Acta",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.aca.2026.346344",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:12.603Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1186/s41181-026-00506-3": {
+      "doi": "10.1186/s41181-026-00506-3",
+      "normalized_doi": "10.1186/s41181-026-00506-3",
+      "normalized_title": "in vivo tracking of nanoerythrosomes with gallium 68 labeling strategies",
+      "title": "In vivo tracking of nanoerythrosomes with gallium-68 labeling strategies",
+      "abstract": "Abstract Background Nanoerythrosomes (NanoEs) are extracellular vesicle mimetics that are suitable for large-scale manufacturing utilizing donated human blood. NanoEs can be used as drug carriers for both disease treatment and diagnostics. To understand the whole-body in vivo behavior of NanoEs, we used positron emission tomography (PET) imaging to study their biodistribution. In this study, we used the [ 68 Ga]Ga- tris (8-hydroxyquinoline) complex to radiolabel NanoEs and track their biodistribution in vivo in healthy Sprague-Dawley rats. The biodistribution was compared with that of the rat control groups administered with [ 68 Ga]GaCl 3 , [ 68 Ga]Ga- tris (8-hydroxyquinoline), and [ 68 Ga]GaCl 3 -labeled NanoEs. Results [ 68 Ga]Ga- tris (8-hydroxyquinoline)-NanoE was synthesized in a two-step process, with a synthesis time of 77 ± 9 min ( n = 4) and a decay-corrected radiochemical yield of 35 ± 20% ( n = 4). The product was purified using size exclusion chromatography and analyzed using thin layer chromatography. The radiotracer was administered to the rats, followed by 60-min PET imaging, after which the tissues were collected for radioactivity quantification. [ 68 Ga]Ga- tris (8-hydroxyquinoline)-NanoE had significantly higher uptake in the liver, pancreas, and blood cells than the control groups. Conclusions It is feasible to radiolabel NanoEs as a novel type of biocompatible nanomaterial with [ 68 Ga]Ga- tris (8-hydroxyquinoline), and significant differences in PET imaging and biodistribution were observed in several tissues compared with the control groups. This is a step forward in the development of NanoE-based delivery platforms for PET imaging and therapeutic purposes.",
+      "authors": "Jonne Kunnas; Reetta Pusa; Emel Bakay; Petter Lövdahl; David Ekwe; Pyry Dillemuth; Kai Härkönen; Ulla Impola; Saara Laitinen; Jessica M. Rosenholm; Xiang‐Guo Li",
+      "journal": "EJNMMI Radiopharmacy and Chemistry",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1186/s41181-026-00506-3",
+        "openalex": "https://openalex.org/W7218583260",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.859Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s44321-026-00528-z": {
+      "doi": "10.1038/s44321-026-00528-z",
+      "normalized_doi": "10.1038/s44321-026-00528-z",
+      "normalized_title": "the therapeutic potential of transposable element activity modulation",
+      "title": "The therapeutic potential of transposable element activity modulation",
+      "abstract": "Abstract The reactivation of transposable elements (TEs) is a recurrent molecular event across cancer, neurodegeneration, autoimmune disease, and aging, yet its therapeutic implications remain largely unexplored. Normally repressed under strict epigenetic surveillance, reactivated transposable elements can generate immunostimulatory nucleic acids that engage cytosolic pattern-recognition receptors, converging on type I interferon signaling and driving chronic sterile inflammation. Yet this inflammatory potential is inherently dual: the same reactivation that drives pathology in some contexts can be harnessed to prime immunity in others. Here, we review two complementary strategies that exploit this duality. Suppressive approaches, including nucleoside reverse transcriptase inhibitors, antisense oligonucleotides, and epigenetic silencing agents, aim to quench pathological TE-driven inflammation in diseases and restore other adaptive mechanisms governing homeostasis. Conversely, controlled TE reactivation through epigenetic priming can induce a viral mimicry state in tumor cells, sensitizing them to immune checkpoint blockade. In parallel, TE-derived peptides presented on MHC class I molecules are emerging as a largely unexploited reservoir of shared tumor antigens for next-generation vaccines and engineered T cell therapies. Together, these observations reframe transposable elements not as mere viral relics to be tolerated, but as a tunable immunological switch whose therapeutic modulation holds promise across some of the most challenging diseases of our time.",
+      "authors": "Gabriele Morelli; Marco D’Onghia; Arianna Mangiavacchi; Valerio Orlando",
+      "journal": "EMBO Molecular Medicine",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s44321-026-00528-z",
+        "openalex": "https://openalex.org/W7218820602",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.860Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.23124264": {
+      "doi": "10.5281/zenodo.23124264",
+      "normalized_doi": "10.5281/zenodo.23124264",
+      "normalized_title": "modular biomimetics programming macroscopic phase and catalytic function in non protein artificial enzymes via central metal substitution part iv programmable topological switches in organometallic enzyme mimetics resolving apoptotic activation via pk a triggers",
+      "title": "Modular Biomimetics: Programming Macroscopic Phase and Catalytic Function in Non-Protein Artificial Enzymes via Central Metal Substitution. Part IV: Programmable Topological Switches in Organometallic Enzyme Mimetics: Resolving Apoptotic Activation via ΔpK_a Triggers.",
+      "abstract": "Classical chemotherapeutic agents and conventional prodrugs rely on structural degradation or indiscriminate reactivity to achieve cytotoxicity, inherently leading to severe systemic side effects. This paper presents an orthogonal paradigm based on topological Phase Dynamics, introducing a triad of organometallic enzyme mimetics (Pt, Cd, and Fe masked by nicotinamide/pidolic acid ligands). Unlike classical pharmacological agents, these complexes operate as topologically closed quantum switches. They do not undergo physical molecular fragmentation to reach the active state; rather, they are activated by a highly localized -driven deprotonation trigger within the acidic tumor microenvironment. Quantum Theory of Atoms in Molecules (QTAIM) calculations demonstrate a profound topological dichotomy: classical Cisplatin exhibits an intrinsically chaotic electronic structure characterized by 0 non-nuclear attractor critical points (NNACPs), leaving its heavy metal center completely unshielded and susceptible to erratic, multi-axial electronic fragmentation. Conversely, the designed Fe-NAM complex generates a strictly disciplined, programmable thermodynamic reservoir defined by an octal symmetric configuration of 8 NNACPs. It must be explicitly noted that empirical evaluations of in vivo pharmacokinetics (PK), pharmacodynamics (PD), and targeted testing on biological cell lines fall strictly outside the scope of this theoretical and structural study.",
+      "authors": "Hennadii Kovalov",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.23124264",
+        "openalex": "https://openalex.org/W7218931603",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.860Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9,
+          "matched_doi": "10.5281/zenodo.23124263"
+        }
+      ]
+    },
+    "10.1016/j.reth.2026.101181": {
+      "doi": "10.1016/j.reth.2026.101181",
+      "normalized_doi": "10.1016/j.reth.2026.101181",
+      "normalized_title": "multifunctional hydrogel scaffolds for endogenous osteochondral regeneration",
+      "title": "Multifunctional hydrogel scaffolds for endogenous osteochondral regeneration",
+      "abstract": "Osteochondral defects, frequently resulting from trauma, infection, or degenerative joint disease, present a significant clinical challenge due to their limited intrinsic healing capacity. Conventional cell-based therapies face limitations including immune rejection, high costs, and regulatory hurdles. Endogenous tissue engineering, which harnesses the body's own repair machinery through biomaterial-mediated recruitment and differentiation of host stem cells, offers a promising alternative. Hydrogel scaffolds, owing to their extracellular matrix-mimetic architecture, tunable physicochemical properties, and capacity for bioactive factor delivery, have emerged as versatile platforms for endogenous osteochondral regeneration. This review provides a strategic overview of hydrogel-based endogenous tissue engineering, covering: (1) the biological rationale for leveraging host cell sources; (2) the design of hydrogels as extracellular matrix -mimetic niches; (3) key regulatory factors; (4) innovative material design strategies. We also discuss current challenges related to long-term functionality, scaffold integration, and clinical translation, offering insights into the development of next-generation hydrogel systems for minimally invasive and effective osteochondral regeneration.",
+      "authors": "Ling Zhang; Xuan Liu; Jinping Liang; Boyu Kuang; Haojie Zhang; Mengxiao Wei; Linjia Wu; 刘南珍; Qidi Ai; Songwei Yang; Yantao Yang",
+      "journal": "Regenerative Therapy",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.reth.2026.101181",
+        "openalex": "https://openalex.org/W7219120951",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.862Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1021/acs.analchem.6c04801": {
+      "doi": "10.1021/acs.analchem.6c04801",
+      "normalized_doi": "10.1021/acs.analchem.6c04801",
+      "normalized_title": "cell mimetic compartmentalization of natural enzymes within mof core cof shell heterostructures as a versatile cascade biosensing platform",
+      "title": "Cell-Mimetic Compartmentalization of Natural Enzymes within MOF-Core/COF-Shell Heterostructures as a Versatile Cascade Biosensing Platform",
+      "abstract": "Abstract The burgeoning demand for efficient multienzyme cascades necessitates advanced scaffolds capable of precise spatial organization; however, constructing heterostructured multilayer frameworks (HMFs) remains a formidable challenge due to harsh solvothermal conditions and imprecise enzyme localization. Herein, a biocompatible, interface-directed strategy is reported to engineer a cell-mimetic metal–organic framework@covalent organic framework (MOF@COF) heterostructure as a versatile colorimetric biosensing platform. Specifically, glucose oxidase immobilization within defect-rich (COOH)2-UiO-66 via competitive coordination generated robust sensing elements. Subsequently, ionic liquid-catalyzed interfacial nucleation orchestrated the in situ growth of a horseradish peroxidase-encapsulated COF shell, yielding a compartmentalized architecture with hierarchical channels. Mechanistic investigations and density functional theory (DFT) calculations reveal that the support’s defect density and interfacial adsorption energy, rather than long-range crystallinity, dictate the directional assembly of the COF layer. This heterostructure exhibits enhanced cascade activity and analytical reliability through spatial proximity and reduced mass transfer resistance over conventional one-pot or stepwise assemblies, while control studies with zeolitic imidazolate framework-8 and hydrogen-bonded organic framework counterparts underscore its superiority in proximity-induced intermediate transfer. Integrating monomer reactivity with topological symmetry offers a predictive blueprint for customizing structurally diverse HMF libraries. Ultimately, flexible replacement of the core enzyme enables the functional validation of this platform through the colorimetric quantification of glucose and hypoxanthine, offering a rational blueprint for engineering biointerfaced heterostructures in cascade biocatalysis.",
+      "authors": "Baozhu Zhao; Zhifei Cheng; Jin Mao; Yanan Zhou; Baocai Xu; Jie Ru Shi; Bo Tang",
+      "journal": "Analytical Chemistry",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1021/acs.analchem.6c04801",
+        "openalex": "https://openalex.org/W7219130074",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.863Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.82940/kkcd-k080": {
+      "doi": "10.82940/kkcd-k080",
+      "normalized_doi": "10.82940/kkcd-k080",
+      "normalized_title": "mimicry and denial proliferating identities in howard jacobson s the finkler question",
+      "title": "Mimicry and Denial: Proliferating Identities in Howard Jacobson’s The Finkler Question",
+      "abstract": "Howard Jacobson’s The Finkler Question examines anti-Semitism in the contemporary United Kingdom, in particular Jewish life besieged by anti-Zionist antagonists. More specifically, the novel, with satire and gallows humor, explores the specific character of a postmodern anti-Semitism. In a society of fluid identities and self-reinvention, archaic prejudices reassert themselves tenaciously, and Jacobson explores possible Jewish responses to this predicament.",
+      "authors": "Russell A. Berman",
+      "journal": null,
+      "year": 2026,
+      "ids": {
+        "crossref": "10.82940/kkcd-k080",
+        "openalex": "https://openalex.org/W3119801705",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.864Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.3389/fphar.2026.1931941": {
+      "doi": "10.3389/fphar.2026.1931941",
+      "normalized_doi": "10.3389/fphar.2026.1931941",
+      "normalized_title": "in vitro pharmacological profiling of ite amide bioisosteric aryl hydrocarbon receptor agonist",
+      "title": "In vitro pharmacological profiling of ITE amide bioisosteric aryl hydrocarbon receptor agonist",
+      "abstract": "Previously, we reported ITE-derived bioisostere 2-(1 H -indole-3-carbonyl)-N-methyl thiazole-4-carboxamide (ITE-CONHCH 3 ) as a high-affinity ligand and potent agonist of the aryl hydrocarbon receptor (AhR) with anti-colitis properties. In the current study, we present its initial in vitro pharmacological profiling. Physicochemical analysis revealed low aqueous solubility (22 µM), excellent chemical stability in human and mouse plasma, and strong plasma protein binding (>98%). Off-target screening against steroid and nuclear receptors confirmed high AhR selectivity. In Caco-2 cells, ITE-CONHCH 3 exhibited high permeability with no active efflux. Interestingly, the compound partitioned substantially into mouse red blood cells (47%) but only weakly into human RBCs (16%). In reporter gene assays, ITE-CONHCH 3 displayed ∼40-fold higher agonist potency in human cells compared to mouse cells. Its ability to activate AhR was further validated by a cell-free AhR-ARNT heterodimerization assay and by the induction of canonical ( CYP1A1 ) and non-canonical ( PAI-1 ) genes expression in Caco-2 cells. In conclusion, ITE-CONHCH 3 possesses a favorable pharmacological profile supporting its potential preclinical development. However, the observed differences in RBC partitioning and AhR potency between species must be considered when interpreting mouse-derived data.",
+      "authors": "Zdenĕk Dvořák; Aneta Grycová; Radim Vrzal; Miroslav Soural; Iveta Zůvalová; Jakub Přikryl",
+      "journal": "Frontiers in Pharmacology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.3389/fphar.2026.1931941",
+        "openalex": "https://openalex.org/W7147198060",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.865Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.37275/oaijmr.v6i5.946": {
+      "doi": "10.37275/oaijmr.v6i5.946",
+      "normalized_doi": "10.37275/oaijmr.v6i5.946",
+      "normalized_title": "pre lacrimal medial canthal epidermoid cyst mimicking lacrimal sac dacryocystocele an observational analytic investigation of clinico radiological discordance functional patency and en bloc microdissection",
+      "title": "Pre-Lacrimal Medial Canthal Epidermoid Cyst Mimicking Lacrimal Sac Dacryocystocele: An Observational Analytic Investigation of Clinico-Radiological Discordance, Functional Patency, and En Bloc Microdissection",
+      "abstract": "Background: Subcutaneous medial canthal masses present a diagnostic challenge due to their proximity to the lacrimal drainage system. Epidermoid cysts in this location are rare and frequently masquerade as dacryocystoceles or lacrimal sac tumors, risking inadvertent lacrimal instrumentation. Objective: To characterize a medial canthal epidermoid cyst mimicking dacryocystocele and assess how functional lacrimal testing and imaging guide diagnosis and excision. Methods: An observational-analytic single-case investigation was conducted in a 21-year-old female presenting with a painless left medial canthal mass. A diagnostic protocol integrating quantitative caliper measurements, Anel irrigation syringing, orbital contrast-enhanced computed tomography (CT), and en bloc transcutaneous microdissection was implemented with serial trajectory monitoring over 12 weeks. Result: Physical examination revealed a 15 × 10 mm firm, mobile, non-tender subcutaneous mass superficial to the anterior lacrimal crest. Preoperative Anel syringing demonstrated 100% unobstructed patency into the nasopharynx without punctal reflux, excluding intrinsic lacrimal sac stenosis. Contrast CT revealed a 15 × 10 mm homogeneous pre-lacrimal cystic lesion (22.4 ± 4.2 Hounsfield units) with intact adjacent bone and an incidental middle cranial fossa Galassi type II arachnoid cyst. Complete en bloc surgical excision was achieved via an 8-mm skin crease incision preserving capsular integrity and the medial palpebral ligament. Histopathology confirmed an epidermoid cyst lined by mature stratified squamous epithelium containing lamellated orthokeratin without adnexa. Postoperative follow-up demonstrated complete mass resolution (Δ% = -100%), patent lacrimal outflow, and excellent cosmetic healing. Conclusion: Functional lacrimal irrigation and high-resolution computed tomography resolve clinico-radiological discordance between pre-lacrimal epidermoid cysts and true dacryocystoceles. En bloc microdissection with capsular preservation yields definitive cure without lacrimal morbidity.",
+      "authors": "Delvi Saswita; Mardijas Efendi",
+      "journal": "Open Access Indonesian Journal of Medical Reviews",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.37275/oaijmr.v6i5.946",
+        "openalex": "https://openalex.org/W7215057169",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.866Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.3389/fimmu.2026.1827486": {
+      "doi": "10.3389/fimmu.2026.1827486",
+      "normalized_doi": "10.3389/fimmu.2026.1827486",
+      "normalized_title": "human macrophages activate a coordinated program linking inflammation and cell death in response to intracellular poly i c",
+      "title": "Human macrophages activate a coordinated program linking inflammation and cell death in response to intracellular Poly(I:C)",
+      "abstract": "Background Macrophages sense viral double-stranded RNA (dsRNA) via the innate immune receptors TLR3 and MDA5 whose activation drives a robust inflammatory program, often coupled to cell death. TLR3/TRIF-dependent apoptosis has been described in response to dsRNA. Growing evidence suggests that dsRNA may trigger multiple forms of cell death with mechanisms yet to be elucidated. In addition to TLR/TRIF axis, the necroptosis regulator RIPK3 has been implicated in both inflammatory response and cell death during viral infections in several cell types. However, its role in regulating these two events in human macrophages remains unclear. Methods Here, we investigated in human monocyte-derived macrophages (hMDMs) the mechanisms of dsRNA induced cell death and its temporal and molecular linkage to inflammatory signaling, with a focus on the interplay between RIPK3 and the TLR3/TRIF pathways. Results We found that intracellular Poly(I:C), a synthetic analogue of dsRNA, induced cell death with apoptotic and necroptotic features. TRIF-mediated signaling cascade and RIPK3 jointly contributed to caspase-8 activation leading to apoptosis. RIPK3 also promoted necroptosis by inducing MLKL phosphorylation. Downstream of caspases, Poly(I:C) induced cleavage of Gasdermin E (GSDME), which remained intracellular and localized in mitochondria contributing to the amplification of caspase-3 activation. RIPK3-dependent signaling drove the release of IFN-β and TNF-α and promoted the upregulation of the sensors TLR3 and MDA5, thereby amplifying the inflammatory axis. The inflammatory response preceded cell death, with RIPK3 being the key regulator of the early signaling and TLR3/TRIF becoming involved at later timepoints. Conclusions Collectively, these findings identify RIPK3 as key mediator coordinating dsRNA-induced inflammatory signaling and regulated cell death in human macrophages.",
+      "authors": "Luigi Fiore; Lara Di Leonardo; Marco Buscetta; Maria Concetta Volpe; Marta Cristaldi; Maria Rita Giuffrè; Chiara Finocchio; Gioacchin Iannolo; Germana Lentini; Giuseppe Teti; Alice Conigliaro; Harald Husebye; Concetta Beninati; Chiara Cipollina",
+      "journal": "Frontiers in Immunology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.3389/fimmu.2026.1827486",
+        "openalex": "https://openalex.org/W7215067916",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.868Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.3389/fonc.2026.1918612": {
+      "doi": "10.3389/fonc.2026.1918612",
+      "normalized_doi": "10.3389/fonc.2026.1918612",
+      "normalized_title": "mixed epithelial and stromal tumor of the kidney with prominent peritumoral adipose tissue a case report radiologically mimicking angiomyolipoma with epithelial cysts",
+      "title": "Mixed epithelial and stromal tumor of the kidney with prominent peritumoral adipose tissue: a case report radiologically mimicking angiomyolipoma with epithelial cysts",
+      "abstract": "Mixed epithelial and stromal tumor of the kidney (MEST) is a rare renal neoplasm with biphasic differentiation comprising epithelial and stromal components. It typically appears as a mixed cystic-solid mass on imaging, and the prognosis is favorable in the vast majority of cases. We report a case of MEST with a prominent fat component on imaging: a 54-year-old woman was admitted with a 1-month history of left flank distension and pain. Contrast-enhanced computed tomography (CT) showed a mixed cystic-solid mass at the lower pole of the left kidney, with a prominent low-attenuation fat-density area surrounding the mass. Preoperatively, the lesion was considered an unusual angiomyolipoma with epithelial cysts (AMLEC). Because the lesion was small, located at the lower pole, and relatively well circumscribed, the patient underwent laparoscopic left partial nephrectomy. Postoperative histopathologic examination confirmed that the left renal mass was benign; however, immunohistochemistry (IHC) demonstrated positivity for EMA and PCK in the epithelial component and for PR and ER in the stromal component, supporting a diagnosis of MEST. The adipose tissue submitted separately with the tumor was located around the tumor and could not be definitively confirmed as an intratumoral component. This case demonstrates that MEST may also exhibit prominent adipose tissue on imaging and illustrates the diagnostic pitfall in which fat-related imaging findings cause MEST to mimic AMLEC, making the early distinction between MEST and cystic change in fat-containing renal tumors challenging.",
+      "authors": "Chuanchuan Wu; Yang Zhang; Bangwei Che; Jiancheng Zhai; Shenglan Yuan; Linjie Lu; Kai Xiong; Yinqian Li; Kaifa Tang",
+      "journal": "Frontiers in Oncology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.3389/fonc.2026.1918612",
+        "openalex": "https://openalex.org/W7215086306",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.869Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.3389/fphar.2026.1924670": {
+      "doi": "10.3389/fphar.2026.1924670",
+      "normalized_doi": "10.3389/fphar.2026.1924670",
+      "normalized_title": "microrna 15b modulates stress induced premature senescence in chronic doxorubicin cardiomyopathy",
+      "title": "microRNA-15b modulates stress-induced premature senescence in chronic doxorubicin cardiomyopathy",
+      "abstract": "Introduction Doxorubicin (DOX) is the most widely used anthracycline in hematologic and solid tumors, whose clinical utility is constrained by dose-dependent cumulative cardiotoxicity that can progress to chronic heart failure. Although previously attributed to overt cardiomyocyte loss, emerging evidence indicates that stress-induced premature senescence (SIPS) constitutes the dominant mechanism of chronic cardiotoxicity at clinically relevant concentrations. SIPS is defined by permanent cell cycle arrest, activation of the p53/p21 and p16/Rb tumor suppressor axes, mitochondrial dysfunction, and a senescence-associated secretory phenotype (SASP) that sustains a pro-inflammatory myocardial milieu. Nevertheless, the post-transcriptional mechanisms that govern this process remain incompletely understood. Methods The post-transcriptional regulation of DOX-induced SIPS was evaluated in vitro using neonatal rat ventricular myocytes (NRVMs) exposed to sublethal DOX (0.1 μM) with or without prophylactic miR-15b restoration via a synthetic mimetic to assess the p53/p21, p16, SASP, lysosomal, and mitochondrial responses. In vivo , a chronic cardiotoxicity model was established in female C57BL/6 mice receiving a cumulative dose of 30 mg/kg DOX to analyze myocardial miR-15b suppression, SIPS markers, and SASP profiles across survival cohorts. Results Sublethal DOX treatment (0.1 μM) suppressed miR-15b expression by approximately 50% in NRVMs, resulting in post-transcriptional derepression of its mitochondrial target, SIRT4. This miR-15b loss triggered a multiparametric SIPS phenotype encompassing accumulation of γH2AX foci, p53/p21 and p16 activation, SASP induction (IL-6, IL-1β, Mcp-1 and Mmp13), lysosomal dysfunction (increased SA-β-Gal staining) and mitochondrial dysfunction. Prophylactic restoration of miR-15b via a synthetic mimetic selectively attenuated the p53/p21 axis, genomic damage foci, lysosomal dysfunction, mitochondrial dysfunction and SASP (IL-6 and IL-1β), without rescuing the p16/Rb pathway. In the female C57BL/6 chronic cardiotoxicity model, the cohort spontaneously stratified into animals completing the protocol (ND; 67%) and a premature death subgroup (PD; 33%). The PD subgroup exhibited the most profound myocardial miR-15b suppression and greater accumulation of SIPS markers, including γH2AX, p16, and reduced Lamin B. Notably, the SASP displayed distinct qualitative profiles between PD and ND animals, suggesting that SASP composition, rather than magnitude alone, determines the cardiotoxic outcome. Conclusion Collectively, these findings position miR-15b as a key post-transcriptional regulator of DOX-induced SIPS in the cardiomyocyte, whose sustained loss associates with cardiotoxicity severity in vivo .",
+      "authors": "Georthan Mancilla; Clara Quiroga; Pablo Castro; Ivonne Olmedo; Hugo Verdejo; Zully Pedrozo",
+      "journal": "Frontiers in Pharmacology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.3389/fphar.2026.1924670",
+        "openalex": "https://openalex.org/W7215094055",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.870Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.3389/fphar.2026.1940174": {
+      "doi": "10.3389/fphar.2026.1940174",
+      "normalized_doi": "10.3389/fphar.2026.1940174",
+      "normalized_title": "resolvin d1 attenuates pulmonary hypertension by suppressing pathological connexin 43 mediated gap junctional communication in pulmonary arterial smooth muscle cells",
+      "title": "Resolvin D1 attenuates pulmonary hypertension by suppressing pathological connexin 43-mediated gap junctional communication in pulmonary arterial smooth muscle cells",
+      "abstract": "Background Pulmonary hypertension (PH) is characterized by progressive pulmonary vascular remodeling driven by activation of pulmonary arterial smooth muscle cells (PASMCs). Resolvin D1 (RvD1), a specialized pro-resolving lipid mediator derived from docosahexaenoic acid (DHA), has vascular protective actions; however, its pharmacological effect on connexin 43 (Cx43)-mediated gap junctional intercellular communication in PH remains unclear. This study investigated whether RvD1 attenuates PH by suppressing pathological formation of gap-junctional Cx43 (GJs-Cx43) in PASMCs. Methods SU5416/hypoxia-induced PH was established in C57BL/6 mice. In vitro , primary mouse PASMCs were cultured under hypoxic conditions to mimic the hypoxic pathological microenvironment and PASMCs activation associated with PH. Pulmonary hemodynamics, right ventricular function and hypertrophy, pulmonary arterial remodeling, and Cx43 distribution in isolated small pulmonary arteries were evaluated in vivo . In PASMCs, biochemical fractionation, Western blotting, immunofluorescence, lucifer yellow dye transfer, cell proliferation and migration assays, and inflammatory and oxidative stress assessments were performed. ZP1609 was used to enhance GJs-Cx43 function in vitro and in vivo . Results RvD1 improved pulmonary hemodynamics and right ventricular adaptation in SU5416/hypoxia-exposed mice. RvD1 also reduced pulmonary arterial wall thickening, elastic lamina remodeling, α-SMA accumulation and PCNA-positive proliferating cells. Mechanistically, SU5416/hypoxia increased total Cx43 and shifted Cx43 toward the GJs-Cx43 formation. RvD1 inhibited GJs-Cx43 formation and attenuated IL-1β, IL-6, ROS and MDA accumulation while partially restoring SOD. In primary PASMCs, hypoxia increased GJs-Cx43 expression, enhanced lucifer yellow dye transfer, and promoted proliferation and migration; these changes were suppressed by RvD1. ZP1609 restored GJs-Cx43-mediated intercellular communication and weakened the inhibitory effects of RvD1 on PASMC inflammatory activation, oxidative stress, proliferation and migration. In vivo , ZP1609 similarly blunted the protection conferred by RvD1 against pulmonary vascular remodeling, right ventricular pressure overload and right ventricular hypertrophy. Conclusion Pathological GJs-Cx43 formation promotes the spread of remodeling-associated signals across PASMCs networks. RvD1 limits pulmonary vascular remodeling by suppressing Cx43-dependent gap junctional communication, identifying GJs-Cx43 as a pharmacologically relevant mechanism underlying the vascular protection afforded by this DHA-derived lipid mediator.",
+      "authors": "Hong Wang; Nan Wang; Zhixian Ji; Yanhui Zhang; Rui Dong; Silin Pan",
+      "journal": "Frontiers in Pharmacology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.3389/fphar.2026.1940174",
+        "openalex": "https://openalex.org/W7215116836",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.871Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.3389/fimmu.2026.1934439": {
+      "doi": "10.3389/fimmu.2026.1934439",
+      "normalized_doi": "10.3389/fimmu.2026.1934439",
+      "normalized_title": "targeting the capsule of klebsiella pneumoniae with a cationic cr3 binding protein enhances phagocytosis and promotes bacterial clearance and survival in a mouse sepsis model",
+      "title": "Targeting the capsule of Klebsiella pneumoniae with a cationic CR3-binding protein enhances phagocytosis and promotes bacterial clearance and survival in a mouse sepsis model",
+      "abstract": "Platelet Factor 4 (PF4), a cationic antimicrobial peptide, serves as a ligand for the myeloid-specific phagocytic receptor CR3 (Mac-1, CD11b/CD18). We previously demonstrated that recombinant dimeric PF4 (rPF4) functions as a bacterial opsonin, enhancing phagocytosis of Gram-positive Staphylococcus aureus and facilitating clearance of both antibiotic-susceptible and methicillin-resistant S. aureus in a mouse model of infectious peritonitis. In this study, we examined whether rPF4 is pathogen-agnostic by assessing its effect on phagocytosis of Gram-negative encapsulated Klebsiella pneumoniae , a WHO Bacterial Priority Pathogen. We demonstrate that rPF4 enhances CR3-mediated phagocytosis of both live and heat-inactivated high-virulence K2 and low-virulence K3 strains of K. pneumoniae by various mouse and human macrophage cell lines, as well as primary neutrophils and macrophages. It also increased phagocytosis of carbapenem-resistant K. pneumoniae . rPF4 did not directly kill bacteria but acted as an opsonin, binding to the negatively charged bacterial capsule and creating recognition sites for CR3 on leukocytes. In a mouse sepsis model, a single dose of rPF4 significantly enhanced bacterial clearance from the lungs, liver, and peritoneum and reduced bacteremia. Histological analyses showed that rPF4 provided substantial protection to lung and liver tissues against K. pneumoniae -induced damage. Consistent with these findings, rPF4 treatment increased the survival rates of infected mice. These results show that rPF4 effectively targets the capsule, a key virulence factor of K. pneumoniae , thereby reducing the bacterium’s ability to evade the host immune response. Overall, the data suggest a common mechanism in which cationic rPF4, by binding to the negatively charged surfaces of both Gram-negative and Gram-positive bacteria, diminishes their antiphagocytic properties.",
+      "authors": "Nataly P. Podolnikova; Iryna Klymenko; James Alagna; Cyrus Diercksmeier; Arnat Balabiyev; David Richardson; Tatiana P. Ugarova",
+      "journal": "Frontiers in Immunology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.3389/fimmu.2026.1934439",
+        "openalex": "https://openalex.org/W7215132892",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.871Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.3389/frbis.2026.1806846": {
+      "doi": "10.3389/frbis.2026.1806846",
+      "normalized_doi": "10.3389/frbis.2026.1806846",
+      "normalized_title": "piezometric architecture and the geometry of plasticity a proposed electromechanical model of the fibrosis plasticity axis",
+      "title": "Piezometric architecture and the geometry of plasticity: a proposed electromechanical model of the Fibrosis–Plasticity axis",
+      "abstract": "Background Models of fibrosis are largely molecular and cell-centred. How whole-organism load geometry constrains long-term tissue fate is comparatively underspecified. The Fibrosis–Plasticity Axis (FPA), a conceptual continuum from reversible remodelling capacity to structural fixation, is proposed here as an organising frame; the physical steps linking load geometry to position on that continuum have not been articulated as a testable chain. Objective To formulate, and render falsifiable, the hypothesis that deformation-generated electrical phenomena in collagen-rich matrix act as a load-geometry-dependent modulator of remodelling, and to define the constructs required to test it. Approach We synthesise evidence from tissue electromechanics, mechanotransduction and connective-tissue physiology, and grade each proposed causal link by evidence level. Proposed framework We introduce, as constructs original to this work: the Geometric Origin of the Body (GOB), the equilibrium configuration around which load-bearing architecture is organised; the Geometric Optimal Pressure Load (GOPeL), the hypothesised load distribution permitting maximal reversibility; and the Geometric Origin Displacement Index (GODI), a proposed—not operationalised, not validated—index of deviation from GOB. The electromechanical proposal is stated as three nested hypotheses. H1, the broad electromechanical hypothesis, holds that deformation of collagen-rich matrix generates local electrical phenomena—electrokinetic, piezoelectric and potentially flexoelectric—which may modulate the behaviour of matrix-producing cells. H2, nested within H1, holds that a solid-state component contributes at physiological hydration and, because it does not require fluid flow for its generation, would be expected to persist when electrokinetic contributions are reduced. H3, nested within H2, holds that this solid-state component is specifically piezoelectric rather than flexoelectric. Each may fail without the one above it failing. We further propose that chronic load asymmetry is distributed through mechanically continuous tissue and generates locally biased electrical signalling at many sites, rather than an electrical field propagating through the organism. Key discriminating criterion If cellular remodelling phenotype is unchanged when electromechanically active and electrically inert matrices are compared under matched mechanical exposure, across the substrate, cell type and loading regimes tested, the electrical contribution proposed here would not be supported within that experimental domain.",
+      "authors": "Alejandro Carballo",
+      "journal": "Frontiers in Biophysics",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.3389/frbis.2026.1806846",
+        "openalex": "https://openalex.org/W7215746796",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.872Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.17507/tpls.1610.05": {
+      "doi": "10.17507/tpls.1610.05",
+      "normalized_doi": "10.17507/tpls.1610.05",
+      "normalized_title": "diasporic ecologies of survival ecofeminist approaches in firoozeh dumas funny in farsi and souvankham thammavongsa s how to pronounce knife",
+      "title": "Diasporic Ecologies of Survival: Ecofeminist Approaches in Firoozeh Dumas’ Funny in Farsi and Souvankham Thammavongsa’s How to Pronounce Knife",
+      "abstract": "Ecofeminism emphasizes the commonality between the experiences of oppressed women and a polluted planet. It is also a method of analysing how much each of these writers brings out the hushed voices of diasporic groups and how much they are connected with nature. This study examines the application of ecofeminism in comparing Firoozeh Dumas’ Funny in Farsi and Souvankham Thammavongsa’s How to Pronounce Knife. This research explores how and why each of these texts relates to Gender, Nature, and Cultural Identity. Dumas and Thammavongsa, in each of their autobiographical narratives, breach Patriarchal traditions and are struggling with environments that shape their identities. Dumas’ Funny in Farsi amusingly defies her struggles with adapting to becoming an Iranian in America and is a subtle satire on Cultural Displacement and Nature. Similarly, Thammavongsa’s collection of short stories, How to Pronounce Knife, voices concern for Lao Immigrants and their struggle with survival and resilience, not only within their environment but also within their societal position. This research examines how these two authors incorporate the concepts of ecofeminism within the description of Gender, Cultural Survival, and Ecological Awareness. It uncovers the intertwining of personal and communal histories with the physical and social landscapes in which they live. Through this comparison, the research identifies the role of environmental and gendered experiences in constructing narratives.",
+      "authors": "Praveen Kumar.M; Vinoth Kumar. M",
+      "journal": "Theory and Practice in Language Studies",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.17507/tpls.1610.05",
+        "openalex": "https://openalex.org/W7215813712",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:13.873Z",
+      "first_run": "RUN:202610051008:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.eswa.2026.134465": {
+      "doi": "10.1016/j.eswa.2026.134465",
+      "normalized_doi": "10.1016/j.eswa.2026.134465",
+      "normalized_title": "cpa rag covert poisoning attacks on retrieval augmented generation in large language models",
+      "title": "CPA-RAG: Covert poisoning attacks on retrieval-augmented generation in large language models",
+      "abstract": null,
+      "authors": "Chunyang Li; Junwei Zhang; Zhuo Ma; Anda Cheng; Yang Liu; Xinghua Li; Jianfeng Ma",
+      "journal": "Expert Systems with Applications",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.eswa.2026.134465",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:14.853Z",
+      "first_run": "RUN:202610051008:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.ast.2026.113899": {
+      "doi": "10.1016/j.ast.2026.113899",
+      "normalized_doi": "10.1016/j.ast.2026.113899",
+      "normalized_title": "implicit q learning bootstrapped ant colony optimization for maritime moving target observation scheduling with agile satellites",
+      "title": "Implicit Q-learning-bootstrapped ant colony optimization for maritime moving-target observation scheduling with agile satellites",
+      "abstract": null,
+      "authors": "He Wang; Junyu Wu; Yeye Liu; Yifan Zhou; Jie Zhang; Hui Li; Yanjie Song; Liang Li",
+      "journal": "Aerospace Science and Technology",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.ast.2026.113899",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:14.854Z",
+      "first_run": "RUN:202610051008:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.asoc.2026.116508": {
+      "doi": "10.1016/j.asoc.2026.116508",
+      "normalized_doi": "10.1016/j.asoc.2026.116508",
+      "normalized_title": "path planning of ackermann field search robots based on an enhanced ant colony algorithm combined with pythagorean hodograph curve smoothing",
+      "title": "Path planning of ackermann field search robots based on an enhanced ant colony algorithm combined with pythagorean hodograph curve smoothing",
+      "abstract": null,
+      "authors": "Shu-Chuan Chu; Zhen-Jia Lu; Jeng-Shyang Pan; Václav Snášel",
+      "journal": "Applied Soft Computing",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.asoc.2026.116508",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:14.856Z",
+      "first_run": "RUN:202610051008:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.jri.2026.104971": {
+      "doi": "10.1016/j.jri.2026.104971",
+      "normalized_doi": "10.1016/j.jri.2026.104971",
+      "normalized_title": "association of antisperm antibodies with conception and molecular mimicry between spermatozoal and genital bacterial proteins in crossbred cows",
+      "title": "Association of antisperm antibodies with conception and molecular mimicry between spermatozoal and genital bacterial proteins in crossbred cows",
+      "abstract": null,
+      "authors": "Ankit Ahuja; Ranjna Cheema; Mrigank Honparkhe; Ajeet Kumar; Pankaj Sood; Mohanned Naif Alhussien",
+      "journal": "Journal of Reproductive Immunology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.jri.2026.104971",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:14.857Z",
+      "first_run": "RUN:202610051008:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.gloplacha.2026.105730": {
+      "doi": "10.1016/j.gloplacha.2026.105730",
+      "normalized_doi": "10.1016/j.gloplacha.2026.105730",
+      "normalized_title": "climate and penguin mediated carbon burial hotspots in coastal lakes of east antarctica",
+      "title": "Climate and penguin-mediated carbon burial hotspots in coastal lakes of East Antarctica",
+      "abstract": null,
+      "authors": "Jingjing Zhao; Yaguang Nie; Libin Wu; Yulu Xue; Steven D. Emslie; Xiaodong Liu",
+      "journal": "Global and Planetary Change",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.gloplacha.2026.105730",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-05T10:08:14.858Z",
+      "first_run": "RUN:202610051008:ANT_MIMICRY:cr",
       "screening_status": "new",
       "relevance_score": null,
       "exclusion_reason": null,
