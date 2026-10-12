@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-05T10:08:14.042Z",
+  "generated": "2026-10-12T10:25:22.624Z",
   "policy": "literature_candidate corpus — discovery layer only; screening_status new → screened; irrelevant records are EXCLUDED with a reason, never deleted (SOP Phase 10).",
   "candidates": {
     "10.1016/j.foodhyd.2026.113278": {
@@ -3850,6 +3850,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.biomaterials.2026.124663"
         }
       ]
     },
@@ -3880,6 +3885,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.ijimpeng.2026.105921"
         }
       ]
     },
@@ -3910,6 +3920,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.bioadv.2026.215196"
         }
       ]
     },
@@ -3940,6 +3955,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.snb.2026.141013"
         }
       ]
     },
@@ -3970,6 +3990,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.aca.2026.346344"
         }
       ]
     },
@@ -4455,6 +4480,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.eswa.2026.134465"
         }
       ]
     },
@@ -4485,6 +4515,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.ast.2026.113899"
         }
       ]
     },
@@ -4515,6 +4550,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.asoc.2026.116508"
         }
       ]
     },
@@ -4545,6 +4585,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.jri.2026.104971"
         }
       ]
     },
@@ -4568,6 +4613,611 @@
       "profile_version": "1.0.0",
       "discovered_at": "2026-10-05T10:08:14.858Z",
       "first_run": "RUN:202610051008:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.18413682": {
+      "doi": "10.5281/zenodo.18413682",
+      "normalized_doi": "10.5281/zenodo.18413682",
+      "normalized_title": "creative leadership as a cognitive social buffer against rumination and organizational anomie the full mediation role of emotional intelligence and emotional capacity",
+      "title": "CREATIVE LEADERSHIP AS A COGNITIVE-SOCIAL BUFFER AGAINST RUMINATION AND ORGANIZATIONAL ANOMIE: THE FULL MEDIATION ROLE OF EMOTIONAL INTELLIGENCE AND EMOTIONAL CAPACITY",
+      "abstract": "Purpose – This study aims to investigate the full mediation effect of Creative Leadership (CL) in the relationship between employee Emotional Capacities (Emotional Contagion (EC), Emotional Intelligence (EI), and Emotion Regulation (ER)) and two critical forms of psychological strain: Rumination (R) and organizational Anomie (A). The research addresses the gap in understanding the specific psychological mechanism through which positive leadership prevents both individual cognitive dwelling and systemic organizational malaise. Design/methodology/approach – A quantitative, cross-sectional research design was employed using a structured, self-administered survey. Data were collected from $N=350$ working professionals. Hypotheses were tested using Structural Equation Modeling (SEM), with analysis conducted using SPSS and LISREL. Findings – The proposed structural model achieved an outstanding fit (RMSEA = 0.003). Emotional Contagion (beta = 1.42) was confirmed as the strongest positive predictor of perceived Creative Leadership. Crucially, CL acts as a significant negative buffer against both Anomie (beta = -0.34) and Rumination (beta = -0.29). The results confirmed that CL fully mediates the relationship between employee emotional capacities and strain outcomes. Research limitations/implications – The study's main limitation is its cross-sectional design, which restricts definitive causal inference. Practically, the findings imply that organizations should integrate emotional resonance into CL training to leverage the strong predictive power of Emotional Contagion. Future work should utilize longitudinal designs or test moderators to confirm the causal sequence and explore contextual variations. Originality/value – This paper provides a novel, empirically-validated framework quantifying CL’s role as a cognitive-social buffer against both individual (R) and organizational (A) strain. It uniquely establishes the paramount role of Emotional Contagion as the primary antecedent for effective Creative Leadership perception, refining leadership theory.",
+      "authors": "DR. S. ANTONY RAJ AISHWARYA ANANDAVALLI MN",
+      "journal": "TPM Testing, psychometrics, methodology in applied psychology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.18413682",
+        "openalex": "https://openalex.org/W7126120974",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.483Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.26044/ranzcr2026/c-226": {
+      "doi": "10.26044/ranzcr2026/c-226",
+      "normalized_doi": "10.26044/ranzcr2026/c-226",
+      "normalized_title": "burkitt lymphoma masquerading as acute abdomen imaging insights from a case series",
+      "title": "Burkitt Lymphoma Masquerading as Acute Abdomen: Imaging Insights from a Case Series",
+      "abstract": null,
+      "authors": "Ivan Mikhail",
+      "journal": "European Society of Radiology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.26044/ranzcr2026/c-226",
+        "openalex": "https://openalex.org/W7220960853",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.484Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.20517/mns.2026.07": {
+      "doi": "10.20517/mns.2026.07",
+      "normalized_doi": "10.20517/mns.2026.07",
+      "normalized_title": "gastric organoid organ on a chip platforms for disease modeling and personalized medicine a review",
+      "title": "Gastric organoid/organ-on-a-chip platforms for disease modeling and personalized medicine: a review",
+      "abstract": "Mechanical, structural, and physiological changes in the stomach underlie both short- and long-term gastric pathologies, most of which are influenced by disruptions of acid secretion, mucosal barrier integrity, motility, or immune responses. Species-specific distinctions limit the study of the pathophysiological state of the human stomach in preclinical animal models. Organoid and organ-on-a-chip (OoC) technologies are emerging tools for recapitulating the compositional and functional properties of native gastric tissue, thus revolutionizing research in gastric health and disease as well as drug screening. The review summarizes recent progress in the development of organoids to model gastric development and disease states to investigate their underlying mechanisms and evaluate associated treatments. Furthermore, microfluidic-based OoC models of the human stomach with an epithelial lining that interfaces with adjacent tissues (including the endothelium and stroma) are described for their increased physiologic relevance owing to the presence of fluid flow and peristalsis-like motion. Finally, we discuss the engineering challenges of the present organoid/OoCsystems, including cell sourcing, experimental throughput, and scalable fabrication, followed by highlighting the future opportunities regarding the optimization of in vitro gastric models for studying gastric pathophysiology and developing personalized therapeutic agents.",
+      "authors": "Peiying Yin; Weiwei Zhang; Shanshan Geng; Yilin Wang; Zhenghan Di; Zhihong Liu; Guangsheng Guo; Xiayan Wang",
+      "journal": "Micro Nano Science",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.20517/mns.2026.07",
+        "openalex": "https://openalex.org/W7221089309",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.485Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25986/iri.2026.104.2.005": {
+      "doi": "10.25986/iri.2026.104.2.005",
+      "normalized_doi": "10.25986/iri.2026.104.2.005",
+      "normalized_title": "1560 1570",
+      "title": "ПОРУЧНЫЕ ЗАПИСИ 1560-х – НАЧАЛА 1570-х гг.: ПРАВЯЩАЯ ЭЛИТА И ПРОВИНЦИАЛЬНЫЕ ДЕТИ БОЯРСКИЕ",
+      "abstract": "Статья посвящена изучению горизонтальных связей в поручных записях 1560-х – начала 1570-х гг. из Царского архива, которые рассматриваются как единый комплекс документов, отражающий происходившие изменения во внутриполитической ситуации Русского государства. Проделанный анализ позволяет сделать вывод, что поручные записи имели ситуативный характер и не привели к возникновению практики общей поруки среди представителей круга высшей аристократии, по аналогии с территориальными служилыми корпорациями второй половины 1570-х гг. Выявленные примеры горизонтальных связей не отличались системностью. При увеличении сумм поруки и расширении числа поручителей процедура поручительства теряла свое значение и превращалась в своеобразный политический «маскарад». This article examines horizontal connections in the 1560s and early 1570s guarantee notes from the Tsar’s archive, examining them as a unified set of documents reflecting ongoing changes in the domestic political situation of the Russian State. The analysis suggests that the guarantee notes were of situational nature and did not lead to the emergence of a practice of general surety among the upper aristocracy members, similar to the territorial service corporations of the second half of the 1570s. The identified examples of horizontal connections were not systematic. As the sums of surety increased and the number of sureties expanded, the surety procedure lost its significance and turned into a kind of political “masquerade.”",
+      "authors": "Бенцианов Михаил Михайлович",
+      "journal": "ДРЕВНЯЯ РУСЬ ВОПРОСЫ МЕДИЕВИСТИКИ",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25986/iri.2026.104.2.005",
+        "openalex": "https://openalex.org/W7221311006",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.486Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.82333/7643-fy75": {
+      "doi": "10.82333/7643-fy75",
+      "normalized_doi": "10.82333/7643-fy75",
+      "normalized_title": "ocular rosacea keratitis presenting with granulomatous keratic precipitates an immune mediated masquerader of granulomatous anterior uveitis",
+      "title": "Ocular Rosacea Keratitis Presenting With Granulomatous Keratic Precipitates: An Immune-Mediated Masquerader Of Granulomatous Anterior Uveitis",
+      "abstract": null,
+      "authors": "A/Prof. Chintan  Malhotra; A/Prof. Amit  Gupta; PC Gupta; Anchal Thakur; Sonam Yangzes; Jitender Jinagal; Lekha Chandel",
+      "journal": "ESCRS Abstracts",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.82333/7643-fy75",
+        "openalex": "https://openalex.org/W7221315606",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.486Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1021/acsami.6c10551": {
+      "doi": "10.1021/acsami.6c10551",
+      "normalized_doi": "10.1021/acsami.6c10551",
+      "normalized_title": "spray freezing engineered cuttlebone architectures enable multiscale mechanical reinforcement in graphene cellulose aerogels",
+      "title": "Spray-Freezing-Engineered Cuttlebone Architectures Enable Multiscale Mechanical Reinforcement in Graphene–Cellulose Aerogels",
+      "abstract": "Abstract Graphene–cellulose aerogels offer lightweight and multifunctional platforms, yet their limited mechanical robustness restricts practical deployment. Herein, we report a bioinspired strategy that integrates novel spray-freezing fabrication with a cuttlebone-mimetic wall–septa architecture to achieve multiscale mechanical reinforcement in graphene–cellulose aerogels. The spray-freezing method allows for scalable production, and the resulting aerogels exhibit an ultralow density of 0.077 g/cm3 while achieving a specific strength of 14.80 kN m/kg and specific modulus of 4.51 kN m/kg at 80% compressive strain, corresponding to 4.95 and 4.96 times those of conventional freeze-dried counterparts. Multiscale simulations reveal that the enhancement arises from two primary mechanisms. At the nanoscale, borax-mediated crosslinking enhances cellulose network integrity, while the bending and load redistribution of graphene nanosheets introduce additional energy dissipation pathways within the lamellar framework. At the mesoscale, horizontal septa in the structure effectively relieve stress concentration during high strain compression. The synergistic coupling of molecular reinforcement and architectural stress redistribution establishes a structure-property paradigm for mechanically resilient cellular nanocomposites. This work provides mechanistic insights into bioinspired multiscale reinforcement and offers a scalable platform for engineering high-performance, lightweight graphene-based aerogels, which is expected to be applied in the thermal and fire prevention fields.",
+      "authors": "Junjiao Li; Yushun Zhao; Yuna Sang; Yichen Zhou; Shaodong Sun; Zifu Zang; 鄭凱伊; Pan Hanchun; Chenxi Zhao; Lei Wen; Chuchu Yang; Chao Sui; Chao Wang",
+      "journal": "ACS Applied Materials & Interfaces",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1021/acsami.6c10551",
+        "openalex": "https://openalex.org/W7221315844",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.487Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.15294/rainbow.v15i3.63704": {
+      "doi": "10.15294/rainbow.v15i3.63704",
+      "normalized_doi": "10.15294/rainbow.v15i3.63704",
+      "normalized_title": "the unhomeliness dilemma of cultural identity on sherman alexie s short story war dances",
+      "title": "The Unhomeliness Dilemma of Cultural Identity on Sherman Alexie’s Short Story War Dances",
+      "abstract": "Sherman Alexie’s (2009) War Dances, one of the short stories in the anthology War Dances, portrays the complexities of Native American identity in contemporary American society. The issue lies in how Indigenous subjects negotiate their cultural belonging through the continuing presence of colonial histories and the supremacy of American cultural values. The narrative presents various social phenomena and catastrophes marked by uncertainty, isolation, and displacement. The contour suggests that cultural identity cannot be comprehended as a settled and homogeneous category, but rather as a negotiated process. This study examines the representation of unhomeliness as cultural identity’s dilemma for Native Americans, employing Homi K. Bhabha’s postcolonial theory, particularly the concepts of hybridity, mimicry, ambivalence, and unhomeliness. Bhabha’s concept of hybridity provides a framework of in-between cultural space that leads to the concept of mimicry as the process of adoption and negotiation between social and cultural entities within the realm of assimilation correlated with ambivalence’s potential. These circumstances culminate in unhomeliness considered not merely as physical displacement but also as a psychological and cultural condition in which the subject experiences a disrupted sense of belonging. The study argues that War Dances portrays unhomeliness as a persistent dilemma in Native American cultural identity.",
+      "authors": "Karina Hanum Luthfia",
+      "journal": "Rainbow Journal of Literature Linguistics and Cultural Studies",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.15294/rainbow.v15i3.63704",
+        "openalex": "https://openalex.org/W7221321715",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.488Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.26599/frict.2026.9441322": {
+      "doi": "10.26599/frict.2026.9441322",
+      "normalized_doi": "10.26599/frict.2026.9441322",
+      "normalized_title": "interactions of pollen stigma interface in fruit trees a multiscale analysis of adhesion mechanisms",
+      "title": "Interactions of pollen-stigma interface in fruit trees: A multiscale analysis of adhesion mechanisms",
+      "abstract": "Abstract Inspired by sophisticated adhesion strategies in nature, physicochemical properties of pollen from three widely distributed fruit species (apple, pear, and kiwifruit) are investigated, and an novel adhesion mechanism for fruit tree pollination is proposed. Through simulation and measurement of natural pollination process, adhesion force between pollen and stigma is quantified, with its constituent components deduced theoretically. Herein, composition and hygroscopic capacity of pollenkitt from three species reveal that while van der Waals forces dominate the adhesion between two biological interfaces, the presence of pollenkitt confers an increased binding strength as relative humidity rises. At the microscale, pollen surfaces are characterized, and biological model between pollen surface microstructure and stigma papillae is investigated to reproduce the natural pollination adhesion system. Following the discovery of strikingly similar ridge structures in two Rosaceae pollen species and dense microprotuberances on kiwifruit pollen, various mechanical models of these microstructures with papillae as well as artificial substrates are established. Furthermore, based on electrostatic properties of pollen, the electrostatically enhanced adhesion effect is explored through theoretical analysis and experimental validation. Collectively, this research elucidates a bioadhesion mechanism underlying fruit tree pollination, providing application potential for research in agricultural science and technology, biomedicine, and ecological environment.",
+      "authors": "Junyu Sun; Yanjun Fang; Liyu Chen; Zhihao Zhang; Yanfei Liu; Fuxi Shi",
+      "journal": "Friction",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.26599/frict.2026.9441322",
+        "openalex": "https://openalex.org/W7221328742",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.489Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25259/jons_12_2026": {
+      "doi": "10.25259/jons_12_2026",
+      "normalized_doi": "10.25259/jons_12_2026",
+      "normalized_title": "halo melanoma of the nail unit a diagnostic and surgical pitfall",
+      "title": "Halo melanoma of the nail unit: A diagnostic and surgical pitfall",
+      "abstract": "Nail unit melanoma (NUM) is a rare but aggressive form of melanoma that often masquerades as a benign nail disorder, leading to diagnostic delay. We report a 60-year-old Indian male who presented with a progressive left thumb nail lesion that evolved from longitudinal melanonychia to destructive nail dystrophy with a friable exophytic mass, together with surrounding periungual depigmentation and focal pigmentation. Onychoscopy revealed an irregular pigment network and black-brown globules over a depigmented background. Positron emission tomography-computed tomography demonstrated a fluorodeoxyglucose-avid primary lesion involving the thumb and a metabolically active ipsilateral axillary lymph node. Histopathology of the amputated specimen confirmed malignant melanoma. Microsections from the depigmented periungual skin showed loss of epidermal melanocytes with dermal melanophages and pigment incontinence, along with scattered atypical melanocytes containing fine granular melanin in continuity with the primary tumour, indicating lateral lentiginous tumour spread within the depigmented field. This case underscores the diagnostic challenges of NUM, in which destructive nail changes may obscure early recognition and periungual depigmentation may mask subclinical lateral tumour spread. Onychoscopy and metabolic imaging are valuable adjuncts for diagnosis and staging; whereas histopathology remains the gold standard. Early suspicion and prompt biopsy are crucial for improving outcomes.",
+      "authors": "Pranomita Sahoo; Vintha Vinisha Reddy; Sibaram Panda; Pranati Pradhan",
+      "journal": "Journal of Onychology and Nail Surgery",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25259/jons_12_2026",
+        "openalex": "https://openalex.org/W7221329134",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.490Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1002/ange.2705500": {
+      "doi": "10.1002/ange.2705500",
+      "normalized_doi": "10.1002/ange.2705500",
+      "normalized_title": "neutrophil extracellular trap mimetic dna nets enable concurrent bacteria targeted eradication and toxin neutralization",
+      "title": "Neutrophil Extracellular Trap‐Mimetic DNA Nets Enable Concurrent Bacteria‐Targeted Eradication and Toxin Neutralization",
+      "abstract": "ABSTRACT Current antibacterial therapies often suffer from limited bacterial selectivity, host‐cell toxicity, and inflammation triggered by toxin release during bacterial killing. Here, we report a neutrophil extracellular traps (NETs)‐mimetic, dopamine‐incorporated DNA net, termed D A Net‐DA, enabling targeted bacterial eradication and concurrent toxin neutralization. Inspired by the trap‐kill‐neutralize function of NETs, D A Net‐DA selectively captures and traps bacteria, followed by in situ catalytic formation of polydopamine nanoshells on the trapped bacteria. This process enables efficient photothermal bacterial eradication while minimizing damage to host cells. Meanwhile, the nanoshells act as molecular sponges to sequester and neutralize bacterial toxins, thereby mitigating toxin‐associated inflammation. These integrated functions endow D A Net‐DA with potent therapeutic efficacy in vivo, as demonstrated by markedly reduced bacterial burdens, toxin levels, tissue inflammation in both conventional and burn wound infection models. Moreover, the simultaneous clearance of bacteria and residual toxins alleviates pro‐inflammatory macrophage polarization, thereby accelerating wound tissue regeneration. This work presents a NETs‐mimetic antibacterial strategy that integrates pathogen clearance with toxin neutralization, offering a promising method for treating bacterial infection‐associated diseases.",
+      "authors": "Jun Li; Hao Yang; Shuangquan Lai; Ruijie Deng; Yi Deng",
+      "journal": "Angewandte Chemie",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1002/ange.2705500",
+        "openalex": "https://openalex.org/W7221332600",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.490Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9,
+          "matched_doi": "10.1002/anie.2705500"
+        }
+      ]
+    },
+    "10.5281/zenodo.23275679": {
+      "doi": "10.5281/zenodo.23275679",
+      "normalized_doi": "10.5281/zenodo.23275679",
+      "normalized_title": "bullous pemphigoid masquerading as desquamative gingivitis in two elderly patients a rare case report",
+      "title": "BULLOUS PEMPHIGOID MASQUERADING AS DESQUAMATIVE GINGIVITIS IN TWO ELDERLY PATIENTS: A RARE CASE REPORT",
+      "abstract": "Background: Bullous pemphigoid (BP) is a chronic autoimmune subepithelial blistering disease of older adults that only uncommonly involves the oral mucosa, where it may mimic ordinary periodontal disease. Case Presentation: Two elderly patients presented with painful desquamative gingivitis (DG). A 65-year-old woman had 6 months of oral burning unresponsive to routine care, with an intact tense bulla at the maxillary left canine (tooth 23); biopsy confirmed BP, and corticosteroids produced marked improvement within 3 weeks. A 72-year-old man on multiple medications, with psychological stress and tobacco use, showed gingival changes consistent with DG. Discussion: The differential diagnosis of DG includes mucous membrane pemphigoid, BP, pemphigus vulgaris, and erosive lichen planus; these overlap clinically, so perilesional biopsy with direct immunofluorescence is essential. Conclusion: BP should be considered in persistent DG in the elderly, as timely biopsy and corticosteroid therapy expedite diagnosis and restore oral health.",
+      "authors": "1*Dr. Manali Shashikant Waghmare, 2Dr. Smita Malbhage, 3Dr. Yadnya Shashikant Waghmare,  4Dr. Gurudev Swami",
+      "journal": "European Journal Pharmaceutical and Medical Research",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.23275679",
+        "openalex": "https://openalex.org/W7221333099",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.491Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25258/ijddt.16.63s.134": {
+      "doi": "10.25258/ijddt.16.63s.134",
+      "normalized_doi": "10.25258/ijddt.16.63s.134",
+      "normalized_title": "pharmacological modulation of neuroinflammation in alzheimer s disease current advances emerging therapeutic targets and future perspectives",
+      "title": "\"Pharmacological Modulation of Neuroinflammation in Alzheimer's Disease: Current Advances, Emerging Therapeutic Targets, and Future Perspectives\"",
+      "abstract": "The gradual degeneration of brain cells, known as synapses and neurones, is the main cause of memory loss and cognitive dysfunction in Alzheimer's disease (AD), a neurodegenerative disorder.Chronic neuroinflammation is an important factor in the development and advancement of the illness, with characteristic pathological characteristics including amyloid-beta plaques and tau-protein tangles.As part of this inflammatory reaction, glial cells, mostly microglia and astrocytes, are activated and pro-inflammatory cytokines like TNF-α, IL-1β, and IL-6 are released.The present therapeutic approaches utilise cytokine inhibitors, microglial modulators, non-steroidal anti-inflammatory medicines (NSAIDs), and anti-inflammatory chemicals derived from plants in an effort to decrease this inflammation and safeguard neuronal integrity.Delays in treatment initiation, inadequate drug penetration across the blood-brain barrier, and low bioavailability are among the reasons that may explain the contradictory clinical results compared to the promising preclinical data.New methods are being developed to improve the efficacy of treatments.These include gene-based therapeutics, monoclonal antibodies, and drug delivery systems driven by nanotechnology.In the future, patient outcomes may be improved by the use of inflammatory biomarkers to drive personalised therapy options.In order to develop better treatments that can halt or slow cognitive loss, our knowledge of neuroinflammation's function in AD must expand.",
+      "authors": null,
+      "journal": "International Journal of Drug Delivery Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25258/ijddt.16.63s.134",
+        "openalex": "https://openalex.org/W7221336419",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.492Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25259/jons_27_2025": {
+      "doi": "10.25259/jons_27_2025",
+      "normalized_doi": "10.25259/jons_27_2025",
+      "normalized_title": "superficial acral fibromyxoma a masquerade of onychomatricoma",
+      "title": "Superficial acral fibromyxoma: A masquerade of onychomatricoma",
+      "abstract": "Superficial acral fibromyxoma (SAF) is a benign nodular tumour with distinct histopathologic findings that distinguish it from other soft-tissue tumours, though clinical findings can be deceptively similar to other pathologies. With prompt recognition, including histologic confirmation and treatment, SAF can be successfully managed despite diagnostic challenges. We present the case of a 45-year-old female who was diagnosed with SAF based on histopathology findings, despite clinical similarity with onychomatricoma (OM). The subtle diagnostic clues are highlighted. This case adds to the limited literature describing this rare entity.",
+      "authors": "Sophia Dahlia Kuhl-Chimera; Chris G Adigun; Garron J. Solomon",
+      "journal": "Journal of Onychology and Nail Surgery",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25259/jons_27_2025",
+        "openalex": "https://openalex.org/W7221337745",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.492Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1021/acsbiomaterials.6c00931": {
+      "doi": "10.1021/acsbiomaterials.6c00931",
+      "normalized_doi": "10.1021/acsbiomaterials.6c00931",
+      "normalized_title": "microstructural anisotropy in bone mimetic silk constructs promotes self mineralization",
+      "title": "Microstructural Anisotropy in Bone-Mimetic Silk Constructs Promotes Self-Mineralization",
+      "abstract": "Abstract Understanding how organic matrix architecture regulates biomineralization remains a central challenge in mineralized tissue regeneration. Emerging evidence highlights the importance of coupled phenomena, including nanoconfinement, ionic and pH regulation, and hierarchical structural remodeling, in directing mineral formation. Silk fibroin (SF) is a versatile structural protein widely used in biomaterials due to its tunable mechanics, scalable processing into micro- and nanoscale constructs, controllable biodegradation, and ability to support cell infiltration and tissue integration, including in bone. However, despite its favorable biological properties, SF exhibits limited intrinsic self-mineralization in physiological fluids, restricting its mechanical reinforcement and osteogenic potential. In this study, we engineered SF scaffolds with controlled microstructure and anisotropy and incorporated bioactive inorganic phases, nano-hydroxyapatite (HA) or 45S5 bioactive glass (BG) to promote self-directed mineralization. Scaffolds were evaluated in simulated body fluid under static and dynamic conditions to assess mineral formation and distribution. Isotropic architectures supported more uniform, volumetric mineral integration, whereas anisotropic scaffolds promoted preferential surface mineral deposition. Incorporation of HA or BG significantly enhanced mineralization, leading to the formation of carbonate-substituted hydroxyapatite (CHA). These compositional and structural effects translated into marked improvements in compressive mechanical properties. Collectively, these findings demonstrate that synergistic control over scaffold architecture and bioactive cargo can direct in situ mineralization, enabling the design of silk-based constructs with enhanced mechanical performance and potential for bone regeneration.",
+      "authors": "Anyelo R. Diaz; Yunteng Cao; Liliana Liverani; Aldo Roberto Boccaccini; Benedetto Marelli; Chiara E. Ghezzi",
+      "journal": "ACS Biomaterials Science & Engineering",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1021/acsbiomaterials.6c00931",
+        "openalex": "https://openalex.org/W7221341852",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.493Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.18231/j.sajhp.19450.1791625886": {
+      "doi": "10.18231/j.sajhp.19450.1791625886",
+      "normalized_doi": "10.18231/j.sajhp.19450.1791625886",
+      "normalized_title": "when a stone grows roots a rare ginger root morphology sialolith of the submandibular gland mimicking malignancy",
+      "title": "When a stone grows roots: A rare ginger-root morphology sialolith of the submandibular gland mimicking malignancy",
+      "abstract": "Introduction: Sialolithiasis is the formation of calcified deposits within the salivary gland or its ductal system, most commonly affecting the submandibular gland and Wharton's duct (~80–90% of cases). Most sialoliths are oval or round; however, atypically branched or irregularly shaped calculi are exceedingly rare and may closely simulate malignancy, posing a significant diagnostic challenge. Case Report: A 58-year-old male presented with a 2-month history of progressive, painful left submandibular swelling with difficulty swallowing. He had a habit of chronic tobacco chewing and a history of angina on antiplatelet therapy. Examination revealed a single, round-to-oval, nodular and tender swelling with no discharge or temperature rise. Intraorally, multiple missing teeth, root pieces, and generalised severe attrition were noted. Investigations: Ultrasonography revealed a heteroechoic lesion with linear calcification and increased vascularity on colour Doppler, raising suspicion of a neoplastic process. CECT neck demonstrated an enlarged left submandibular gland with heterogenous enhancement, a calculus in the submandibular duct, surrounding fat stranding, and reactive cervical lymphadenopathy — consistent with acute sialadenitis secondary to sialolithiasis. CBCT further characterised the calculus as a highly radio-opaque structure with a striking irregular branched ginger-root morphology and smooth, well-defined periphery within the left submandibular gland space.Conclusion: This case highlights a rare ginger-root–shaped sialolith masquerading as submandibular malignancy. Multimodal imaging was pivotal in establishing an accurate diagnosis. Clinicians must maintain a high index of suspicion for morphologically atypical sialolithiasis to avoid misdiagnosis and unwarranted surgical intervention.",
+      "authors": "Jaishri Pagare; Sangharsh Rajdatta Gaikwad; Pornima Rohidas Gawali",
+      "journal": "Southeast Asian Journal of Health Professional",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.18231/j.sajhp.19450.1791625886",
+        "openalex": "https://openalex.org/W7221350318",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.493Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s44319-026-00959-2": {
+      "doi": "10.1038/s44319-026-00959-2",
+      "normalized_doi": "10.1038/s44319-026-00959-2",
+      "normalized_title": "viral subversion of b cell tolerance mechanisms linking infection to autoimmunity",
+      "title": "Viral subversion of B-cell tolerance: mechanisms linking infection to autoimmunity",
+      "abstract": "Abstract Viral infections are increasingly recognized as triggers of autoimmunity, yet the mechanisms linking viral infection to breakdown of B-cell tolerance remain incompletely understood. B-cell tolerance is maintained through sequential central and peripheral checkpoints that normally eliminate or silence self-reactive clones. Viral infections converge on shared mechanisms, including inflammatory cytokines, innate immune activation, molecular mimicry, and persistent antigen exposure, while also promoting polyreactivity, thereby enhancing the survival, activation, and expansion of autoreactive B cells. In this review, we propose that autoimmune outcomes are determined less by viral identity than by the immunological and anatomical context in which tolerance fails. We integrate mechanistic and clinical evidence across systemic, localized, and neurotropic viral infections to present a unifying framework for virus-induced B-cell tolerance breakdown. This framework identifies conserved principles underlying post-viral autoimmunity and provides a foundation for developing therapeutic strategies to preserve B-cell tolerance.",
+      "authors": "Michael Fraczek; Gielenny M. Salem; Ivonne Melano; Xuan Ning Sharon Tan; Charlotte S M Lim; Weiqiang Chen",
+      "journal": "EMBO Reports",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s44319-026-00959-2",
+        "openalex": "https://openalex.org/W7221360278",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.494Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.33232/001c.172274": {
+      "doi": "10.33232/001c.172274",
+      "normalized_doi": "10.33232/001c.172274",
+      "normalized_title": "spectroscopic follow up of compact object binary candidates from gaia dr3 white dwarfs neutron stars black holes and the parallax zeropoint",
+      "title": "Spectroscopic follow-up of compact object binary candidates from Gaia DR3: White dwarfs, neutron stars, black holes, and the parallax zeropoint",
+      "abstract": "Astrometry and radial velocities (RVs) from Gaia DR3 yielded orbits for hundreds of thousands of binary systems, including several samples proposed to contain black holes (BHs), neutron stars (NSs), and white dwarfs (WDs). We present results of a systematic spectroscopic follow-up program targeting these objects. Beginning with a sample of 227 sources, we used a combination of archival data and many-epoch spectroscopic follow-up to characterize more than 200. We obtained 1292 high-quality RVs over a period of four years using the TRES and FEROS spectrographs, achieving a typical precision of 50 m/s and at least 10 RVs for 60 sources. We use these data to test the Gaia orbital solutions and tighten constraints on orbital parameters and component masses. Joint fitting of astrometry and RVs allows us to directly constrain flux ratios, verifying that undetected companions are genuinely dark. We find that ~60% of the astrometric candidates indeed host compact objects, including the two known Gaia BHs, 27 NS candidates, and a dozen massive WDs. We show that tight WD+WD binaries may masquerade as NSs within this sample. The spectroscopic candidates have lower purity: ~50% have spurious solutions, and a majority of the rest are post-mass-transfer binaries or hierarchical triples. Joint astrometry+RV fits of binaries with dark companions yield direct, parallax-independent distance measurements. Using 40 such systems, we measure the Gaia DR3 parallax zeropoint for astrometric orbital solutions. We find Z = − 0.0362 ± 0.0053 mas, consistent with the single-star zeropoint for sources of similar color and magnitude. These results will guide the selection of cleaner candidate samples from Gaia DR4, where a longer observing baseline will enable discovery of many more compact object binaries. RV follow-up will remain important for confirming individual systems, particularly those with extreme parameters.",
+      "authors": "Kareem J. El-Badry; David W. Latham; Hans‐Walter Rix; Allyson Bieryla; Lars A. Buchhave; S. Shahaf; T. Mazeh; Johanna Müller-Horn; Pranav Nagarajan; Natsuko Yamaguchi; Casey Y. Lam; D. M. Rowan; Joshua D. Simon; Jessica R. Lu; Howard Isaacson",
+      "journal": "The Open Journal of Astrophysics",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.33232/001c.172274",
+        "openalex": "https://openalex.org/W7202125456",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.494Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1186/s43556-026-00594-2": {
+      "doi": "10.1186/s43556-026-00594-2",
+      "normalized_doi": "10.1186/s43556-026-00594-2",
+      "normalized_title": "an inducible co stimulator ligand icosl based peptide therapy for proteinuric kidney diseases targeting v 3 integrin",
+      "title": "An inducible co-stimulator ligand (ICOSL)-based peptide therapy for proteinuric kidney diseases targeting αvβ3 integrin",
+      "abstract": "Dysregulated αvβ3 integrin activation in podocytes contributes to proteinuric kidney disease by disrupting podocyte architecture and the glomerular filtration barrier. However, no treatments currently exist that therapeutically target this integrin. We previously identified inducible co-stimulator ligand (ICOSL) as an endogenous antagonist of αvβ3 integrin that protects kidney function through its arginine-glycine-aspartic acid (RGD) motif, independent of its canonical role in immunity. Leveraging the therapeutic advantages of small peptides and the renoprotective function of ICOSL, we used a structure-guided approach to design a 19-amino acid human ICOSL-derived peptide (hICOSL-19) containing the RGD motif and evaluated its therapeutic potential for proteinuric kidney disease. hICOSL-19 exhibited high-affinity binding to αvβ3 integrin, similar to full-length ICOSL, and retained its αvβ3-antagonistic activity. PEGylation of hICOSL-19 (PhICOSL-19) extended its circulating half-life while preserving its antagonistic function. In murine models of acute and chronic proteinuric kidney disease, including immune-mediated glomerulonephritis and diabetic nephropathy, PhICOSL-19 treatment significantly reduced proteinuria, limited glomerular injury, and preserved podocyte architecture. In vitro and in vivo safety assessments further showed no detectable podocyte cytotoxicity, T-cell activation, or anti-drug antibody response. These findings suggest that an ICOSL-derived peptide targeting αvβ3 integrin represents a potential therapeutic strategy for proteinuric kidney diseases associated with αvβ3 integrin activation.",
+      "authors": "Alexis Paulina Jiménez‐Uribe; Yan Xu; 曹艳霞; Ryan Spear; Kwi Hye Koh; Adrian Pablo Mansini; Ariana G. Alcantar; Felix Kliewe; Nicole Endlich; Jochen Reiser; Steve Mangos; Eunsil Hahm",
+      "journal": "Molecular Biomedicine",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1186/s43556-026-00594-2",
+        "openalex": "https://openalex.org/W7220909526",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:22.495Z",
+      "first_run": "RUN:202610121025:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.foreco.2026.124313": {
+      "doi": "10.1016/j.foreco.2026.124313",
+      "normalized_doi": "10.1016/j.foreco.2026.124313",
+      "normalized_title": "long term legacy effects of eucalyptus plantation on soil properties ant diversity and ecosystem functioning in tropical montane ecosystems",
+      "title": "Long-term legacy effects of Eucalyptus plantation on soil properties, ant diversity, and ecosystem functioning in tropical montane ecosystems",
+      "abstract": null,
+      "authors": "Bruno Henrique Silva Mayrink; Tatiana Cornelissen; Bruno Moreira; Pablo Cuevas-Reyes; Walisson Kenedy Siqueira; Marcilio Fagundes",
+      "journal": "Forest Ecology and Management",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.foreco.2026.124313",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:26.544Z",
+      "first_run": "RUN:202610121025:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.inoche.2026.117691": {
+      "doi": "10.1016/j.inoche.2026.117691",
+      "normalized_doi": "10.1016/j.inoche.2026.117691",
+      "normalized_title": "bioactive nickel ii coordination polymer exhibiting phenoxazinone synthase mimicry dna bsa binding and anticancer activity",
+      "title": "Bioactive nickel(II) coordination polymer exhibiting phenoxazinone synthase mimicry, DNA/BSA binding, and anticancer activity",
+      "abstract": null,
+      "authors": "Mahtab Gheytasi Zarouny; Zahra Asadi; Monika Kucerakova; Michal Dusek; Banafsheh Rastegari",
+      "journal": "Inorganic Chemistry Communications",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.inoche.2026.117691",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-12T10:25:26.546Z",
+      "first_run": "RUN:202610121025:ANT_MIMICRY:cr",
       "screening_status": "new",
       "relevance_score": null,
       "exclusion_reason": null,
