@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-12T10:25:22.624Z",
+  "generated": "2026-10-19T08:35:35.835Z",
   "policy": "literature_candidate corpus — discovery layer only; screening_status new → screened; irrelevant records are EXCLUDED with a reason, never deleted (SOP Phase 10).",
   "candidates": {
     "10.1016/j.foodhyd.2026.113278": {
@@ -4650,6 +4650,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.5281/zenodo.18413682"
         }
       ]
     },
@@ -4680,6 +4685,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.26044/ranzcr2026/c-226"
         }
       ]
     },
@@ -5195,6 +5205,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.foreco.2026.124313"
         }
       ]
     },
@@ -5218,6 +5233,666 @@
       "profile_version": "1.0.0",
       "discovered_at": "2026-10-12T10:25:26.546Z",
       "first_run": "RUN:202610121025:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.biomaterials.2026.124685": {
+      "doi": "10.1016/j.biomaterials.2026.124685",
+      "normalized_doi": "10.1016/j.biomaterials.2026.124685",
+      "normalized_title": "ultrasound triggered spinal cord mimetic electroactive hydrogel enables localized bioelectrical modulation and promotes spinal cord injury repair through jnk mediated autophagy",
+      "title": "Ultrasound-triggered spinal cord-mimetic electroactive hydrogel enables localized bioelectrical modulation and promotes spinal cord injury repair through JNK-mediated autophagy",
+      "abstract": null,
+      "authors": "Xiaochen Su; Jing Tian; Zuhao Zhang; Liuyang Zhang; Yanzi Zhao; Yonghui Zhao; Songchuan Zhao; Yingang Zhang; Bo Lei",
+      "journal": "Biomaterials",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.biomaterials.2026.124685",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:34.273Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.talanta.2026.130644": {
+      "doi": "10.1016/j.talanta.2026.130644",
+      "normalized_doi": "10.1016/j.talanta.2026.130644",
+      "normalized_title": "new electrochemical biosensor for the early diagnosis of dengue virus based on a mimetic peptide immobilized on a polymeric nanocomposite",
+      "title": "New electrochemical biosensor for the early diagnosis of dengue virus based on a mimetic peptide immobilized on a polymeric nanocomposite",
+      "abstract": null,
+      "authors": "Jussara Gonçalves Vieira; Ana Paula Sarreta Terra; David Nascimento Silva Teixeira; Guedmiller Souza de Oliveira; Diesley Martins da Silva Araújo; Antonio Eduardo da Hora Machado; Ana Carolina Santana de Oliveira; Ana Gracy Brito-Madurro; João Marcos Madurro; Luciano Pereira Rodrigues",
+      "journal": "Talanta",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.talanta.2026.130644",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:34.275Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.54878/7sfyzq64": {
+      "doi": "10.54878/7sfyzq64",
+      "normalized_doi": "10.54878/7sfyzq64",
+      "normalized_title": "medieval arabic dance philosophical and speculative foundations of the performing arts in the abbasid era",
+      "title": "Medieval Arabic Dance: Philosophical and Speculative Foundations of the Performing Arts in the Abbasid Era",
+      "abstract": "This paper reconstructs, through a textual and philosophical reading of selected Abbasid-era sources, the pre-expressive foundations of medieval Arabic court dance as an integrated performing art rather than a recoverable “catalogue of steps.” Methodologically, it advances an interpretive hypothesis grounded primarily in al-Fārābī's Kitāb al-mūsīqī al-kabīr and al-Masʿūdī's Murūj al-Ḏahab, supplemented by reflections drawn from al-Kindī's musical theory, while delimiting the investigation to the Abbasid period (second half of the 8th to the first half of the 13th century). The author is a performing scholar—dancer, choreographer, and researcher—whose analysis emerges from nearly thirty years of embodied practice in Arab-Islamic and Persian dance forms, and whose dancer-philosopher perspective combines firsthand performance experience with rigorous philological inquiry. The present work is the second volume of a two-part research project: the first volume (Sales 2006, Akkuaria, Roma) introduced the dancer-philosopher perspective and examined al-Kindī's philosophico-musical principles; the current volume (Sales 2025) extends that inquiry to al-Fārābī and al-Masʿūdī and develops the five-nucleus model of pre-expressive requirements. The approach integrates (i) textual-philological analysis of these witnesses, (ii) a controlled comparative-analogical reading oriented toward Persian and Central-Asian stylemes still attested “without solution of continuity,” and (iii) a dancer-philosopher standpoint developed through long practical experience, in which dance remains inseparable from musical philosophy and its ontological horizon. Results are organized into a five-nucleus model of pre-expressive requirements: professionalisation of the artist; the body as sonic/percussive extension; mimetic dance; defined repertoires and technical abilities; and the organic relationship between musical execution and choreutic practice. The paper concludes that, although reliable textual testimonies appear only from the 10th century, their described richness implies a long prior maturation “not born suddenly from nothing,” and that Abbasid court dance should be understood as multi-competent artistry (dance, song, and rhythmic percussion) structurally intertwined with music and classical Arabic poetry.",
+      "authors": "Marialuisa Sales",
+      "journal": "International journal of civilizations studies & tolerance sciences.",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.54878/7sfyzq64",
+        "openalex": "https://openalex.org/W7222648856",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.693Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25258/ijddt.16.87s.10": {
+      "doi": "10.25258/ijddt.16.87s.10",
+      "normalized_doi": "10.25258/ijddt.16.87s.10",
+      "normalized_title": "stimuli responsive polymers design principles polymer architectures and controlled functional responses",
+      "title": "STIMULI-RESPONSIVE POLYMERS: DESIGN PRINCIPLES, POLYMER ARCHITECTURES, AND CONTROLLED FUNCTIONAL RESPONSES",
+      "abstract": "Smart polymers undergo reversible physicochemical changes in response to stimuli such as magnetic fields, temperature, pH, light, and external reagents. Advanced polymerization techniques, including reversible addition fragmentation chain transfer (RAFT), atom transfer radical polymerization (ATRP), and ring opening polymerization, enable precise control over polymer architecture and functional group placement, allowing the design of tailored responsive materials. These polymers are widely explored in biomedical applications, drug delivery, biosensing, cosmetics, and soft robotics due to their ability to adapt dynamically to environmental conditions. Poly(N-isopropylacrylamide) is a well-known thermoresponsive polymer extensively studied for drug delivery and sensing. Responsive polymers exist in linear, block, graft, and cross-linked forms, with activation depending on interactions between structural motifs and stimuli. Despite promising results, challenges remain, including immunogenicity, batch variability, synthesis complexity, scalability, and limited understanding of in vivo stimulus accessibility. Covalent adaptable and interpenetrating polymer networks enhance mechanical strength, biocompatibility, and stimuli responsiveness.",
+      "authors": "Pradip Karale; Dipali Pagar; Agasti Ware; Seema Gosavi; Amit Narang; Nitin Sutar; Nilesh B Chaudhari; Saloni Borse; Anushka Pholane; Raosaheb S. Shendge",
+      "journal": "International Journal of Drug Delivery Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25258/ijddt.16.87s.10",
+        "openalex": "https://openalex.org/W7222790429",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.694Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25258/ijddt.16.88s.2": {
+      "doi": "10.25258/ijddt.16.88s.2",
+      "normalized_doi": "10.25258/ijddt.16.88s.2",
+      "normalized_title": "from inflammation to resolution therapeutic insights into chronic disease management",
+      "title": "From Inflammation to Resolution: Therapeutic Insights into Chronic Disease Management",
+      "abstract": "Inflammation is a fundamental biological process implicated in various physiological and neurological disorders, including cardiovascular diseases, cancer, diabetes, and neurodegenerative conditions. Chronic inflammation is linked to significant health challenges and mortality worldwide, emphasizing the importance of understanding its mechanisms and resolution. This review elucidates inflammatory processes as essential components of the immune response, highlighting pharmacological interventions for promoting timely inflammation resolution. We explore the dual phases of inflammation—acute and chronic—detailing the complex cellular interactions and signaling pathways that govern the inflammatory response to pathogens and tissue injury. In particular, we emphasize specialized pro-resolving mediators (SPMs), such as lipoxins and resolvins, which play crucial roles in transitioning inflammation from a detrimental to a healing state. Additionally, we discuss innovative therapeutic approaches, including tissue engineering, cellular therapies, and the utilization of SPMs, aimed at enhancing inflammation resolution. The roles of gaseous mediators and peptide/protein mediators in modulating inflammation are also examined. Through this comprehensive analysis, we advocate for the development of pro-resolving treatments to improve outcomes for patients with chronic inflammatory disorders. By understanding the intricate dynamics of inflammation and its resolution, new avenues for targeted therapy emerge, offering promise for mitigating the impacts of chronic inflammatory diseases and enhancing patient quality of life.",
+      "authors": "Anastasia Vladimirovna Poznyak; Nikita A. Mitkin; Daria Dmitryevna Borodko; Alexander Nikolaevich Orekhov",
+      "journal": "International Journal of Drug Delivery Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25258/ijddt.16.88s.2",
+        "openalex": "https://openalex.org/W7222795599",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.695Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.31612/2616-4868.7.2026.07": {
+      "doi": "10.31612/2616-4868.7.2026.07",
+      "normalized_doi": "10.31612/2616-4868.7.2026.07",
+      "normalized_title": "jaundice form of leptospirosis in obstetric practice a clinical case of maternal death",
+      "title": "JAUNDICE FORM OF LEPTOSPIROSIS IN OBSTETRIC PRACTICE: A CLINICAL CASE OF MATERNAL DEATH",
+      "abstract": "Introduction. The icteric form of leptospirosis in pregnant women is rare but severe, potentially leading to multi-organ failure and a high risk of maternal and fetal death. Clinical manifestations are often nonspecific and may mimic preeclampsia or other pregnancy complications, complicating early diagnosis.Aim. To increase medical professionals’ awareness of the clinical course and pathomorphological findings of icteric leptospirosis in pregnancy to support timely diagnosis and clinical management.Materials and methods. A retrospective analysis was conducted of a maternal death in a 25-week pregnant woman with the icteric form of leptospirosis. The study included anamnesis, clinical manifestations, laboratory findings, and autopsy results, with macro- and histological examination of the liver, kidneys, lungs, and placenta.Results. On admission, the patient had jaundice, hyperthermia (39.2 °C), tachycardia, arterial hypotension, and oliguria. Laboratory tests indicated severe liver and kidney injury (bilirubin 175 µmol/L, ALT 86 U/L, AST 95 U/L, creatinine 149 µmol/L, urea 15.8 mmol/L, thrombocytopenia 74×10⁹/L, leukocytes 15.4×10⁹/L, C-reactive protein 18 mg/L). Despite intensive therapy, multi-organ failure, disseminated intravascular coagulation (DIC), and septic shock developed, resulting in death. Autopsy confirmed a severe infectious-toxic process: focal hepatic necrosis, dystrophic and necrotic changes in the kidneys, venous congestion and pulmonary edema, and severe infectious-inflammatory damage of the placenta with villous edema, trophoblast necrosis, and extensive hemorrhages.Conclusions. Clinical, laboratory, and morphological findings indicate a severe course of the icteric form of leptospirosis in pregnancy and confirm the link between systemic infection, impaired uteroplacental circulation, and maternal death. Early involvement of an infectious disease specialist and intensive therapy is critically important.",
+      "authors": "Viacheslav M. Husiev",
+      "journal": "Clinical and Preventive Medicine",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.31612/2616-4868.7.2026.07",
+        "openalex": "https://openalex.org/W7222804669",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.696Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25258/ijddt.16.88s.44": {
+      "doi": "10.25258/ijddt.16.88s.44",
+      "normalized_doi": "10.25258/ijddt.16.88s.44",
+      "normalized_title": "a critical review of waste biomass derived carbon dots for drug delivery synthesis properties applications and future prospects",
+      "title": "A Critical Review of Waste Biomass-Derived Carbon Dots for Drug Delivery: Synthesis, Properties, Applications, and Future Prospects",
+      "abstract": "Carbon dots (CDs) made from waste materials and renewable biomass are gaining popularity due to the growing need for sustainable and multipurpose medicine delivery systems. A promising strategy that addresses waste valorization and the creation of functional nanomaterials for therapeutic administration at the same time is waste-biomass-derived carbon dots (WBCDs). The synthesis, physicochemical characteristics, drug-delivery uses, biocompatibility, and translational potential of WBCDs are all rigorously examined in this review. The chemical composition of various waste biomass precursors— such as food wastes, plant-derived materials, agricultural residues, and chitin-rich wastes—and how it affects CD size, morphology, surface functionality, heteroatom incorporation, optical characteristics, and biological performance are examined. The main synthesis techniques—hydrothermal, microwave-assisted, microwave-hydrothermal, pyrolytic, ultrasonic, chemical oxidation, electrochemical, and conventional thermal approaches—are compared with a focus on how they affect characteristics important to drug delivery. Drug-loading processes, pH-responsive and controlled release, cellular uptake, targeted delivery, tracking using fluorescence, and theranostic uses are all given special consideration. The potential of WBCDs for delivering antibiotics, anticancer medications, anti-inflammatory medicines, and bioactive compounds is demonstrated by representative systems based on wheat bran, bamboo leaves, crab shells, sugarcane bagasse, sago bark, carrot roots, sea-buckthorn leaves, and other biomass sources. The review also emphasizes how precursor composition, surface chemistry, particle properties, purification, dose, and exposure conditions all have a significant impact on claimed biological safety. Biomass heterogeneity, batch-to-batch variability, purification, repeatability, limited control over drug loading and release, long-term toxicity, biodistribution, scalability, and regulatory translation are among the outstanding issues despite encouraging laboratory and preclinical results. Standardized synthesis, sophisticated characterisation, logical surface engineering, stimuli-responsive and target-specific administration, thorough toxicological evaluation, scalable processing, and life-cycle assessment should thus be the main areas of future development. All things considered, WBCDs are an emerging platform that combines multifunctional medication delivery technologies with the concepts of the circular economy.",
+      "authors": "Sourav Dutta; Swarnav Koley; Dr. Aparajita Dutta; Partha Pratim Ghosh",
+      "journal": "International Journal of Drug Delivery Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25258/ijddt.16.88s.44",
+        "openalex": "https://openalex.org/W7222804755",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.697Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25258/ijddt.16.88s.101": {
+      "doi": "10.25258/ijddt.16.88s.101",
+      "normalized_doi": "10.25258/ijddt.16.88s.101",
+      "normalized_title": "phytochemical profiling in vitro cox 2 inhibition and in silico evaluation of the ethanolic flower extract of rosa indica l",
+      "title": "Phytochemical Profiling, In-Vitro COX-2 Inhibition and In-Silico Evaluation of the Ethanolic Flower Extract of Rosa indica L.",
+      "abstract": "Background: Pain and inflammation are leading reasons for medical care, and the adverse effects of long-term NSAID and opioid use sustain interest in safer plant-derived alternatives. Rosa indica L. (Rosaceae) is traditionally used for wounds, headaches, and inflammatory complaints, but its anti-inflammatory mechanism remains poorly defined. Objective: To chemically characterise the ethanolic flower extract of Rosa indica and evaluate its COX-2 inhibitory potential using integrated in vitro and in silico approaches. Methods: Fresh authenticated flowers were cold-macerated in 95 % ethanol and concentrated below 40°C. The extract underwent qualitative phytochemical screening, GC–MS profiling and a concentration-dependent COX-2 inhibition assay with indomethacin as a standard. Major constituents were docked against COX-2 (PDB: 5IKR), assessed for drug-likeness, and the resulting complexes were subjected to RMSF analysis using CABS-flex 3.0. Results: Screening confirmed phenolics, flavonoids, alkaloids, tannins, saponins, steroids and glycosides. GC–MS identified 27 constituents, including pyrogallol, 2,4-di-tert-butylphenol, 5-hydroxymethylfurfural, DDMP, phenylethyl alcohol, vanillin lactoside, linoleic acid, and chondroitin sulfate. Ethanolic extract of Rosa indica inhibited COX-2 with an IC₅₀ of 624.5 ± 23.33 µg/mL, compared with 93.35 ± 0.88 % inhibition by indomethacin. Docking energies ranged from −7.0 to −8.7 kcal/mol, led by vanillin lactoside (−8.7) and chondrillasterol (−8.3). Phenylethyl alcohol and 2,4-di-tert-butylphenol showed was most drug-like lead strongest binders were least drug-like. RMSF values remained largely below 1.5 Å. Conclusion: The ethanolic flower extract of Rosa indica is a weak to moderate, multi-component COX-2 inhibitor whose activity most likely reflects additive contributions of phenolic, glycosidic, fatty acid, as well as steroidal constituents. These findings provide a mechanistic rationale for the traditional anti-inflammatory use of the plant and justify bioassay-guided fractionation and in-vivo validation, but do not by themselves establish therapeutic efficacy.",
+      "authors": "Dhineshmani Muthupandi; Dhanasekar J; Linda Merlin; Ashwini B; Pradeepraja K; Narmadha D; Piranesh V; Srikanth C",
+      "journal": "International Journal of Drug Delivery Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25258/ijddt.16.88s.101",
+        "openalex": "https://openalex.org/W7222817422",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.698Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25258/ijddt.16.78s.30": {
+      "doi": "10.25258/ijddt.16.78s.30",
+      "normalized_doi": "10.25258/ijddt.16.78s.30",
+      "normalized_title": "narrative voice memory and postcolonial identity formation a comparative analytical study of lyrical storytelling in the select novels of arundhati roy and kiran desai",
+      "title": "Narrative Voice, Memory, and Postcolonial Identity Formation: A Comparative Analytical Study of Lyrical Storytelling in the Select Novels of Arundhati Roy and Kiran Desai",
+      "abstract": "The rise of the postcolonial narratives has predicted the intricacies of fractured identities informed by the past, displacement and cultural ambivalence. Nevertheless, the significance of lyrical narrative voice as a memory creating and mediating mechanism is under-researched. This paper examines the interplay of narrative voice and memory to construct postcolonial identity in these two novels that were chosen Arundhati Roy and Kiran Desai. Through the application of qualitative comparative textual analysis based on the postcolonial and memory theory, the paper examines how the two authors employ lyrical narratives told through non-linear storytelling, remembrance imagery and rhythmic language in re-creating personal and community experiences. It is argued in the analysis that the role of the lyrical narrative voice is a compelling discursive tool wherein fragmented identities are researched, which enables characters to power brokering trauma, belonging, and cultural dislocation. Although the narrative style of Roy is more intimate and localized in terms of memory and emotional richness, the one of Desai is indicative of the general diasporic conflicts and national identity construction. This study can help to better explain how modern Indian English fiction can be articulated by focusing on the issues of memory, voice, and postcolonial subjectivity.",
+      "authors": "Abhimanue Yadav; Shikha Dutt Sharma",
+      "journal": "International Journal of Drug Delivery Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25258/ijddt.16.78s.30",
+        "openalex": "https://openalex.org/W7222820076",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.699Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25258/ijddt.16.87s.11": {
+      "doi": "10.25258/ijddt.16.87s.11",
+      "normalized_doi": "10.25258/ijddt.16.87s.11",
+      "normalized_title": "regulatory challenges and validation protocols for chip based organ mimicry",
+      "title": "REGULATORY CHALLENGES AND VALIDATION PROTOCOLS FOR CHIP-BASED ORGAN MIMICRY",
+      "abstract": "The function of tissues and perhaps organs could be replicated utilize organ-on-a-chip technology. Clone organs, create functional organ-like components on a fluidic chip platform, and replicate the microbiome of humans. By getting rid of significant differences between cell cultures and common animal These bioengineered models have advanced toxicity testing & customized medicine. Organ chip technology may rebuild the human microbiota, recreate the physiology of tissues and organelles, and produce functional organs on multiple levels of chip substrates. The regulatory acceptance of OoC systems becomes even more important as they find applications into preclinical and clinical research spheres. Though dispersed, worldwide regulatory systems make standardisation and certification rather difficult. Along with the global regulatory landscape for OoC platforms, the legislative framework for OoC technologies in important countries namely the United States, the European Union, Japan, China, and developing nations is exhaustively examined in this review stressing the status, verification problems, and future orientations. The lack of uniformity, unclear classification, and reproducibility concerns create significant obstacles to regulatory approval. Forward-thinking initiatives like “Innovative Science and Technology Approaches for New Drugs” (ISTAND) Pilot project, which encourages the creation of pharmaceutical research contrivance have been started by the US Food and Drug Administration (FDA).",
+      "authors": "Pradip Karale; Sakshi Ithaped; Seema Gosavi; Nitin Sutar; Amit Narang; Agasti Ware; Nilesh B Chaudhari; Anjali Gavit; Raosaheb S. Shendge",
+      "journal": "International Journal of Drug Delivery Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25258/ijddt.16.87s.11",
+        "openalex": "https://openalex.org/W7222823634",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.700Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s40944-026-01174-6": {
+      "doi": "10.1007/s40944-026-01174-6",
+      "normalized_doi": "10.1007/s40944-026-01174-6",
+      "normalized_title": "uterine synovial sarcoma masquerading as a broad ligament mass a diagnostic challenge",
+      "title": "Uterine Synovial Sarcoma Masquerading as a Broad Ligament Mass: A Diagnostic Challenge",
+      "abstract": null,
+      "authors": "Akkamahadevi C. Hiremath; Y. C. Spoorthy Rekha; Nandeesha TD; Aishwarya Shukla; H. J. Keerthi",
+      "journal": "Indian Journal of Gynecologic Oncology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s40944-026-01174-6",
+        "openalex": "https://openalex.org/W7222825414",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.701Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25258/ijddt.16.88s.60": {
+      "doi": "10.25258/ijddt.16.88s.60",
+      "normalized_doi": "10.25258/ijddt.16.88s.60",
+      "normalized_title": "ruptured amoebic liver abscess with subdiaphragmatic and posterior mediastinal extension presenting as acute dyspnoea in a 77 year old man with copd a case report",
+      "title": "Ruptured Amoebic Liver Abscess with Subdiaphragmatic and Posterior Mediastinal Extension Presenting as Acute Dyspnoea in a 77-Year-Old Man with COPD: A Case Report",
+      "abstract": "Rupture of an amoebic liver abscess through the hepatic capsule is uncommon, and extension beyond the subphrenic space into the posterior mediastinum is rarer still. We describe a 77-year-old man with chronic obstructive pulmonary disease (COPD) whose only prominent symptoms were acute breathlessness with orthopnoea and a dull right hypochondrial ache; he remained afebrile throughout. Ultrasonography identified a 220–230 cc hypoechoic collection in segment VII of the liver with a right pleural effusion, and contrast-enhanced computed tomography (CECT) demonstrated a capsular defect at the medial aspect of segment VII through which the abscess had tracked into the subdiaphragmatic space, around the oesophagus and into the posterior mediastinum, accompanied by gross ascites and a septated, air-containing right pleural collection. The patient was treated with intravenous metronidazole and ceftriaxone, right tube thoracostomy, percutaneous pigtail drainage of the hepatic cavity, albumin–diuretic therapy, one unit of packed red cells and inhaled bronchodilators. Serial imaging documented a fall in cavity volume from roughly 220 cc to 90–100 cc over eighteen days, and he was discharged clinically improved with the chest drain retained pending pleural resolution. The case illustrates that a ruptured amoebic abscess with mediastinal spread can present with respiratory rather than hepatic symptoms in the elderly and can be managed without laparotomy when rupture is recognised early and both the hepatic and pleural compartments are adequately drained.",
+      "authors": "Jintu Bura Gohain; Deepak Sharma; Suresh Babu; Yash Pahariya; Dr Lavish Singla; Vipul Goyal; Apurav Punia; Rishikesh Pandey; Kshitij Kumar; Dr. Pokala Sai Bhadrinath",
+      "journal": "International Journal of Drug Delivery Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25258/ijddt.16.88s.60",
+        "openalex": "https://openalex.org/W7222830612",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.701Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25258/ijddt.16.73s.67": {
+      "doi": "10.25258/ijddt.16.73s.67",
+      "normalized_doi": "10.25258/ijddt.16.73s.67",
+      "normalized_title": "engineering bilosomes for enhanced drug delivery current status and future prospects",
+      "title": "Engineering Bilosomes for Enhanced Drug Delivery: Current Status and Future Prospects",
+      "abstract": "Bilosomes are the bile salt-stabilized lipid vesicles used to tackle the main drawbacks of classical vesicular systems, in particular their poor stability in the gastrointestinal tract and inadequate mucosal delivery.By incorporating bile salts (e.g., sodium deoxycholate, sodium taurocholate) into the lipid bilayer, bilosomes gain increased membrane elasticity, which is vital for withstanding enzymatic and pH-mediated degradation/escalating epithelial permeation via membrane fluidization, as well as for transient tight-junction modulation.This review will focus on core phospholipid vesicles including its basic principles (Self-assembly, composition, critical quality attributes), improvement strategies (Polymer coating, PEGylation, Ligand functionalization, hybrid/stimuliresponsive system formation as well as optimized lipid-surfactant-bile salt complex), and preparation techniques (scalable microfluidics production with homogenization/sonication/extrusion post-sizing).Bilosomes work by enhancing mucosal adhesion, thereby increasing paracellular/transcellular drug transport and absorption via lymphatics, which helps avoid the first-pass effect and enables better intracellular delivery of macromolecules.It is useful in the case of oral administration of poorly bioavailable drugs, orally administered peptides/proteins/biologics, oral/intranasal vaccination with strong mucosal/systemic immune response, intranasal brain targeting, transdermal delivery, oncology agentive passive/ligand-mediated targeting, and the use of nucleic acid-based/biomacromolecular delivery systems.Finally, translational challenges in specificity, such as long-term stability, biological media variability, sensitivity, IVIVC gaps, scalable, reproducible manufacturing systems, safety/regulatory evaluation, multi-excipient system cost, further prospective directions, use of AIguided formulation optimization techniques, real-time monitored continuous microfluidic production, and friendly bile salt mimetic development are discussed.",
+      "authors": null,
+      "journal": "International Journal of Drug Delivery Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25258/ijddt.16.73s.67",
+        "openalex": "https://openalex.org/W7222846252",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.702Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.58721/za13x671": {
+      "doi": "10.58721/za13x671",
+      "normalized_doi": "10.58721/za13x671",
+      "normalized_title": "green bonds and financial performance of commercial banks in kenya",
+      "title": "Green Bonds and Financial Performance of Commercial Banks in Kenya",
+      "abstract": "The study investigated the relationship between green bonds and the financial performance of commercial banks in Kenya. A quantitative research design using panel data analysis was used. The study adopted a census approach where 14 commercial banks having complete data for the period 2020–2024 were used. Secondary data was gathered from audited annual reports, financial statements, sustainability reports and publications by Central Bank of Kenya, using a structured data extraction template. Descriptive statistics (mean, standard deviation, minimum, maximum, skewness, and kurtosis) and inferential statistics (Pearson's correlation analysis and fixed-effects panel regression analysis) were used to analyse the data. The results showed that green bonds positively and statistically significantly influenced financial performance (β = 0.0905, p = 0.005). The results support the theoretical propositions of Institutional Theory. The study adds to literature by offering empirical evidence on the green bonds and financial performance relationship in the Kenyan banking context. The results can be used to develop policies on green finance adoption and sustainable banking. The commercial banks are urged to boost the issuance of green bonds to boost their profitability and promote environmental sustainability.",
+      "authors": "Faith Leah Anyona; Maniagi Musiega; Jackline Akoth Odero",
+      "journal": "Research Journal of Business and Finance",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.58721/za13x671",
+        "openalex": "https://openalex.org/W7222079936",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.703Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25258/ijddt.16.70s.122": {
+      "doi": "10.25258/ijddt.16.70s.122",
+      "normalized_doi": "10.25258/ijddt.16.70s.122",
+      "normalized_title": "phenolic profiles of nelumbo nucifera from manipur against neurodegenerative inflammation",
+      "title": "Phenolic Profiles of Nelumbo nucifera from Manipur Against Neurodegenerative Inflammation",
+      "abstract": "Background: Natural phenolic compounds have emerged as promising therapeutic agents owing to their antioxidant and anti-inflammatory effects.Neuroinflammation is a pivotal factor in the etiology of neurodegenerative disorders.Although Nelumbo nucifera is widely utilized in traditional medicine for neurological ailments, its phenolic composition and the associated neuroprotective mechanisms are predominantly uninvestigated.Objective: This study sought to employ ultra-high-performance liquid chromatography-tandem mass spectrometry (UHPLC-MS/MS) to analyze the phenolic compounds of N. nucifera from Manipur and to assess its neuroprotective potential by evaluating its anti-inflammatory, antioxidant, and immunomodulatory activities in BV2 microglial cells activated by lipopolysaccharide (LPS).Methods: UHPLC-MS/MS was utilized to identify and quantify phenolic chemicals.The neuroprotective activity was evaluated by quantifying tumor necrosis factor-α (TNF-α), interleukin-1β (IL-1β), nitric oxide (NO), and intracellular reactive oxygen species (ROS) generation.Western blotting was utilized to evaluate the expression levels of NF-κB p65, phosphorylated p38 MAPK, phosphorylated JNK, cyclooxygenase-2 (COX-2), and inducible nitric oxide synthase (iNOS).M1 (iNOS and CD86) and M2 (Arg-1, CD206, IL-4, and IL-10) markers were utilized to assess microglial polarization.Results: UHPLC-MS/MS profiling revealed that the predominant phenolic compounds were myricetin (18.64 ± 0.82 mg g⁻¹ DW), quercetin (15.27 ± 0.74 mg g⁻¹ DW), and kaempferol (11.83 ± 0.56 mg g⁻¹ DW), along with rutin, catechin, gallic acid, and chlorogenic acid.Compared to LPS-treated cells, N. nucifera extract markedly decreased the generation of TNF-α (66.17%),IL-1β (68.32%),NO (68.54%), and ROS (64.80%) at a dose of 100 μg mL⁻¹ (p < 0.001).The extract induced a phenotypic shift in microglia from the pro-inflammatory M1 phenotype to the neuroprotective M2 phenotype by enhancing the synthesis of Arg-1, CD206, IL-4, and IL-10, while significantly suppressing the activation of NF-κB p65, phosphorylated p38 MAPK, phosphorylated JNK, COX-2, and iNOS.Conclusion: The results demonstrate that N. nucifera from Manipur is a considerable source of bioactive phenolics with notable neuroprotective characteristics.The extract reduced neuroinflammation by promoting anti-inflammatory microglial polarization and lowering oxidative stress, inflammatory cytokine production, and NF-κB/MAPK signaling.These findings demonstrate N. nucifera's potential as a natural therapeutic alternative for the prevention and treatment of neuroinflammatory and neurodegenerative illnesses, offering mechanistic validity for the plant's traditional medicinal uses.",
+      "authors": null,
+      "journal": "International Journal of Drug Delivery Technology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25258/ijddt.16.70s.122",
+        "openalex": "https://openalex.org/W7222259662",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.703Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1108/jeim-05-2026-0911": {
+      "doi": "10.1108/jeim-05-2026-0911",
+      "normalized_doi": "10.1108/jeim-05-2026-0911",
+      "normalized_title": "corporate ethical and responsible ai cerai and ai trustworthiness a lifecycle perspective and empirical insights",
+      "title": "Corporate ethical and responsible AI (CERAi) and AI trustworthiness: a lifecycle perspective and empirical insights",
+      "abstract": "Purpose This study develops and empirically validates a Corporate Ethical and Responsible AI (CERAi) lifecycle framework. The framework comprises three interdependent stages: design and development, testing and training, and deployment and usage. The study aims to move the research beyond abstract principles and policy analyses toward empirically grounded, lifecycle-integrated artificial intelligence AI governance theory. It positions ethical AI and responsible AI governance as the two constitutive components of the CERAi construct, and AI trustworthiness as a conceptually and empirically distinct downstream outcome anchored in stage-specific organizational governance mechanisms. The CERAi framework is scoped broadly to encompass governance of both conventional/traditional machine learning models and autonomous AI agents operating within organizational settings. Design/methodology/approach We administered a large-scale survey to 500 attendees at a national AI conference in the United States in early 2026, yielding 143 useable responses from AI professionals across healthcare, financial services, manufacturing, retail and energy sectors. We developed and validated multi-item scales for each CERAi lifecycle stage using established ethical AI and AI governance frameworks. Structural equation modeling was employed to assess the measurement model and to test both direct path hypotheses and mediation hypotheses. Findings Both CERAIi design and development and CERAi deployment and usage have significant positive direct effects on AI trustworthiness, whereas CERAi testing and training do not. Our results also indicate a significant serial mediation pathway in which CERAi deployment and usage enhance AI trustworthiness through testing and training, followed by design and development. Conversely, testing and training alone do not mediate the relationship between deployment and usage and AI trustworthiness, indicating that design-stage ethics serve as an intervening (mediating) mechanism through which governance activity enacted at later lifecycle stages is associated with perceived AI trustworthiness. This is consistent with testing and training's association with trustworthiness operating indirectly, mediated by the ethical architecture established during the design and development stage. Originality/value Findings of this study demonstrate that AI trustworthiness reflects differentiated perceived salience across AI lifecycle stages, whereby stakeholders appear to weight visible, deployment-stage governance more heavily than upstream design and testing stage governance in forming trustworthiness judgments, rather than reflecting a definitive validation that governance effects accumulate uniformly across all stages in isolation. This study makes a distinctive contribution by providing empirical evidence for a governance-sequencing mechanism, whereby design-stage ethics function as a mediating pathway shaping the effectiveness of governance activity at later lifecycle stages. To the best of our knowledge, such a mediated, stage-sequential mechanism has not previously been demonstrated using primary data within a comprehensive, three-stage CERAi lifecycle framework linking organizational ethical and responsible governance practices to AI trustworthiness outcomes.",
+      "authors": "Rupak Rauniar; Qing Ray Cao; Steve Bin Zhou; Amaani Rauniar",
+      "journal": "Journal of Enterprise Information Management",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1108/jeim-05-2026-0911",
+        "openalex": "https://openalex.org/W7222345529",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.704Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s42003-026-11125-8": {
+      "doi": "10.1038/s42003-026-11125-8",
+      "normalized_doi": "10.1038/s42003-026-11125-8",
+      "normalized_title": "flippability of escherichia coli membrane proteins under lipid stress reveals a new job for old genes",
+      "title": "Flippability of Escherichia coli membrane proteins under lipid stress reveals a new job for old genes",
+      "abstract": "Normally, the “flip-flop” motion is reserved for small lipid molecules which move from one leaflet of the membrane to the other, and even that process is very slow without the aid of specific enzymes. Unexpectedly, we recently found that despite a prohibitively high energy barrier, Escherichia coli cardiolipin (CL) synthase A (ClsA) flips its large catalytic domain across the inner (cytoplasmic) membrane (IM) when cells were fully or partially depleted of phosphatidylethanolamine (PE) and that this was necessary to support cell viability. Here, we demonstrated that production of the non-native phospholipid phosphatidylcholine (PC) in PE-depleted cells prevents ClsA flipping and halts cell growth, a phenotype rescued by constitutively inverted ClsA. Surprisingly, properly oriented lactose permease (LacY) acts as a multicopy suppressor, rescuing the growth defect in the -PE+PC cells. These data indicate that neutral PC regulates the membrane topology of ClsA and LacY, and subsequently the appearance of CL to the periplasmic leaflet required for viability. Therefore, ClsA and potentially LacY may achieve varied roles from the same amino acid sequence through an unusual flip-flopping mechanism. This fruitful “repurposing” of genetic material highlights the remarkable adaptability of living organisms and their membranes. Altering E. coli lipids disrupts growth, but controlled membrane protein flipping simulates natural selection and resemonstrates that membrane proteins can re-evolve under the selective pressure of an altered lipid bilayer.",
+      "authors": "Katsuhiro Sawasato; Mikhail V. Bogdanov",
+      "journal": "Communications Biology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s42003-026-11125-8",
+        "openalex": "https://openalex.org/W7222404488",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.704Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s11102-026-01776-5": {
+      "doi": "10.1007/s11102-026-01776-5",
+      "normalized_doi": "10.1007/s11102-026-01776-5",
+      "normalized_title": "higher arnt expression is associated with the sparsely granulated phenotype in somatotroph pituitary adenomas an immunohistochemical study",
+      "title": "Higher ARNT expression is associated with the sparsely granulated phenotype in somatotroph pituitary adenomas: An immunohistochemical study",
+      "abstract": "PURPOSE: Somatotroph pituitary adenomas are a heterogeneous group comprising distinct histopathological subtypes, including the well-defined densely granulated (DG) and sparsely granulated (SG) phenotypes. While the aryl hydrocarbon receptor-interacting protein (AIP) pathway has been implicated in pituitary tumorigenesis, the role of aryl hydrocarbon receptor nuclear translocator (ARNT) in somatotroph tumors remains poorly characterized. METHODS: We retrospectively analyzed 71 surgically treated somatotroph pituitary adenomas, clinically managed in a tertiary endocrinology center between 2020 and 2025. Immunohistochemical expression of AIP, AHR and ARNT was evaluated and correlated with clinicopathological characteristics, including cytokeratin pattern, hormonal expression and Ki-67 index. RESULTS: Moderate/strong ARNT expression was more frequent in SG than in DG adenomas (60% vs. 17.6%, p = 0.002). Patients with moderate/strong ARNT expression were younger than those with absent/weak expression (median 39 vs. 46 years, p = 0.044). In multivariable analysis, ARNT expression remained associated with the SG phenotype after adjustment for age and sex (adjusted OR 6.84, 95% CI 2.05-22.84; p = 0.002). No significant associations were observed between ARNT expression and Ki-67 index, baseline GH or IGF1 levels, AIP/AHR immunoexpression or the evaluated clinical outcomes, including biochemical control during first-generation somatostatin receptor ligand therapy. CONCLUSIONS: Increased ARNT expression is associated with the sparsely granulated phenotype in somatotroph pituitary adenomas, suggesting that ARNT expression may reflect tumor differentiation rather than proliferative activity. However, the present findings do not demonstrate additional prognostic or therapeutic utility beyond granulation pattern. Further molecular and transcriptomic studies are warranted to clarify the biological role of ARNT.",
+      "authors": "Cristiana Călin; Iulia Florentina Burcea; Ramona Dobre; R Stan; Mihai Alin Publik; Dana Cristina Terzea; M Ceauşu; Cătălina Poiană",
+      "journal": "Pituitary",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s11102-026-01776-5",
+        "openalex": "https://openalex.org/W7222413990",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.705Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1002/bip.70127": {
+      "doi": "10.1002/bip.70127",
+      "normalized_doi": "10.1002/bip.70127",
+      "normalized_title": "polyglycine strands within a collagen triple helix",
+      "title": "Polyglycine Strands Within a Collagen Triple Helix",
+      "abstract": "ABSTRACT The collagen triple helix is the most abundant protein structural motif in animals. It tolerates any amino acid in its Xaa and Yaa positions but demands glycine (Gly) at every third position, where the residue packs into the sterically forbidding core of the triple helix and donates the recurring interstrand N–H⋯OC hydrogen bond that stitches the three strands together. (2 S )‐Proline (Pro) and (2 S ,4 R )‐4‐hydroxyproline (Hyp) are enriched far above their proteome‐wide abundance because they preorganize individual strands into the polyproline II conformation, lowering the entropic cost of folding. We asked whether the triple helix is intrinsically stable enough to form from strands that carry no such preorganization, that is, from polyglycine. To offset the conformational entropy of a Gly‐rich tract, we embedded Gly 6 within flanking triple‐helical (Pro‐Hyp‐Gly) n clamps in Ac‐(Pro‐Hyp‐Gly) 6 ‐Gly 6 ‐(Pro‐Hyp‐Gly) 5 ‐Pro‐Hyp‐NH 2 and compared it with an otherwise identical peptide in which Gly 6 was replaced by two [2‐(2‐aminoethoxy)ethoxy]acetic acid units, a flexible, length‐matched spacer that lacks most of the regularly spaced backbone amides of Gly 6 . Circular dichroism spectroscopy revealed the diagnostic positive band at 225 nm. The molar ellipticity of the spacer‐containing control was 86% of that of the Gly 6 ‐containing peptide, matching the 35/41 = 85% ratio of residues capable of triple‐helix formation and consistent with the Gly 6 segment contributing to the triple‐helical signal. Thermal denaturation yielded a T m of 46.8°C for the Gly 6 ‐containing peptide, 6.3°C higher than that of the matched spacer control. This added stability indicates that the polyglycine tract is not merely accommodated within the helix but contributes stabilizing interstrand hydrogen bonds. Together, these data indicate that three polyglycine strands can form a collagen triple helix when flanked by triple‐helical clamps. This result is consistent with the idea that the triple‐helical architecture predates the recruitment of Pro and Hyp, informs the evolutionary origin of collagen, and offers a blunt‐ended, symmetric scaffold for designing peptidic triple helices.",
+      "authors": "Wasin Tiarawut; Gabriel Saenz; Jinyi Yang; Ronald T. Raines",
+      "journal": "Biopolymers",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1002/bip.70127",
+        "openalex": "https://openalex.org/W7222416733",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:35.706Z",
+      "first_run": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.isprsjprs.2026.09.043": {
+      "doi": "10.1016/j.isprsjprs.2026.09.043",
+      "normalized_doi": "10.1016/j.isprsjprs.2026.09.043",
+      "normalized_title": "skysplat hierarchical 3d gaussian splatting for generalizable sparse view reconstruction from multi temporal satellite imagery",
+      "title": "SkySplat++: Hierarchical 3D Gaussian Splatting for generalizable sparse-view reconstruction from multi-temporal satellite imagery",
+      "abstract": null,
+      "authors": "Xuejun Huang; Yi Wan; Lei Yu; Xinyi Liu; Zhi Zheng; Bin Zhang; Mingtao Xiong; Yingying Pei; Changjun Zhu; Yi Liu; Hongwei Hu; Junjian Zhang; Yifei Wang; Yongjun Zhang",
+      "journal": "ISPRS Journal of Photogrammetry and Remote Sensing",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.isprsjprs.2026.09.043",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:39.785Z",
+      "first_run": "RUN:202610190835:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.afres.2026.102693": {
+      "doi": "10.1016/j.afres.2026.102693",
+      "normalized_doi": "10.1016/j.afres.2026.102693",
+      "normalized_title": "hydrogel based texture mimicry of wooden breast optimization via response surface methodology and artificial neural networks",
+      "title": "Hydrogel-based texture mimicry of wooden breast: Optimization via response surface methodology and artificial neural networks",
+      "abstract": null,
+      "authors": "Lingqi Li; Yang Ye; Zhen Li; Zongyun Yang; Peng Wang; Xinglian Xu; Minghao Bian; Xin Chen; Qingqin Lv",
+      "journal": "Applied Food Research",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.afres.2026.102693",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:39.787Z",
+      "first_run": "RUN:202610190835:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.omton.2026.201361": {
+      "doi": "10.1016/j.omton.2026.201361",
+      "normalized_doi": "10.1016/j.omton.2026.201361",
+      "normalized_title": "retraction notice to the pabpc5 hcg15 znf331 feedback loop regulates vasculogenic mimicry of glioma via stau1 mediated mrna decay",
+      "title": "Retraction Notice to: The PABPC5/HCG15/ZNF331 Feedback Loop Regulates Vasculogenic Mimicry of Glioma via STAU1-Mediated mRNA Decay",
+      "abstract": null,
+      "authors": "Fangkun Jing; Xuelei Ruan; Xiaobai Liu; Chunqing Yang; Di Wang; Jian Zheng; Yixue Xue; Shuyuan Shen; Lianqi Shao; Yang Yang; Ping Wang; Jun Ma; Yunhui Liu",
+      "journal": "Molecular Therapy Oncology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.omton.2026.201361",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-19T08:35:39.788Z",
+      "first_run": "RUN:202610190835:ANT_MIMICRY:cr",
       "screening_status": "new",
       "relevance_score": null,
       "exclusion_reason": null,

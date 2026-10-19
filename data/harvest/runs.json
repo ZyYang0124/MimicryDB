@@ -293,7 +293,49 @@
       "records_error": 0,
       "status": "success",
       "error_log": []
+    },
+    {
+      "run_id": "RUN:202610190835:MIMICRY_GENERAL:cr",
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "started_at": "2026-10-19T08:35:31.461Z",
+      "finished_at": "2026-10-19T08:35:34.276Z",
+      "records_seen": 20,
+      "records_new": 2,
+      "records_duplicate": 18,
+      "records_error": 0,
+      "status": "success",
+      "error_log": []
+    },
+    {
+      "run_id": "RUN:202610190835:MIMICRY_GENERAL_OPENALEX:op",
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "started_at": "2026-10-19T08:35:34.538Z",
+      "finished_at": "2026-10-19T08:35:35.706Z",
+      "records_seen": 20,
+      "records_new": 17,
+      "records_duplicate": 3,
+      "records_error": 0,
+      "status": "success",
+      "error_log": []
+    },
+    {
+      "run_id": "RUN:202610190835:ANT_MIMICRY:cr",
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "started_at": "2026-10-19T08:35:35.835Z",
+      "finished_at": "2026-10-19T08:35:39.789Z",
+      "records_seen": 20,
+      "records_new": 3,
+      "records_duplicate": 17,
+      "records_error": 0,
+      "status": "success",
+      "error_log": []
     }
   ],
-  "last_successful_sync": "2026-10-12T10:25:26.547Z"
+  "last_successful_sync": "2026-10-19T08:35:39.789Z"
 }
