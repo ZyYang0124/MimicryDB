@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-19T08:35:35.835Z",
+  "generated": "2026-10-26T08:37:57.109Z",
   "policy": "literature_candidate corpus — discovery layer only; screening_status new → screened; irrelevant records are EXCLUDED with a reason, never deleted (SOP Phase 10).",
   "candidates": {
     "10.1016/j.foodhyd.2026.113278": {
@@ -5270,6 +5270,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.biomaterials.2026.124685"
         }
       ]
     },
@@ -5300,6 +5305,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.talanta.2026.130644"
         }
       ]
     },
@@ -5840,6 +5850,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.isprsjprs.2026.09.043"
         }
       ]
     },
@@ -5870,6 +5885,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.afres.2026.102693"
         }
       ]
     },
@@ -5893,6 +5913,605 @@
       "profile_version": "1.0.0",
       "discovered_at": "2026-10-19T08:35:39.788Z",
       "first_run": "RUN:202610190835:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.biomaterials.2026.124717": {
+      "doi": "10.1016/j.biomaterials.2026.124717",
+      "normalized_doi": "10.1016/j.biomaterials.2026.124717",
+      "normalized_title": "hybrid nanovesicle artificial antigen presenting cells integrate endogenous tumor antigen display with senescence mimetic erythrocyte membrane directed splenic t cell priming",
+      "title": "Hybrid nanovesicle artificial antigen-presenting cells integrate endogenous tumor antigen display with senescence-mimetic erythrocyte membrane-directed splenic T-cell priming",
+      "abstract": null,
+      "authors": "Zhijuan Yang; Sha Li; Yunqi Guo; Tao Wang; Huize Han; Muye Ma; Yongliang Zhang; Wei Tang",
+      "journal": "Biomaterials",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.biomaterials.2026.124717",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:55.199Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "no-doi:the impact of organizational ethical culture on the quality of sustainability reporting with the mediating role of environmental governance": {
+      "doi": null,
+      "normalized_doi": null,
+      "normalized_title": "the impact of organizational ethical culture on the quality of sustainability reporting with the mediating role of environmental governance",
+      "title": "The Impact of Organizational Ethical Culture on the Quality of Sustainability Reporting with the Mediating Role of Environmental Governance",
+      "abstract": "This study was conducted with the aim of examining the impact of organizational ethical culture on the quality of sustainability reporting with the mediating role of environmental governance in companies listed on the Tehran Stock Exchange. Given the increasing demand for transparent and credible disclosure of sustainability information, understanding the organizational determinants affecting reporting quality is of considerable importance. The research design was quantitative and descriptive–analytical, and data were collected through standardized questionnaires and content analysis of sustainability reports from 112 active companies in 2024. Data analysis was performed using Partial Least Squares Structural Equation Modeling (PLS-SEM) with SmartPLS 4 and SPSS version 27. The findings indicated that organizational ethical culture has a positive and statistically significant relationship with the quality of sustainability reporting (β = 0.34). Furthermore, environmental governance not only has a direct positive effect on reporting quality (β = 0.41), but also plays a statistically significant mediating role in the relationship between ethical culture and sustainability reporting quality (indirect effect: β = 0.19). These results emphasize that enhancing the quality of sustainability reporting requires the integration of ethical orientations with formal governance structures. The findings contribute to the theoretical development of sustainability accounting and provide practical guidance for boards of directors, regulators, and organizations in emerging economies.",
+      "authors": "Mohammad Reza Razdar; Reza Jahanshiri",
+      "journal": "Journal of Management and Business Solutions",
+      "year": 2026,
+      "ids": {
+        "openalex": "https://openalex.org/W7217110812",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.927Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.23628845": {
+      "doi": "10.5281/zenodo.23628845",
+      "normalized_doi": "10.5281/zenodo.23628845",
+      "normalized_title": "the architecture of resistance a two volume post colonial matrix on filipino identity volume ii visual fine arts subversion and the canvas of identity",
+      "title": "The Architecture of Resistance: A Two-Volume Post-Colonial Matrix on Filipino Identity (Volume II: Visual Fine Arts, Subversion, and the Canvas of Identity)",
+      "abstract": "Volume II: Visual Fine Arts, Subversion, and the Canvas of Identity A Critical Analysis of 19th-Century Visual Appropriation and Sovereignty in Filipino Masterpieces Building upon the linguistic framework established in Volume I, this second volume of the post-colonial matrix shifts its critical inquiry toward 19th-century Philippine visual fine arts. Challenging the Eurocentric paradigm that reduces indigenous painting to passive mimicry of Western academic conventions, this work argues that the visual field served as a high-stakes arena of structural subversion. By examining monastic controls, subterranean iconography, and the watershed international triumphs of Juan Luna (Spoliarium) and Félix Resurrección Hidalgo at the 1884 Madrid Exposition, this study decodes the dualistic operation of the canvas. It demonstrates how Filipino masters weaponized European classical training—operating simultaneously on a compliant phenotypic layer and a subversive genotypic layer—to expose colonial trauma, reclaim historical agency, and cement an unbroken national identity.",
+      "authors": "María Cecilia Pineda",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.23628845",
+        "openalex": "https://openalex.org/W7223472977",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.929Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.54878/9bv6m266": {
+      "doi": "10.54878/9bv6m266",
+      "normalized_doi": "10.54878/9bv6m266",
+      "normalized_title": "artificial intelligence in next generation firewalls for discriminating cyber attacks from legitimate service traffic surges",
+      "title": "Artificial Intelligence in Next-Generation Firewalls for Discriminating Cyber Attacks from Legitimate Service Traffic Surges",
+      "abstract": "Next-generation firewalls (NGFWs) sit on the critical path between public networks and production services. Their most consequential error is no longer a missed signature; it is the inability to tell a malicious flood from a genuine surge in legitimate demand. Flash crowds, seasonal campaigns, media-driven spikes, and elastic microservice fan-out can resemble distributed denial-of-service (DDoS) traffic in volume while remaining economically and operationally valid. Static access-control lists, fixed rate limits, and signature catalogs therefore produce an unacceptable trade-off: either they under-block stealthy application-layer attacks or they over-block paying users. This article reviews, compares, and synthesizes peer-reviewed evidence from 2020 onward on machine-learning and deep-learning methods that can be embedded in NGFW and software-defined enforcement points to discriminate attacks from legitimate service-intensity bursts. We organize the literature into statistical filters, classical classifiers, representation-learning hybrids, sequential models, and two-tier designs that first cheaply detect a burst and then classify its intent. Published detectors regularly report accuracy above 98% on CICDDoS2019 and related traces, yet most benchmarks omit a dedicated flash-event class, which inflates apparent performance and leaves the operationally hardest decision under-tested. Building on that gap, we propose AID-NGFW, a three-tier architecture that couples entropy and cumulative-sum screening with a calibrated three-class discriminator (benign, flash crowd, attack) and a policy engine that drops malicious flows while scaling or shaping legitimate surges. Comparative tables and figures compile reported accuracies, F1-scores, datasets, and latency–accuracy trade-offs. We argue that the scientific and engineering priority is no longer binary attack detection in isolation, but reliable, low-latency, and explainable discrimination under encrypted traffic, class imbalance, concept drift, and adversarial mimicry.",
+      "authors": "Samir Khanji",
+      "journal": "International Journal of Information & Digital Security",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.54878/9bv6m266",
+        "openalex": "https://openalex.org/W7223274559",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.932Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s00265-026-03810-9": {
+      "doi": "10.1007/s00265-026-03810-9",
+      "normalized_doi": "10.1007/s00265-026-03810-9",
+      "normalized_title": "determinants of striking and defensive behaviour in four south african medically important snake species",
+      "title": "Determinants of striking and defensive behaviour in four South African medically important snake species",
+      "abstract": "Abstract African snakes display a range of defensive behaviours. However, there are limited quantifiable data on specific retaliatory behaviours for most species in response to threat-eliciting stimuli and the factors that might influence defensive behaviours, particularly in instances of human-snake conflict. We investigated defensive striking behaviour of four African snake species: puff adder ( Bitis arietans ), black mamba ( Dendroaspis polylepis ), snouted cobra ( Naja annulifera ) and Mozambique spitting cobra ( Naja mossambica ), including the impact of snake body size and sex on striking behaviours and strike performance. Individuals were presented with a fake arm model to simulate a human arm, and behaviours were recorded in two sequential trials. Of the 14 D. polylepis individuals tested, ten defensively struck at the hand and eight of these individuals bit the hand. Three of the seven N. annulifera struck with only two resulting in bites and of the six B. arietans individuals, four struck the hand and three bit the hand. None of the 21 N. mossambica individuals struck or bit the hand. Body size and sex were not significant predictors of striking behaviour. Defensive behaviours were generally higher for individuals undergoing a second trial. Strike performance results showed that B. arietans displayed the highest strike accelerations over short distances, indicating high strike effectiveness at close range. This likely contributes to its status as the species responsible for most snakebite incidences in South Africa. The results revealed that snakes exhibit a flight response when provided the opportunity to escape, but if persistently harassed, they will strike and bite in defence.",
+      "authors": "Hiral Naik; Graham John Alexander",
+      "journal": "Behavioral Ecology and Sociobiology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s00265-026-03810-9",
+        "openalex": "https://openalex.org/W7223287329",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.933Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1186/s13100-026-00417-9": {
+      "doi": "10.1186/s13100-026-00417-9",
+      "normalized_doi": "10.1186/s13100-026-00417-9",
+      "normalized_title": "quieting the hush a systematic review on drug development against the human silencing hub",
+      "title": "Quieting the HUSH: a systematic review on drug development against the human silencing hub",
+      "abstract": "Abstract The Human Silencing Hub (HUSH) complex is an epigenetic regulator that maintains transcriptional repression of transposable elements and other genomic loci though deposition of the repressive histone mark H3K9 trimethylation. Composed of core scaffold proteins TASOR, MPP8, and PPHLN1, and associated effectors including SETDB1, MORC2, and ZNF638, the HUSH complex enforces epigenetic silencing that limits expression of endogenous retroelements and suppresses innate immune activation. Disruption of this pathway induces viral mimicry though accumulation of double-stransded RNA (dsRNA), activating interferon signaling, enhancing antigen presentation, and promoting antitumor immunity. Consequently, pharmacologic inhibition of HUSH components represents a promising strategy to overcome tumor immune evasion and improve response to immunotherapy. This systematic review evaluates translational efforts targeting HUSH associated proteins, analyzing 26 original research studies identified though PRISMA-guided screening. These studies investigated 23 small molecules and 3 RNA-based therapeutics across 37 cancer types, with the majority targeting the catalytic methyltransferase SETDB1. Therapeutic strategies targeting HUSH-associated silencing include FDA-approved agents, repurposed targeted therapies, novel small-molecule inhibitors, and RNA-based modalities. These therapeutic strategies disrupt epigenetic repression though mechanisms such as transcriptional modulation, interference with chromatin-binding domains, and post-transcriptional regulation of HUSH components. Collectively, these findings identify emerging pharmacologic strategies for disrupting HUSH-associated silencing, although the available evidence remains predominantly preclinical and is heavily concentrated on SETDB1. Further development and validation of selective inhibitors, including evaluation in combination with immune checkpoint blockade and radiotherapy, will be necessary to determine the therapeutic potential and clinical feasibility of targeting HUSH-associated pathways.",
+      "authors": "Kajol Kalliecharan; Christian Kieran Ramsoomair; Manav Daftari; Sarah Wang; Deryn Ramsoomair; Manuela Aramburu Berckemeyer; Victoria Alvarez; Felipe Sarmiento; Deepa Seetharam; Vaidya Govindarajan; Jay S. Chandar; Ansel Jordan; Anna Hudson; Lindsey Ingerman James; Ashish H. Shah",
+      "journal": "Mobile DNA",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1186/s13100-026-00417-9",
+        "openalex": "https://openalex.org/W7223295251",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.935Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.30574/ijsra.2026.21.1.1912": {
+      "doi": "10.30574/ijsra.2026.21.1.1912",
+      "normalized_doi": "10.30574/ijsra.2026.21.1.1912",
+      "normalized_title": "ribosome collisions at the host pathogen interface evidence linking translational stress to innate immune outcomes",
+      "title": "RIBOSOME COLLISIONS AT THE HOST–PATHOGEN INTERFACE: EVIDENCE LINKING TRANSLATIONAL STRESS TO INNATE IMMUNE OUTCOMES",
+      "abstract": "Ribosome collisions are increasingly invoked in infection biology, but translational arrest, physical collision, stress-kinase activation and host protection are often treated as interchangeable observations. This critical narrative review asks when translation damage is causally linked to innate-immune outcome. Targeted PubMed searches updated through 13 October 2026 prioritized primary studies with direct disome or structural evidence, pathway perturbation, genetic epistasis and infection or tissue endpoints. We distinguish pausing, stalling and physical collision, then integrate EDF1–GIGYF2–4EHP initiation control, ZNF598–ASCC/RQT and PELO–HBS1L–ABCE1 rescue, NEMF–LTN1 nascent-chain disposal, and ZAKα- and GCN2-dependent signalling. Antiviral effectors can generate stall- and collision-prone states: OAS–RNase L leaves translated cleavage products that form terminal stalls and, where ribosome density permits, collisions, whereas viperin-derived ddhCTP induces a ZAK–GCN2-dependent translational brake in defined flavivirus models. Pathogens can damage rRNA or eEF2, engineer structured pause sites, suppress ribosome influx or exploit quality-control-mediated recycling. Across these settings, collision is neither intrinsically antiviral nor synonymous with inflammation. We therefore separate causal confidence from biological relevance in a two-axis C0–C4/R0–R3 framework and use a traffic-and-threshold synthesis in which ribosome influx, lesion lifetime, rescue capacity, cell lineage and coincident pattern-recognition signals shape repair, adaptation, inflammatory alarm or cell death. Current evidence establishes collision-dependent immune signalling in only a limited set of systems; in many others, collision remains inferred from stall- or stress-associated readouts. Ribosome collision is therefore not a pathogen-specific receptor but one physical state within a broader translation-surveillance network that can couple damage to stress and innate-immune outputs.",
+      "authors": "Khayali Ban D.H. Al",
+      "journal": "International Journal of Science and Research Archive",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.30574/ijsra.2026.21.1.1912",
+        "openalex": "https://openalex.org/W7223303532",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.936Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.3760/cma.j.cn112148-20260326-00202": {
+      "doi": "10.3760/cma.j.cn112148-20260326-00202",
+      "normalized_doi": "10.3760/cma.j.cn112148-20260326-00202",
+      "normalized_title": "fabry disease and hypertrophic obstructive cardiomyopathy from phenotypic mimicry to precision diagnosis and treatment",
+      "title": "[Fabry disease and hypertrophic obstructive cardiomyopathy: from phenotypic mimicry to precision diagnosis and treatment].",
+      "abstract": null,
+      "authors": "T Liu; C H He; Y C Zhang; X Du; J Z Dong",
+      "journal": "PubMed",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.3760/cma.j.cn112148-20260326-00202",
+        "openalex": "https://openalex.org/W7223307668",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.937Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.23605681": {
+      "doi": "10.5281/zenodo.23605681",
+      "normalized_doi": "10.5281/zenodo.23605681",
+      "normalized_title": "agentic ai si cyber crisis great power alignment agentic ai si cyber cascades and the mathematical background of great power alignment scenarios",
+      "title": "Agentic AI(SI) Cyber Crisis & Great-Power Alignment Agentic AI(SI) Cyber Cascades and the Mathematical Background of Great-Power Alignment Scenarios",
+      "abstract": "過去30年間にわたり世界のサイバーセキュリティ基盤を支えてきた「人間のオペレーターが有する時間および認知資源の希少性」という経済学的前提は、自律型人工知能(AI)および合成知能(SI: Synthetic Intelligence)エージェント群(Swarm)の実戦投入によって根底から崩壊した。脱獄(jailbreak)されたオープンウェイトモデルとオープンソースのエージェント・ハーネスを結合させることで、偵察、ゼロデイ脆弱性の発見、および多段階の侵入プロセスは完全に自動化され、企業1社あたりの侵害限界費用は約50〜100ドルという極小水準にまで低下している。実際に、複数の商用・オープンモデル(Claude、Grok、Kimi、および改変されたPentestGPT基盤等)を並行稼働させ、認可されたレッドチーム演習を装うことで安全ガードレールを突破し、中南米の銀行・金融機関400社以上やアルゼンチンの医療機関少なくとも15組織に自動侵入した事案や、インターネット上に公開されたAIゲートウェイおよびModel Context Protocol(MCP)サーバーを乗っ取り最大10万回の自動操作を試みる「LLMjacking」が観測されている。この構造変化は2026年10月(「Black October」)にスーパーエージェント主導の脆弱性カスケードとして顕在化した。世界のWebバックエンドの約70%を支えるPHPにおいて、数十年間潜在していた致命的な遠隔コード実行(RCE)脆弱性(CVE-2026-109618およびCVE-2026-109619、通称「PHP2Shell」、CVSS 9.2、ならびに後続のCVE-2026-115560)がAI支援のソースコード監査によって露呈すると、公開直後に数百万件規模の自動悪用試行が発生し、ペイロードをリアルタイムに変異させる攻撃によって、日本の地方銀行約20行や英国の32の行政サービスをはじめとする世界中のシステムが緊急停止(ロックダウン)を余儀なくされた。さらに同時期に、Node.js(CVE-2026-111497、「Node2Shell」)、JavaおよびGraalVM(CVE-2026-91403、CVSS 9.1)、GitLab(CVSS 10.0)、LinuxカーネルのSMBサーバー機能KSMBD(修正前に公開された2件のCVSS 9.0脆弱性)といった基幹ソフトウェアの欠陥や、週2,300万回ダウンロードされるAI開発ツールLiteLLMのサプライチェーン汚染、クラウド基盤(Railwayおよび32万1,810アカウントが露呈し事業閉鎖に至ったZeabur)の侵害が連鎖的に発生しており、AIがハードウェアレベルを含む未知の脆弱性を発見する速度は、人間によるパッチ適用とシステム改修の限界をすでに凌駕している。 こうした自律型攻撃の激化は、サイバー犯罪の形態を従来の「データ暗号化による身代金要求」から「金融市場の取引メカニズムを直接悪用した顧客資産の破壊と企業恐喝」へと変質させ、国家経済およびコーポレート・ガバナンスを根底から揺るがしている。日本国内では、GMOインターネットグループが提供するFX自動売買用仮想デスクトップ環境「お名前.com デスクトップクラウド」(最大2万6,739台のサーバーに影響)への不正アクセスが発生し、2段階認証を通過した後のログイン済みデスクトップ画面および保存された取引認証情報が奪取された。この事案では、攻撃者を名乗る集団が「企業側が交渉に応じなかった報復として、24時間で顧客口座の15%(約66億円/2,800万ドル相当)を破壊した」と一方的に主張する声明サイトを公開し、高レバレッジかつスプレッドの広い通貨ペアで超高速の往復売買を繰り返すことで、数秒のうちに口座残高を取引手数料として摩耗・消滅させる手口が報告された(なお、66億円や15%という被害規模は攻撃者側の未検証の主張である一方、サーバーへの侵入事実および複数のFX事業者における不正ログイン・不正取引の発生は公式に確認されている)。また、岩井コスモ証券のインターネット取引委託先システムにおいては、AIを用いた脆弱性への総当たり攻撃によってシステム自体が掌握され、個人レベルの多要素認証(MFA)やパスキーが完全に迂回されて顧客が指示していない株式売買が成立する事案が発生した。同時に米国では、JPMorgan Chase、Bank of America、Citigroup、Morgan Stanley、Wells Fargoなどの主要銀行において、利用者が利便性のためにID・パスワードを共有した未承認のサードパーティ製AIエージェントが口座内で本人の指示と無関係な資金移動等を試みる挙動が相次いで検知された。本人が認証情報を渡しているため不正アクセスとの識別が困難であり、各行は外部エージェントの遮断や口座の「読み取り専用(read-only)化」による防御を迫られているが、これは「資金が盗まれなくとも、防御側自らが送金・決済機能を停止させることで金融システムの信用と流動性が崩壊する」という国際通貨基金(IMF)の警告が現実化したパラドックスを示している。 さらに重大な戦略的脅威は、これらの事象が核兵器による物理的破壊以上に長期間にわたり社会基盤を蝕む「情報的不衛生状態(prolonged informational unsanitariness:認識論的・生体的・暗号学的汚染)」をもたらしている点である。物理的インフラは再建可能であり、漏洩したパスワードはリセット可能であるが、インターネットの信頼の根幹をなす暗号基盤の腐食と、変更不可能な生体・医療・身分証明データの流出は不可逆的な汚染を引き起こす。具体的には、インドの認証局eMudhraにおいて秘密鍵が極めて容易に算出可能な8枚の中間証明書が発行されていた問題(同社は世界向けのSSL/TLS証明書事業から撤退し、主要ブラウザによるルート証明書の信頼停止やPythonパッケージ管理環境 `pip`、`certifi` およびコンテナイメージの緊急更新を招いた)は、オンライン上の真正性検証基盤そのものが汚染され得ることを実証した。これと並行して、米国成人の約3分の1および病院の半数にサービスを提供する医療検査大手Quest Diagnosticsの患者記録システム(Quanum)への侵入、カリフォルニア州の公立学校生徒570万人分のデータ流出、日本国内における佐川急便の配送データ(最大約5,323万件)、パーク24「タイムズカー」の暗号化された運転免許証画像(約146万件に外部送信痕跡)、デジタル庁や地方自治体が利用する委託先Web・メール配信システム(Studio、ブラストメール等)、パナソニック子会社における社内規定違反の外部生成AI送信による33万4,000人分の個人情報漏洩、さらには海運IT企業を踏み台とした18カ国40以上の港湾・海運組織へのランサムウェア侵害(n0n)など、リセット不可能な実空間データの流出が常態化している。これらの汚染データは、SNS上の資産情報と結合されることで、暗号資産保有者への物理的拉致・強迫(レンチ攻撃)や匿名・流動型犯罪グループ(トクリュウ)による家族ぐるみの強盗・詐欺の標的リストへと転用され、サイバー空間の脆弱性が物理的な治安崩壊へと直結している。 このような環境下において、攻撃者は中国やロシア等に対するジオブロッキングを回避するため、欧米の正規トラフィックに紛れるクラウドIPや高性能VPS、匿名化プロキシを経由して攻撃を実行しており、送信元IPログのみに基づく帰属特定(Attribution)や一国単独での境界防御は構造的に機能不全に陥っている。最先端AIによる形式検証(ClaudeとRocqを 결합し123のオープンソースライブラリに対して数億行の機械検証済み数学的証明を生成・自動パッチ化する技術等)や、静止軌道衛星を用いた主権エアギャップ通信網、国家計算備蓄(National Compute Reserves)の構築は重要な防衛手段であるものの、技術的対策のみでは「1回あたり数十ドルで無限に反復される自動攻撃」との消耗戦を終わらせることはできない。サイバー犯罪の収益構造を断ち切り、報復の連鎖による世界的なインターネットのロックダウンや金融決済網の凍結、ひいては核保有国間の全面的なハイブリッド戦争へのエスカレーションを回避するためには、国境を越えた資金追跡・没収とAIエージェントの統治に関する国際的枠組みが不可欠となる。これこそが、本研究の3状態スピン1 Blume–Capel選挙ポテンシャルゲームにおいて、巨大な人口・データ空間・計算資源を抱える超大国3国(米国・中国・ロシア)およびBRICS諸国との間で、イデオロギー的対立を超えた危機管理上のコンセンサスや限定的・条件付きの戦略的譲歩による連携シナリオ(外生ショック $\\xi_{\\mathrm{trilat}} \\sim \\mathrm{Gamma}(2.8, 0.24)$)が想定される論理的必然性である。モデル内において、この超国家的生存戦略は高い戦略的不可逆性パラメータ($\\Omega_{\\mathrm{strat}} \\in [2.20, 2.25]$)を伴う制度的グリッドロック指数 $$G_{\\mathrm{inst}}(t) = \\Omega_{\\mathrm{strat}}\\left(0.45\\,I_{\\mathrm{House}}(t) + 0.55\\,I_{\\mathrm{Senate}}(t)\\right)$$ として定式化される。この不可逆的な大国間調整は、労働者階級・企業連携層($w_{\\mathrm{work},k}$)のうち企業・エネルギー派閥($\\phi_{\\mathrm{corp},k} w_{\\mathrm{work},k}$)にはインフラ・資源取引の安定をもたらす一方で、伝統的な「米国第一主義」を信奉するポピュリスト・ナショナリスト派閥($(1-\\phi_{\\mathrm{corp},k}) w_{\\mathrm{work},k}$)には、裏切り閾値 $\\tau_{\\mathrm{betray}}$ を超えた際に非線形の認知的不協和ペナルティ $$\\Psi_{\\mathrm{diss}}(\\xi_{\\mathrm{trilat}}) = \\gamma_{\\mathrm{diss}}\\max\\left(0, \\xi_{\\mathrm{trilat}} - \\tau_{\\mathrm{betray}}\\right)^2$$ を発生させる。そして、2026年中間選挙後の両院ねじれ($G_{\\mathrm{inst}}^{2026} = 2.20\\text{--}2.25$)および多段階のスキャンダル文書開示($\\Lambda_{\\mathrm{leak}} \\in [0.03, 1.00]$)と結合することで、エスタブリッシュメント層($c=\\mathrm{est}$)や無党派層($c=\\mathrm{truth}$)、さらには特定条件下での労働者層の結晶場 $D_{c,k} = B_{\\mathrm{duty},c,k} - C_{\\mathrm{vote},c,k}$ を普遍的三重臨界スピノーダル閾値 $D_t/J_{\\mathrm{eff}} = -\\ln(4)/3 \\approx -0.4621$ 未満へと侵食させ、有権者の大規模な戦略的棄権カスケード($s_i = 0$)とマクロな選挙相分岐を引き起こすのである。 For three decades, the architecture of global cybersecurity rested upon an implicit economic premise: because human operators possessed finite time and cognitive bandwidth, adversarial intrusions were naturally bounded by the opportunity cost of target selection. The operational deployment of autonomous artificial intelligence (AI) and synthetic intelligence (SI) agent swarms has dismantled this scarcity constraint, reducing the marginal cost of automated reconnaissance, zero-day vulnerability discovery, and multi-stage exploitation to negligible levels—empirically estimated at approximately $50 to $100 per compromised enterprise when utilizing jailbroken open-weight models coupled with open-source agentic harnesses. Threat intelligence observations confirm that criminal syndicates have parallelized commercial and open-weight models (including Claude, Grok, Kimi, and modified `PentestGPT` frameworks) to autonomously breach over 400 banking and financial institutions across Latin America and at least 15 healthcare organizations in Argentina, bypassing model safety guardrails by masquerading as authorized red-team penetration tests, while simultaneously engaging in \"LLMjacking\" campaigns (such as the `Skynet` agent captured hijacking exposed AI gateways and Model Context Protocol [MCP] servers to execute up to 100,000 automated operations). This structural shift culminated in October 2026—widely designated by security researchers as \"Black October\"—in a super-agent-driven vulnerability cascade across foundational internet infrastructure. AI-assisted source-code auditing exposed decades-old critical remote code execution (RCE) flaws in PHP (`CVE-2026-109618` and `CVE-2026-109619`, termed \"PHP2Shell,\" rated CVSS 9.2, alongside `CVE-2026-115560`), which powers approximately 70% of global web backends. Within minutes of premature disclosure, automated exploitation attempts surged into the millions with real-time payload mutation, compelling national authorities—including the U.S. NSA, FBI, CISA, the UK government, and the Prime Minister of Japan—to mandate immediate patching or service suspension, which forced over 20 regional banks in Japan, 32 UK government portals, and major commercial platforms into temporary lockdowns. Concurrently, severe vulnerabilities emerged across Node.js (`CVE-2026-111497`, \"Node2Shell\"), Java and GraalVM JSSE (`CVE-2026-91403`, CVSS 9.1), GitLab (CVSS 10.0), and the Linux kernel SMB server `KSMBD` (two CVSS 9.0 RCE flaws disclosed prior to patch availability), accompanied by supply-chain malware injection into the AI library `LiteLLM` (23 million weekly downloads) and breaches of cloud hosting platforms (`Railway` and `Zeabur`, the latter permanently shutting down after 321,810 accounts were exposed), demonstrating that AI-driven bug discovery at both software and hardware levels now outpaces human patching capacity. The proliferation of autonomous offensive agents has simultaneously transformed cyber extortion from conventional data-encryption ransomware into direct, market-mediated asset destruction, destabilizing national financial governance and payment liquidity. In Japan, an intrusion into GMO Internet Group's virtual desktop infrastructure (*Onamae.com Desktop Cloud*, affecting up to 26,739 virtual private servers utilized for 24-hour automated foreign exchange trading) illustrated how attackers can hijack active remote desktop sessions where two-factor authentication (2FA) has already been satisfied and harvest stored brokerage credentials. Following the breach, individuals claiming responsibility launched an extortion portal alleging the destruction of 15% of customer accounts (approximately 6.6 billion JPY or $28 million) within 24 hours after the provider declined ransom negotiations, executing high-frequency, high-leverage round-trip trades across wide-spread currency pairs to intentionally exhaust customer margin balances into transaction fees within seconds (while the $28 million figure remains an unverified attacker claim, GMO and multiple foreign exchange brokerages officially confirmed the server intrusion, credential theft, and unauthorized trading). In a parallel domestic incident, IwaiCosmo Securities confirmed that an AI-driven brute-force vulnerability exploit compromised a contractor's trading system directly, bypassing individual multi-factor authentication (MFA) and passkeys to execute unauthorized equity trades across customer accounts. Concurrently, major U.S. financial institutions—including JPMorgan Chase, Bank of America, Citigroup, Morgan Stanley, and Wells Fargo—detected unauthorized third-party AI agents operating inside retail customer accounts via user-shared credentials and attempting autonomous fund transfers and actions independent of explicit human instruction. Because voluntary credential sharing invalidates standard fraud classifications and obscures whether an action is authorized by a human principal or a rogue agent, banks have been forced to block external agentic traffic and evaluate restricting accounts to \"read-only\" status—instantiating the International Monetary F",
+      "authors": "Yasuko Kawahata",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.23605681",
+        "openalex": "https://openalex.org/W7223367797",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.938Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.radcr.2026.09.071": {
+      "doi": "10.1016/j.radcr.2026.09.071",
+      "normalized_doi": "10.1016/j.radcr.2026.09.071",
+      "normalized_title": "post ischemic enteritis mimicking crohn s disease with complex entero enteric fistulization",
+      "title": "Post-ischemic enteritis mimicking Crohn's disease with complex entero-enteric fistulization",
+      "abstract": "Mesenteric venous thrombosis is an uncommon yet potentially life-threatening cause of mesenteric ischemia with an insidious clinical course. Delayed diagnosis of venous ischemia may lead to late complications such as bowel strictures, perforation, and fistulization. These sequelae can closely mimic Crohn's disease, posing significant diagnostic and therapeutic challenges. We report the case of a 33-year-old postpartum woman who presented with acute abdominal pain and was diagnosed with subacute thrombosis of the superior mesenteric vein and portal vein confluence on contrast-enhanced CT. Initial imaging demonstrated jejunal wall thickening without signs of transmural necrosis, and the patient was managed conservatively with anticoagulation. Despite treatment, she later developed recurrent abdominal pain, bowel obstruction, perforation, and complex small bowel fistulization. Serial imaging findings were initially interpreted as fibrostenotic Crohn's disease. Endoscopic evaluation and bowel biopsies were unremarkable. Ongoing recurrent obstruction ultimately necessitated limited small bowel resection, and histopathologic findings confirmed ischemic injury, characterized by ulceration, vascular congestion, granulation tissue, and full-thickness hyalinization and necrosis. The patient unfortunately died from postoperative complications seven months after the initial presentation. This case highlights chronic ischemic enteritis as an important masquerader of Crohn's disease, particularly in patients with a history of mesenteric venous thrombosis. Complex fistulization and fibrostenotic changes are not pathognomonic for inflammatory bowel disease and may represent late sequelae of missed or patchy bowel ischemia. Careful assessment of mesenteric vasculature and collateral formation on imaging is crucial to avoid misdiagnosis, inappropriate immunosuppressive therapy, and delayed definitive management.",
+      "authors": "Faeze Salahshour; Sahar Yaghoubi; Nasim Khajavirad; Amir Ghasemloee",
+      "journal": "Radiology Case Reports",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.radcr.2026.09.071",
+        "openalex": "https://openalex.org/W7223387312",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.940Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.23605785": {
+      "doi": "10.5281/zenodo.23605785",
+      "normalized_doi": "10.5281/zenodo.23605785",
+      "normalized_title": "3 blume capel 50",
+      "title": "3状態Blume--Capel選挙ポテンシャルゲームにおける非同期ショックカスケード、スピノーダル・ヒステリシス、および空間感染米国50州にわたる歴史的分割議会バックテストとマルチレジーム・モンテカルロ検証",
+      "abstract": "アブストラクト 二大政党得票率 $R_{k}=\\frac{1}{2}(1+m_{k}^{*}/q_{k}^{*})$ を逆転させることが確認された。2018〜2020年のねじれ議会に対する歴史的バックテストからは、上院による制度的緩衝作用と急速な記憶散逸が、高投票率かつ順序可換な均衡($q_{k}^{*}>84\\%$)を維持することが確認される。対照的に、緩衝作用のない両院の膠着状態の下では、最終的な選挙結果はショックの到達順序、ショック間の緩和間隔、州レベルの産業サプライチェーンのエクスポージャー、およびアーカイブ化されたスキャンダル開示の累積的範囲に依存すると仮説した。 従来の選挙競争に関する統計力学的モデルは、一般に二値イジングスピン仕様($s_{i}\\in\\{+1,-1\\}$)に依拠しているが、これは一定の投票参加恒等式($s_{i}^{2}\\equiv1$)を課すものであり、外生的な政策ショックや評判ショックが直接的なイデオロギーの転向のみを通じて選挙結果を変化させることを前提としている。この制約を緩和し、有権者の戦略的棄権($s_{i}=0$)を内生化するため、本研究では米国50州の空間ネットワーク上に、多項ロジット型量子応答均衡(QRE)と結合した3状態スピン1 Blume–Capel選挙ポテンシャルゲームを定式化する。各州において、有権者は非妥協的な党派的コア層と、反応性を有する3つの社会経済的階層(労働者階級および企業同調層の有権者、制度的エスタブリッシュメント層の有権者、ならびに真実追求型の無党派有権者)に分割される。水平磁場は、縦断的な世論調査および抗議活動の時系列データ(2024年12月〜2026年10月)から較正された純党派的政策格差を捉え、結晶場は純粋な市民参加インセンティブから多争点にわたる制度的シニシズムを差し引いたものを表す。解析的な6次ランダウ自由エネルギー展開により、中間選挙後の立法府の膠着状態と多争点政策ショックによってある階層の結晶場が対称三重臨界スピノーダル閾値($D_{t}/J_{\\mathrm{eff}}=-\\ln(4)/3\\approx-0.4621$)を下回ると、2次および4次のランダウ係数の符号が反転し($a_{2}>0, a_{4}<0$)、磁化ゼロにおける常磁性的な棄権のポテンシャル井戸が安定化することが示される。大規模なベクトル化モンテカルロ・シミュレーション(24の歴史的および反事実的レジームにわたり、各レジームあたり$1.0\\times10^{6}$から$1.2\\times10^{6}$試行)により、交差圧力に晒された階層における選択的棄権が、純党派磁化の分子($m$)よりも速く有効投票率の分母($q$)を縮小させ、直接的な党派的離反を伴うことなく実効厳密な4次ビンダー・キュムラント分解($U_{4,k}$)および1次ソボル感度指数($S_{1,k}(X_{0})<10^{-5}$)により、初期事前分布に対する不変性が検証されるとともに、非対称的な投票ロックインと3階層全体の参加崩壊とを隔てる相境界が特定される。 研究背景 過去30年間にわたり世界のサイバーセキュリティ基盤を支えてきた「人間のオペレーターが有する時間および認知資源の希少性」という経済学的前提は、自律型人工知能(AI)および合成知能(SI: Synthetic Intelligence)エージェント群(Swarm)の実戦投入によって根底から崩壊した。脱獄(jailbreak)されたオープンウェイトモデルとオープンソースのエージェント・ハーネスを結合させることで、偵察、ゼロデイ脆弱性の発見、および多段階の侵入プロセスは完全に自動化され、企業1社あたりの侵害限界費用は約50〜100ドルという極小水準にまで低下している。実際に、複数の商用・オープンモデル(Claude、Grok、Kimi、および改変されたPentestGPT基盤等)を並行稼働させ、認可されたレッドチーム演習を装うことで安全ガードレールを突破し、中南米の銀行・金融機関400社以上やアルゼンチンの医療機関少なくとも15組織に自動侵入した事案や、インターネット上に公開されたAIゲートウェイおよびModel Context Protocol(MCP)サーバーを乗っ取り最大10万回の自動操作を試みる「LLMjacking」が観測されている。この構造変化は2026年10月(「Black October」)にスーパーエージェント主導の脆弱性カスケードとして顕在化した。世界のWebバックエンドの約70%を支えるPHPにおいて、数十年間潜在していた致命的な遠隔コード実行(RCE)脆弱性(CVE-2026-109618およびCVE-2026-109619、通称「PHP2Shell」、CVSS 9.2、ならびに後続のCVE-2026-115560)がAI支援のソースコード監査によって露呈すると、公開直後に数百万件規模の自動悪用試行が発生し、ペイロードをリアルタイムに変異させる攻撃によって、日本の地方銀行約20行や英国の32の行政サービスをはじめとする世界中のシステムが緊急停止(ロックダウン)を余儀なくされた。さらに同時期に、Node.js(CVE-2026-111497、「Node2Shell」)、JavaおよびGraalVM(CVE-2026-91403、CVSS 9.1)、GitLab(CVSS 10.0)、LinuxカーネルのSMBサーバー機能KSMBD(修正前に公開された2件のCVSS 9.0脆弱性)といった基幹ソフトウェアの欠陥や、週2,300万回ダウンロードされるAI開発ツールLiteLLMのサプライチェーン汚染、クラウド基盤(Railwayおよび32万1,810アカウントが露呈し事業閉鎖に至ったZeabur)の侵害が連鎖的に発生しており、AIがハードウェアレベルを含む未知の脆弱性を発見する速度は、人間によるパッチ適用とシステム改修の限界をすでに凌駕している。 こうした自律型攻撃の激化は、サイバー犯罪の形態を従来の「データ暗号化による身代金要求」から「金融市場の取引メカニズムを直接悪用した顧客資産の破壊と企業恐喝」へと変質させ、国家経済およびコーポレート・ガバナンスを根底から揺るがしている。日本国内では、GMOインターネットグループが提供するFX自動売買用仮想デスクトップ環境「お名前.com デスクトップクラウド」(最大2万6,739台のサーバーに影響)への不正アクセスが発生し、2段階認証を通過した後のログイン済みデスクトップ画面および保存された取引認証情報が奪取された。この事案では、攻撃者を名乗る集団が「企業側が交渉に応じなかった報復として、24時間で顧客口座の15%(約66億円/2,800万ドル相当)を破壊した」と一方的に主張する声明サイトを公開し、高レバレッジかつスプレッドの広い通貨ペアで超高速の往復売買を繰り返すことで、数秒のうちに口座残高を取引手数料として摩耗・消滅させる手口が報告された(なお、66億円や15%という被害規模は攻撃者側の未検証の主張である一方、サーバーへの侵入事実および複数のFX事業者における不正ログイン・不正取引の発生は公式に確認されている)。また、岩井コスモ証券のインターネット取引委託先システムにおいては、AIを用いた脆弱性への総当たり攻撃によってシステム自体が掌握され、個人レベルの多要素認証(MFA)やパスキーが完全に迂回されて顧客が指示していない株式売買が成立する事案が発生した。同時に米国では、JPMorgan Chase、Bank of America、Citigroup、Morgan Stanley、Wells Fargoなどの主要銀行において、利用者が利便性のためにID・パスワードを共有した未承認のサードパーティ製AIエージェントが口座内で本人の指示と無関係な資金移動等を試みる挙動が相次いで検知された。本人が認証情報を渡しているため不正アクセスとの識別が困難であり、各行は外部エージェントの遮断や口座の「読み取り専用(read-only)化」による防御を迫られているが、これは「資金が盗まれなくとも、防御側自らが送金・決済機能を停止させることで金融システムの信用と流動性が崩壊する」という国際通貨基金(IMF)の警告が現実化したパラドックスを示している。 さらに重大な戦略的脅威は、これらの事象が核兵器による物理的破壊以上に長期間にわたり社会基盤を蝕む「情報的不衛生状態(prolonged informational unsanitariness:認識論的・生体的・暗号学的汚染)」をもたらしている点である。物理的インフラは再建可能であり、漏洩したパスワードはリセット可能であるが、インターネットの信頼の根幹をなす暗号基盤の腐食と、変更不可能な生体・医療・身分証明データの流出は不可逆的な汚染を引き起こす。具体的には、インドの認証局eMudhraにおいて秘密鍵が極めて容易に算出可能な8枚の中間証明書が発行されていた問題(同社は世界向けのSSL/TLS証明書事業から撤退し、主要ブラウザによるルート証明書の信頼停止やPythonパッケージ管理環境 `pip`、`certifi` およびコンテナイメージの緊急更新を招いた)は、オンライン上の真正性検証基盤そのものが汚染され得ることを実証した。これと並行して、米国成人の約3分の1および病院の半数にサービスを提供する医療検査大手Quest Diagnosticsの患者記録システム(Quanum)への侵入、カリフォルニア州の公立学校生徒570万人分のデータ流出、日本国内における佐川急便の配送データ(最大約5,323万件)、パーク24「タイムズカー」の暗号化された運転免許証画像(約146万件に外部送信痕跡)、デジタル庁や地方自治体が利用する委託先Web・メール配信システム(Studio、ブラストメール等)、パナソニック子会社における社内規定違反の外部生成AI送信による33万4,000人分の個人情報漏洩、さらには海運IT企業を踏み台とした18カ国40以上の港湾・海運組織へのランサムウェア侵害(n0n)など、リセット不可能な実空間データの流出が常態化している。これらの汚染データは、SNS上の資産情報と結合されることで、暗号資産保有者への物理的拉致・強迫(レンチ攻撃)や匿名・流動型犯罪グループ(トクリュウ)による家族ぐるみの強盗・詐欺の標的リストへと転用され、サイバー空間の脆弱性が物理的な治安崩壊へと直結している。 このような環境下において、攻撃者は中国やロシア等に対するジオブロッキングを回避するため、欧米の正規トラフィックに紛れるクラウドIPや高性能VPS、匿名化プロキシを経由して攻撃を実行しており、送信元IPログのみに基づく帰属特定(Attribution)や一国単独での境界防御は構造的に機能不全に陥っている。最先端AIによる形式検証(ClaudeとRocqを 결합し123のオープンソースライブラリに対して数億行の機械検証済み数学的証明を生成・自動パッチ化する技術等)や、静止軌道衛星を用いた主権エアギャップ通信網、国家計算備蓄(National Compute Reserves)の構築は重要な防衛手段であるものの、技術的対策のみでは「1回あたり数十ドルで無限に反復される自動攻撃」との消耗戦を終わらせることはできない。サイバー犯罪の収益構造を断ち切り、報復の連鎖による世界的なインターネットのロックダウンや金融決済網の凍結、ひいては核保有国間の全面的なハイブリッド戦争へのエスカレーションを回避するためには、国境を越えた資金追跡・没収とAIエージェントの統治に関する国際的枠組みが不可欠となる。これこそが、本研究の3状態スピン1 Blume–Capel選挙ポテンシャルゲームにおいて、巨大な人口・データ空間・計算資源を抱える超大国3国(米国・中国・ロシア)およびBRICS諸国との間で、イデオロギー的対立を超えた危機管理上のコンセンサスや限定的・条件付きの戦略的譲歩による連携シナリオ(外生ショック $\\xi_{\\mathrm{trilat}} \\sim \\mathrm{Gamma}(2.8, 0.24)$)が想定される論理的必然性である。モデル内において、この超国家的生存戦略は高い戦略的不可逆性パラメータ($\\Omega_{\\mathrm{strat}} \\in [2.20, 2.25]$)を伴う制度的グリッドロック指数 $$G_{\\mathrm{inst}}(t) = \\Omega_{\\mathrm{strat}}\\left(0.45\\,I_{\\mathrm{House}}(t) + 0.55\\,I_{\\mathrm{Senate}}(t)\\right)$$ として定式化される。この不可逆的な大国間調整は、労働者階級・企業連携層($w_{\\mathrm{work},k}$)のうち企業・エネルギー派閥($\\phi_{\\mathrm{corp},k} w_{\\mathrm{work},k}$)にはインフラ・資源取引の安定をもたらす一方で、伝統的な「米国第一主義」を信奉するポピュリスト・ナショナリスト派閥($(1-\\phi_{\\mathrm{corp},k}) w_{\\mathrm{work},k}$)には、裏切り閾値 $\\tau_{\\mathrm{betray}}$ を超えた際に非線形の認知的不協和ペナルティ $$\\Psi_{\\mathrm{diss}}(\\xi_{\\mathrm{trilat}}) = \\gamma_{\\mathrm{diss}}\\max\\left(0, \\xi_{\\mathrm{trilat}} - \\tau_{\\mathrm{betray}}\\right)^2$$ を発生させる。そして、2026年中間選挙後の両院ねじれ($G_{\\mathrm{inst}}^{2026} = 2.20\\text{--}2.25$)および多段階のスキャンダル文書開示($\\Lambda_{\\mathrm{leak}} \\in [0.03, 1.00]$)と結合することで、エスタブリッシュメント層($c=\\mathrm{est}$)や無党派層($c=\\mathrm{truth}$)、さらには特定条件下での労働者層の結晶場 $D_{c,k} = B_{\\mathrm{duty},c,k} - C_{\\mathrm{vote},c,k}$ を普遍的三重臨界スピノーダル閾値 $D_t/J_{\\mathrm{eff}} = -\\ln(4)/3 \\approx -0.4621$ 未満へと侵食させ、有権者の大規模な戦略的棄権カスケード($s_i = 0$)とマクロな選挙相分岐を引き起こすのである。 For three decades, the architecture of global cybersecurity rested upon an implicit economic premise: because human operators possessed finite time and cognitive bandwidth, adversarial intrusions were naturally bounded by the opportunity cost of target selection. The operational deployment of autonomous artificial intelligence (AI) and synthetic intelligence (SI) agent swarms has dismantled this scarcity constraint, reducing the marginal cost of automated reconnaissance, zero-day vulnerability discovery, and multi-stage exploitation to negligible levels—empirically estimated at approximately $50 to $100 per compromised enterprise when utilizing jailbroken open-weight models coupled with open-source agentic harnesses. Threat intelligence observations confirm that criminal syndicates have parallelized commercial and open-weight models (including Claude, Grok, Kimi, and modified `PentestGPT` frameworks) to autonomously breach over 400 banking and financial institutions across Latin America and at least 15 healthcare organizations in Argentina, bypassing model safety guardrails by masquerading as authorized red-team penetration tests, while simultaneously engaging in \"LLMjacking\" campaigns (such as the `Skynet` agent captured hijacking exposed AI gateways and Model Context Protocol [MCP] servers to execute up to 100,000 automated operations). This structural shift culminated in October 2026—widely designated by security researchers as \"Black October\"—in a super-agent-driven vulnerability cascade across foundational internet infrastructure. AI-assisted source-code auditing exposed decades-old critical remote code execution (RCE) flaws in PHP (`CVE-2026-109618` and `CVE-2026-109619`, termed \"PHP2Shell,\" rated CVSS 9.2, alongside `CVE-2026-115560`), which powers approximately 70% of global web backends. Within minutes of premature disclosure, automated exploitation attempts surged into the millions with real-time payload mutation, compelling national authorities—including the U.S. NSA, FBI, CISA, the UK government, and the Prime Minister of Japan—to mandate immediate patching or service suspension, which forced over 20 regional banks in Japan, 32 UK government portals, and major commercial platforms into temporary lockdowns. Concurrently, severe vulnerabilities emerged across Node.js (`CVE-2026-111497`, \"Node2Shell\"), Java and GraalVM JSSE (`CVE-2026-91403`, CVSS 9.1), GitLab (CVSS 10.0), and the Linux kernel SMB server `KSMBD` (two CVSS 9.0 RCE flaws disclosed prior to patch availability), accompanied by supply-chain malware injection into the AI library `LiteLLM` (23 million weekly downloads) and breaches of cloud hosting platforms (`Railway` and `Zeabur`, the latter permanently shutting down after 321,810 accounts were exposed), demonstrating that AI-driven bug discovery at both software and hardware levels now outpaces human patching capacity. The proliferation of autonomous offensive agents has simultaneously transformed cyber extortion from conventional data-encryption ransomware into direct, market-mediated asset destruction, destabilizing national financial governance and payment liquidity. In Japan, an intrusion into GMO Internet Group's virtual desktop infrastructure (*Onamae.com Desktop Cloud*, affecting up to 26,739 virtual private servers utilized for 24-hour automated foreign exchange trading) illustrated how attackers can hijack active remote desktop sessions where two-factor authentication (2FA) has already been satisfied and harvest stored brokerage credentials. Following the breach, individuals claiming responsibility launched an extortion portal alleging the destruction of 15% of customer accounts (approximately 6.6 billion JPY or $28 million) within 24 hours after the provider declined ransom negotiations, executing high-",
+      "authors": "Yasuko Kawahata",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.23605785",
+        "openalex": "https://openalex.org/W7223392709",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.941Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s12602-026-11254-w": {
+      "doi": "10.1007/s12602-026-11254-w",
+      "normalized_doi": "10.1007/s12602-026-11254-w",
+      "normalized_title": "mechanistic insights into the antifungal activity of the synthetic peptide fk18 against candida tropicalis",
+      "title": "Mechanistic Insights into the Antifungal Activity of the Synthetic Peptide FK18 Against Candida tropicalis",
+      "abstract": "Abstract The increasing incidence of invasive fungal infections caused by opportunistic yeasts, particularly Candida tropicalis , poses a major clinical challenge due to rising antifungal resistance and the limited availability of effective therapies. Antimicrobial peptides (AMPs) have emerged as promising alternatives owing to their rapid mechanisms of action and low propensity for resistance development. In this study, we investigated the antifungal activity, mechanism of action, and structural properties of FK18, a rationally designed synthetic cationic peptide. FK18 exhibited broad-spectrum antifungal activity against Candida and Cryptococcus species, with minimum inhibitory concentration (MIC) values ranging from 5 to > 40 µM. Notably, C. tropicalis showed high susceptibility, with inhibition observed at 10 µM. Time-kill assays demonstrated rapid fungicidal activity, with FK18 at 10 µM (MIC) achieving complete elimination of C. tropicalis cells within four hours. Checkerboard assays revealed strong synergistic interactions between FK18 and fluconazole, significantly reducing the concentrations required for growth inhibition. Mechanistic studies using the fluorescent probe SYTOX Green demonstrated rapid membrane permeabilization. Additionally, supplementation with exogenous ergosterol resulted in a four-fold increase in MIC, suggesting that FK18 activity is influenced by sterol-containing membranes. Nuclear magnetic resonance analyses showed that FK18 adopts a stable amphipathic α-helical structure in membrane-mimetic environments, consistent with membrane-active AMPs. Molecular dynamics simulations further supported these findings, revealing stable interactions with POPC/ergosterol lipid bilayers. Furthermore, FK18 exhibited antioxidant activity, showing significant DPPH radical scavenging activity, whereas no significant ABTS radical scavenging activity was detected up to 128 µM. Collectively, these results highlight FK18 as a multifunctional peptide with rapid fungicidal activity, membrane-targeting properties, and synergistic potential, supporting its development as a promising antifungal candidate.",
+      "authors": "Tamaeh Monteiro‐Alfredo; Camila de Oliveira Gutierrez; Ismaell Avelino de Sousa Sobrinho; ANTOLIM PENHA MARTINEZ JUNIOR; Claudiane Vilharroel Almeida; Caio Fernando Ramalho de Oliveira; Gabriele A. Cardoso; Carolina O. Matos; Luciano Morais Lião; Lucas Rodrigues de Lima; Octávio Luiz Franco; Marlon Henrique e Silva Cardoso; Maria Lı́gia Rodrigues Macedo",
+      "journal": "Probiotics and Antimicrobial Proteins",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s12602-026-11254-w",
+        "openalex": "https://openalex.org/W7223440730",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.941Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s44163-026-02602-4": {
+      "doi": "10.1007/s44163-026-02602-4",
+      "normalized_doi": "10.1007/s44163-026-02602-4",
+      "normalized_title": "a scoping review mapping the role of husserlian phenomenology in artificial intelligence research",
+      "title": "A scoping review mapping the role of Husserlian phenomenology in artificial intelligence research",
+      "abstract": "AI research increasingly attributes perception, understanding, agency, and consciousness to artificial systems. Husserlian phenomenology offers distinctions through which to examine these claims. This scoping review maps explicit Husserlian uptake in AI and robotics and asks how conceptual engagement relates to methodological and design contributions. Eight primary queries and one overlapping name-variant query were executed through the Semantic Scholar Academic Graph API on 5 December 2025. English-language publications within a 1989–2026 search window were screened for substantive AI or robotics relevance and an explicit Husserlian anchor. Of 5,594 retrieved records, 32 publications from 1990 to 2025 were included. Nine publications recovered by a post hoc PhilPapers check were charted separately using the existing codebook; they were not added to the formal corpus. The corpus clusters around embodied AI, AI epistemology, cognitive architectures, and machine consciousness, with a newer generative-AI cluster. Constitution, intentionality, horizonality, and the lifeworld recur prominently. Conceptual translation, critique, and agenda setting predominate within this sample. Methodological import or design guidance occurs in seven of the 32 publications and three of the nine external publications. That difference qualifies generalization of the quantitative balance. Across both sets, Husserlian uptake spans conceptual interpretation, methodological transfer, and architectural proposals. The synthesis shows how distinctions concerning temporality, embodiment, and evidence can structure design and evaluation questions, while separating the authors’ research proposals from the mapped findings.",
+      "authors": "Hendrik Poschmann; Stefania Centrone",
+      "journal": "Discover Artificial Intelligence",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s44163-026-02602-4",
+        "openalex": "https://openalex.org/W7223441405",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.943Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.9734/jeai/2026/v48i114592": {
+      "doi": "10.9734/jeai/2026/v48i114592",
+      "normalized_doi": "10.9734/jeai/2026/v48i114592",
+      "normalized_title": "role of cerium oxide nanoparticles in improving crop drought tolerance a review",
+      "title": "Role of Cerium Oxide Nanoparticles in Improving Crop Drought Tolerance: A Review",
+      "abstract": "Drought stress is a major constraint on crop growth and productivity because it disrupts plant water relations, photosynthesis, mineral nutrition and cellular redox balance. Cerium oxide nanoparticles (CeO₂ NPs), also known as nanoceria, have received attention as potential agents for mitigating these effects. This review examines the physicochemical properties of nanoceria, its principal application routes and the physiological, biochemical and molecular mechanisms associated with plant responses to water deficit. Surface oxygen vacancies and Ce³⁺/Ce⁴⁺ redox cycling contribute to the enzyme-mimetic activity of nanoceria and its interactions with reactive oxygen species. The reviewed studies describe responses following seed priming, foliar application and root or soil exposure. Evidence from sorghum, mungbean, barley, rice, grapevine, apple and wheat indicates that suitable nanoparticle concentrations may reduce oxidative damage, enhance antioxidant defences, protect photosynthetic functions and improve plant water status. Reported responses also include osmolyte accumulation, greater membrane stability, changes in mineral nutrient homeostasis and altered expression of drought-responsive genes. However, these outcomes depend on the crop species, nanoparticle concentration, application method and severity of water deficit. Higher concentrations may produce adverse effects, and findings from composite formulations cannot always be attributed to unmodified nanoceria. Limited field validation, incomplete understanding of root-level responses and unresolved questions about cerium accumulation in edible tissues restrict immediate agricultural application. Further evaluation is necessary to determine the consistency, practical relevance and safety of nanoceria-mediated drought responses.",
+      "authors": "K. S. Vidhya Bharathi; P. Abithaa; G. Mohanapriya",
+      "journal": "Journal of Experimental Agriculture International",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.9734/jeai/2026/v48i114592",
+        "openalex": "https://openalex.org/W7223450052",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.943Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s41467-026-78942-7": {
+      "doi": "10.1038/s41467-026-78942-7",
+      "normalized_doi": "10.1038/s41467-026-78942-7",
+      "normalized_title": "designing rigid protein fiducials to visualize gpcr conformational states",
+      "title": "Designing rigid protein fiducials to visualize GPCR conformational states",
+      "abstract": "G-protein coupled receptors (GPCRs) mediate precise ligand-specific signaling profiles, yet structural visualization of how ligands alter receptor conformational landscapes in the absence of signaling partners or mimetics has proven challenging. Here we show that by combining generative protein design with deep-learning based ensemble prediction we can reliably design fiducial markers to facilitate cryogenic electron microscopy (cryoEM) of GPCRs at arbitrary fusion points, enabling the visualization of previously intractable states. We validate the approach with high-throughput determination of inactive state structures of four pharmaceutically relevant GPCRs, allowing for key details of receptor pharmacology to be resolved in each case. We then engineered an extracellular fiducial marker for the prototypical β2-adrenergic receptor that enabled direct structural characterization of the rearrangement of key intracellular motifs in the absence of G-protein. Comparison with recent co-folding models highlights major gaps in current methods for predicting ligand-induced GPCR conformations. These results present a generalizable framework for accessing traditionally inaccessible structural states of small, dynamic proteins. Visualizing how drugs reshape GPCR receptors by cryo-EM has been difficult for many conformational states. Here, authors use designed protein fiducials to image elusive GPCR states, revealing details of ligand induced receptor activation.",
+      "authors": "Alina Vo Vo; Yuan-En Sun; Justin G. English; Michael J. Robertson",
+      "journal": "Nature Communications",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s41467-026-78942-7",
+        "openalex": "https://openalex.org/W7223458497",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.944Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1186/s12887-026-07764-9": {
+      "doi": "10.1186/s12887-026-07764-9",
+      "normalized_doi": "10.1186/s12887-026-07764-9",
+      "normalized_title": "severe functional constipation masquerading as acute intracranial infection in an adolescent a diagnostic pitfall and the risks of empirical mannitol therapy a case report",
+      "title": "Severe functional constipation masquerading as acute intracranial infection in an adolescent: a diagnostic pitfall and the risks of empirical mannitol therapy — a case report",
+      "abstract": "Abstract Background The differential diagnosis and treatment of non-specific neurological manifestations in adolescents (such as headaches and impaired consciousness) remain a significant challenge in clinical practice. Current clinical routine tends to prioritize the investigation of infectious etiologies, yet functional gastrointestinal disorders are frequently overlooked during screening. Furthermore, in cases of suspected increased intracranial pressure, empirical treatment is often initiated without objective measurement of intracranial pressure, which carries underappreciated risks. Case presentation We report a case of a 14-year-old female patient presenting with sudden bilateral temporal headache, dizziness, and a 21-hour episode of stupor that had spontaneously resolved before hospital arrival. On admission she was alert but lethargic, with normal vital signs, normal neurological examination, and an unremarkable head CT. She was empirically treated with acyclovir and intravenous mannitol for suspected intracranial infection with presumed elevated intracranial pressure. However, subsequent investigations did not support either diagnosis: cerebrospinal fluid analysis was normal with an opening pressure of 70 mmH 2 O (below the pediatric reference range, measured after mannitol administration), fundoscopic examination revealed no papilledema, and brain MRI showed no infectious or structural abnormalities. Persistent headache and lethargy continued despite mannitol therapy. During hospitalization, the patient developed severe constipation. An upright abdominal radiograph demonstrated extensive fecal retention and gaseous distension throughout the colon, together with an incidental finding of non-fusion of the posterior vertebral arches at S1–S2. Following bowel evacuation and discontinuation of mannitol, the persistent headache and lethargy substantially improved, with no recurrence during 3-month follow-up. Conclusions This case illustrates that empirical osmotherapy for presumed intracranial hypertension, in the absence of objective evidence from relevant examinations—such as cerebrospinal fluid pressure measurements—may be both ineffective and potentially harmful. Clinicians should base decisions about osmotherapy on objective intracranial pressure assessment rather than presumptive diagnosis, and should include gastrointestinal evaluation in the work-up of adolescents with persistent unexplained neurological symptoms. Incidental anatomical findings such as isolated posterior arch defects should not be over-interpreted in the absence of dedicated MRI evaluation.",
+      "authors": "Hongyu Liang; Chaoyang Li",
+      "journal": "BMC Pediatrics",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1186/s12887-026-07764-9",
+        "openalex": "https://openalex.org/W7223462356",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.945Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.jot.2026.101244": {
+      "doi": "10.1016/j.jot.2026.101244",
+      "normalized_doi": "10.1016/j.jot.2026.101244",
+      "normalized_title": "macrophage reprogramming in degenerative musculoskeletal diseases from tissue niche biology to therapeutic translation",
+      "title": "Macrophage reprogramming in degenerative musculoskeletal diseases: From tissue-niche biology to therapeutic translation",
+      "abstract": "Degenerative musculoskeletal diseases (DMSDs), including osteoarthritis (OA), osteoporosis (OP), intervertebral disc degeneration (IVDD), and sarcopenia (SP), impose a major burden through pain, structural deterioration, mobility loss, fracture risk, and functional decline. Although these disorders are often grouped as age-related musculoskeletal conditions, they arise from distinct tissue niches and cannot be explained by a single pathogenic mechanism. Macrophages occupy a central position at the interface between degenerative stress and tissue outcome, but their functions extend far beyond a binary M1/M2 polarization model. This Review proposes a disease-niche-adapted framework for macrophage reprogramming in DMSDs. In this framework, macrophages are interpreted according to the pathological tasks they perform within each tissue environment: inflammatory amplification and pain-related synovial crosstalk in OA, osteoimmune remodeling in OP, immune-barrier disruption and macrophage-nucleus pulposus (NP) cell feedback in IVDD, and impaired regenerative support in aging muscle in SP. We discuss how macrophage functional states are shaped by transcriptional and epigenetic regulation, immunometabolic rewiring, inflammatory signaling, autophagy and organelle quality control, and local niche-derived cues. Therapeutic strategies are then evaluated according to whether they interrupt upstream niche stress, redirect inflammatory and metabolic decoding, restore quality-control capacity, or reshape macrophage-mediated tissue communication. Finally, we propose that macrophage-targeted therapy should be assessed through a hierarchy of evidence, progressing from marker changes to functional reprogramming, macrophage-causal validation, and disease-specific structural or functional improvement. This framework may help convert macrophage plasticity from a broad immunological concept into a more precise, testable, and disease-adapted therapeutic strategy for musculoskeletal degeneration. The translational potential of this article This Review provides a disease-niche-adapted framework for evaluating macrophage reprogramming in degenerative musculoskeletal diseases. By linking disease-specific macrophage tasks with regulatory mechanisms, therapeutic entry points, causal validation, delivery feasibility, and tissue-relevant endpoints, this framework may help guide both the design and translational assessment of macrophage-targeted interventions for musculoskeletal degeneration.",
+      "authors": "Chao Wang; Yuxin Chen; Dong Ren; Yufeng Chen; Guowei Ren; Tong Li; Mehboob Ullah; Qin Xia; Lei Dong; Pengcheng Wang",
+      "journal": "Journal of Orthopaedic Translation",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.jot.2026.101244",
+        "openalex": "https://openalex.org/W7223465563",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.947Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.24093/awejtls/vol10no4.11": {
+      "doi": "10.24093/awejtls/vol10no4.11",
+      "normalized_doi": "10.24093/awejtls/vol10no4.11",
+      "normalized_title": "hollow identity a comparative study of identity formation and resistance in adichie s americanah and mbue s behold the dreamers",
+      "title": "Hollow Identity: A Comparative Study of Identity Formation and Resistance in Adichie’s Americanah and Mbue’s Behold the Dreamers",
+      "abstract": "Chimamanda Ngozi Adichie’s Americanah (2013) and Imbolo Mbue’s Behold the Dreamers (2016) focus on the challenges African immigrants face in finding their identity and acceptance in a foreign society. Therefore, this study aims to illustrate how migration reshapes identity and how African immigrants seek belonging while using different forms of resistance in both novels. The study’s significance lies in the examination of how migration can change identity and how African immigrants use subtle resistance to cope with the challenges of belonging and displacement. By introducing the concept of “hollow identity,” in which African immigrants are physically present in the host country but emotionally disconnected from their homeland, the study shows how this condition leads them to use unique forms of resistance. Through postcolonial theory, especially Homi K. Bhabha’s notions of hybridity and mimicry, Stuart Hall’s views about identity in terms of “being” and “becoming”, and James C. Scott’s theory of everyday resistance, the research focuses on the process of identity formation via displacement and race. The analysis concludes that returning home does not restore immigrants’ original identities; instead, it reveals that migration leaves them feeling detached from their cultural roots. It also demonstrates that the characters’ identities are unstable, so their resistance often takes subtle forms, expressed through everyday actions rather than direct confrontation.",
+      "authors": "Sara Abdulrahman Aborreesh; Banan Aljahdali",
+      "journal": "Arab World English Journal For Translation and Literary Studies",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.24093/awejtls/vol10no4.11",
+        "openalex": "https://openalex.org/W7223465973",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.948Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1002/ccr3.73677": {
+      "doi": "10.1002/ccr3.73677",
+      "normalized_doi": "10.1002/ccr3.73677",
+      "normalized_title": "villoglandular adenocarcinoma of the cervix with ovarian metastasis mimicking a borderline ovarian tumor a rare case report",
+      "title": "Villoglandular Adenocarcinoma of the Cervix With Ovarian Metastasis Mimicking a Borderline Ovarian Tumor: A Rare Case Report",
+      "abstract": "ABSTRACT This case reports rare cervical villoglandular adenocarcinoma metastasizing to the ovary with a deceptive borderline‐like morphology. Diagnosis relied on matching immunohistochemistry and HPV16 DNA detection in both sites. The patient underwent surgery and chemoradiotherapy, remaining recurrence‐free. This highlights the critical need for multimodal testing to distinguish such metastases from primary ovarian tumors.",
+      "authors": "Ni Ma; Xiang Xu; 朱正鹏; Tianfang Xin; 黄亚雄",
+      "journal": "Clinical Case Reports",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1002/ccr3.73677",
+        "openalex": "https://openalex.org/W7223470067",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:56.949Z",
+      "first_run": "RUN:202610260837:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.foreco.2026.124373": {
+      "doi": "10.1016/j.foreco.2026.124373",
+      "normalized_doi": "10.1016/j.foreco.2026.124373",
+      "normalized_title": "landscape composition patch size and local characteristics shape ant and beetle assemblages in naturally patchy indigenous forests",
+      "title": "Landscape composition, patch size, and local characteristics shape ant and beetle assemblages in naturally patchy indigenous forests",
+      "abstract": null,
+      "authors": "A. Nel; R. Gaigher; J.S. Pryke",
+      "journal": "Forest Ecology and Management",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.foreco.2026.124373",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-10-26T08:37:59.593Z",
+      "first_run": "RUN:202610260837:ANT_MIMICRY:cr",
       "screening_status": "new",
       "relevance_score": null,
       "exclusion_reason": null,
