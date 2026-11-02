@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-26T08:37:57.109Z",
+  "generated": "2026-11-02T10:41:05.525Z",
   "policy": "literature_candidate corpus — discovery layer only; screening_status new → screened; irrelevant records are EXCLUDED with a reason, never deleted (SOP Phase 10).",
   "candidates": {
     "10.1016/j.foodhyd.2026.113278": {
@@ -5950,6 +5950,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.biomaterials.2026.124717"
         }
       ]
     },
@@ -5979,6 +5984,10 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "normalized_title",
+          "confidence": 0.9
         }
       ]
     },
@@ -6512,6 +6521,640 @@
       "profile_version": "1.0.0",
       "discovered_at": "2026-10-26T08:37:59.593Z",
       "first_run": "RUN:202610260837:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.foreco.2026.124373"
+        }
+      ]
+    },
+    "10.1016/j.colsurfa.2026.142197": {
+      "doi": "10.1016/j.colsurfa.2026.142197",
+      "normalized_doi": "10.1016/j.colsurfa.2026.142197",
+      "normalized_title": "bimetallic cu ce mof 808 nanozyme with enhanced haloperoxidase mimetic activity for quorum sensing disruption and marine antifouling",
+      "title": "Bimetallic Cu/Ce-MOF-808 nanozyme with enhanced haloperoxidase-mimetic activity for quorum sensing disruption and marine antifouling",
+      "abstract": null,
+      "authors": "Jiarui Fang; Xiaoyan He; Zongcheng Yang; Zihao Zhang; Xiaoqing Dou; Xiuqin Bai",
+      "journal": "Colloids and Surfaces A: Physicochemical and Engineering Aspects",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.colsurfa.2026.142197",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:MIMICRY_GENERAL",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:03.973Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "no-doi:an elusive diagnosis of strongyloides infection masquerading as daptomycin induced eosinophilic pneumonitis": {
+      "doi": null,
+      "normalized_doi": null,
+      "normalized_title": "an elusive diagnosis of strongyloides infection masquerading as daptomycin induced eosinophilic pneumonitis",
+      "title": "An Elusive Diagnosis of Strongyloides Infection Masquerading as Daptomycin-Induced Eosinophilic Pneumonitis.",
+      "abstract": "Daptomycin-induced eosinophilic pneumonitis, characterized by peripheral eosinophilia, bilateral pulmonary infiltrates and respiratory symptoms, is a recognized adverse drug effect. However, these findings overlap significantly with pulmonary strongyloidiasis, in which transpulmonary larval migration provokes a similar eosinophil-rich inflammatory response. Failure to distinguish between these entities carries serious consequences, as untreated Strongyloides infection can progress to hyperinfection syndrome with high mortality. We describe a middle-aged male with alcoholic liver cirrhosis who developed peripheral eosinophilia, bilateral pulmonary nodules, migratory consolidative opacities, and pleural effusions while receiving daptomycin for polymicrobial bacteremia. The findings were initially attributed to daptomycin-induced eosinophilic pneumonitis, and the drug was discontinued. However, given clinical suspicion for a parasitic etiology, Strongyloides testing was pursued. Stool ova-and-parasite examination and bronchoalveolar lavage were both negative; however, Strongyloides serology returned positive, confirming the diagnosis. The patient improved both clinically and radiographically following treatment with ivermectin and albendazole. The negative stool and bronchoalveolar lavage results further underscore the suboptimal sensitivity of conventional diagnostic methods and the essential role of serologic testing. Clinicians evaluating eosinophilia with pulmonary infiltrates in patients receiving daptomycin should systematically consider parasitic etiologies, including Strongyloides serology, before attributing findings solely to a drug-related cause.",
+      "authors": "Steven Y Zhou; Arber Sejdiu; Muhammad Abdullah; Yisrael Feman; Deniz Kuci; Vincent B DeChavez",
+      "journal": "PubMed",
+      "year": 2026,
+      "ids": {
+        "openalex": "https://openalex.org/W7224137871",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.264Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1097/j.pain.0000000000004054": {
+      "doi": "10.1097/j.pain.0000000000004054",
+      "normalized_doi": "10.1097/j.pain.0000000000004054",
+      "normalized_title": "spontaneous neuropathic pain",
+      "title": "Spontaneous neuropathic pain",
+      "abstract": "Spontaneous pain is a highly prevalent and disabling consequence of neuropathic disorders, yet it remains mechanistically underdefined and therapeutically underserved. Historically, preclinical animal models and clinical trials have been overwhelmingly biased toward stimulus-evoked hypersensitivity, relegating spontaneous pain to a secondary manifestation. Emerging evidence now challenges this view. Converging data from pharmacology, neural recordings, and systems-level causal manipulations indicate that spontaneous and stimulus-evoked pain arise from substantially dissociable molecular, cellular, and circuit substrates. Injured-fiber–derived ectopic activity within specific sensory neuron subtypes serves as a dominant peripheral generator of spontaneous pain, whereas cellularly distinct, intact spared-fiber pathways mediate stimulus-evoked hypersensitivity. At spinal and supraspinal levels, spontaneous pain preferentially engages affective–salience networks during pain chronification and may ultimately become stabilized within higher-order circuitry—while remaining dynamically coupled to afferent input. This mechanistic delineation carries critical translational implications. Current diagnostic and treatment guidelines rarely differentiate symptom domains, and most therapies have been validated primarily using stimulus-evoked or overall pain intensity endpoints—potentially contributing to a mechanism–therapy mismatch and variable efficacy. We argue that spontaneous neuropathic pain should be defined as a separate symptom domain rather than considered as a spontaneous manifestation of evoked pain mechanisms. This recognition demands longitudinal, biomarker-informed phenotyping to capture its persistent and fluctuating nature, and thereby enable robust mechanistic dissection at peripheral, spinal, and cortical nodes. Reframing spontaneous neuropathic pain along these lines will provide a foundation for precision therapeutics that target defined cell types, specific molecular drivers, and maladaptive network states—enabling mechanism-based, symptom-aligned treatments.",
+      "authors": "Xiangsunze Zeng; Clifford J. Woolf",
+      "journal": "PubMed Central",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1097/j.pain.0000000000004054",
+        "openalex": "https://openalex.org/W7224902608",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.267Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s41420-026-03434-y": {
+      "doi": "10.1038/s41420-026-03434-y",
+      "normalized_doi": "10.1038/s41420-026-03434-y",
+      "normalized_title": "stf 62247 induces a non canonical caspase independent cell death in ccrcc associated with autophagic and lysosomal dysfunction",
+      "title": "STF-62247 induces a non-canonical, caspase-independent cell death in ccRCC associated with autophagic and lysosomal dysfunction",
+      "abstract": "Abstract Clear cell renal cell carcinoma (ccRCC), the most prevalent form of kidney cancer, is driven by early chromosome 3p loss and VHL inactivation, frequently followed by secondary mutations in other 3p genes, such as SETD2, PBRM1, and BAP1 . The small molecule STF-62247 was found to target VHL -deficient ccRCC through autophagy-dependent cell death. We recently demonstrated that SETD2 inactivation in VHL -reconstituted ccRCC cells also confers vulnerability to STF-62247, accompanied by caspase-3 and gasdermin E (GSDME) cleavage. Here, we investigated the underlying cell death mechanisms that drive STF-62247 cytotoxicity across different ccRCC genetic profiles. Our results ruled out necroptosis, ferroptosis, and GSDMD-mediated pyroptosis. In VHL -deficient cells, signature markers of classical intrinsic apoptosis, including cytochrome c release, PARP, and caspase-3 cleavage, as well as the extrinsic apoptosis marker, caspase-8 cleavage, were induced with STF-62247. Conversely, SETD2 -inactivated cells did not display cytochrome c release or caspase-8 activation. CRISPR knockout of CASP3 or GSDME , or pharmacological inhibition of caspases, failed to rescue cell death, proving these pathways are secondary. Mechanistically, immunofluorescence for LAMP1, cathepsin L (CTSL), and Galectin-3 indicated the absence of lysosomal membrane permeabilization. Instead, STF-62247-mediated PIKfyve inhibition caused endolysosomal enlargement, trapping immature pro-CTSL within non-functional compartments. We hypothesize that cells may alter their autophagic machinery to cope with this degradative arrest, potentially leading to an atypical secretory autophagy-like response; this could account for the observed LAMP1 plasma membrane translocation in VHL-deficient cells and dysfunctional vacuolar accumulation in SETD2-deficient models. Genetic ablation of ATG5 or BECN1 or pharmacological inhibition of autophagy with SAR405 partially rescued viability in SETD2 -inactivated cells, confirming that this autophagy-linked pathway actively contributes to cell death. Collectively, we found that STF-62247 triggers a multifaceted cell death program associated with autophagic machinery deregulation. While GSDME cleavage does not dictate survival, its pro-inflammatory potential remains an intriguing perspective to be explored for potentially optimizing immunotherapy strategies in ccRCC.",
+      "authors": "Mathieu Johnson; Cai Smyth; Sophie E. Landry; Chloe Michaud; Patric M. Page; Kevin Caissie; Sandra Turcotte",
+      "journal": "Cell Death Discovery",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s41420-026-03434-y",
+        "openalex": "https://openalex.org/W7225039401",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.269Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.18502/crcp.v11i4.23136": {
+      "doi": "10.18502/crcp.v11i4.23136",
+      "normalized_doi": "10.18502/crcp.v11i4.23136",
+      "normalized_title": "when pneumonia is not pneumonia acute myocarditis encountered in a pediatric emergency service",
+      "title": "When Pneumonia is Not Pneumonia: Acute Myocarditis Encountered in a Pediatric Emergency Service",
+      "abstract": "Pediatric acute myocarditis often presents with dominant respiratory symptoms, creating a significant diagnostic overlap with common lower respiratory tract infections. This clinical mimicry frequently results in misdiagnosis, such as pneumonia, and potentially fatal delays in specialized cardiac care. We report three consecutive male patients (aged 6 months to 3.5 years) initially referred to a Pediatric Pulmonology Service for presumed consolidative pneumonia. The diagnosis was shifted to acute myocarditis only after identifying cardiac “red flags,” including tachycardia disproportionate to fever, cardiomegaly on imaging, and elevated cardiac biomarkers or pericardial effusions. Clinical management included intravenous immunoglobulin, pulse steroids, and supportive therapy. One patient required electrical cardioversion for refractory ventricular tachycardia. All three patients achieved clinical recovery or significant improvement, with normalization of cardiac function or resolution of effusions. Emergency medicine specialists and pediatricians must maintain a high index of suspicion for acute myocarditis in children presenting with respiratory distress. Recognizing clinical findings that are disproportionate to the degree of parenchymal lung involvement is essential to prevent diagnostic delays and ensure the timely initiation of life-saving interventions",
+      "authors": "Ahmad Safapour; Maryam Taraz",
+      "journal": "Case Reports in Clinical Practice",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.18502/crcp.v11i4.23136",
+        "openalex": "https://openalex.org/W7225041833",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.272Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s41536-026-00518-2": {
+      "doi": "10.1038/s41536-026-00518-2",
+      "normalized_doi": "10.1038/s41536-026-00518-2",
+      "normalized_title": "xenogeneic acellular nerve grafts laden with schwann cell like cells repair monkey long gap facial nerve defects",
+      "title": "Xenogeneic acellular nerve grafts laden with Schwann cell-like cells repair monkey long-gap facial nerve defects",
+      "abstract": "This study evaluated whether hair follicle epidermal neural crest stem cell-derived Schwann cell-like cells (HF-EPI-NCSC-SCLCs) could enhance the performance of cable-type porcine acellular nerve grafts (ANGs) in repairing long-gap whole facial nerve defects (WFNDs) in rhesus monkeys. Following chemical decellularization, porcine ANGs lacked S100B, α-Gal and swine leukocyte antigen expression, while laminin was well preserved. Cultured monkey HF-EPI-NCSC-SCLCs expressed Schwann cell markers (GFAP + /S100B +), exhibited low immunogenicity, and demonstrated vigorous growth in porcine ANGs in vitro. Twelve monkeys were randomly assigned to three equal groups: autologous sural nerve graft, ANG alone, and ANG + HF-EPI-NCSC-SCLCs. Each group received a graft to bridge a 35-mm-long WFND. At 8 months postoperatively, the ANG + HF-EPI-NCSC-SCLCs group showed significantly better facial symmetry, mimetic recovery, and recovery ratios of onset latency and amplitude than the ANG group. Severe synkinesis was frequent in the ANG group but only occasional in the other two groups. Nerve regeneration indices were also significantly improved with cell supplementation. No notable systemic or local immune responses differed among the three groups. These findings demonstrate that HF-EPI-NCSC-SCLCs effectively boost the regenerative capacity of cable-type xenogeneic ANGs for repairing long-gap WFNDs in non-human primates, supporting their translational potential for facial nerve reconstruction.",
+      "authors": "Guochen Zhu; Jingjing Yang; Jianxin Hu",
+      "journal": "npj Regenerative Medicine",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s41536-026-00518-2",
+        "openalex": "https://openalex.org/W7225044994",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.274Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s41467-026-79315-w": {
+      "doi": "10.1038/s41467-026-79315-w",
+      "normalized_doi": "10.1038/s41467-026-79315-w",
+      "normalized_title": "the gene ivory mir 193 controls scale type differentiation in heliconius butterflies",
+      "title": "The gene ivory:mir-193 controls scale type differentiation in Heliconius butterflies",
+      "abstract": "The ivory:mir-193 locus is a genetic hotspot underlying melanic wing pattern variation across Lepidoptera, acting as a master regulator of melanic scale fate. This includes the genus Heliconius, where aposematic mimicry is driven by three scale cell types: light Type I, dark-melanic Type II, and red Type III scales. We test functions of ivory:mir-193 in Heliconius using CRISPR-induced somatic mosaic knockouts of ivory and mir-193 across multiple pattern morphs. Knockouts convert Type II scales to Type I scales. Effects on Type III scales vary among and within individuals, indicating that ivory:mir-193 is permissive for Type III development. Using single-nucleus RNA-seq, we profile the transcriptional landscape of H. melpomene Δ78k mutants lacking mir-193. Loss of mir-193 produces readthrough transcription, consistent with a model where mir-193 acts as a co-transcriptional terminator. These data show that miR-193, a miRNA under the transcriptional control of the ivory host gene, mediate the diversification of wing patterns across Lepidoptera by modulating scale cell identity during pupal wing development. Butterfly wing scales are diverse cell types that generate the colours and structures used in communication and adaptation. This study shows that the non-coding RNA ‘ivory’ controls alternative scale-cell states, linking regulatory evolution to phenotypic diversity.",
+      "authors": "Joseph J. Hanly; Leo T. Camino; Julia C. Holder; Paola Calderon-Oñate; Pushkar Ravindra Wagh; Joshue Ruiz; Leia Zhao; Eva D. Stroh; Luca Livraghi; Ling Sheng Loh; Carlos Federico Arias; Lawrence E. Gilbert; Gregory A. Wray; Arnaud Martin; W. Owen McMillan",
+      "journal": "Nature Communications",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s41467-026-79315-w",
+        "openalex": "https://openalex.org/W7225046151",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.276Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.47391/jpma.32107": {
+      "doi": "10.47391/jpma.32107",
+      "normalized_doi": "10.47391/jpma.32107",
+      "normalized_title": "moderately differentiated squamous cell carcinoma of the temporal bone a case report of an external auditory canal mass in an elderly patient",
+      "title": "Moderately differentiated squamous cell carcinoma of the temporal bone: a case report of an external auditory canal mass in an elderly patient",
+      "abstract": "Squamous cell carcinoma (SCC) of the temporal bone is a rare malignancy, often misdiagnosed due to its mimicry of inflammatory ear conditions. The occurrence is rare, reported at 1 to 6 per million population per year. A 91-year-old female with diabetes, presented with one-year history of persistent right-sided otorrhoea, mixed hearing loss, and otalgia unresponsive to medical therapy. Physical examination revealed a polypoidal mass obstructing the External Auditory Canal (EAC). Contrast-enhanced CT scan identified soft tissue mass without bony erosion. Punch biopsy confirmed moderately differentiated SCC. The patient underwent modified radical mastoidectomy, followed by radiotherapy. At seven-month follow-up, imaging showed no residual tumour mass. Surgical resection with negative margins followed by concurrent chemo-radiotherapy (CCRT) is the treatment of choice, but for tumour involving the intracerebral structures, radiotherapy is the treatment modality. This case is exceptionally rare as no previous report has described a 91-year-old patient with localised disease without bone, nodal, or cranial nerve involvement. Keywords: Squamous cell carcinoma, Temporal bone, Ear neoplasm, Skull base neoplasm.",
+      "authors": "Hafiz Danyal Khan; Dr. Ihsan Ullah; Noorullah; Muhammad Imran Marwat",
+      "journal": "Journal of the Pakistan Medical Association",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.47391/jpma.32107",
+        "openalex": "https://openalex.org/W7225050340",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.278Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.32479/irmm.24349": {
+      "doi": "10.32479/irmm.24349",
+      "normalized_doi": "10.32479/irmm.24349",
+      "normalized_title": "artificial intelligence driven audit risk reduction in thin capitalisation engagements implications for external audit effectiveness among south african multinational corporations",
+      "title": "Artificial Intelligence-driven Audit Risk Reduction in Thin Capitalisation Engagements: Implications for External Audit Effectiveness among South African Multinational Corporations",
+      "abstract": "This study examined the effect of artificial intelligence-driven audit techniques on audit risk reduction associated with thin capitalisation engagements. It also examined their implications for external audit effectiveness among South African multinational corporations. Panel regression and System Generalised Method of Moments (GMM) models were used to analyse the data gathered from 14 listed multinational corporations in Johannesburg Stock Exchange. The adoption of artificial intelligence significantly reduced audit risk at β = −0.371, p < 0.001. It improved external audit effectiveness (β = 0.123, p < 0.05) after controlling for endogeneity through GMM instrumentation. Thin capitalisation and audit risk mitigation activity were positively related (β = 0.576, p < 0.001), contrary to conventional expectations. Artificial intelligence adoption did not moderate the relationship between thin capitalisation and audit risk reduction (β = 0.231, p < 0.10). Audit risk reduction partially mediated the AI–effectiveness relationship (indirect effect = 0.094). The lagged dependent variable in GMM (α = 0.446, p < 0.05) confirmed that audit effectiveness is path-dependent. The study contributes to the limited literature on the causal interrelationship between artificial intelligence and auditing in Africa and extends institutional theory within the context of tax compliance and audit quality governance in emerging markets. The findings underscore the need to enhance audit effectiveness and mitigate audit risks that can be traced to thin capitalisation engagements.",
+      "authors": "Ayobaye Salemcity",
+      "journal": "International Review of Management and Marketing",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.32479/irmm.24349",
+        "openalex": "https://openalex.org/W7225065895",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.281Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1093/genetics/iyag311": {
+      "doi": "10.1093/genetics/iyag311",
+      "normalized_doi": "10.1093/genetics/iyag311",
+      "normalized_title": "more than just a centromere evolution of a structural supergene causing female meiotic drive in monkeyflowers",
+      "title": "More than just a centromere: evolution of a structural supergene causing female meiotic drive in monkeyflowers",
+      "abstract": "ABSTRACT Meiotic drivers capitalize on vulnerabilities in eukaryotic meiosis and gametogenesis to gain greater-than-equal transmission to the next generation. In most plants and animals, asymmetric female meiosis is such an arena for selfishness; centromeric variants can bias their chromosome’s segregation to the one egg cell with potentially profound effects on individual fitness, population dynamics, and genome structure. However, the mechanisms and consequences of selfish centromere evolution remain obscure, due to both the complexity of centromeric DNA and to a paucity of model systems. Here, we build on representative chromosome-scale assemblies of yellow monkeyflowers (M. guttatus species complex ) to compare the structure, gene content, and sequence of three functionally distinct haplotypes at Meiotic Drive Locus on Chromosome 11 (MDL11), whose driving D allele was previously shown to be centromere-containing, costly, and maintained as a balanced polymorphism in wild populations. Relative to both moderately-resistant M. guttatus nondrivers ( D − ; IM767) and weak ( d) M. nasutus , D minimally evolved via two rearrangements (including a hemicentric inversion creating dual arrays of M. guttatus centromeric satellite Cent728 separated by > 200 trapped genes), massive expansions of a novel MDL11-specific subfamily of satellite repeats ( Cent728 D ) that increase D chromosome length by >50%, and the accumulation of >40 extra D-only genes (EDG) from diverse genomic sources in a hemizygous pericentromeric region. Under a strictly centromeric model of selfishness, the recent expansion of Cent728 D is a primary candidate for generating centromere drive, either by directly altering the binding of centromeric histone CenH3 or by shifting kinetochore size or position as an epigenetic byproduct of chromosome size. However, elevated divergence in genic presence-absence variants (both in the EDG and elsewhere) and gene sequence across MDL11 strata points to strong candidates for both collusion with the D centromere and for interspecific ( D − vs. d ) variation in resistance. Overall, our findings support the sequential buildup of this model centromeric driver over time, reveal intriguing parallels with adaptive and gamete-killing supergenes, and provide a strong platform for further dissection of the molecular genetic basis of its dramatic deviations from Mendelian rules.",
+      "authors": "Evan R. Stark-Dykema; Findley R. Finseth; William R. Conner; Chris B Plott; Lila Fishman",
+      "journal": "Genetics",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1093/genetics/iyag311",
+        "openalex": "https://openalex.org/W7131093840",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.282Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1002/smll.76487": {
+      "doi": "10.1002/smll.76487",
+      "normalized_doi": "10.1002/smll.76487",
+      "normalized_title": "bidirectional plant microneedle responses to guide biomaterial design",
+      "title": "Bidirectional Plant‐Microneedle Responses to Guide Biomaterial Design",
+      "abstract": "ABSTRACT Designing biomaterials compatible with plants and specific payloads enables new technologies for precision agriculture, including targeted and dose‐controlled agrochemical delivery that overcomes the runoff, drift, and cuticular exclusion limiting conventional methods. However, broader implementation requires a systematic understanding of the complex interactions among payloads, biomaterial properties, and plant responses to establish design principles that support a sustained biotic–abiotic interface. Using microneedles made of different polymers and microstructures, this study investigates plant–biomaterial interactions to develop effective compound delivery strategies. Biodegradation studies show that microneedle biomaterials impart distinct mechanical strength, hydrophilicity, and surface charge, influencing the release of bioactive cargo. Transcriptomic analyses reveal a largely shared acute response to microneedle injection, with some material‐ or structure‐dependent variation in immunity and metabolism. Mid‐term biochemical responses show corresponding differences in membrane integrity and antioxidant activity. Despite these responses, microneedle treatments caused minimal effects on plant growth, chlorophyll content, stomatal conductance, and quantum efficiency of photosystem II. Finally, we demonstrate how biomaterial properties influence agrochemical delivery using hydrophilic plant growth regulator gibberellic acid (GA 3 ) and hydrophobic herbicide pelargonic acid (PA), into tomato and lettuce, respectively. These findings establish principles for engineering plant‐biomaterial interfaces to accommodate payloads with diverse characteristics while ensuring plant safety.",
+      "authors": "Sally Shuxian Koh; Meng Li; Kasey Goh; Yunteng Cao; Yangyang Han; Raju Cheerlavancha; Liang Cui; Benedetto Marelli; Daisuke Urano",
+      "journal": "Small",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1002/smll.76487",
+        "openalex": "https://openalex.org/W7165551900",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.284Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s44327-026-00401-1": {
+      "doi": "10.1007/s44327-026-00401-1",
+      "normalized_doi": "10.1007/s44327-026-00401-1",
+      "normalized_title": "circular construction waste management and perceived urban environmental sustainability across ghanaian cities",
+      "title": "Circular construction waste management and perceived urban environmental sustainability across Ghanaian Cities",
+      "abstract": "Abstract Construction waste constitutes a major environmental challenge in rapidly urbanising sub-Saharan African cities, yet its governance through circular economy frameworks remains underexplored. This research used quantitative multi-city evaluations of the effect of circular construction waste management (CCWM) on urban environmental sustainability in Ghana. A sequential explanatory mixed methods design was used to gather the data from 502 built environment professionals in the cities of Accra, Kumasi, Takoradi, Tamale and Cape Coast. The study adopted hierarchical multiple regression, MANOVA, K-means cluster analysis, and mediation and moderation analyses using the PROCESS macro to support the development of the study. The results show that the overall adoption level of CCWMs remains low (M = 2.87/5.00), due to the lowest implementation levels of design for deconstruction (M = 1.93) and on-site source segregation (M = 2.19). Three groups of adopters emerged: non-adopters (21.3%), moderate adopters (54.5%) and advanced circular firms (24.2%). The hierarchical regression results indicated that CCWM practices (β = 0.412, p < .001) were the strongest predictor, followed by regulatory enforcement (β = 0.289, p < .001) and technological capability (β = 0.175, p = .002) for sustainability outcomes. The adoption–sustainability relationship was partially mediated by regulatory enforcement, explaining 36% of the overall effect, and significant inter-city differences were observed, with Accra performing better than Tamale. Adoption–sustainability relationship was also higher in large firms than in small firms. The results confirm that awareness is not enough to bring about the adoption of a circular economy; regulation and technological tools play an important role in achieving the sustainability outcomes in the construction sector in Ghana.",
+      "authors": "Adamu Wahab; Daniel Olatunde Babalola; Thomas Mensah Asabere",
+      "journal": "Discover Cities",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s44327-026-00401-1",
+        "openalex": "https://openalex.org/W7165634983",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.285Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1029/2025wr041619": {
+      "doi": "10.1029/2025wr041619",
+      "normalized_doi": "10.1029/2025wr041619",
+      "normalized_title": "storage connectivity and stream drying in headwater systems modeling across hydrogeomorphic features",
+      "title": "Storage, Connectivity, and Stream Drying in Headwater Systems: Modeling Across Hydrogeomorphic Features",
+      "abstract": "Abstract Headwater streams play a critical role in the physical, chemical, and biological functions of downstream waters. However, predicting their specific impact on a landscape scale remains a grand challenge, prompting the development of the river corridor framework to integrate the study of stream channels and hyporheic zones with that of adjacent hillslopes and riparian zones. To operationalize this framework and better explore hydrologic fluxes, the intermediate hydrogeomorphic feature (HGF) scale was recently defined to discretize the river corridor into quantifiable and repeatable compartments. In this study, we used process‐based modeling within and across HGFs to evaluate hydrologic connectivity, storage, streamflow, and drying. We used the Advanced Terrestrial Simulator to model hydrologic fluxes in an experimental watershed in the Coastal Plain of the southeastern United States, where we delineated incised, intact riparian, and wetland HGFs along three streams. Among HGFs, incised channels gained the most water from the subsurface, wetland HGFs maintained the highest water tables, and intact riparian HGFs frequently went dry. Incised and wetland HGFs generated the majority of discharge throughout the year, but dry season discharge was dominated by streamflow gains in incised HGFs. Together, these results suggest that stream incision increases downstream connectivity and export, whereas wetland HGFs increase watershed capacity for storage. Our findings highlight the role of geomorphic structure in driving spatial patterns of drying, storage, and connectivity. Given the pervasiveness of stream incision across anthropogenically impacted systems, our results provide a basis for identifying locations significant to watershed‐scale hydrologic export or retention.",
+      "authors": "Ashleigh N. Kirker; Charles Nathan Jones; Delaney Peterson; Corianne Tatariw; Jami E. Nettles; Xingyuan Chen",
+      "journal": "Water Resources Research",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1029/2025wr041619",
+        "openalex": "https://openalex.org/W7213549867",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.286Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1093/mtomcs/mfag032": {
+      "doi": "10.1093/mtomcs/mfag032",
+      "normalized_doi": "10.1093/mtomcs/mfag032",
+      "normalized_title": "selenium alters the tissue distribution of inorganic but not methylmercury in zebrafish larvae",
+      "title": "Selenium Alters the Tissue Distribution of Inorganic but Not Methylmercury in Zebrafish Larvae",
+      "abstract": "Mercury toxicity is strongly influenced by its chemical speciation, with interactions between mercury and selenium species either mitigating or exacerbating toxic effects. Here, synchrotron-based X-ray fluorescence imaging was used to examine the influence of l-selenomethionine on the tissue distributions of inorganic mercury and methylmercury in zebrafish larvae. Inorganic mercury accumulated predominantly in the pronephric ducts and liver, whereas methylmercury was distributed more uniformly throughout the organism. Administration of l-selenomethionine substantially altered the distribution of inorganic mercury and increased selenium accumulation within the pronephric ducts. Subcellular-resolution imaging revealed strong spatial correlations among mercury, selenium, and sulfur following inorganic mercury exposure, revealing mercury-, selenium-, and sulfur-rich domains within the pronephric ducts. In contrast, l-selenomethionine had comparatively little influence on methylmercury distribution, although combined exposure increased tissue sulfur levels. These findings demonstrate fundamentally different interactions of selenium with inorganic and organometallic mercury species in vivo and emphasize the importance of both chemical form and subsequent metabolism in determining mercury-selenium interactions.",
+      "authors": "Natalia Vasilevna Dolgova; Olena Ponomarenko; Susan Nehzati; Olga A. Antipova; Tracy C. MacDonald; Kelly L. Summers; Ashley K. James; Linda Vogt; Sanjukta Choudhury; Graham Neil George; Ingrid J. Pickering",
+      "journal": "Metallomics",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1093/mtomcs/mfag032",
+        "openalex": "https://openalex.org/W7223384472",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.288Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s44371-026-01053-1": {
+      "doi": "10.1007/s44371-026-01053-1",
+      "normalized_doi": "10.1007/s44371-026-01053-1",
+      "normalized_title": "unveiling the binding dynamics of banana lectin with l fucose through integrative spectroscopic crystallographic and in silico studies",
+      "title": "Unveiling the binding dynamics of banana lectin with L-fucose through integrative spectroscopic, crystallographic, and in silico studies",
+      "abstract": "Banana lectin (Banlec) is a homodimeric plant lectin with glucose/mannose specificity and is also capable of recognizing other carbohydrates. The present study was conducted to evaluate the binding modalities of Banlec with L -fucose. Such structural and biophysical characterization is essential for understanding the molecular basis of Banlec–carbohydrate recognition and its potential applications in glycobiology. Banlec was purified from Musa paradisiaca , and its binding with L -fucose was analyzed via different biophysical techniques. In the first step, the binding affinity of Banlec with L-fucose was analyzed via UV–Vis spectroscopy, which revealed a decreased absorption intensity at 280 nm with increasing concentrations of L-fucose. The binding constant (K b = (4.78 ± 0.08) ×10 4 M −1 ), dissociation constant (K d =21.8 ± 0.3 µM), and Gibbs free energy (ΔG°= − 26.7 kJ mol −1 ), suggest a favourable interaction. Results of circular dichroism spectroscopic (CD) analysis showed that binding of fucose did not alter the secondary structure of Banlec. Differential scanning fluorimetry showed a slight increase in melting temperature (ΔTm = + 0.5 °C) upon L -fucose binding. Additionally, the X-ray crystal structure of Banlec–fucose complex was resolved at 2.95 Å. Two molecules of L -fucose showed binding with Ser33, Gly34, His63, His84, and Gly105 amino acid residues. Molecular docking studies further supported the experimental findings. Hence, this study provides structural insights into the carbohydrate-binding features of Banlec, particularly its interaction with L-fucose.",
+      "authors": "Rida Arif; Javeria Arif; Malik Shoaib Ahmad; Saima Rasheed",
+      "journal": "Discover Chemistry.",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s44371-026-01053-1",
+        "openalex": "https://openalex.org/W7224852345",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.289Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.66434/ijspsy.v6i3.457": {
+      "doi": "10.66434/ijspsy.v6i3.457",
+      "normalized_doi": "10.66434/ijspsy.v6i3.457",
+      "normalized_title": "digital classroom assessment and student online behaviour rethinking teacher responsibilities in preventing technology facilitated gender based violence",
+      "title": "Digital classroom assessment and student online behaviour: Rethinking teacher responsibilities in preventing technology-facilitated gender-based violence",
+      "abstract": "The rapid integration of digital technologies into teaching, learning, and assessment has created new avenues through which technology-facilitated gender-based violence (TFGBV) may occur in school settings. Existing scholarship has examined TFGBV mainly through the lenses of cyberbullying, digital safety, and student well-being. At the same time, emerging work has also begun to conceptualise digital assessment systems as sites of structural and institutional gendered risk. Building on this systems-level perspective, this conceptual paper shifts attention to the pedagogical and interactional layer of digital assessment, examining how teachers' assessment design and oversight decisions may shape the conditions under which TFGBV becomes more or less likely. Developed through a critical interdisciplinary literature review, the paper draws on Bronfenbrenner's ecological systems theory, digital citizenship frameworks, and classroom assessment scholarship to examine how learning management systems, peer assessment tools, collaborative online assignments, and social media-integrated assessment activities may create conditions conducive to gendered harassment, image-based abuse, and exclusionary behaviour among learners of all genders. The paper proposes the Assessment-Mediated Digital Ethics (AMDE) framework, a theoretically grounded but not yet empirically validated model integrating gender-responsive assessment design, embedded digital behavioural expectations, and structured teacher oversight. AMDE is presented as a complementary pedagogical extension of existing justice-oriented approaches to digital assessment and TFGBV, rather than as a claim of first conceptualisation. The framework provides a basis for future empirical research examining teacher-mediated assessment practices and their relationship to digital safety, ethical participation, and TFGBV risk across diverse educational contexts. Responsibility for TFGBV prevention is understood as shared among teachers, learners, schools, families, technology providers, and policymakers.",
+      "authors": "Moses Mhide Kpum",
+      "journal": "International Journal of Studies in Psychology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.66434/ijspsy.v6i3.457",
+        "openalex": "https://openalex.org/W7224962288",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.290Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.2147/dddt.s629109": {
+      "doi": "10.2147/dddt.s629109",
+      "normalized_doi": "10.2147/dddt.s629109",
+      "normalized_title": "apigenin antihypertensive effects and underlying mechanisms a comprehensive review",
+      "title": "Apigenin: Antihypertensive Effects and Underlying Mechanisms — A Comprehensive Review",
+      "abstract": "Abstract: Apigenin, a ubiquitous dietary flavone from vegetables, fruits and herbal teas, exhibits multi-target hypotensive effects, yet its poor water solubility limits oral bioavailability and industrial translation. Previous reviews only summarized its general bioactivities and anti-atherosclerotic effects, without comprehensively analyzing its antihypertensive mechanisms. Most evidence derives from preclinical studies; human trials merely use crude celery seed extracts instead of purified apigenin, lacking reliable clinical proof for its antihypertensive efficacy. This review summarizes apigenin’s sources, chemical properties, safety and solubility-enhanced delivery systems to support functional food exploitation. We elaborate four core antihypertensive pathways, and also point out translational bottlenecks and propose strategies including food-grade nanoformulation and standardized clinical trials. This work links preclinical mechanisms to food industry application, providing theoretical evidence for developing apigenin-enriched functional foods for hypertension adjuvant intervention. Keywords: apigenin, hypertension, antioxidant, anti-inflammation, blood pressure, flavone",
+      "authors": "Xiaolin Liao; Hangxing Huang; Junlong Cai; Huaguan Lu; Jing Li; Hongfang Li; Yueping Jiang",
+      "journal": "Drug Design Development and Therapy",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.2147/dddt.s629109",
+        "openalex": "https://openalex.org/W7224989640",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.292Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.4084/mjhid.2026.085": {
+      "doi": "10.4084/mjhid.2026.085",
+      "normalized_doi": "10.4084/mjhid.2026.085",
+      "normalized_title": "how i approach hematologic abnormalities in hospitalized patients with infectious diseases",
+      "title": "HOW I APPROACH HEMATOLOGIC ABNORMALITIES IN HOSPITALIZED PATIENTS WITH INFECTIOUS DISEASES",
+      "abstract": "Patients hospitalized with infectious diseases often develop cytopenias, coagulopathy, hyperinflammation, or tissue abnormalities that may reflect infection, treatment toxicity, organ failure, immune dysregulation, or occult hematologic disease. Drawing on 20 years of daily consultation at the National Institute for Infectious Diseases “Lazzaro Spallanzani” IRCCS, I organize my approach around six recurring scenarios: fever with thrombocytopenia or schistocytes; persistent cytopenia during anti-infective therapy; fever, cytopenias, and hyperferritinemia; pancytopenia prompting marrow assessment; severe anemia or hemolysis; and persistent lymphadenopathy, effusion, or unexplained inflammation, particularly in an immunocompromised patient. Across scenarios, I first identify diagnoses in which delay changes outcome, then integrate tempo, the peripheral blood smear, reticulocyte response, medication, heparin, and transfusion exposure, organ dysfunction, and immune status. Guidelines define diagnostic and therapeutic standards; experience determines how those standards are ordered, combined, and revisited when evidence is incomplete. The approach prioritizes immediate treatment of suspected thrombotic thrombocytopenic purpura, clinically significant disseminated intravascular coagulation, heparin-induced thrombocytopenia or severe drug-induced immune thrombocytopenia, acute promyelocytic leukemia, severe hemolysis, and rapidly progressive secondary hemophagocytic lymphohistiocytosis; disciplined attribution of drug toxicity; physiology-based transfusion and anticoagulation; and timely marrow or tissue diagnosis when infection no longer explains the trajectory. The goal is a reproducible, stewardship-aware bedside method.",
+      "authors": "Michele Bibas",
+      "journal": "Mediterranean Journal of Hematology and Infectious Diseases",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.4084/mjhid.2026.085",
+        "openalex": "https://openalex.org/W7224990016",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:05.293Z",
+      "first_run": "RUN:202611021041:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.jpowsour.2026.241836": {
+      "doi": "10.1016/j.jpowsour.2026.241836",
+      "normalized_doi": "10.1016/j.jpowsour.2026.241836",
+      "normalized_title": "ant nest like three dimensional porous fe2o3 as a high performance anode material for lithium ion batteries",
+      "title": "Ant-nest-like three-dimensional porous Fe2O3 as a high-performance anode material for lithium-ion batteries",
+      "abstract": null,
+      "authors": "Fengjun Zhao; Wei Zhou; Ruizhi Zhang; Yu Tian; Teng Jia; Wenfang Du; Qing Wang; Xiong Liu; Xiaoming Lou; Huibing He",
+      "journal": "Journal of Power Sources",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.jpowsour.2026.241836",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:07.287Z",
+      "first_run": "RUN:202611021041:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.compeleceng.2026.111636": {
+      "doi": "10.1016/j.compeleceng.2026.111636",
+      "normalized_doi": "10.1016/j.compeleceng.2026.111636",
+      "normalized_title": "a hybrid quantum inspired genetic algorithm and multi objective ant colony system framework for virtual machine scheduling in cloud data centers",
+      "title": "A hybrid quantum-inspired genetic algorithm and multi-objective ant colony system framework for virtual machine scheduling in cloud data centers",
+      "abstract": null,
+      "authors": "Aishwarya Katyal; Mohit Sajwan",
+      "journal": "Computers and Electrical Engineering",
+      "year": 2027,
+      "ids": {
+        "crossref": "10.1016/j.compeleceng.2026.111636",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:07.290Z",
+      "first_run": "RUN:202611021041:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.32687/0869-866x-2026-34-5-1268-1272": {
+      "doi": "10.32687/0869-866x-2026-34-5-1268-1272",
+      "normalized_doi": "10.32687/0869-866x-2026-34-5-1268-1272",
+      "normalized_title": "the perimetry ant tonometry in real clinical practice of managing patients with glaucoma facilities and possibilities",
+      "title": "The perimetry ant tonometry in real clinical practice of managing patients with glaucoma: facilities and possibilities",
+      "abstract": "The anonymous survey of 107 ophthalmologists was carried out to assess facilities and practical application of diagnostic equipment in detection and management of glaucoma patients. It is established that main load of dispensary monitoring lies upon out-patient sector (81.8% of interrogated physicians of this level). However, only 12.5% of them have dedicated hours for glaucoma patients as compared to 35.3% of in-patient physicians (p=0.03). This indicates at time deficiency for full-value management of glaucoma patients at the primary care level that may negatively affect quality of dispensary monitoring. The significant deficiency of modern equipment is established. Only 46.4% of institutions are equipped with computerized perimeters. At that, outdated and law informative Förster perimeter remains the only method to assess visual field for 37.4% of specialists. The standard automated perimetry is applied by only 45.4% of physicians, and 9.1% of ophthalmologists in polyclinics apply no perimetry at all. The Maklakov tonometry (78.5%) and pneumotonometry (62.6%) dominate among methods measuring intraocular pressure, while Goldmann tonometry is practically unavailable (2.8%). The study results testify significant gap between Russian clinical practice and international standards requiring comprehensive measures on technical re-equipment and optimization of organization of ophthalmological care.",
+      "authors": "M. E. Mirgorodskaya; A. G. Zabolotniy; Z. I. Paranuk",
+      "journal": "Problems of Social Hygiene, Public Health and History of Medicine",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.32687/0869-866x-2026-34-5-1268-1272",
+        "openalex": null,
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "crossref",
+      "search_profile": "PROFILE:ANT_MIMICRY",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-02T10:41:07.293Z",
+      "first_run": "RUN:202611021041:ANT_MIMICRY:cr",
       "screening_status": "new",
       "relevance_score": null,
       "exclusion_reason": null,
