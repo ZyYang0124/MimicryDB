@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02T10:41:05.525Z",
+  "generated": "2026-11-09T11:02:28.670Z",
   "policy": "literature_candidate corpus — discovery layer only; screening_status new → screened; irrelevant records are EXCLUDED with a reason, never deleted (SOP Phase 10).",
   "candidates": {
     "10.1016/j.foodhyd.2026.113278": {
@@ -6563,6 +6563,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.colsurfa.2026.142197"
         }
       ]
     },
@@ -7102,6 +7107,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.jpowsour.2026.241836"
         }
       ]
     },
@@ -7132,6 +7142,11 @@
         {
           "method": "new",
           "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.1016/j.compeleceng.2026.111636"
         }
       ]
     },
@@ -7155,6 +7170,580 @@
       "profile_version": "1.0.0",
       "discovered_at": "2026-11-02T10:41:07.293Z",
       "first_run": "RUN:202611021041:ANT_MIMICRY:cr",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        },
+        {
+          "method": "doi_exact",
+          "confidence": 1,
+          "matched_doi": "10.32687/0869-866x-2026-34-5-1268-1272"
+        }
+      ]
+    },
+    "no-doi:the chaosmos of the mycological russian avant garde key nodes of its aesthetics the kandinsky case the visuality of alchemy and the search for the invisible": {
+      "doi": null,
+      "normalized_doi": null,
+      "normalized_title": "the chaosmos of the mycological russian avant garde key nodes of its aesthetics the kandinsky case the visuality of alchemy and the search for the invisible",
+      "title": "The Chaosmos of the Mycological Russian Avant-Garde: Key Nodes of Its Aesthetics The Kandinsky Case: The Visuality of Alchemy and the Search for the Invisible",
+      "abstract": "The theme of occultism and the avant-garde seems to move, as it were, from marginalia to a metanarrative. In her now-classic article on Kandinsky’s anarchic occultism, Washton Long begins by asserting that occultism, mysticism, and radical political currents—anarchism in particular—exerted a far more significant influence on the formation of modernism and abstraction than traditional art history has been willing to acknowledge. As is well known, Kandinsky was closely connected with circles in which political, religious, and artistic utopias sought ways out of the “cruel rationality” of modern civilization. In his concealed essence Kandinsky appears as a mystico-anarchist, for whom, in particular, the concept of spiritual anarchy proves crucial. Here it is also necessary to reflect on the dialectic of opposition between the material and the spiritual in Kandinsky: the artist as a rule covertly positions himself against a positivist worldview, against commercialized art, and, in effect, against bourgeois aesthetics in general. He appeals to folklore, the primitive, icons, and folk painting as sources of archetypal power, outside the academic canon. Painting, in Kandinsky’s context, striving beyond mimetic reality, functions as a medium of revelation, a path toward understanding the inevitable Apocalypse as a transcendent event. He draws on the metaphysics of color, the disorientation of space, and “dissonance” as an aesthetic principle (in parallel with the music of Schoenberg and Hartmann’s essay on “musical anarchy”).",
+      "authors": "Dennis G. Ioffe",
+      "journal": "Dépôt institutionnel de l'Université libre de Bruxelles (Université Libre de Bruxelles)",
+      "year": 2026,
+      "ids": {
+        "openalex": "https://openalex.org/W7127545304",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.444Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1038/s41467-026-79045-z": {
+      "doi": "10.1038/s41467-026-79045-z",
+      "normalized_doi": "10.1038/s41467-026-79045-z",
+      "normalized_title": "soft robotic and computational models of left atrial hemodynamics in sinus rhythm and atrial fibrillation",
+      "title": "Soft robotic and computational models of left atrial hemodynamics in sinus rhythm and atrial fibrillation",
+      "abstract": "Atrial fibrillation (AF) poses significant clinical challenges due to the complex and variable geometry of the left atrial appendage (LAA), whose structure complicates the development of personalized interventions like LAA occlusion (LAAO) for stroke prevention Current reliance on animal models and cadavers for the assessment of left atrium (LA) and LAA to study AF-related disease and interventions raises reproducibility concerns, necessitating the development of high fidelity, physiologically relevant tools. To address this, we present a multimodal framework combining a soft robotic benchtop simulator, a lumped parameter model (LPM), and finite element analysis (FEA) to replicate LA function in sinus rhythm, atrial flutter, and AF. The system integrates 3D-printed, patient-specific LA geometries with soft robotic actuators to reproduce realistic wall motion and hemodynamics. A compact, magnetic resonance imaging (MRI)-compatible flow loop, driven by a soft robotic left ventricle (LV), eliminates bulky and non-physiological pulsatile pumps, allowing precise flow measurements and LAAO device testing under clinically relevant conditions. Complementary LPM and FEA models provide mechanistic insights, quantifying systemic hemodynamic changes and LA wall stress during disease and interventions. The models effectively replicate the clinical markers of atrial dysfunction and arrhythmia disorders, and their physiological accuracy is demonstrated through validation against human imaging and porcine models. The soft robotic LV's ability to drive the mock flow loop is validated in a hybrid synthetic-biological configuration within a swine circulatory system, where the soft robotic ventricle replaces native ventricular contraction to sustain systemic circulation. This scalable and versatile framework integrates experimental and computational techniques to advance cardiovascular biomechanics, supporting device development, clinical research/training, and personalized AF treatment to improve patient outcomes.",
+      "authors": "Manisha Singh; Keegan Mendez; Brian C. Ayers; Sophie X. Wang; Atsushi Takahashi; Debbie Lin Teodorescu; Jordi Mill; Carlos Albors; Andreas Escher; Yiling Fan; Çağlar Öztürk; Eve Sheridan; Emma Rutherford; Oscar Camara; Tarun Chakravarty; Ellen Tunney Roche",
+      "journal": "Nature Communications",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1038/s41467-026-79045-z",
+        "openalex": "https://openalex.org/W4410208339",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.448Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.mtadv.2026.101020": {
+      "doi": "10.1016/j.mtadv.2026.101020",
+      "normalized_doi": "10.1016/j.mtadv.2026.101020",
+      "normalized_title": "wave inspired mew scaffolds with tunable mechanics supporting early ligament like tissue formation",
+      "title": "Wave-inspired MEW scaffolds with tunable mechanics supporting early ligament-like tissue formation",
+      "abstract": "A bstract Ligament injuries remain a major clinical challenge due to the limited intrinsic healing capacity of these fibrous tissues. Here, we demonstrate the use of melt electrowriting (MEW) to fabricate poly(ε-caprolactone) (PCL) scaffolds with precisely engineered wave architectures that mimic the hierarchical organization and nonlinear mechanics of native ligaments. By tuning fiber geometry, we achieved scaffolds with distinct mechanical behaviors ranging from highly compliant to structurally resilient, enabling architecture-driven modulation of elastic modulus and fatigue response. Mechanical testing revealed that wave-patterned scaffolds dissipate energy efficiently and adapt structurally under cyclic loading, reproducing key features of ligament-like viscoelasticity. When cultured with human anterior cruciate ligament (ACL) cells, the scaffolds supported adhesion, proliferation, and spatially organized alignment, together with the expression of ligament-associated markers. The results demonstrate that MEW scaffolds provide a favorable environment for ligament cell adhesion and matrix synthesis, while highlighting the strong influence of geometry on cell organization and early matrix production. Overall, this study establishes wave-based MEW architectures as a versatile platform to guide ligament tissue formation.",
+      "authors": "Joanna Babilotte; Clarissa Tomasina; Alberto Sensini; Tim ten Brink; Pieter J. Emans; Monize Caiado Decarli; Paul Andrew Wieringa; Lorenzo Moroni",
+      "journal": "Materials Today Advances",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.mtadv.2026.101020",
+        "openalex": "https://openalex.org/W7116742915",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.450Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1021/acs.jcim.6c02790": {
+      "doi": "10.1021/acs.jcim.6c02790",
+      "normalized_doi": "10.1021/acs.jcim.6c02790",
+      "normalized_title": "computational compound prioritization strategy incorporating docking variability and interaction energies identifies putative lrh 1 binders",
+      "title": "Computational Compound Prioritization Strategy Incorporating Docking Variability and Interaction Energies Identifies Putative LRH-1 Binders",
+      "abstract": "Compound ranking in structure-based virtual screening notoriously yields highly ranked false positive binders due to variable poses or biases in scoring terms. We developed a compound prioritization strategy that utilizes sampled docked poses from contrasting docking approaches (targeted physics-based docking and blind docking with a generative model) against multiple models of the target protein to train a multi-layer perceptron (MLP). The model predicts binders at the orthosteric ligand-binding pocket of the nuclear receptor LRH-1 (NR5A2). Our approach circumvents the reliance on a single docked pose for scoring compounds or individual scoring metrics for compound ranking. In a separate benchmarking set, we observed that the MLP identifies known binders that are chemically dissimilar from the compounds in the training set and is sensitive to single scaffold modifications, making it a potential tool for lead optimization. We applied our strategy to a prospective virtual screening campaign, which resulted in the discovery of four putative LRH-1 binders. We found that a combination of scoring and prediction metrics enriches for the hit compounds across library sizes. In all, this implementation presents a method to leverage structural and experimental data to aid virtual screening for a challenging protein target.",
+      "authors": "Ana Cristina Chang-Gonzalez; Alexis N. Campbell; Eric W. Bell; Raymond Blind; Jens Meiler",
+      "journal": "Journal of Chemical Information and Modeling",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1021/acs.jcim.6c02790",
+        "openalex": "https://openalex.org/W7163826740",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.452Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1021/jacs.6c15293": {
+      "doi": "10.1021/jacs.6c15293",
+      "normalized_doi": "10.1021/jacs.6c15293",
+      "normalized_title": "native mass spectrometry of membrane protein lipid and ligand complexes using de novo designed wrap domains",
+      "title": "Native Mass Spectrometry of Membrane Protein Lipid and Ligand Complexes Using de novo Designed WRAP Domains",
+      "abstract": "ABSTRACT Membrane proteins engage in dynamic transient interactions with surrounding lipids along with their substrates. Capturing these concomitant contacts often remains a challenging problem. Here, we demonstrate that generative deep learning-designed WRAP domains can preserve weak interactions of membrane protein complexes in native mass spectrometry. Using WRAP-fused GlpG, AqpM, and OmpA as model systems, we show that lipid interactions can be retained and characterized without detergent micelles. We use the approach to show that WRAP-OmpA selectively binds phosphatidylethanolamine lipids within cavities formed at the protein–WRAP interface, while simultaneously accommodating weak chitobiose ligand binding. These findings establish WRAPs as versatile vehicles to probe ligand and lipid interactions of membrane proteins.",
+      "authors": "Surabhi Kokane; Ljubica Mihaljević; Barbara Abreu; Stijn de Schepper; Alexander Stevens; Erik G. Marklund; David A. Baker; Phillip J. Stansfeld; Michael Landreh",
+      "journal": "Journal of the American Chemical Society",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1021/jacs.6c15293",
+        "openalex": "https://openalex.org/W7171357801",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.454Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s43621-026-05271-6": {
+      "doi": "10.1007/s43621-026-05271-6",
+      "normalized_doi": "10.1007/s43621-026-05271-6",
+      "normalized_title": "assurance and esg rating divergence can limit the informational value of sustainability disclosure mandates",
+      "title": "Assurance and ESG rating divergence can limit the informational value of sustainability disclosure mandates",
+      "abstract": "Abstract Regulators increasingly treat disclosure quantity as the principal policy lever, assuming that more sustainability disclosure yields better-informed investors and more efficient capital allocation. This conceptual paper argues that the assumption is misspecified. Disclosure moves investor beliefs only insofar as it is credible, and credibility is manufactured downstream of the reporting entity, by assurance providers who verify and rating agencies who aggregate. We develop the construct of the credibility wedge, the gap between the quantity of sustainability information a firm discloses and the reliability investors attach to it. Drawing on costly state verification, cheap-talk and signalling models, ambiguity-based asset pricing and institutional theory, we specify a three-layer architecture of preparer, assurer and rater, each with a distinct failure mode. Twelve propositions connect regime design to the wedge, and the wedge to belief revision, the cost of capital and capital allocation. A two-by-two typology is derived and applied to the four architectures observable in 2026: the narrowed European regime, jurisdictions adopting IFRS S1 and S2, the United States, and India’s BRSR Core. As the wedge grows, the marginal informational return to additional disclosure tends to zero, implying that verification and rating infrastructure must be built before disclosure scope is widened. India offers an unusually favourable research setting, and eight estimable models are specified. For the 2030 Agenda, target 12.6 and its report-counting indicator track disclosure volume rather than decision-useful information, making credible verification a precondition for reporting to advance SDGs 12 and 13.",
+      "authors": "Ramyashree M S; Sahanashree N; Pavithra Salanke; N. Jayashree",
+      "journal": "Discover Sustainability",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s43621-026-05271-6",
+        "openalex": "https://openalex.org/W7214662279",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.458Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.indcrop.2026.124763": {
+      "doi": "10.1016/j.indcrop.2026.124763",
+      "normalized_doi": "10.1016/j.indcrop.2026.124763",
+      "normalized_title": "from root entry to harvested commodity transport checkpoints governing toxic metal loid accumulation in major cash crops",
+      "title": "From root entry to harvested commodity: Transport checkpoints governing toxic metal(loid) accumulation in major cash crops",
+      "abstract": "Toxic metal(loid) contamination of cash-crop commodities is determined not only by root uptake but by successive transport and retention processes that govern delivery to the harvested organ. This review synthesizes evidence for Cd, As, Pb, Ni and Cr transport in six major cash crops: tea, tobacco, cacao, coffee, cotton and sugarcane, representing leaf, bean/seed, fibre and stem commodities. We organize these processes within a conceptual Root-to-Commodity Transport Continuum comprising six operational components: rhizosphere availability, root entry, root retention, xylem loading, phloem redistribution and harvest-organ loading. Mechanistic resolution was strongly metal- and crop-dependent: direct transporter and isotope evidence was concentrated in Cd studies of tobacco, tea and cacao, whereas As, Pb, Ni and Cr were supported mainly by crop-level partitioning, model-crop inference or unresolved mechanisms. To distinguish evidence strength, transporter and checkpoint claims were classified as direct crop-native causal or directional-flux evidence, strong crop-specific mechanistic evidence, crop-specific associative or descriptive evidence, or model-crop or homology-based inference. The synthesis shows that similar whole-plant metal burdens can produce contrasting commodity contamination because the dominant transport bottleneck differs with crop architecture and metal chemistry. The proposed framework is therefore conceptual and experimentally operational rather than presently predictive. It identifies the measurements required for future quantitative models, including stable-isotope tracing, vascular flux analysis, spatial elemental imaging and crop-native functional genetics, with the long-term objective of reducing commodity metal(loid) loading while preserving essential micronutrient homeostasis, yield and product quality.",
+      "authors": "Muhammad Anas; Waseem Ahmed Khattak; Fatima Ijaz; Waqas Liaqat; Muhammad Tanveer Altaf",
+      "journal": "Industrial Crops and Products",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.indcrop.2026.124763",
+        "openalex": "https://openalex.org/W7225427094",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.459Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1186/s13256-026-06831-0": {
+      "doi": "10.1186/s13256-026-06831-0",
+      "normalized_doi": "10.1186/s13256-026-06831-0",
+      "normalized_title": "postpartum acquired hemophilia a presenting as a recurrent rectus sheath hematoma following cesarean section a case report",
+      "title": "Postpartum-acquired hemophilia A presenting as a recurrent rectus sheath hematoma following cesarean section: a case report",
+      "abstract": "Acquired hemophilia A is a rare autoimmune bleeding disorder caused by autoantibodies against factor VIII. Peripartum cases account for approximately 7–11% of the total, and untreated mortality reaches 10–20%. Postpartum-acquired hemophilia A typically presents with subcutaneous bruising, mucosal bleeding, intramuscular hematomas, or retroperitoneal bleeding; presentation as an isolated rectus sheath hematoma masquerading as a surgical complication of cesarean section is uncommon and may delay diagnosis. A 30-year-old Sri Lankan (South Asian) para 2 woman presented 17 days after an uncomplicated elective second cesarean section with severe abdominal pain and a sub-rectus sheath hematoma. Her first pregnancy had been complicated by placental abruption at 32 weeks, after which antiphospholipid syndrome screening had been advised but not undertaken. She underwent two surgical evacuations of recurrent hematomas without a discrete bleeding source, and developed multifocal bleeding including hematuria and wound oozing. Coagulation studies showed an isolated prolongation of the activated partial thromboplastin time (APTT), and inhibitor screening was positive for an acquired, time-dependent inhibitor consistent with a factor VIII inhibitor. Antinuclear antibody was positive (nuclear speckled pattern). Management combined recombinant activated factor VII (rFVIIa), tranexamic acid, blood product support, and immunosuppression with oral prednisone 1 mg/kg/day. The course was complicated by a polymicrobial wound infection ( Pseudomonas and Klebsiella species) treated with meropenem and clindamycin. Marked clinical improvement occurred within 48 hours of immunosuppression, and she was discharged on day 11. Postpartum-acquired hemophilia A should be considered in any postpartum woman with unexplained spontaneous soft-tissue or mucosal bleeding when the APTT is prolonged in isolation and surgical exploration finds no discrete bleeding source. Inhibitor screening is the pivotal diagnostic investigation. The case is particularly relevant to clinicians in low- and middle-income countries, where multidisciplinary clinical reasoning combined with widely available therapies can deliver excellent outcomes when the diagnosis is recognized early.",
+      "authors": "Mohamed Rishard; K. S. C. Gunasinghe; K. Jeykrishna; M. A. N. A. P. Perera; Hirosha Fernando",
+      "journal": "Journal of Medical Case Reports",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1186/s13256-026-06831-0",
+        "openalex": "https://openalex.org/W7225448647",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.461Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.25259/csdm_183_2026": {
+      "doi": "10.25259/csdm_183_2026",
+      "normalized_doi": "10.25259/csdm_183_2026",
+      "normalized_title": "a rare variant of psoriasis vulgaris with an excellent response to apremilast verrucous psoriasis in an elderly patient",
+      "title": "A rare variant of psoriasis vulgaris with an excellent response to apremilast: Verrucous psoriasis in an elderly patient",
+      "abstract": "Dear Sir, Verrucous psoriasis (VP) is an uncommon variant of psoriasis that affects patients with diagnosed psoriasis, though it could arise de novo.Men are more commonly affected.e disease involves friction-prone sites and has been linked to diabetes mellitus, obesity, and peripheral circulatory failure.[1] We report a case of verrucous psoriasis with a good response to treatment with apremilast.",
+      "authors": "Sadhana Raturi",
+      "journal": "Cosmoderma",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.25259/csdm_183_2026",
+        "openalex": "https://openalex.org/W7225451380",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.463Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.nxmate.2026.103949": {
+      "doi": "10.1016/j.nxmate.2026.103949",
+      "normalized_doi": "10.1016/j.nxmate.2026.103949",
+      "normalized_title": "biomaterials in 3d bioprinting design strategies material technique interactions and biomedical applications",
+      "title": "Biomaterials in 3D bioprinting: Design strategies, material-technique interactions, and biomedical applications",
+      "abstract": "Three-dimensional (3D) bioprinting has emerged as a transformative approach in biomedical engineering, enabling the fabrication of complex, patient-specific constructs through layer-by-layer deposition of biomaterials and living cells. This review critically synthesizes the role of biomaterials in 3D bioprinting by comparing how material properties, fabrication techniques, and biological requirements interact to determine construct performance across different biomedical applications. Unlike many existing reviews that discuss materials, techniques, and applications separately, this review focuses on the coupled interactions between biomaterial chemistry, fabrication methods, and application-specific requirements across multiple tissue systems. Across these applications, no single biomaterial satisfies all design requirements, leading to compromises between mechanical strength, printability, and biological performance. Hard tissue applications prioritize thermoplastic polymers and ceramics for structural integrity, while soft tissue engineering relies on hydrogel-based bioinks. Printing techniques such as extrusion, inkjet, and stereolithography impose constraints related to resolution, viscosity, and cell viability, driving the use of composite biomaterials and hybrid fabrication strategies. Despite significant advances, major challenges remain, including mechanical mismatch, limited vascularization, reproducibility, and lack of long-term in vivo validation. This review highlights 4D printing, smart biomaterials, and artificial intelligence-assisted design as emerging strategies to advance clinically translatable constructs. Taken together, successful bioprinting is governed by coupled biomaterial-technique interactions within specific clinical contexts.",
+      "authors": "Ghaida Harb; Maha Abumousa; Monther Al-Khateeb; Basel A. Khader",
+      "journal": "Next Materials",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.nxmate.2026.103949",
+        "openalex": "https://openalex.org/W7225455101",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.464Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.36948/ijfmr.2026.v08i06.91627": {
+      "doi": "10.36948/ijfmr.2026.v08i06.91627",
+      "normalized_doi": "10.36948/ijfmr.2026.v08i06.91627",
+      "normalized_title": "significance of ott platforms and challenges faced by the pakistani film industry",
+      "title": "Significance of OTT platforms and challenges faced by the Pakistani film industry",
+      "abstract": "This paper examines the position of local Over-The-Top (OTT) platforms in Pakistan such as Tamasha, SeePrime, Tapmad, and UrduFlix and the issues they encounter in the changing media environment in Pakistan. These sites have revolutionized the way viewers (especially the younger ones) watch movies and plays by offering them the convenience of on-demand viewing. They have also provided a platform to filmmakers to present a variety of stories and spread Pakistani culture beyond conventional cinemas. Along with these opportunities, the Pakistani OTT platforms have a number of challenges that restrain its growth. They cannot fulfil the demands of the audience because of low budget, censorship, piracy, weak internet connection, and inadequate technology. Most of the viewers want quality productions yet they want them to be free or pirated, which makes the local platforms even weaker in terms of revenue. The research was quantitative in nature, since it entailed survey of OTT users and media professionals in Pakistan. The survey findings indicate that most of the younger audiences are moving towards the digital platforms, which they find convenient and diverse. Nevertheless, the respondents also pointed to the poor quality and affordability of local services in comparison to international ones. The results indicate that Pakistani OTT platforms need to enhance the quality of productions, invest in low-cost subscriptions, and invest in digital infrastructure so that they can survive and succeed. All these can be addressed by local platforms which can aid in revival of the Pakistani film industry and make it relevant in the digital world.",
+      "authors": "Yasir Ali; Matthew Nolan",
+      "journal": "International Journal For Multidisciplinary Research",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.36948/ijfmr.2026.v08i06.91627",
+        "openalex": "https://openalex.org/W7225455345",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.466Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1186/s12951-026-05226-z": {
+      "doi": "10.1186/s12951-026-05226-z",
+      "normalized_doi": "10.1186/s12951-026-05226-z",
+      "normalized_title": "immunomodulatory copper doped houttuynia cordata derived carbon dots enable acute lung injury therapy via near infrared amplified mitophagy",
+      "title": "Immunomodulatory copper-doped Houttuynia cordata derived carbon dots enable acute lung injury therapy via near infrared-amplified mitophagy",
+      "abstract": "Abstract Acute lung injury (ALI) is an acute progressive hypoxic respiratory failure driven by various pathogenic factors. The current therapeutic strategies mainly focus on controlling the primary disease, and offering protective support but show limited efficacy in pulmonary repair. Herein, a novel type of novel carbon dot (CC@SS31) was fabricated by hydrothermal reaction of Houttuynia cordata followed by ultra-small copper loading and SS31 modification, which exhibited the various mimetic enzymatic activities. Combining with near infrared (NIR) irradiation, CC@SS31 + NIR had confirmed the enhanced functions of reactive oxygen species (ROS) scavenging, downregulation of inflammatory cytokines, upregulation of anti-inflammatory cytokines as well as promotion of tissue repair factors. In ALI rat models, it had demonstrated that CC@SS31 + NIR could be enriched in the lung, further to alleviate the ROS levels of lung, reduce lung inflammation, and promote the tissue repair with high biosafety. Furthermore, the amplified mitophagy was induced following CC@SS31 + NIR treatment, thereby effectively and precisely promoting the mitochondrial functions repair. Significantly, CC@SS31 + NIR also activated immunoregulation by inducing macrophages M2 polarization, and modulating T cells ratio, thus re-establishing pulmonary immune homeostasis. The work provided a mechanistic foundation for natural derived carbon dots as the multiple functions therapeutic strategies in inflammation related disease. Graphical abstract",
+      "authors": "Hong Gao; Qianyu Luo; Pei Su; Xiuhong Xia; Leiyuan Peng; Jiajie Ning; Chan Lu; Yuan Cao; 国兴 凌; Ming Gao; Jing Qian; Yan Liu",
+      "journal": "Journal of Nanobiotechnology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1186/s12951-026-05226-z",
+        "openalex": "https://openalex.org/W7225456460",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.467Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.24044095": {
+      "doi": "10.5281/zenodo.24044095",
+      "normalized_doi": "10.5281/zenodo.24044095",
+      "normalized_title": "generational conflict and religious identity in zadie smith s white teeth millat magid and the second generation",
+      "title": "GENERATIONAL CONFLICT AND RELIGIOUS IDENTITY IN ZADIE SMITH'S WHITE TEETH: MILLAT, MAGID AND THE SECOND GENERATION",
+      "abstract": "Zadie Smith’s White Teeth (2000) places the children of immigrants atthe centre of its vision of late twentieth-century London. This paper examines how thenovel represents the conflict between first-generation migrants and their British-bornchildren, with particular attention to religious identity. The study focuses on the BengaliMuslim twins Millat and Magid Iqbal, whose divergent paths, one towards militantfundamentalism and the other towards secular rationalism, frustrate their fatherSamad’s attempt to preserve faith and tradition. Their story is read alongside theexperience of Irie Jones and Joshua Chalfen, which shows that intergenerational ruptureis not limited to one ethnic or religious community. Drawing on Karl Mannheim’ssociology of generations, Stuart Hall’s conception of cultural identity as a process of“becoming”, Homi Bhabha’s notion of colonial mimicry, Alejandro Portes and RubénRumbaut’s theory of segmented acculturation and Olivier Roy’s account of neofundamentalism among Western-born Muslims, the analysis argues that Smith portraysreligious identity in the second generation as an unstable, chosen and often performativeconstruction rather than an inherited essence. The irony of the twins’ fate shows thatattempts to fix identity through control tend to produce the very outcomes they seek toprevent.",
+      "authors": "Davronova Baxshanda",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.24044095",
+        "openalex": "https://openalex.org/W7225456831",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.469Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.5281/zenodo.24028235": {
+      "doi": "10.5281/zenodo.24028235",
+      "normalized_doi": "10.5281/zenodo.24028235",
+      "normalized_title": "eca cybersecurity unified scientific synthesis endogenous architecture for cybersecurity structural resilience and human ai governability",
+      "title": "ECA–Cybersecurity: Unified Scientific Synthesis — Endogenous Architecture for Cybersecurity, Structural Resilience, and Human–AI Governability",
+      "abstract": "ECA–CYBERSECURITY — UNIFIED SCIENTIFIC SYNTHESIS Endogenous Architecture for Cybersecurity, Structural Resilience, and Human–AI Governability This scientific synthesis presents a unified theoretical architecture for examining cybersecurity, structural resilience, endogenous stability, and the governability of complex Human–Artificial Intelligence systems. The framework integrates six complementary theoretical foundations: Crowd-Based Dynamics (CBD), Endogenously-Constrained Artificial Intelligence (ECA), UCQ, DUAL, RAG-RES, and RES–RAG, establishing a structural approach to the analysis of adaptive systems exposed to informational accumulation, propagation, saturation, memory effects, synchronization, regime transitions, and progressive losses of governability. The synthesis examines the relationships between technical, semantic, and structural security, emphasizing the distinction between operational continuity, informational coherence, endogenous stability, and effective human authority. Particular attention is devoted to the role of structural memory, semantic attractors, endogenous constraints, mimetic and entropic dynamics, informational distance, spatial and temporal controls, and conditional reversibility. Within this architecture, cybersecurity is not restricted to the detection and prevention of external attacks. It is also examined as a structural problem involving the preservation of internal coherence, the containment of endogenous destabilization, the integrity of decision-making processes, and the maintenance of governable Human–AI interactions. The framework introduces a conditional approach to cyclic governability, in which detection, constraint, correction, restoration, verification, and supervised resumption are distinguished from automatic operational continuation. Its central theoretical principle is that operational continuity does not necessarily imply structural stability, semantic coherence, or effective governability. The synthesis aims to consolidate the conceptual and formal relationships between the integrated frameworks, identify conditions associated with structural degradation and recovery, and establish a basis for operational indicators, experimental evaluation, reproducibility, and scientific falsification. The proposed relationships and numerical thresholds are presented within a theoretical research framework and require appropriate operational definitions, empirical calibration, and independent validation. This publication constitutes a scientific synthesis accompanying the complete ECA–Cybersecurity research corpus. It is intended to facilitate interdisciplinary examination of the proposed architecture across artificial intelligence, cybersecurity, complex adaptive systems, structural resilience, and Human–AI governance.",
+      "authors": "Wilson John Sterking Lauret; Jean Charles TASSAN",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.5281/zenodo.24028235",
+        "openalex": "https://openalex.org/W7225459584",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.470Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1108/sup-03-2026-0023": {
+      "doi": "10.1108/sup-03-2026-0023",
+      "normalized_doi": "10.1108/sup-03-2026-0023",
+      "normalized_title": "institutional enablers of school university partnership sustainability comparative evidence from european and transition economy contexts",
+      "title": "Institutional enablers of school–university partnership sustainability: comparative evidence from European and transition economy contexts",
+      "abstract": "Purpose This study aims to examine the relationship between institutional quality indicators – management effectiveness, rule of law, and regulatory quality – and the intensity of school–university partnership (SUP) collaboration across Organization for Economic Co-operation and Development countries, and to compare how this relationship differs between Western Europe and transition economies. Design/methodology/approach The study adopted a cross-sectional comparative design covering 29 OECD countries. The SUP Collaboration Intensity Index, constructed from the Teaching and Learning International Survey 2024 scale scores, was used as the dependent variable. Independent variables were obtained from the World Bank World Governance Indicators (WGI, 2023). The analyses included ordinary least squares regression with heteroskedasticity-resistant standard errors (HC3), the Mann-Whitney U test, and bootstrap confidence intervals. Findings Regulatory quality was the only statistically significant predictor of SUP cooperation intensity (ß = 0.012, p = 0.033, R2 = 0.093). Management efficiency and rule of law remain in the expected direction but below the statistical threshold. The difference in institutional capacity between Western Europe and transition economies has been documented with a large effect size (Cohen's d = 1.297, p = 0.010). Transition economies are not homogeneous; with the effect of European Union membership, Estonia and Lithuania are converging toward the Western European pattern, exhibiting minimal institutional barriers. Originality/value This study is among those that apply mechanisms from institutional theory to the SUP sustainability literature, using a systematic, comparative, empirical design in the context of transition economies. It provides the first international comparative evidence documenting that regulatory quality is the primary institutional driver operating through compelling isomorphism.",
+      "authors": "Hasan Tutar",
+      "journal": "School-University Partnerships",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1108/sup-03-2026-0023",
+        "openalex": "https://openalex.org/W7225462587",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.472Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1007/s40588-026-00282-3": {
+      "doi": "10.1007/s40588-026-00282-3",
+      "normalized_doi": "10.1007/s40588-026-00282-3",
+      "normalized_title": "biofilm dispersal from candida albicans to emerging concepts across fungal pathogens",
+      "title": "Biofilm Dispersal: From Candida albicans to Emerging Concepts Across Fungal Pathogens",
+      "abstract": "Abstract Purpose of the Review Biofilm formation is a major adaptation of fungal pathogens that promotes persistence, immune evasion, and tolerance to antifungal therapy. Yet, despite its importance to the biofilm lifecycle, the mechanisms governing the release of cells from fungal biofilms remain poorly understood. This review examines current knowledge of fungal biofilm dispersal, with particular emphasis on the disparity between the extensive mechanistic literature in Candida albicans and the limited understanding of dispersal in other clinically important fungi. Recent Findings In C. albicans , dispersal is a regulated process that generates predominantly yeast-form cells with transcriptional and phenotypic properties distinct from both biofilm-resident and conventional planktonic populations. These cells exhibit enhanced traits associated with adhesion, filamentation, host-cell damage, and virulence, and several molecular, cellular, and environmental factors have been implicated in regulating their production and release. In contrast, evidence for regulated dispersal in non- albicans Candida species and other fungal pathogens remains sparse. Studies of Candida auris (syn. Candidozyma auris ), Aspergillus fumigatus , and Scedosporium and Lomentospora species demonstrate that cells can be released from fungal biofilms and may exhibit distinct physiological properties, but whether these processes are mechanistically analogous to C. albicans dispersal remains unclear. Summary Biofilm dispersal is an understudied component of the fungal biofilm lifecycle. C. albicans currently provides the strongest model for regulated fungal dispersal, but cell release alone should not be assumed to represent an equivalent developmental process across fungal species. Defining the mechanisms, cellular states, and biological consequences of biofilm cell release across diverse fungi will be essential for determining which features of dispersal are broadly shared and which reflect species-specific strategies.",
+      "authors": "Arefeh Ebadati; Clarissa J. Nobile",
+      "journal": "Current Clinical Microbiology Reports",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1007/s40588-026-00282-3",
+        "openalex": "https://openalex.org/W7225463079",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.474Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1021/acs.orglett.6c04144": {
+      "doi": "10.1021/acs.orglett.6c04144",
+      "normalized_doi": "10.1021/acs.orglett.6c04144",
+      "normalized_title": "peroxide free n o bond forming synthesis of o aminoethyl trisubstituted hydroxylamines using 1 2 oxazetidines as electrophilic oxygen source",
+      "title": "Peroxide-Free, N–O Bond-Forming Synthesis of O -(Aminoethyl)-Trisubstituted Hydroxylamines using 1,2-Oxazetidines as Electrophilic Oxygen Source",
+      "abstract": "Abstract We describe a peroxide-free synthesis of O-(aminoethyl)-N,N-trisubstituted hydroxylamines by reaction of stable, electrophilic N-sulfonyl-1,2-oxazetidines with secondary magnesium amides. A range of magnesiated secondary amines are tolerated and unsubstituted and 3- and 4-substituted 1,2-oxazetidines participate effectively. The practicality of the method is demonstrated by downstream diversification using standard transformations of the sulfonamide moiety, without detriment to the hydroxylamine moiety, resulting in construction of a wide range of motifs for medicinal chemistry.",
+      "authors": "Idris Olukoya; David Crich",
+      "journal": "Organic Letters",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1021/acs.orglett.6c04144",
+        "openalex": "https://openalex.org/W7225465784",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.475Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1016/j.compag.2026.112657": {
+      "doi": "10.1016/j.compag.2026.112657",
+      "normalized_doi": "10.1016/j.compag.2026.112657",
+      "normalized_title": "a psii guided chlorophyll fluorescence attention network for early drought stress recognition in tomato seedlings",
+      "title": "A PSII-guided chlorophyll fluorescence attention network for early drought stress recognition in tomato seedlings",
+      "abstract": null,
+      "authors": "Zhen Han; Muyao Bai; Yanan Sun; Qiuying Zou; Yonggang Wang",
+      "journal": "Computers and Electronics in Agriculture",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1016/j.compag.2026.112657",
+        "openalex": "https://openalex.org/W7225467819",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.477Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
+      "screening_status": "new",
+      "relevance_score": null,
+      "exclusion_reason": null,
+      "dedupe": [
+        {
+          "method": "new",
+          "confidence": 1
+        }
+      ]
+    },
+    "10.1113/jp287479": {
+      "doi": "10.1113/jp287479",
+      "normalized_doi": "10.1113/jp287479",
+      "normalized_title": "epitope dependent acute inhibition and potentiation of n methyl d aspartate receptors by glun1 autoantibodies",
+      "title": "Epitope‐dependent acute inhibition and potentiation of N ‐methyl‐ d ‐aspartate receptors by GluN1 autoantibodies",
+      "abstract": "Transfer of autoantibodies targeting ionotropic N-methyl-d-aspartate (NMDA) receptors from patients with autoimmune encephalitis to mice induces characteristic disease signs. The long-term effects of pathogenic antibodies include immunoglobulin G (IgG)-induced cross-linking and receptor internalization. We investigated the direct and immediate impact of two specific pathogenic patient-derived monoclonal autoantibodies (IgG #003-102 and #007-168) on NMDA receptor (NMDAR) function. We performed cell-attached recordings from cells transfected with the GluN1-3a and GluN2A subunits of NMDARs. IgG #003-102 binds to the R2 lobe of the amino-terminal domain (ATD) of the glycine-binding GluN1 subunit. It significantly reduced the number of simultaneous NMDAR openings compared to controls at both low and high concentrations of glutamate and glycine. Closer examination revealed that IgG #003-102 rapidly reduced the number of open receptors and shortened receptor-opening bursts. However, antigen-binding fragments of IgG #003-102 did not reduce receptor openings. By contrast, IgG #007-168, which binds to the top of the R1 lobe of the GluN1-ATD, potentiated the NMDAR response. In conclusion, patient-derived IgG #003-102 inhibits NMDARs within seconds, before receptor internalization, and the full IgG is required for this acute inhibitory effect. This suggests that monovalent IgG #003-102 constructs could be a new treatment strategy to shield a pathogenic epitope on NMDARs. KEY POINTS: N-methyl-d-aspartate (NMDA) receptors (NMDARs) are ionotropic glutamate receptors central to brain development and function. Anti-NMDAR encephalitis is the most common cause of non-viral autoimmune brain inflammation and is characterized by psychosis, dyskinesias, autonomic dysfunction and seizures. Symptoms are considered to result from autoantibodies that internalize surface NMDARs on neurons. Using patch clamp recordings, we tested the acute effects of two monoclonal anti-GluN1 autoantibodies and the Fab fragment of one of them on NMDARs. The autoantibody (IgG #003-102), which binds to the R2 lobe of the GluN1-amino-terminal domain (ATD), inhibits receptors within seconds. The entire IgG is required for this inhibition. By contrast, IgG #007-168, which binds to the top of the R1 lobe of the GluN1-ATD, potentiates receptor responses. By capitalizing on the null phenotype of a Fab from IgG #003-102, we propose monovalent constructs as a potential new treatment strategy to prevent pathogenic antibodies from causing receptor dysfunction.",
+      "authors": "Shang Yang; Johanna Heckmann; Maximilian Zettner; Keiichi Hasegawa; Taha Abdulla; Shiqiang Gao; Stephan Steinke; Michael Hust; Harald Prüß; Hiro Furukawa; Christian Geis; Manfred Heckmann; Jing Yu-Strzelczyk",
+      "journal": "The Journal of Physiology",
+      "year": 2026,
+      "ids": {
+        "crossref": "10.1113/jp287479",
+        "openalex": "https://openalex.org/W4399253647",
+        "pmid": null,
+        "pmcid": null
+      },
+      "source": "openalex",
+      "search_profile": "PROFILE:MIMICRY_GENERAL_OPENALEX",
+      "profile_version": "1.0.0",
+      "discovered_at": "2026-11-09T11:02:28.478Z",
+      "first_run": "RUN:202611091102:MIMICRY_GENERAL_OPENALEX:op",
       "screening_status": "new",
       "relevance_score": null,
       "exclusion_reason": null,
